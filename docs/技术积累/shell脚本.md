@@ -213,8 +213,12 @@ hello, runoob ! hello, ${your_name} !
 >
 > ###### 获取字符串长度
 >
+> ```bash
+> string="abcd"
+> echo \${#string}   # 输出 4
+> ```
 >
-> 变量为字符串时，**${#string}** 等价于 **${#string[0]}**
+> 变量为字符串时，**`${#string}`** 等价于 **`${#string[0]}`**
 >
 > ###### 提取子字符串
 >
@@ -303,11 +307,11 @@ echo ${array_name[@]}
 
 ```bash
 # 取得数组元素的个数
-length=${#array_name[@]}
+length=\${#array_name[@]}
 # 或者
-length=${#array_name[*]}
+length=\${#array_name[*]}
 # 取得数组单个元素的长度
-length=${#array_name[n]}
+length=\${#array_name[n]}
 ```
 
 ### 4.9 注释

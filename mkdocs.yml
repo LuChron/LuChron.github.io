@@ -51,7 +51,7 @@ theme:
 markdown_extensions:
   - toc:
       permalink: true
-      toc_depth: 6
+      toc_depth: 3
   - admonition
   - attr_list
   - def_list
@@ -123,8 +123,8 @@ plugins:
       zoomable: true
       draggable: true
   - awesome-pages
-  - macros:
-      include_dir: includes
+  # - macros:
+  #     include_dir: includes
 
 # 额外的JavaScript
 extra_javascript:
@@ -178,7 +178,8 @@ nav:
     - 编程语言:
       - 概览: 技术积累/编程语言/index.md
       - C#: 技术积累/编程语言/C#.md
-    - shell: 技术积累/shell脚本.md
+    - shell脚本: 技术积累/shell脚本.md
+
   - 项目记录: 项目记录/index.md
   - 读书笔记:
     - 概览: 读书笔记/index.md
@@ -208,4 +209,8 @@ extra:
       - reject
 
 # 版权信息
-copyright: Copyright &copy; 2025 Lucien-Joelle 
+copyright: Copyright &copy; 2025 Lucien-Joelle
+
+
+
+ 
