@@ -2,7 +2,7 @@
 
 编程分类：动态如python，静态如C等
 
-![image-20250715101133244](../../assets/图片/image-20250715101133244.png)
+![image-20250715101133244](D:\task\note\图片\image-20250715101133244.png)
 
 
 
@@ -129,8 +129,6 @@ namespace CalculatorApplication
 声明数组变量并不是声明 number0、number1、...、number99 一个个单独的变量，而是声明一个就像 numbers 这样的变量，然后使用 numbers[0]、numbers[1]、...、numbers[99] 来表示一个个单独的变量。数组中某个指定的元素是通过索引来访问的。
 
 所有的数组都是由连续的内存位置组成的。最低的地址对应第一个元素，最高的地址对应最后一个元素。
-
-![C# 中的数组](https://www.runoob.com/wp-content/uploads/2014/04/arrays.jpg)
 
 ### 1 声明数组
 
@@ -2126,6 +2124,303 @@ var averageAgeMethod = students.Select(s => s.Age).Average();  //计算平均年
 ```
 
 还有Max/Min，Count，Sum
+
+
+
+## C# Lambda 表达式 
+
+Lambda 表达式是 C# 3.0 引入的一项核心特性，它提供了一种简洁的方式来创建匿名函数。它是函数式编程思想在 C# 中的重要体现，尤其在 LINQ（语言集成查询）中扮演着不可或缺的角色。
+
+### 1. 什么是 Lambda 表达式？
+
+简单来说，**Lambda 表达式就是一个匿名函数**。它可以像普通方法一样拥有参数和方法体，但没有方法名。它使得我们可以就地定义一个函数，并将其作为变量、参数或返回值来使用。
+
+Lambda 表达式的出现取代了 C# 2.0 中的匿名方法，提供了更简洁、更强大的语法。
+
+### 2 核心语法
+
+Lambda 表达式的核心是 `=>` 运算符，它读作 "goes to"（goes to）。运算符的左边是输入参数，右边是表达式或语句块。
+
+**基本结构：**
+```csharp
+(输入参数) => { 表达式或语句块 }
+```
+
+#### 2.1 参数 (Parameters)
+
+- **无参数**：使用空括号 `()`。
+  
+  ```csharp
+  () => Console.WriteLine("Hello, Lambda!");
+  ```
+  
+- **单个参数**：括号是可选的。
+  ```csharp
+  // 两种写法等价
+  x => x * x;
+  (x) => x * x;
+  ```
+
+- **多个参数**：必须使用括号，参数用逗号分隔。
+  ```csharp
+  (x, y) => x + y;
+  ```
+
+- **类型推断与显式类型**：大多数情况下，编译器可以根据上下文推断参数的类型。如果无法推断或为了代码清晰，可以显式指定类型。
+  ```csharp
+  // 编译器可以推断 x 和 y 是 int 类型 (如果上下文明确)
+  (x, y) => x + y;
+  
+  // 显式指定类型
+  (int x, int y) => x + y;
+  ```
+
+#### 2.2 主体 (Body)
+
+Lambda 的主体可以是表达式或语句块。
+
+- **表达式 Lambda (Expression Lambda)**：
+  
+  - 主体只包含一个表达式。
+  - 表达式的计算结果就是该匿名函数的返回值。
+  - 不需要 `return` 关键字和花括号 `{}`。
+  ```csharp
+  // 计算平方
+  x => x * x;
+  
+  // 检查是否为偶数
+  n => n % 2 == 0;
+  ```
+  
+- **语句 Lambda (Statement Lambda)**：
+  - 主体包含一个或多个语句，必须用花括号 `{}` 包围。
+  - 如果需要返回值，必须使用 `return` 语句。
+  ```csharp
+  (x, y) =>
+  {
+      int sum = x + y;
+      Console.WriteLine($"计算结果: {sum}");
+      return sum;
+  };
+  
+  // 无返回值的语句 Lambda
+  (string message) =>
+  {
+      Console.WriteLine("--- Log ---");
+      Console.WriteLine(message);
+      Console.WriteLine("-----------");
+  };
+  ```
+
+### 3 Lambda 的类型 - 委托 (Delegates)
+
+Lambda 表达式本身没有类型。编译器会根据其使用的上下文，将其转换为一个兼容的**委托 (Delegate)** 类型实例或**表达式树 (Expression Tree)**。
+
+最常用的委托类型是 `Func<>` 和 `Action<>`。
+
+- **`Action<>`**：用于表示没有返回值的 Lambda。
+  - `Action`: 无参数，无返回值。
+  - `Action<T>`: 1个参数，无返回值。
+  - `Action<T1, T2>`: 2个参数，无返回值。
+  - ...最多16个参数。
+
+  ```csharp
+  Action log = () => Console.WriteLine("Logging...");
+  Action<string> print = message => Console.WriteLine(message);
+  
+  log(); // 输出: Logging...
+  print("Hello, C#"); // 输出: Hello, C#
+  ```
+
+- **`Func<>`**：用于表示有返回值的 Lambda。
+  - 泛型参数列表中，**最后一个**参数是返回值的类型。
+  - `Func<TResult>`: 无参数，返回 `TResult` 类型的值。
+  - `Func<T, TResult>`: 1个 `T` 类型参数，返回 `TResult` 类型的值。
+  - `Func<T1, T2, TResult>`: 2个参数，返回 `TResult` 类型的值。
+  - ...最多16个输入参数。
+
+  ```csharp
+  Func<int> getRandomNumber = () => new Random().Next(1, 100);
+  Func<int, int> square = x => x * x;
+  Func<int, int, int> add = (x, y) => x + y;
+  
+  Console.WriteLine(getRandomNumber()); // 输出一个随机数
+  Console.WriteLine(square(5));        // 输出: 25
+  Console.WriteLine(add(3, 4));          // 输出: 7
+  ```
+
+### 4 实际应用场景
+
+#### 4.1 LINQ (语言集成查询)
+
+这是 Lambda 最广为人知的应用场景。LINQ 的方法（如 `Where`, `Select`, `OrderBy`, `GroupBy` 等）都接受委托作为参数，而 Lambda 是提供这些委托的最简洁方式。
+
+```csharp
+List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+// 1. 筛选出所有偶数
+var evenNumbers = numbers.Where(n => n % 2 == 0); // Where 需要一个 Func<int, bool>
+
+// 2. 将每个数字的平方生成新序列
+var squares = numbers.Select(n => n * n); // Select 需要一个 Func<int, int>
+
+// 3. 筛选偶数，计算平方，然后降序排序
+var queryResult = numbers.Where(n => n % 2 == 0)
+                         .Select(n => n * n)
+                         .OrderByDescending(sq => sq);
+
+// 打印结果: 100, 64, 36, 16, 4
+foreach (var num in queryResult)
+{
+    Console.WriteLine(num);
+}
+```
+
+#### 4.2 集合与数组操作
+
+许多集合类的方法都接受委托参数。
+
+```csharp
+List<string> names = new List<string> { "Alice", "Bob", "Charlie", "David" };
+
+// 查找第一个长度大于5的名字
+string longName = names.Find(name => name.Length > 5); // "Charlie"
+
+// 判断是否存在以 'A' 开头的名字
+bool startsWithA = names.Exists(name => name.StartsWith("A")); // true
+
+// 对列表进行自定义排序（按字符串长度）
+names.Sort((s1, s2) => s1.Length.CompareTo(s2.Length));
+```
+
+#### 4.3 事件处理
+
+在 UI 编程或任何事件驱动的模型中，可以简洁地订阅事件。
+
+```csharp
+// 假设有一个 Button 控件
+myButton.Click += (sender, e) =>
+{
+    MessageBox.Show("按钮被点击了!");
+};
+```
+
+#### 4.4 异步编程
+
+在 `async/await` 模式中，经常使用 Lambda 来启动一个异步任务。
+
+```csharp
+// 在后台线程上执行一个耗时操作
+await Task.Run(() =>
+{
+    // ... 模拟耗时工作 ...
+    Thread.Sleep(2000);
+    Console.WriteLine("后台任务完成！");
+});
+```
+
+
+
+## C# 运算符重载
+
+您可以重定义或重载 C# 中内置的运算符。因此，程序员也可以使用用户自定义类型的运算符。重载运算符是具有特殊名称的函数，是通过关键字 **operator** 后跟运算符的符号来定义的。与其他函数一样，重载运算符有返回类型和参数列表。
+
+例如，请看下面的函数：为用户自定义的类 Box 实现了加法运算符（+）。它把两个 Box 对象的属性相加，并返回相加后的 Box 对象。
+
+>简单理解就是重新定义一个+，然后让两个类的实例可以直接实现相加（实质上是对应属性分别相加）
+
+```c#
+using System;
+
+namespace OperatorOvlApplication
+{
+   class Box
+   {
+      private double length;      // 长度
+      private double breadth;     // 宽度
+      private double height;      // 高度
+
+      public double getVolume()
+      {
+         return length * breadth * height;
+      }
+      public void setLength( double len )
+      {
+         length = len;
+      }
+
+      public void setBreadth( double bre )
+      {
+         breadth = bre;
+      }
+
+      public void setHeight( double hei )
+      {
+         height = hei;
+      }
+      // 重载 + 运算符来把两个 Box 对象相加
+      public static Box operator+ (Box b, Box c)
+      {
+         Box box = new Box();
+         box.length = b.length + c.length;
+         box.breadth = b.breadth + c.breadth;
+         box.height = b.height + c.height;
+         return box;
+      }
+
+   }
+
+   class Tester
+   {
+      static void Main(string[] args)
+      {
+         Box Box1 = new Box();         // 声明 Box1，类型为 Box
+         Box Box2 = new Box();         // 声明 Box2，类型为 Box
+         Box Box3 = new Box();         // 声明 Box3，类型为 Box
+         double volume = 0.0;          // 体积
+
+         // Box1 详述
+         Box1.setLength(6.0);
+         Box1.setBreadth(7.0);
+         Box1.setHeight(5.0);
+
+         // Box2 详述
+         Box2.setLength(12.0);
+         Box2.setBreadth(13.0);
+         Box2.setHeight(10.0);
+
+         // Box1 的体积
+         volume = Box1.getVolume();
+         Console.WriteLine("Box1 的体积： {0}", volume);
+
+         // Box2 的体积
+         volume = Box2.getVolume();
+         Console.WriteLine("Box2 的体积： {0}", volume);
+
+         // 把两个对象相加
+         Box3 = Box1 + Box2;
+
+         // Box3 的体积
+         volume = Box3.getVolume();
+         Console.WriteLine("Box3 的体积： {0}", volume);
+         Console.ReadKey();
+      }
+   }
+}
+```
+
+### 可重载和不可重载运算符
+
+下表描述了 C# 中运算符重载的能力：
+
+| 运算符                                | 描述                                         |
+| :------------------------------------ | :------------------------------------------- |
+| +, -, !, ~, ++, --                    | 这些一元运算符只有一个操作数，且可以被重载。 |
+| +, -, *, /, %                         | 这些二元运算符带有两个操作数，且可以被重载。 |
+| ==, !=, <, >, <=, >=                  | 这些比较运算符可以被重载。                   |
+| &&, \|\|                              | 这些条件逻辑运算符不能被直接重载。           |
+| +=, -=, *=, /=, %=                    | 这些赋值运算符不能被重载。                   |
+| =, ., ?:, ->, new, is, sizeof, typeof | 这些运算符不能被重载。                       |
 
 
 

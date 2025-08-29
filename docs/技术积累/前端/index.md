@@ -30,7 +30,7 @@ graph TD
 #### HTML - 页面结构
 掌握语义化标签和现代HTML特性。
 
-[📖 学习HTML](../前端三大件/HTML.md){ .md-button .md-button--primary }
+[📖 学习HTML](HTML.md){ .md-button .md-button--primary }
 
 **主要内容:**
 - 语义化标签使用
@@ -41,7 +41,7 @@ graph TD
 #### 🎨 CSS - 样式设计
 从基础样式到高级布局技术。
 
-[🎨 学习CSS](../前端三大件/CSS.md){ .md-button .md-button--primary }
+[🎨 学习CSS](CSS.md){ .md-button .md-button--primary }
 
 **主要内容:**
 - 选择器与层叠规则
@@ -52,7 +52,7 @@ graph TD
 #### ⚡ JavaScript - 动态交互
 现代JavaScript编程技巧和ES6+特性。
 
-[⚡ 学习JavaScript](../前端三大件/JS.md){ .md-button .md-button--primary }
+[⚡ 学习JavaScript](JS.md){ .md-button .md-button--primary }
 
 **主要内容:**
 - ES6+ 语法特性
@@ -67,7 +67,7 @@ graph TD
 #### ⚛️ React - 现代框架
 构建复杂用户界面的利器。
 
-[⚛️ 学习React](../前端三大件/React.md){ .md-button .md-button--primary }
+[⚛️ 学习React](React.md){ .md-button .md-button--primary }
 
 **主要内容:**
 - 组件化开发思想
@@ -78,7 +78,7 @@ graph TD
 #### 🌐 API通信
 前后端数据交互的核心技术。
 
-[🌐 学习Fetch API](../前端三大件/fatch api.md){ .md-button .md-button--primary }
+[🌐 学习Fetch API](fatch api.md){ .md-button .md-button--primary }
 
 **主要内容:**
 - Fetch API 使用
