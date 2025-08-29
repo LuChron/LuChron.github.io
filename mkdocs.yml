@@ -125,8 +125,6 @@ plugins:
   - awesome-pages
   - macros:
       include_dir: includes
-      exclude:
-        - 技术积累/shell脚本.md
 
 # 额外的JavaScript
 extra_javascript:

@@ -213,10 +213,6 @@ hello, runoob ! hello, ${your_name} !
 >
 > ###### 获取字符串长度
 >
-> ```bash
-> string="abcd"
-> echo ${#string}   # 输出 4
-> ```
 >
 > 变量为字符串时，**${#string}** 等价于 **${#string[0]}**
 >
