@@ -1,13 +1,13 @@
-# 📚 Lucien-Joelle's Notebook
+# 📚 LuChron's Notebook
 
-[![GitHub Actions Status](https://github.com/lucien-joelle/notebook/actions/workflows/deploy-simple.yml/badge.svg)](https://github.com/lucien-joelle/notebook/actions)
+[![GitHub Actions Status](https://github.com/LuChron/notebook/actions/workflows/deploy-simple.yml/badge.svg)](https://github.com/LuChron/notebook/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## ✨ 项目简介
 
 这是一个基于 [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) 的个人学习笔记和知识管理系统。项目结构参考了 IsshikiHugh 的优秀设计，具有简洁清晰的架构和丰富的功能特性。
 
-**🚀 在线访问**: [https://lucien-joelle.github.io/notebook/](https://lucien-joelle.github.io/notebook/)
+**🚀 在线访问**: [https://LuChron.github.io/notebook/](https://LuChron.github.io/notebook/)
 
 ## 📋 功能特性
 
@@ -70,7 +70,7 @@ notebook/
 
 1. **克隆仓库**
    ```bash
-   git clone https://github.com/lucien-joelle/notebook.git
+   git clone https://github.com/LuChron/notebook.git
    cd notebook
    ```
 

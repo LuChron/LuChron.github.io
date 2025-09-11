@@ -5,7 +5,7 @@
 
 set -e
 
-echo "🎯 设置 Lucien-Joelle's Notebook 开发环境..."
+echo "🎯 设置 LuChron's Notebook 开发环境..."
 
 # 检查 Python
 if ! command -v python3 &> /dev/null; then

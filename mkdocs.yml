@@ -1,11 +1,11 @@
-site_name: Lucien-Joelle's Notebook
+site_name: LuChron's Notebook
 site_description: 个人学习笔记和知识管理系统  
-site_author: Lucien-Joelle
-site_url: https://lucien-joelle.github.io/notebook
+site_author: LuChron
+site_url: https://LuChron.github.io/notebook
 
 # 仓库配置
-repo_url: https://github.com/lucien-joelle/notebook
-repo_name: lucien-joelle/notebook
+repo_url: https://github.com/LuChron/notebook
+repo_name: LuChron/notebook
 edit_uri: edit/main/docs/
 
 # 主题配置
@@ -189,10 +189,10 @@ nav:
 # 额外配置
 extra:
   generator: false
-  homepage: https://lucien-joelle.github.io/notebook
+  homepage: https://LuChron.github.io/notebook
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/lucien-joelle
+      link: https://github.com/LuChron
       name: GitHub
     - icon: fontawesome/solid/envelope
       link: mailto:3454410481@qq.com
@@ -209,7 +209,7 @@ extra:
       - reject
 
 # 版权信息
-copyright: Copyright &copy; 2025 Lucien-Joelle
+copyright: Copyright &copy; 2025 LuChron
 
 
 

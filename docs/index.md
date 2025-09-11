@@ -1,4 +1,4 @@
-## Lucien-Joelle's Notebook
+## LuChron's Notebook
 
 这是陆沉的个人学习笔记，记录学习历程和技术心得。
 

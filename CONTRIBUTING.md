@@ -1,6 +1,6 @@
 # 🤝 贡献指南
 
-感谢您对 Lucien-Joelle's Notebook 项目的兴趣！我们欢迎任何形式的贡献。
+感谢您对 LuChron's Notebook 项目的兴趣！我们欢迎任何形式的贡献。
 
 ## 📝 贡献方式
 
@@ -8,7 +8,7 @@
 
 如果您发现了 bug 或有改进建议：
 
-1. 检查 [Issues](https://github.com/lucien-joelle/notebook/issues) 是否已有相关问题
+1. 检查 [Issues](https://github.com/LuChron/notebook/issues) 是否已有相关问题
 2. 如果没有，创建新的 Issue
 3. 提供清楚的问题描述和重现步骤
 
@@ -78,7 +78,7 @@ def example_function():
 
 ```bash
 # 克隆项目
-git clone https://github.com/lucien-joelle/notebook.git
+git clone https://github.com/LuChron/notebook.git
 cd notebook
 
 # 设置虚拟环境
@@ -190,7 +190,7 @@ Closes #15
 
 如有任何问题，可以通过以下方式联系：
 
-- 创建 [Issue](https://github.com/lucien-joelle/notebook/issues)
+- 创建 [Issue](https://github.com/LuChron/notebook/issues)
 - 发送邮件：[your-email@example.com](mailto:your-email@example.com)
 
 ## 🙏 感谢

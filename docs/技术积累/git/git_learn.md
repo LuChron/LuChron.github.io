@@ -215,7 +215,7 @@ git checkout -- test.txt
 根据提示，我们在本地的`learngit`中运行
 
 ```bash
-git remote add original https://github.com/Lucien-Joelle/learngit.git
+git remote add original https://github.com/LuChron/learngit.git
 ```
 
 创建`original`（默认且常用）的本地仓库
