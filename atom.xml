@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://luchron.github.io</id>
+    <id>https://LuChron.github.io</id>
     <title>絶対忘れ てやらないよ</title>
     <subtitle>狗窝</subtitle>
     <icon>https://luchron.github.io/assets/favicon.ico</icon>
-    <link href="https://luchron.github.io" />
+    <link href="https://LuChron.github.io" />
     <author>
       <name>Luchron</name>
     </author>
@@ -11178,9 +11178,9 @@ React 就从这里开始渲染一整棵组件树。&lt;/li&gt;
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C#/</id>
+        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Csharp/</id>
         <title>C#</title>
-        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C#/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Csharp/"/>
         <content type="html">&lt;h2 id=&#34;c是什么&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#c是什么&#34;&gt;#&lt;/a&gt; C#是什么&lt;/h2&gt;
 &lt;p&gt;编程分类：动态如python，静态如C等&lt;/p&gt;
 &lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;/assets/%E5%9B%BE%E7%89%87/image-20250715101133244.png&#34; alt=&#34;image-20250715101133244&#34; /&gt;&lt;/p&gt;
@@ -11665,7 +11665,7 @@ React 就从这里开始渲染一整棵组件树。&lt;/li&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;Sun&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt; =&lt;/span&gt;&lt;span style=&#34;color:#2F798A;--shiki-dark:#4C9A91&#34;&gt; 0&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;Fri&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt; =&lt;/span&gt;&lt;span style=&#34;color:#2F798A;--shiki-dark:#4C9A91&#34;&gt; 5&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;c类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#c类&#34;&gt;#&lt;/a&gt; C#类&lt;/h2&gt;
-&lt;h3 id=&#34;核心概念类是蓝图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#核心概念类是蓝图&#34;&gt;#&lt;/a&gt; 核心概念：类是“蓝图”&lt;/h3&gt;
+&lt;h3 id=&#34;类是蓝图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#类是蓝图&#34;&gt;#&lt;/a&gt; 类是蓝图&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;类 (Class)&lt;/strong&gt; 是创建&lt;strong&gt;对象 (Object)&lt;/strong&gt; 的&lt;strong&gt;蓝图、模板或设计图&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;它定义了一类事物应该具有的 &lt;strong&gt;状态（数据）&lt;/strong&gt; 和 &lt;strong&gt;行为（功能）&lt;/strong&gt;。&lt;/p&gt;
 &lt;ul&gt;
@@ -11712,7 +11712,7 @@ React 就从这里开始渲染一整棵组件树。&lt;/li&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;        Console&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt;WriteLine&lt;/span&gt;&lt;span style=&#34;color:#a65e2b;--shiki-dark:#d4976c&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#B5695977;--shiki-dark:#C98A7D77&#34;&gt;$&#34;&lt;/span&gt;&lt;span style=&#34;color:#B56959;--shiki-dark:#C98A7D&#34;&gt;大家好，我叫 &lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span style=&#34;color:#A65E2B;--shiki-dark:#C99076&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#B56959;--shiki-dark:#C98A7D&#34;&gt;Name&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span style=&#34;color:#B56959;--shiki-dark:#C98A7D&#34;&gt;，今年 &lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span style=&#34;color:#A65E2B;--shiki-dark:#C99076&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#B56959;--shiki-dark:#C98A7D&#34;&gt;Age&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span style=&#34;color:#B56959;--shiki-dark:#C98A7D&#34;&gt; 岁了。&lt;/span&gt;&lt;span style=&#34;color:#B5695977;--shiki-dark:#C98A7D77&#34;&gt;&#34;&lt;/span&gt;&lt;span style=&#34;color:#a65e2b;--shiki-dark:#d4976c&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#1e754f;--shiki-dark:#4d9375&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;a-字段-fields-和-属性-properties-代表状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#a-字段-fields-和-属性-properties-代表状态&#34;&gt;#&lt;/a&gt; a. 字段 (Fields) 和 属性 (Properties) —— 代表“状态”&lt;/h5&gt;
+&lt;h4 id=&#34;a-字段-fields-和-属性-properties-代表状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#a-字段-fields-和-属性-properties-代表状态&#34;&gt;#&lt;/a&gt; a. 字段 (Fields) 和 属性 (Properties) —— 代表“状态”&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;字段 (Field)&lt;/strong&gt;: 类内部的普通变量，用于存储数据。通常设为 &lt;code&gt;private&lt;/code&gt;，以保护数据不被外部随意修改。就像人的基因，是内部核心信息。&lt;/p&gt;
@@ -11728,18 +11728,18 @@ React 就从这里开始渲染一整棵组件树。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&#34;b-构造函数-constructor-代表创建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#b-构造函数-constructor-代表创建&#34;&gt;#&lt;/a&gt; b. 构造函数 (Constructor) —— 代表“创建”&lt;/h5&gt;
+&lt;h4 id=&#34;b-构造函数-constructor-代表创建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#b-构造函数-constructor-代表创建&#34;&gt;#&lt;/a&gt; b. 构造函数 (Constructor) —— 代表“创建”&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;当你使用 &lt;code&gt;new Person(...)&lt;/code&gt; 时，构造函数被&lt;strong&gt;自动调用&lt;/strong&gt;。&lt;/li&gt;
 &lt;li&gt;它的工作是&lt;strong&gt;初始化对象&lt;/strong&gt;，确保对象一被创建就处于一个有效的、有意义的状态。&lt;/li&gt;
 &lt;li&gt;在我们的例子中，构造函数强制要求创建 &lt;code&gt;Person&lt;/code&gt; 时必须提供姓名、年龄和社保号。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&#34;c-方法-methods-代表行为&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#c-方法-methods-代表行为&#34;&gt;#&lt;/a&gt; c. 方法 (Methods) —— 代表“行为”&lt;/h5&gt;
+&lt;h4 id=&#34;c-方法-methods-代表行为&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#c-方法-methods-代表行为&#34;&gt;#&lt;/a&gt; c. 方法 (Methods) —— 代表“行为”&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;方法定义了对象能做什么。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;public void Introduce()&lt;/code&gt; 就是 &lt;code&gt;Person&lt;/code&gt; 对象的一个行为能力。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;如何使用类从蓝图到实体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何使用类从蓝图到实体&#34;&gt;#&lt;/a&gt; 如何使用类：从蓝图到实体&lt;/h3&gt;
+&lt;h3 id=&#34;创建与使用类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建与使用类&#34;&gt;#&lt;/a&gt; 创建与使用类&lt;/h3&gt;
 &lt;pre class=&#34;shiki shiki-themes vitesse-light vitesse-dark&#34; style=&#34;background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee&#34; tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-csharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt;// 使用 new 关键字，根据 Person 蓝图创建一个真实的对象 zhangSan&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt;// &#34;张三&#34;, 30, &#34;123...&#34; 这些参数会传递给构造函数&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#2E8F82;--shiki-dark:#5DA994&#34;&gt;Person&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt; zhangSan&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt; =&lt;/span&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt; new&lt;/span&gt;&lt;span style=&#34;color:#2E8F82;--shiki-dark:#5DA994&#34;&gt; Person&lt;/span&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#B5695977;--shiki-dark:#C98A7D77&#34;&gt;&#34;&lt;/span&gt;&lt;span style=&#34;color:#B56959;--shiki-dark:#C98A7D&#34;&gt;张三&lt;/span&gt;&lt;span style=&#34;color:#B5695977;--shiki-dark:#C98A7D77&#34;&gt;&#34;&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#2F798A;--shiki-dark:#4C9A91&#34;&gt; 30&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#B5695977;--shiki-dark:#C98A7D77&#34;&gt; &#34;&lt;/span&gt;&lt;span style=&#34;color:#B56959;--shiki-dark:#C98A7D&#34;&gt;123456789&lt;/span&gt;&lt;span style=&#34;color:#B5695977;--shiki-dark:#C98A7D77&#34;&gt;&#34;&lt;/span&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
@@ -11753,7 +11753,7 @@ React 就从这里开始渲染一整棵组件树。&lt;/li&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt;// 3. 尝试修改只读属性&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt;// zhangSan.Age = 31;&lt;/span&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt; // 编译错误！因为 Age 的 set 是 private 的。&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;类的三大支柱思想&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#类的三大支柱思想&#34;&gt;#&lt;/a&gt; 类的三大支柱思想&lt;/h3&gt;
+&lt;h3 id=&#34;类的三大思想&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#类的三大思想&#34;&gt;#&lt;/a&gt; 类的三大思想&lt;/h3&gt;
 &lt;p&gt;为什么我们要用类？因为它能帮助我们更好地组织代码，并实现这三大强大的思想：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -11782,7 +11782,7 @@ React 就从这里开始渲染一整棵组件树。&lt;/li&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr /&gt;
-&lt;h3 id=&#34;总结所有知识点的串联&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结所有知识点的串联&#34;&gt;#&lt;/a&gt; 总结：所有知识点的串联&lt;/h3&gt;
+&lt;h3 id=&#34;本节总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本节总结&#34;&gt;#&lt;/a&gt; 本节总结&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;你定义一个 &lt;strong&gt;类 (Class)&lt;/strong&gt; 作为蓝图。&lt;/li&gt;
 &lt;li&gt;类里面有 &lt;strong&gt;属性 (Property)&lt;/strong&gt; 描述状态，&lt;strong&gt;方法 (Method)&lt;/strong&gt; 描述行为。&lt;/li&gt;
@@ -12089,7 +12089,7 @@ React 就从这里开始渲染一整棵组件树。&lt;/li&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;两种主要写法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#两种主要写法&#34;&gt;#&lt;/a&gt; 两种主要写法&lt;/h3&gt;
-&lt;h5 id=&#34;a-自动实现属性-auto-implemented-property&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#a-自动实现属性-auto-implemented-property&#34;&gt;#&lt;/a&gt; a. 自动实现属性 (Auto-Implemented Property)&lt;/h5&gt;
+&lt;h4 id=&#34;a-自动实现属性-auto-implemented-property&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#a-自动实现属性-auto-implemented-property&#34;&gt;#&lt;/a&gt; a. 自动实现属性 (Auto-Implemented Property)&lt;/h4&gt;
 &lt;p&gt;这是最常见、最简洁的写法。当你不需要任何额外的逻辑时，就用它。&lt;/p&gt;
 &lt;pre class=&#34;shiki shiki-themes vitesse-light vitesse-dark&#34; style=&#34;background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee&#34; tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-csharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt;// 编译器会自动在后台为你创建一个私有的、看不见的字段来存储数据&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt; class&lt;/span&gt;&lt;span style=&#34;color:#2E8F82;--shiki-dark:#5DA994&#34;&gt; Person&lt;/span&gt;&lt;/span&gt;
@@ -12102,7 +12102,7 @@ React 就从这里开始渲染一整棵组件树。&lt;/li&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#2E8F82;--shiki-dark:#5DA994&#34;&gt;Person&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt; p&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt; =&lt;/span&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt; new&lt;/span&gt;&lt;span style=&#34;color:#2E8F82;--shiki-dark:#5DA994&#34;&gt; Person&lt;/span&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;p&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;Name&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt; =&lt;/span&gt;&lt;span style=&#34;color:#B5695977;--shiki-dark:#C98A7D77&#34;&gt; &#34;&lt;/span&gt;&lt;span style=&#34;color:#B56959;--shiki-dark:#C98A7D&#34;&gt;李四&lt;/span&gt;&lt;span style=&#34;color:#B5695977;--shiki-dark:#C98A7D77&#34;&gt;&#34;&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt;      // 这里调用了 set 访问器&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#1E754F;--shiki-dark:#4D9375&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt; name&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt; =&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt; p&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;Name&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt; // 这里调用了 get 访问器&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;b-完整实现属性-full-property&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#b-完整实现属性-full-property&#34;&gt;#&lt;/a&gt; b. 完整实现属性 (Full Property)&lt;/h5&gt;
+&lt;h4 id=&#34;b-完整实现属性-full-property&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#b-完整实现属性-full-property&#34;&gt;#&lt;/a&gt; b. 完整实现属性 (Full Property)&lt;/h4&gt;
 &lt;p&gt;当你需要对数据的读写进行控制时（例如，数据验证），就需要这种写法。&lt;/p&gt;
 &lt;p&gt;这种写法需要你&lt;strong&gt;手动声明一个私有字段&lt;/strong&gt;（通常以下划线 &lt;code&gt;_&lt;/code&gt; 开头）来存储数据。&lt;/p&gt;
 &lt;pre class=&#34;shiki shiki-themes vitesse-light vitesse-dark&#34; style=&#34;background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee&#34; tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-csharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt; class&lt;/span&gt;&lt;span style=&#34;color:#2E8F82;--shiki-dark:#5DA994&#34;&gt; Product&lt;/span&gt;&lt;/span&gt;
@@ -12251,10 +12251,10 @@ Dog对象的Name字段被赋值为&amp;quot;Tom&amp;quot;（继承自Animal）&l
 &lt;span class=&#34;line&#34;&gt;&lt;span&gt;面积： 33.75&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span&gt;成本： 2362.5&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;接口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#接口&#34;&gt;#&lt;/a&gt; 接口&lt;/h2&gt;
-&lt;h3 id=&#34;核心概念接口是合同或规范&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#核心概念接口是合同或规范&#34;&gt;#&lt;/a&gt; 核心概念：接口是“合同”或“规范”&lt;/h3&gt;
+&lt;h3 id=&#34;接口是什么&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#接口是什么&#34;&gt;#&lt;/a&gt; 接口是什么&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;接口 (Interface)&lt;/strong&gt; 是一种&lt;strong&gt;纯粹的抽象类型&lt;/strong&gt;，它只定义了**“应该做什么” (What)&lt;strong&gt;，而不关心&lt;/strong&gt;“具体怎么做” (How)**。&lt;/p&gt;
 &lt;p&gt;可以把它理解为一份&lt;strong&gt;合同、规范或一份能力清单&lt;/strong&gt;。任何类如果想“签署”这份合同，就必须实现合同中规定的所有条款（方法、属性等）。&lt;/p&gt;
-&lt;h3 id=&#34;为什么使用接口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#为什么使用接口&#34;&gt;#&lt;/a&gt; 为什么使用接口？&lt;/h3&gt;
+&lt;h3 id=&#34;为什么用接口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#为什么用接口&#34;&gt;#&lt;/a&gt; 为什么用接口&lt;/h3&gt;
 &lt;p&gt;使用接口的主要目的是为了实现&lt;strong&gt;松散耦合 (Loose Coupling)&lt;/strong&gt;，这带来了巨大的好处：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;实现多态&lt;/strong&gt;：允许你编写一段代码来处理&lt;strong&gt;任何&lt;/strong&gt;实现了该接口的对象，而无需关心对象的具体类型。&lt;/li&gt;
@@ -12262,8 +12262,8 @@ Dog对象的Name字段被赋值为&amp;quot;Tom&amp;quot;（继承自Animal）&l
 &lt;li&gt;&lt;strong&gt;支持依赖注入 (DI)&lt;/strong&gt;：这是现代软件架构的基石。程序依赖于稳定的“接口合同”，而不是依赖于易变的“具体实现”。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;方便单元测试&lt;/strong&gt;：可以轻松地创建接口的“模拟”实现 (Mock Object) 来进行测试。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;核心语法和规则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#核心语法和规则&#34;&gt;#&lt;/a&gt; 核心语法和规则&lt;/h3&gt;
-&lt;h5 id=&#34;a-定义接口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#a-定义接口&#34;&gt;#&lt;/a&gt; a. 定义接口&lt;/h5&gt;
+&lt;h3 id=&#34;接口语法与规则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#接口语法与规则&#34;&gt;#&lt;/a&gt; 接口语法与规则&lt;/h3&gt;
+&lt;h4 id=&#34;a-定义接口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#a-定义接口&#34;&gt;#&lt;/a&gt; a. 定义接口&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;使用 &lt;code&gt;interface&lt;/code&gt; 关键字。&lt;/li&gt;
 &lt;li&gt;接口名称通常以大写字母 &lt;code&gt;I&lt;/code&gt; 开头（例如 &lt;code&gt;IComparable&lt;/code&gt;, &lt;code&gt;IDisposable&lt;/code&gt;），这是一个广泛遵循的命名约定。&lt;/li&gt;
@@ -12278,7 +12278,7 @@ Dog对象的Name字段被赋值为&amp;quot;Tom&amp;quot;（继承自Animal）&l
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt;    // 方法规范：必须有一个 MakeSound 方法&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#1E754F;--shiki-dark:#4D9375&#34;&gt;    void&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt; MakeSound&lt;/span&gt;&lt;span style=&#34;color:#1e754f;--shiki-dark:#4d9375&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#1e754f;--shiki-dark:#4d9375&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;b-实现接口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#b-实现接口&#34;&gt;#&lt;/a&gt; b. 实现接口&lt;/h5&gt;
+&lt;h4 id=&#34;b-实现接口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#b-实现接口&#34;&gt;#&lt;/a&gt; b. 实现接口&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;类通过在类名后使用冒号 &lt;code&gt;:&lt;/code&gt; 来实现一个或多个接口。&lt;/li&gt;
 &lt;li&gt;一个类可以继承一个基类，同时实现多个接口。&lt;/li&gt;
@@ -12307,7 +12307,7 @@ Dog对象的Name字段被赋值为&amp;quot;Tom&amp;quot;（继承自Animal）&l
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;        Console&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt;WriteLine&lt;/span&gt;&lt;span style=&#34;color:#a65e2b;--shiki-dark:#d4976c&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#B5695977;--shiki-dark:#C98A7D77&#34;&gt;&#34;&lt;/span&gt;&lt;span style=&#34;color:#B56959;--shiki-dark:#C98A7D&#34;&gt;嘀嘀嘀！&lt;/span&gt;&lt;span style=&#34;color:#B5695977;--shiki-dark:#C98A7D77&#34;&gt;&#34;&lt;/span&gt;&lt;span style=&#34;color:#a65e2b;--shiki-dark:#d4976c&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#1e754f;--shiki-dark:#4d9375&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;c-使用接口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#c-使用接口&#34;&gt;#&lt;/a&gt; c. 使用接口&lt;/h5&gt;
+&lt;h4 id=&#34;c-使用接口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#c-使用接口&#34;&gt;#&lt;/a&gt; c. 使用接口&lt;/h4&gt;
 &lt;p&gt;使用接口的最大威力在于，你可以&lt;strong&gt;面向接口编程&lt;/strong&gt;，而不是面向具体类编程。&lt;/p&gt;
 &lt;pre class=&#34;shiki shiki-themes vitesse-light vitesse-dark&#34; style=&#34;background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee&#34; tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-csharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt;// 这个方法不关心传来的是 Dog 还是 Car，它只关心对象是否“可发出声音”&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#1E754F;--shiki-dark:#4D9375&#34;&gt; void&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt; TriggerSound&lt;/span&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2E8F82;--shiki-dark:#5DA994&#34;&gt;ISoundable&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt; soundMaker&lt;/span&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;)&lt;/span&gt;&lt;/span&gt;
@@ -12388,7 +12388,7 @@ Dog对象的Name字段被赋值为&amp;quot;Tom&amp;quot;（继承自Animal）&l
 &lt;p&gt;输出结果为：&lt;/p&gt;
 &lt;pre class=&#34;shiki shiki-themes vitesse-light vitesse-dark&#34; style=&#34;background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee&#34; tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Method1 implementation&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span&gt;Method2 implementation&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;c多重继承&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#c多重继承&#34;&gt;#&lt;/a&gt; C#多重继承&lt;/h3&gt;
+&lt;h3 id=&#34;多重继承&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#多重继承&#34;&gt;#&lt;/a&gt; 多重继承&lt;/h3&gt;
 &lt;p&gt;多重继承指的是一个类别可以同时从多于一个父类继承行为与特征的功能。与单一继承相对，单一继承指一个类别只可以继承自一个父类。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;C# 不支持多重继承&lt;/strong&gt;。但是，您可以使用接口来实现多重继承。下面的程序演示了这点：&lt;/p&gt;
 &lt;pre class=&#34;shiki shiki-themes vitesse-light vitesse-dark&#34; style=&#34;background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee&#34; tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-csharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#1E754F;--shiki-dark:#4D9375&#34;&gt;using&lt;/span&gt;&lt;span style=&#34;color:#2E8F82;--shiki-dark:#5DA994&#34;&gt; System&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
@@ -12456,7 +12456,7 @@ Dog对象的Name字段被赋值为&amp;quot;Tom&amp;quot;（继承自Animal）&l
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;h3 id=&#34;代码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#代码&#34;&gt;#&lt;/a&gt; 代码&lt;/h3&gt;
-&lt;h5 id=&#34;没有di-紧密耦合-the-bad-way&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#没有di-紧密耦合-the-bad-way&#34;&gt;#&lt;/a&gt; 没有DI (紧密耦合 - The Bad Way)&lt;/h5&gt;
+&lt;h4 id=&#34;没有di-紧密耦合-the-bad-way&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#没有di-紧密耦合-the-bad-way&#34;&gt;#&lt;/a&gt; 没有DI (紧密耦合 - The Bad Way)&lt;/h4&gt;
 &lt;pre class=&#34;shiki shiki-themes vitesse-light vitesse-dark&#34; style=&#34;background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee&#34; tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-csharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt;// 依赖的具体实现&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt; class&lt;/span&gt;&lt;span style=&#34;color:#2E8F82;--shiki-dark:#5DA994&#34;&gt; EmailService&lt;/span&gt;&lt;span style=&#34;color:#393A34;--shiki-dark:#DBD7CAEE&#34;&gt; &lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/span&gt;
@@ -12480,7 +12480,7 @@ Dog对象的Name字段被赋值为&amp;quot;Tom&amp;quot;（继承自Animal）&l
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;        _emailService&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt;Send&lt;/span&gt;&lt;span style=&#34;color:#a65e2b;--shiki-dark:#d4976c&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;message&lt;/span&gt;&lt;span style=&#34;color:#a65e2b;--shiki-dark:#d4976c&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#1e754f;--shiki-dark:#4d9375&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;使用di-松散耦合-the-good-way&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用di-松散耦合-the-good-way&#34;&gt;#&lt;/a&gt; 使用DI (松散耦合 - The Good Way)&lt;/h5&gt;
+&lt;h4 id=&#34;使用di-松散耦合-the-good-way&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用di-松散耦合-the-good-way&#34;&gt;#&lt;/a&gt; 使用DI (松散耦合 - The Good Way)&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;第1步：依赖于接口 (抽象)&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;shiki shiki-themes vitesse-light vitesse-dark&#34; style=&#34;background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee&#34; tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-csharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt;// 1. 定义一个接口（合同）&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt; interface&lt;/span&gt;&lt;span style=&#34;color:#2E8F82;--shiki-dark:#5DA994&#34;&gt; IMessageService&lt;/span&gt;&lt;/span&gt;
@@ -12515,7 +12515,7 @@ Dog对象的Name字段被赋值为&amp;quot;Tom&amp;quot;（继承自Animal）&l
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;        _messageService&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt;Send&lt;/span&gt;&lt;span style=&#34;color:#a65e2b;--shiki-dark:#d4976c&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;message&lt;/span&gt;&lt;span style=&#34;color:#a65e2b;--shiki-dark:#d4976c&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#1e754f;--shiki-dark:#4d9375&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;注入的三种主要方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注入的三种主要方式&#34;&gt;#&lt;/a&gt; 注入的三种主要方式&lt;/h3&gt;
+&lt;h3 id=&#34;三种注入方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三种注入方式&#34;&gt;#&lt;/a&gt; 三种注入方式&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;构造函数注入 (Constructor Injection)&lt;/strong&gt;&lt;/p&gt;
@@ -12576,7 +12576,7 @@ Dog对象的Name字段被赋值为&amp;quot;Tom&amp;quot;（继承自Animal）&l
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;catch (ExceptionType ex)&lt;/code&gt;&lt;/strong&gt;: 如果 &lt;code&gt;try&lt;/code&gt; 块中发生 &lt;em&gt;指定类型&lt;/em&gt; 的异常，则执行此块。&lt;code&gt;ex&lt;/code&gt; 对象包含错误详情。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;finally&lt;/code&gt;&lt;/strong&gt;: 无论是否发生异常，这里的代码 &lt;strong&gt;总是&lt;/strong&gt; 会被执行。主要用于释放资源（如关闭文件、数据库连接）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;核心规则与最佳实践&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#核心规则与最佳实践&#34;&gt;#&lt;/a&gt; 核心规则与最佳实践&lt;/h3&gt;
+&lt;h3 id=&#34;规则与实践&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#规则与实践&#34;&gt;#&lt;/a&gt; 规则与实践&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;捕获顺序：从具体到通用&lt;/strong&gt;&lt;br /&gt;
@@ -12663,7 +12663,7 @@ Dog对象的Name字段被赋值为&amp;quot;Tom&amp;quot;（继承自Animal）&l
 &lt;h2 id=&#34;委托&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#委托&#34;&gt;#&lt;/a&gt; 委托&lt;/h2&gt;
 &lt;p&gt;这个委托其实就是类似函数指针，不过更加安全可靠。我们用委托来指向一个函数，这样可以方便很多为了减少麻烦，微软为我们省去了定义委托的这一步骤。&lt;/p&gt;
 &lt;p&gt;正常的函数定义委托，我们只是根据他的返回值类型和参数个数来进行区别。有了泛型后，我们只根据参数的个数进行区别。&lt;/p&gt;
-&lt;h3 id=&#34;委托的类别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#委托的类别&#34;&gt;#&lt;/a&gt; 委托的类别&lt;/h3&gt;
+&lt;h3 id=&#34;委托分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#委托分类&#34;&gt;#&lt;/a&gt; 委托分类&lt;/h3&gt;
 &lt;p&gt;于是有了以下几类委托：&lt;/p&gt;
 &lt;h4 id=&#34;11-action&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11-action&#34;&gt;#&lt;/a&gt; 1.1 Action&lt;/h4&gt;
 &lt;p&gt;**Action：**代表不返回值的方法。可以接受最多 16 个参数。&lt;/p&gt;
@@ -12984,7 +12984,7 @@ Dog对象的Name字段被赋值为&amp;quot;Tom&amp;quot;（继承自Animal）&l
 &lt;p&gt;还有Max/Min，Count，Sum&lt;/p&gt;
 &lt;h2 id=&#34;c-lambda-表达式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#c-lambda-表达式&#34;&gt;#&lt;/a&gt; C# Lambda 表达式&lt;/h2&gt;
 &lt;p&gt;Lambda 表达式是 C# 3.0 引入的一项核心特性，它提供了一种简洁的方式来创建匿名函数。它是函数式编程思想在 C# 中的重要体现，尤其在 LINQ（语言集成查询）中扮演着不可或缺的角色。&lt;/p&gt;
-&lt;h3 id=&#34;什么是-lambda-表达式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是-lambda-表达式&#34;&gt;#&lt;/a&gt; 什么是 Lambda 表达式？&lt;/h3&gt;
+&lt;h3 id=&#34;lambda-是什么&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lambda-是什么&#34;&gt;#&lt;/a&gt; Lambda 是什么&lt;/h3&gt;
 &lt;p&gt;简单来说，&lt;strong&gt;Lambda 表达式就是一个匿名函数&lt;/strong&gt;。它可以像普通方法一样拥有参数和方法体，但没有方法名。它使得我们可以就地定义一个函数，并将其作为变量、参数或返回值来使用。&lt;/p&gt;
 &lt;p&gt;Lambda 表达式的出现取代了 C# 2.0 中的匿名方法，提供了更简洁、更强大的语法。&lt;/p&gt;
 &lt;h3 id=&#34;核心语法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#核心语法&#34;&gt;#&lt;/a&gt; 核心语法&lt;/h3&gt;
@@ -13054,7 +13054,7 @@ Dog对象的Name字段被赋值为&amp;quot;Tom&amp;quot;（继承自Animal）&l
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;lambda-的类型-委托-delegates&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lambda-的类型-委托-delegates&#34;&gt;#&lt;/a&gt; Lambda 的类型 - 委托 (Delegates)&lt;/h3&gt;
+&lt;h3 id=&#34;lambda-与委托&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lambda-与委托&#34;&gt;#&lt;/a&gt; Lambda 与委托&lt;/h3&gt;
 &lt;p&gt;Lambda 表达式本身没有类型。编译器会根据其使用的上下文，将其转换为一个兼容的&lt;strong&gt;委托 (Delegate)&lt;/strong&gt; 类型实例或&lt;strong&gt;表达式树 (Expression Tree)&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;最常用的委托类型是 &lt;code&gt;Func&amp;lt;&amp;gt;&lt;/code&gt; 和 &lt;code&gt;Action&amp;lt;&amp;gt;&lt;/code&gt;。&lt;/p&gt;
 &lt;ul&gt;
@@ -13222,7 +13222,7 @@ Dog对象的Name字段被赋值为&amp;quot;Tom&amp;quot;（继承自Animal）&l
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#a65e2b;--shiki-dark:#d4976c&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;   &lt;/span&gt;&lt;span style=&#34;color:#1e754f;--shiki-dark:#4d9375&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;可重载和不可重载运算符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可重载和不可重载运算符&#34;&gt;#&lt;/a&gt; 可重载和不可重载运算符&lt;/h3&gt;
+&lt;h3 id=&#34;运算符重载范围&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#运算符重载范围&#34;&gt;#&lt;/a&gt; 运算符重载范围&lt;/h3&gt;
 &lt;p&gt;下表描述了 C# 中运算符重载的能力：&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
