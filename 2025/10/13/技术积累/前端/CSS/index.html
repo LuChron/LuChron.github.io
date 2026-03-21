@@ -1,0 +1,825 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"><meta name="renderer" content="webkit"><link rel="icon" type="image/ico" sizes="32x32" href="/assets/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="alternate" href="/rss.xml" title="絶対忘れ てやらないよ" type="application/rss+xml"><link rel="alternate" href="/atom.xml" title="絶対忘れ てやらないよ" type="application/atom+xml"><link rel="alternate" type="application/json" title="絶対忘れ てやらないよ" href="http://localhost:4000/feed.json"><link rel="preconnect" href="https://s4.zstatic.net"><link rel="preconnect" href="https://at.alicdn.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CFredericka%20the%20Great:400,400italic,700,700italic%7CNoto%20Serif%20JP:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CInconsolata:400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext" media="none" onload="this.media='all'"><link rel="modulepreload" href="/js/siteInit.js"><link rel="modulepreload" href="/js/nyx-player-V2MWNUB3.js"><link rel="modulepreload" href="/js/copy-tex-BSIFCPVN.js"><link rel="modulepreload" href="/js/post-BFPLUYWY.js"><link rel="modulepreload" href="/js/chunk-5YCYNXSP.js"><link rel="modulepreload" href="/js/index.esm-VAXQ4E3Y.js"><link rel="modulepreload" href="/js/chunk-HJSTZ4VX.js"><link rel="modulepreload" href="/js/chunk-RWXZJNSV.js"><link rel="stylesheet" href="/css/siteInit.css" media="none" onload="this.media='all'"><link rel="preload" href="//assets/01.jpg" as="image" fetchpriority="high"><meta name="keywords" content="编程语言,前端"><meta name="description" content="CSS基础"><link rel="canonical" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/CSS/"><link rel="stylesheet" href="/css/post.css?v=0.5.4"><link rel="stylesheet" href="/css/mermaid.css?v=0.5.4"><!-- 临时处理--><link rel="stylesheet" media="none" onload="this.media='all'" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css"><title>CSS</title><meta name="generator" content="Hexo 7.3.0"></head><body itemscope="" itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="pagefind_mount"></div><div id="container"><header id="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">CSS</h1><div class="meta"><span class="item" title="创建时间：2025-10-13 14:30:00"><span class="icon"><i class="ic i-calendar"></i></span><span class="text">发表于</span><time itemprop="dateCreated datePublished" datetime="2025-10-13T14:30:00+08:00">2025-10-13</time></span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i></span><span class="text">本文字数</span><span>16k</span><span class="text">字</span></span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i></span><span class="text">阅读时长</span><span>15 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span><span class="line"></span><span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">Luchron's Blog</a></li></ul><ul class="right" id="rightNav"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div class="pjax" id="imgs"><img src="/assets/01.avif" loading="eager" decoding="async" fetchpriority="high" alt="絶対忘れ てやらないよ"></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><main><div class="inner"><div class="pjax" id="main"><div class="article wrap"><div class="breadcrumb" itemlistelement="" itemscope="" itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i><span><a href="/">首页</a></span><i class="ic i-angle-right"></i><span class="current" itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" itemprop="item" rel="index" title="分类于技术积累"><span itemprop="name">技术积累<meta itemprop="position" content="0"></span></a></span></div><article class="post block" itemscope="itemscope" itemtype="http://schema.org/Article" data-pagefind-body="data-pagefind-body" lang="zh-CN"><link itemprop="mainEntityOfPage" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/CSS/"><span hidden="hidden" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="image" content="/assets/avatar.jpg"><meta itemprop="name" content="Luchron"><meta itemprop="description" content="狗窝, 未下眉头，又上心头"></span><span hidden="hidden" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="絶対忘れ てやらないよ"></span><div class="body md" itemprop="articleBody"><h2 id="什么是css"><a class="anchor" href="#什么是css">#</a> 什么是CSS</h2>
+<p>使用 CSS，您可以精确控制 HTML 元素在浏览器中的外观，以您喜欢的任何设计和布局向用户展示您的文档。</p>
+<blockquote>
+<p>美化html</p>
+</blockquote>
+<ul>
+<li>文档通常是指使用标记语言结构化的文本文件，最常见的是 HTML（这些被称为 HTML 文档）。</li>
+<li>向用户展示文档意味着将其转换为受众可用的形式。</li>
+</ul>
+<p>CSS用来提升视觉效果。其中包括：</p>
+<ul>
+<li>文本样式，例如，更改标题和链接的颜色和大小。</li>
+<li>创建布局，例如，将单列文本转换为多列布局。</li>
+<li>特效，例如动画。</li>
+</ul>
+<h3 id="css语法基础"><a class="anchor" href="#css语法基础">#</a> CSS语法基础</h3>
+<p>CSS 是一种基于规则的语言——可以通过指定应用于网页上特定元素或元素组的样式组来定义规则。</p>
+<p>例如，可以决定将页面上的主要标题样式设置为大的红色文本：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> red</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 2.5</span><span style="color:#AB5959;--shiki-dark:#CB7676">em</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>在这个例子中，我们正在样式化一级标题。花括号包含属性和值</p>
+<p>CSS有很多这样的规则，我们需要一个接一个编写</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> red</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 2.5</span><span style="color:#AB5959;--shiki-dark:#CB7676">em</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> aqua</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  padding</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 5</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  background</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> midnightblue</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="css是如何应用到html上的"><a class="anchor" href="#css是如何应用到html上的">#</a> CSS是如何应用到HTML上的</h3>
+<p>浏览器首先接收包含网页内容的 HTML 文档，并将其转换为 <strong>DOM</strong> 树。</p>
+<p>然后将CSS规则应用于DOM树，生成渲染树，该渲染树被绘制到浏览器窗口中。</p>
+<p>例如：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-html"><span class="line"><span style="color:#999999;--shiki-dark:#666666">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">CSS is great</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">You can style text.</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">And create layouts and special effects.</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span></code></pre>
+<p>然后使用CSS进行渲染</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> red</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 2.5</span><span style="color:#AB5959;--shiki-dark:#CB7676">em</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> aqua</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  padding</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 5</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  background</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> midnightblue</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>期中<code>h1</code>模块将所有一级标题进行渲染，<code>p</code>模块将所有正文部分进行渲染。</p>
+<h2 id="开始css"><a class="anchor" href="#开始css">#</a> 开始CSS</h2>
+<p>我们最想做的就是让 HTML 文档能够遵守我们给它的 CSS 规则。其实有三种方式可以实现，而目前我们更倾向于利用最普遍且有用的方式——在文档的开头链接 CSS。</p>
+<p>我们需要在与HTML相同的文件目录下创建<code>.css</code>文件</p>
+<p>为了把他们链接起来，我们可以在<code>head</code>模块中添加以下代码。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-html"><span class="line"><span style="color:#999999;--shiki-dark:#666666">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">link</span><span style="color:#B07D48;--shiki-dark:#BD976A"> rel</span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">stylesheet</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B07D48;--shiki-dark:#BD976A"> href</span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">styles.css</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666"> /&gt;</span></span></code></pre>
+<p>在<code>link</code>语句块里面，我们用属性 <code>rel</code>，让浏览器知道有 CSS 文档存在（所以需要遵守 CSS 样式的规定），并利用属性 <code>href</code> 指定，寻找 CSS 文件的位置。</p>
+<h3 id="格式化html元素"><a class="anchor" href="#格式化html元素">#</a> 格式化HTML元素</h3>
+<p>我们可以用这个来设置颜色</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> green</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>同时也可以一次设置多个模块</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> green</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="改变元素的默认行为"><a class="anchor" href="#改变元素的默认行为">#</a> 改变元素的默认行为</h3>
+<p>如果你看一个元素不顺眼，比如无序列表的那个点，我们大可以把他删掉</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  list-style-type</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> none</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="使用类名"><a class="anchor" href="#使用类名">#</a> 使用类名</h3>
+<p>如果我们像渲染某类特殊元素，我们可以个他家一个<code>class</code>属性</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-html"><span class="line"><span style="color:#999999;--shiki-dark:#666666">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">ul</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">  &lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">项目一</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">  &lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#B07D48;--shiki-dark:#BD976A"> class</span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">special</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">项目二</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">  &lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">项目 </span><span style="color:#999999;--shiki-dark:#666666">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">em</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">三</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">em</span><span style="color:#999999;--shiki-dark:#666666">&gt;&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">ul</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span></code></pre>
+<p>这样我们就可以用<code>.special</code>来选择特定的模块</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">special</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> orange</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-weight</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> bold</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>有的时候，HTML元素会和选择器类名一起出现</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">special</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> orange</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-weight</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> bold</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>这个意思是说，“选中每个 <code>special</code> 类的 <code>li</code> 元素”。如果还有别的，再填上去就是了</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">special</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">span</span><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">special</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> orange</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-weight</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> bold</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="根据元素在文档中的位置确定样式"><a class="anchor" href="#根据元素在文档中的位置确定样式">#</a> 根据元素在文档中的位置确定样式</h3>
+<p>比如我们现在有两个<code>&lt;em&gt;</code>元素，一个在段落中，一个在列表中，我们班像选择列表中的，加一个空格就可以了</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#1E754F;--shiki-dark:#4D9375"> em</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> rebeccapurple</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>还有一种选择器：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#AB5959;--shiki-dark:#CB7676"> +</span><span style="color:#1E754F;--shiki-dark:#4D9375"> p</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 200</span><span style="color:#AB5959;--shiki-dark:#CB7676">%</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p><code>h1 + p</code>：这个选择器表示选择紧跟在 <code>&lt;h1&gt;</code> 元素后的第一个 <code>&lt;p&gt;</code> 元素（即相邻兄弟元素）。</p>
+<blockquote>
+<p>只有当 <code>&lt;p&gt;</code> 是紧跟在 <code>&lt;h1&gt;</code> 元素之后时，才会被选中并应用样式。如果 <code>&lt;p&gt;</code> 元素在其他元素之后，或者中间有其他元素，则不会被选中。</p>
+</blockquote>
+<h3 id="根据状态确定样式"><a class="anchor" href="#根据状态确定样式">#</a> 根据状态确定样式</h3>
+<p>举个例子就是我们的链接标签。根据是否是未访问的、访问过的、被鼠标悬停的、被键盘定位的，亦或是正在被点击当中的状态，这个标签有着不同的状态。</p>
+<p>比如，以下代码实现：没有被访问的链接颜色变为粉色、访问过的链接变为绿色。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B07D48;--shiki-dark:#BD976A">link</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> pink</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B07D48;--shiki-dark:#BD976A">visited</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> green</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>我们还可以改变链接被鼠标悬停的时候的样式，例如移除下划线，下面的代码就实现了这个功能。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B07D48;--shiki-dark:#BD976A">hover</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  text-decoration</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> none</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>这样就可以让超链接更加鲜明了</p>
+<h3 id="同时使用多种"><a class="anchor" href="#同时使用多种">#</a> 同时使用多种</h3>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">body</span><span style="color:#1E754F;--shiki-dark:#4D9375"> h1</span><span style="color:#AB5959;--shiki-dark:#CB7676"> +</span><span style="color:#1E754F;--shiki-dark:#4D9375"> p</span><span style="color:#999999;--shiki-dark:#666666"> .</span><span style="color:#B07D48;--shiki-dark:#BD976A">special</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> yellow</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  background-color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> black</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  padding</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 5</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>这就是，跟在一级标题后面的正文，然后带有<code>class</code>属性的，进行选择。</p>
+<h2 id="css选择器"><a class="anchor" href="#css选择器">#</a> CSS选择器</h2>
+<h3 id="选择器列表"><a class="anchor" href="#选择器列表">#</a> 选择器列表</h3>
+<p>我们可以把所有的同一个属性的合在一起</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#999999;--shiki-dark:#666666"> .</span><span style="color:#B07D48;--shiki-dark:#BD976A">special</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> blue</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>或者另起一行</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">special</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> blue</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p><strong>但是注意</strong>，组合起来的如果一个无效的话，另外一个也会无效的</p>
+<h3 id="选择器种类"><a class="anchor" href="#选择器种类">#</a> 选择器种类</h3>
+<h4 id="1-类型选择器-type-selector"><a class="anchor" href="#1-类型选择器-type-selector">#</a> 1. <strong>类型选择器 (Type Selector)</strong></h4>
+<p>类型选择器选择所有特定类型的 HTML 元素。例如，<code>h1</code> 选择器会选择页面中的所有 <code>&lt;h1&gt;</code> 元素。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> blue</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<ul>
+<li><strong>作用</strong>：将所有 <code>&lt;h1&gt;</code> 元素的文本颜色设置为蓝色。</li>
+</ul>
+<h4 id="2-类选择器-class-selector"><a class="anchor" href="#2-类选择器-class-selector">#</a> 2. <strong>类选择器 (Class Selector)</strong></h4>
+<p>类选择器用于选择具有特定 <code>class</code> 属性的元素。类选择器以点号（<code>.</code>）开头。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">box</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  background-color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> yellow</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<ul>
+<li><strong>作用</strong>：将所有 class 为 <code>box</code> 的元素背景色设置为黄色。类选择器可以应用到多个元素上。</li>
+</ul>
+<h4 id="3-id-选择器-id-selector"><a class="anchor" href="#3-id-选择器-id-selector">#</a> 3. <strong>ID 选择器 (ID Selector)</strong></h4>
+<p>ID 选择器用于选择具有特定 <code>id</code> 属性的元素。ID 选择器以井号（<code>#</code>）开头。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#999999;--shiki-dark:#666666">#</span><span style="color:#B07D48;--shiki-dark:#BD976A">unique</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 20</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<ul>
+<li><strong>作用</strong>：将 <code>id</code> 为 <code>unique</code> 的元素的字体大小设置为 20px。ID 选择器应该在页面中唯一，确保每个 ID 只用于一个元素。</li>
+</ul>
+<h4 id="4-标签属性选择器-attribute-selector"><a class="anchor" href="#4-标签属性选择器-attribute-selector">#</a> 4. <strong>标签属性选择器 (Attribute Selector)</strong></h4>
+<p>标签属性选择器根据元素的属性值来选择元素。它有多种形式，以下是常见的几种：</p>
+<ul>
+<li>
+<p><strong>选择具有特定属性的元素</strong>：<br>
+例如，<code>a[title]</code> 选择所有具有 <code>title</code> 属性的 <code>&lt;a&gt;</code> 元素。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#2993a3;--shiki-dark:#5eaab5">[</span><span style="color:#B07D48;--shiki-dark:#BD976A">title</span><span style="color:#2993a3;--shiki-dark:#5eaab5">]</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> red</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<ul>
+<li><strong>作用</strong>：将所有具有 <code>title</code> 属性的 <code>&lt;a&gt;</code> 元素的文字颜色设置为红色。</li>
+</ul>
+</li>
+<li>
+<p><strong>选择具有特定属性值的元素</strong>：<br>
+例如，<code>a[href="https://example.com"]</code> 选择所有 <code>href</code> 属性值为 <code>https://example.com</code> 的 <code>&lt;a&gt;</code> 元素。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#2993a3;--shiki-dark:#5eaab5">[</span><span style="color:#B07D48;--shiki-dark:#BD976A">href</span><span style="color:#AB5959;--shiki-dark:#CB7676">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">https://example.com</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#2993a3;--shiki-dark:#5eaab5">]</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-weight</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> bold</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<ul>
+<li><strong>作用</strong>：将所有 <code>href</code> 属性值为 <code>https://example.com</code> 的链接文本加粗。</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-伪类与伪元素-pseudo-classes-and-pseudo-elements"><a class="anchor" href="#5-伪类与伪元素-pseudo-classes-and-pseudo-elements">#</a> 5. <strong>伪类与伪元素 (Pseudo-classes and Pseudo-elements)</strong></h4>
+<p>伪类和伪元素选择器是对元素状态或某部分的特殊选择。</p>
+<ul>
+<li>
+<p><strong>伪类</strong>：用来选择处于某种状态的元素，例如 <code>:hover</code> 伪类会在鼠标悬停到元素上时触发。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B07D48;--shiki-dark:#BD976A">hover</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> green</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<ul>
+<li><strong>作用</strong>：当鼠标悬停在 <code>&lt;a&gt;</code> 元素上时，文本颜色变为绿色。</li>
+</ul>
+</li>
+<li>
+<p><strong>伪元素</strong>：用来选择元素的某部分，而不仅仅是整个元素。例如，<code>::first-line</code> 伪元素选择一个段落的第一行文本。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666">::</span><span style="color:#B07D48;--shiki-dark:#BD976A">first-line</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-weight</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> bold</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<ul>
+<li><strong>作用</strong>：将 <code>&lt;p&gt;</code> 元素的第一行文本加粗。</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-组合选择器-combinator-selectors"><a class="anchor" href="#6-组合选择器-combinator-selectors">#</a> 6. <strong>组合选择器 (Combinator Selectors)</strong></h4>
+<p>组合选择器通过运算符将多个选择器结合起来，进行更复杂的选择。</p>
+<ul>
+<li>
+<p><strong>子选择器（&gt;）</strong>：选择指定元素的直接子元素。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">article</span><span style="color:#AB5959;--shiki-dark:#CB7676"> </span><span style="color:#AB5959;--shiki-dark:#CB7676">&gt;</span><span style="color:#1E754F;--shiki-dark:#4D9375"> p</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  margin-top</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 20</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<ul>
+<li><strong>作用</strong>：将所有直接位于 <code>&lt;article&gt;</code> 元素下的 <code>&lt;p&gt;</code> 元素的上边距设置为 20px。注意，这里只选择 <code>&lt;article&gt;</code> 的直接子元素，而不是所有嵌套的 <code>&lt;p&gt;</code> 元素。</li>
+</ul>
+</li>
+</ul>
+<h2 id="属性选择器"><a class="anchor" href="#属性选择器">#</a> 属性选择器</h2>
+<h3 id="presence-and-value-selectors"><a class="anchor" href="#presence-and-value-selectors">#</a> Presence and value selectors</h3>
+<h4 id="1-attr-选择器"><a class="anchor" href="#1-attr-选择器">#</a> 1. <strong><code>[attr]</code> 选择器</strong></h4>
+<p>这个选择器会选择所有具有某个属性的元素，而不管该属性的值是什么。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#2993a3;--shiki-dark:#5eaab5">[</span><span style="color:#B07D48;--shiki-dark:#BD976A">title</span><span style="color:#2993a3;--shiki-dark:#5eaab5">]</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> red</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p><strong>作用</strong>：选择所有具有 <code>title</code> 属性的 <code>&lt;a&gt;</code> 元素，并将它们的文字颜色设置为红色。这里不关心 <code>title</code> 属性的值，只关心是否存在这个属性。</p>
+<h4 id="2-attrvalue-选择器"><a class="anchor" href="#2-attrvalue-选择器">#</a> 2. <strong><code>[attr=value]</code> 选择器</strong></h4>
+<p>这个选择器选择那些具有指定属性并且该属性的值正好为某个特定值的元素。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#2993a3;--shiki-dark:#5eaab5">[</span><span style="color:#B07D48;--shiki-dark:#BD976A">href</span><span style="color:#AB5959;--shiki-dark:#CB7676">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">https://example.com</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#2993a3;--shiki-dark:#5eaab5">]</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> blue</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p><strong>作用</strong>：选择所有 <code>href</code> 属性值为 <code>https://example.com</code> 的 <code>&lt;a&gt;</code> 元素，并将它们的文字颜色设置为蓝色。</p>
+<h4 id="3-attr~value-选择器"><a class="anchor" href="#3-attr~value-选择器">#</a> 3. <strong><code>[attr~=value]</code> 选择器</strong></h4>
+<p>这个选择器用来选择属性值中包含某个特定的<strong>单一词汇</strong>（使用空格分隔）的元素。也就是说，它会匹配属性值中包含某个特定单词的元素，即使这个单词是属性值中的一部分。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#2993a3;--shiki-dark:#5eaab5">[</span><span style="color:#B07D48;--shiki-dark:#BD976A">class</span><span style="color:#AB5959;--shiki-dark:#CB7676">~=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">special</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#2993a3;--shiki-dark:#5eaab5">]</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-weight</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> bold</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p><strong>作用</strong>：选择所有 <code>class</code> 属性值中包含单词 <code>special</code> 的 <code>&lt;p&gt;</code> 元素。如果某个元素的 <code>class</code> 属性是 <code>"special"</code>, <code>"my special class"</code>, <code>"another special item"</code> 等，都会被选中。</p>
+<ul>
+<li>
+<p>例如，以下的元素都会被选中：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> class="special"</span><span style="color:#AB5959;--shiki-dark:#CB7676">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">内容1</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">&lt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">/</span><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#AB5959;--shiki-dark:#CB7676">&gt;</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> class="my special class"</span><span style="color:#AB5959;--shiki-dark:#CB7676">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">内容2</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">&lt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">/</span><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#AB5959;--shiki-dark:#CB7676">&gt;</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> class="another special item"</span><span style="color:#AB5959;--shiki-dark:#CB7676">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">内容3</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">&lt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">/</span><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#AB5959;--shiki-dark:#CB7676">&gt;</span></span></code></pre>
+</li>
+<li>
+<p>但如果 <code>class</code> 值为 <code>“a special”</code> 或 <code>“nonspecial”</code>，则不会匹配。</p>
+</li>
+</ul>
+<h4 id="4-attrvalue-选择器"><a class="anchor" href="#4-attrvalue-选择器">#</a> 4. <strong><code>[attr|=value]</code> 选择器</strong></h4>
+<p>这个选择器选择那些属性值**以特定值开始，并且后面紧跟着一个<mark>连字符</mark>**的元素。这个选择器通常用于语言属性（如 <code>lang</code>）的匹配。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">div</span><span style="color:#2993a3;--shiki-dark:#5eaab5">[</span><span style="color:#B07D48;--shiki-dark:#BD976A">lang</span><span style="color:#AB5959;--shiki-dark:#CB7676">|=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">zh</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#2993a3;--shiki-dark:#5eaab5">]</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  background-color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> yellow</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p><strong>作用</strong>：选择所有 <code>lang</code> 属性值以 <code>zh</code> 开头的 <code>&lt;div&gt;</code> 元素，并将它们的背景色设置为黄色。例如：</p>
+<ul>
+<li><code>lang="zh"</code>（精确匹配）会被选中。</li>
+<li><code>lang="zh-cn"</code>（值以 <code>zh</code> 开头）也会被选中。</li>
+<li><code>lang="zh-tw"</code>（值以 <code>zh</code> 开头）也会被选中。</li>
+<li>但 <code>lang="en"</code> 或 <code>lang="zhh"</code> 不会被选中。</li>
+</ul>
+<h3 id="字符串选择匹配器"><a class="anchor" href="#字符串选择匹配器">#</a> 字符串选择匹配器</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选择器</th>
+<th style="text-align:left">示例</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>[attr^=value]</code></td>
+<td style="text-align:left"><code>li[class^="box-"]</code></td>
+<td style="text-align:left">匹配带有一个名为<em>attr</em>的属性的元素，其值开头为<em>value</em>子字符串。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>[attr$=value]</code></td>
+<td style="text-align:left"><code>li[class$="-box"]</code></td>
+<td style="text-align:left">匹配带有一个名为<em>attr</em>的属性的元素，其值结尾为<em>value</em>子字符串</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>[attr*=value]</code></td>
+<td style="text-align:left"><code>li[class*="box"]</code></td>
+<td style="text-align:left">匹配带有一个名为<em>attr</em>的属性的元素，其值的字符串中的任何地方，至少出现了一次<em>value</em>子字符串。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="大小写敏感"><a class="anchor" href="#大小写敏感">#</a> 大小写敏感</h3>
+<p>正常的CSS和HTML是大小写敏感的，但是我们可以让它不敏感：在中括号结束前加一个<code>]</code></p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#2993a3;--shiki-dark:#5eaab5">[</span><span style="color:#B07D48;--shiki-dark:#BD976A">classs</span><span style="color:#AB5959;--shiki-dark:#CB7676">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">a</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#AB5959;--shiki-dark:#CB7676"> i</span><span style="color:#2993a3;--shiki-dark:#5eaab5">]</span></span></code></pre>
+<p>这样就也可以匹配<code>A</code></p>
+<h2 id="伪类和伪元素"><a class="anchor" href="#伪类和伪元素">#</a> 伪类和伪元素</h2>
+<blockquote>
+<p>伪类是选择器的一种，它用于选择处于特定状态的元素，比如当它们是这一类型的第一个元素时，或者是当鼠标指针悬浮在元素上面的时候。它们表现得会像是你向你的文档的某个部分应用了一个类一样，帮你在你的标记文本中减少多余的类，让你的代码更灵活、更易于维护。</p>
+</blockquote>
+<blockquote>
+<p>伪类就是开头为冒号的关键字。例如，<code>:hover</code> 就是一个伪类。</p>
+</blockquote>
+<h3 id="简单的伪类"><a class="anchor" href="#简单的伪类">#</a> 简单的伪类</h3>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">article</span><span style="color:#1E754F;--shiki-dark:#4D9375"> p</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B07D48;--shiki-dark:#BD976A">first-child</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 120</span><span style="color:#AB5959;--shiki-dark:#CB7676">%</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-weight</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> bold</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>这样我们就选择了article中的第一段。这个还可以用在无序列表中等</p>
+<p>此外还有<code>last-child</code>，就是最后一个</p>
+<h3 id="用户行为类伪类"><a class="anchor" href="#用户行为类伪类">#</a> 用户行为类伪类</h3>
+<blockquote>
+<p>动态伪类</p>
+</blockquote>
+<ul>
+<li><code>:hover</code>——上面提到过，只会在用户将指针挪到元素上的时候才会激活，一般就是链接元素。</li>
+<li><code>:focus</code>——只会在用户使用键盘控制，选定元素的时候激活。</li>
+</ul>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B07D48;--shiki-dark:#BD976A">link</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">                         //原来的</span></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B07D48;--shiki-dark:#BD976A">visited</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">                     //访问过的</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> rebeccapurple</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-weight</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> bold</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">              </span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B07D48;--shiki-dark:#BD976A">hover</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">                       //鼠标悬浮</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> hotpink</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="伪元素"><a class="anchor" href="#伪元素">#</a> 伪元素</h3>
+<p>伪元素开头为双冒号 <code>::</code>。比如，<code>::before</code> 就是一个伪元素的示例。</p>
+<blockquote>
+<p><code>::first-line</code>伪元素选择器会值得信赖地做到这件事——即使单词/字符的数目改变，它也只会选中第一行。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">article</span><span style="color:#1E754F;--shiki-dark:#4D9375"> p</span><span style="color:#999999;--shiki-dark:#666666">::</span><span style="color:#B07D48;--shiki-dark:#BD976A">first-line</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965"> font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 120</span><span style="color:#AB5959;--shiki-dark:#CB7676">%</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965"> font-weight</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> bold</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>这个会把所有article中段落的第一行执行操作</p>
+</blockquote>
+<h3 id="伪类和伪元素结合"><a class="anchor" href="#伪类和伪元素结合">#</a> 伪类和伪元素结合</h3>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">article</span><span style="color:#1E754F;--shiki-dark:#4D9375"> p</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B07D48;--shiki-dark:#BD976A">first-child</span><span style="color:#999999;--shiki-dark:#666666">::</span><span style="color:#B07D48;--shiki-dark:#BD976A">first-line</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 120</span><span style="color:#AB5959;--shiki-dark:#CB7676">%</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-weight</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> bold</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="生成带有before-和after-的内容"><a class="anchor" href="#生成带有before-和after-的内容">#</a> 生成带有::before 和::after 的内容</h3>
+<p>有一组特别的伪元素，可以使用 CSS 将内容插入到你的文档中。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-html"><span class="line"><span style="color:#999999;--shiki-dark:#666666">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#B07D48;--shiki-dark:#BD976A"> class</span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">box</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">我的 HTML 页面的盒子中的内容。</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span></code></pre>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">box</span><span style="color:#999999;--shiki-dark:#666666">::</span><span style="color:#B07D48;--shiki-dark:#BD976A">before</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  content</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">这应该显示在其他内容之前。</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>这样就插入到html的内容之前了</p>
+<p>但是我们不推荐这么插入文本，因为浏览器不同，可能这些内容是不可见的，所以我们可以加入一些图标什么的</p>
+<h2 id="关系选择器"><a class="anchor" href="#关系选择器">#</a> 关系选择器</h2>
+<h3 id="后代选择器"><a class="anchor" href="#后代选择器">#</a> 后代选择器</h3>
+<p><strong>后代选择器</strong> 是用来选择某个元素的所有后代元素的 CSS 选择器。它使用一个 <strong>空格</strong> 来分隔选择器（比如 <code>body article p</code>）。这种选择器的意思是：选择一个元素，该元素是另一个元素的后代，后代元素的<mark>层级可以是多层的</mark>（即祖先、父元素、子元素等）。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>父元素 后代元素</span></span></code></pre>
+<ul>
+<li><strong>父元素</strong> 是你选择的一个父级元素，后代元素是位于这个父元素内的任何子元素（包括子孙元素，不限层级）。</li>
+<li>使用一个空格 (<code>" "</code>) 作为分隔符来组合选择器。</li>
+</ul>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-html"><span class="line"><span style="color:#999999;--shiki-dark:#666666">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">div</span><span style="color:#B07D48;--shiki-dark:#BD976A"> class</span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">box</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">  &lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">Text in .box</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">div</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">Text not in .box</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span></code></pre>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">box</span><span style="color:#1E754F;--shiki-dark:#4D9375"> p</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> red</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h6 id="解释"><a class="anchor" href="#解释">#</a> 解释：</h6>
+<ul>
+<li><code>.box p</code> 是一个后代选择器。它选择的是所有在 <strong><code>.box</code></strong> 类元素内的 <code>&lt;p&gt;</code> 元素。</li>
+<li><strong><code>.box p</code></strong> 的意思是：选择所有在 <code>.box</code> 元素内部的 <code>&lt;p&gt;</code> 标签，且层级不限，只要 <code>&lt;p&gt;</code> 标签是 <code>.box</code> 元素的<strong>后代</strong>（无论是直接子元素，还是孙子、曾孙子元素等）。</li>
+</ul>
+<h3 id="子代选择器"><a class="anchor" href="#子代选择器">#</a> 子代选择器</h3>
+<p><strong>子代选择器</strong>（Child Selector）是 CSS 中用于选择某个元素的<strong>直接子元素</strong>的选择器。与<strong>后代选择器</strong>不同，子代选择器只会匹配那些直接嵌套在父元素内部的子元素，不包括孙子元素、曾孙元素等。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">ul</span><span style="color:#AB5959;--shiki-dark:#CB7676"> </span><span style="color:#AB5959;--shiki-dark:#CB7676">&gt;</span><span style="color:#1E754F;--shiki-dark:#4D9375"> li</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  border-top</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 5</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#A65E2B;--shiki-dark:#C99076"> solid</span><span style="color:#A65E2B;--shiki-dark:#C99076"> red</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="邻接兄弟"><a class="anchor" href="#邻接兄弟">#</a> 邻接兄弟</h3>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#AB5959;--shiki-dark:#CB7676"> +</span><span style="color:#1E754F;--shiki-dark:#4D9375"> p</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-weight</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> bold</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  background-color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#999999;--shiki-dark:#666666"> #</span><span style="color:#A65E2B;--shiki-dark:#C99076">333</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#999999;--shiki-dark:#666666"> #</span><span style="color:#A65E2B;--shiki-dark:#C99076">fff</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  padding</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 0.5</span><span style="color:#AB5959;--shiki-dark:#CB7676">em</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>选择紧跟着一级标题的段落。前文已有，这里不再赘述</p>
+<h3 id="通用兄弟"><a class="anchor" href="#通用兄弟">#</a> 通用兄弟</h3>
+<p>如果你想选中一个元素的兄弟元素，即使它们不直接相邻，你还是可以使用通用兄弟关系选择器（<code>~</code>）。要选中所有的<code>&lt;p&gt;</code>元素后<em>任何地方</em>的<code>&lt;img&gt;</code>元素，我们会这样做：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#AB5959;--shiki-dark:#CB7676"> ~</span><span style="color:#1E754F;--shiki-dark:#4D9375"> img</span></span></code></pre>
+<h2 id="盒模型"><a class="anchor" href="#盒模型">#</a> 盒模型</h2>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20250505212801884.avif" alt="image-20250505212801884"></p>
+<ul>
+<li><strong>Margin(外边距)</strong> - 清除边框外的区域，外边距是透明的。</li>
+<li><strong>Border(边框)</strong> - 围绕在内边距和内容外的边框。</li>
+<li><strong>Padding(内边距)</strong> - 清除内容周围的区域，内边距是透明的。</li>
+<li><strong>Content(内容)</strong> - 盒子的内容，显示文本和图像。</li>
+</ul>
+<h3 id="css标注盒模型"><a class="anchor" href="#css标注盒模型">#</a> CSS标注盒模型</h3>
+<p>假设一个盒子的CSS如下：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">box</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  width</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 350</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  height</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 150</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">          //这个是</span><span style="color:#998418;--shiki-dark:#B8A965">content</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">的长和宽</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  margin</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 10</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  padding</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 25</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  border</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 5</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#A65E2B;--shiki-dark:#C99076"> solid</span><span style="color:#A65E2B;--shiki-dark:#C99076"> black</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="替代盒模型"><a class="anchor" href="#替代盒模型">#</a> 替代盒模型</h3>
+<p>在标准盒模型中，<code>width</code> 和 <code>height</code> 仅控制<strong>内容区域</strong>的大小。**内边距（padding）<strong>和</strong>边框（border）**会在总尺寸计算时额外加上，从而使元素的总尺寸大于你设置的 <code>width</code> 和 <code>height</code>。</p>
+<p>在替代盒模型中，<code>width</code> 和 <code>height</code> 是元素的<strong>总宽度</strong>和<strong>总高度</strong>，包括内容区域、内边距和边框的尺寸。因此，设置 <code>width</code> 和 <code>height</code> 时，内边距和边框的大小会自动包含在内，而不会被加到总尺寸中。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">box</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  width</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 350</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  inline-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 350</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  height</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 150</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  block-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 150</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  margin</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 10</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  padding</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 25</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  border</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 5</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#A65E2B;--shiki-dark:#C99076"> solid</span><span style="color:#A65E2B;--shiki-dark:#C99076"> black</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="外边距"><a class="anchor" href="#外边距">#</a> 外边距</h3>
+<p>外边距是盒子周围一圈看不到的空间。它会把其他元素退推离盒子。外边距属性值可以为正也可以为负。在盒子一侧设置负值会导致盒子和页面上的其他内容重叠。无论使用标准模型还是替代模型，外边距总是在计算可见部分后额外添加。</p>
+<p>我们可以使用 <code>margin</code>属性一次性控制一个元素的所有外边距，或者每边单独使用等价的普通属性控制：</p>
+<ul>
+<li><code>margin-top</code></li>
+<li><code>margin-right</code></li>
+<li><code>margin-bottom</code></li>
+<li><code>margin-left</code></li>
+</ul>
+<p>类似的，内边距也有这些属性的。</p>
+<h3 id="边框"><a class="anchor" href="#边框">#</a> 边框</h3>
+<p>相比之下，边框的属性更多一些</p>
+<p>欲分别设置每边的属性，可以使用：</p>
+<ul>
+<li><code>border-top</code></li>
+<li><code>border-right</code></li>
+<li><code>border-bottom</code></li>
+<li><code>border-left</code></li>
+</ul>
+<p>欲设置所有边的宽度、样式或颜色，可以使用：</p>
+<ul>
+<li><code>border-width</code></li>
+<li><code>border-style</code></li>
+<li><code>border-color</code></li>
+</ul>
+<p>欲设置单条边的宽度、样式或颜色，可以使用最细粒度的普通属性之一：</p>
+<ul>
+<li><code>border-top-width</code></li>
+</ul>
+<h3 id="行内盒模型"><a class="anchor" href="#行内盒模型">#</a> 行内盒模型</h3>
+<ul>
+<li>行内盒模型用于**行内元素（如 <code>&lt;span&gt;</code>、<code>&lt;a&gt;</code>）**的布局。</li>
+<li>与块级盒模型不同，<strong>行内盒不会打断一行</strong>，多个行内盒会在同一行排列，直到排不下才换行。</li>
+</ul>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">span</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  margin</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 20</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  padding</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 20</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  width</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 80</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  height</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 50</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  background-color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> lightblue</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  border</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 2</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#A65E2B;--shiki-dark:#C99076"> solid</span><span style="color:#A65E2B;--shiki-dark:#C99076"> blue</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  display</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> inline-block</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h2 id="层叠-优先级与继承"><a class="anchor" href="#层叠-优先级与继承">#</a> 层叠、优先级与继承</h2>
+<h3 id="层叠"><a class="anchor" href="#层叠">#</a> 层叠</h3>
+<p>样式表<strong>层叠</strong>——简单的说，就是 CSS 规则的顺序很重要；当应用两条同级别的规则到一个元素的时候，写在后面的就是实际使用的规则。</p>
+<p>下面的示例中，我们有两个关于 <code>&lt;h1&gt;</code> 的规则。<code>&lt;h1&gt;</code> 最后显示蓝色——这两个规则来自同一个源，且具有相同的元素选择器，有相同的优先级，所以顺序在最后的生效。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#AB5959;--shiki-dark:#CB7676">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">这是我的标题。</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">&lt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">/</span><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#AB5959;--shiki-dark:#CB7676">&gt;</span></span></code></pre>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> red</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> blue</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="优先级"><a class="anchor" href="#优先级">#</a> 优先级</h3>
+<ul>
+<li>一个元素选择器不是很具体，则会选择页面上该类型的所有元素，所以它的优先级就会低一些。</li>
+<li>一个类选择器稍微具体点，则会选择该页面中有特定 <code>class</code> 属性值的元素，所以它的优先级就要高一点。</li>
+</ul>
+<p>下面我们再来介绍两个适用于 <code>&lt;h1&gt;</code> 的规则。下面的 <code>&lt;h1&gt;</code> 最后会显示红色——类选择器 <code>main-heading</code> 有更高的优先级，因此就会被应用——即使元素选择器顺序在它后面。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-html"><span class="line"><span style="color:#999999;--shiki-dark:#666666">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#B07D48;--shiki-dark:#BD976A"> class</span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">main-heading</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">这是我的标题。</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span></code></pre>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">main-heading</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> red</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> blue</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="继承"><a class="anchor" href="#继承">#</a> 继承</h3>
+<p>CSS 的继承是指：<strong>某些 CSS 属性会自动从父元素“传递”到子元素</strong>，子元素会默认使用父元素设置的这些属性值。</p>
+<p>就像现实中，孩子可能会“继承”父母的某些特征，网页中的元素也可以“继承”一些样式。</p>
+<p>主要是跟<strong>文字和排版相关</strong>的属性，比如：</p>
+<ul>
+<li><code>color</code>（文字颜色）</li>
+<li><code>font-size</code>（字体大小）</li>
+<li><code>font-family</code>（字体类型）</li>
+<li><code>line-height</code>（行高）</li>
+<li><code>letter-spacing</code>（字间距）</li>
+<li><code>text-align</code>（文字对齐方式）</li>
+<li><code>visibility</code>（可见性）</li>
+</ul>
+<p>大多数 <strong>布局和盒模型相关的属性不会继承</strong>，比如：</p>
+<ul>
+<li><code>margin</code> / <code>padding</code> / <code>border</code></li>
+<li><code>width</code> / <code>height</code></li>
+<li><code>background</code></li>
+<li><code>display</code></li>
+<li><code>position</code></li>
+<li><code>box-shadow</code></li>
+</ul>
+<p>这些不继承是为了避免子元素样式混乱。</p>
+<h3 id="控制继承"><a class="anchor" href="#控制继承">#</a> 控制继承</h3>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>inherit</code></td>
+<td>明确让当前元素<strong>继承</strong>父元素的属性值（即使该属性默认不继承也会继承）。</td>
+</tr>
+<tr>
+<td><code>initial</code></td>
+<td>重置为<strong>CSS规范中的默认初始值</strong>（不是浏览器样式，是标准定义的默认值）。</td>
+</tr>
+<tr>
+<td><code>revert</code></td>
+<td>还原为<strong>浏览器默认样式</strong>（也就是 user agent stylesheet 的值），而不是 CSS 规范里的“初始值”。常用于覆盖用户或作者样式。</td>
+</tr>
+<tr>
+<td><code>revert-layer</code></td>
+<td>恢复为在<strong>上一个样式层（layer）中定义的值</strong>，用于 cascade layers（需要 <code>@layer</code> 支持，较高级）。</td>
+</tr>
+<tr>
+<td><code>unset</code></td>
+<td>取决于属性是否继承：如果这个属性是可继承的，就相当于 <code>inherit</code>；如果不可继承，就相当于 <code>initial</code>。是一个通用“取消设定”的方式。</td>
+</tr>
+</tbody>
+</table>
+<p>例如：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-html"><span class="line"><span style="color:#999999;--shiki-dark:#666666">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">ul</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">  &lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">默认</span><span style="color:#999999;--shiki-dark:#666666">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#B07D48;--shiki-dark:#BD976A"> href</span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">#</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">链接</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">颜色</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">  &lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#B07D48;--shiki-dark:#BD976A"> class</span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">my-class-1</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">继承</span><span style="color:#999999;--shiki-dark:#666666">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#B07D48;--shiki-dark:#BD976A"> href</span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">#</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">链接</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">颜色</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">  &lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#B07D48;--shiki-dark:#BD976A"> class</span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">my-class-2</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">重置</span><span style="color:#999999;--shiki-dark:#666666">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#B07D48;--shiki-dark:#BD976A"> href</span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">#</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">链接</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">颜色</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">  &lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#B07D48;--shiki-dark:#BD976A"> class</span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">my-class-3</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">取消</span><span style="color:#999999;--shiki-dark:#666666">&lt;</span><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#B07D48;--shiki-dark:#BD976A"> href</span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">#</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">链接</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">a</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">颜色的设置</span><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">li</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">&lt;/</span><span style="color:#1E754F;--shiki-dark:#4D9375">ul</span><span style="color:#999999;--shiki-dark:#666666">&gt;</span></span></code></pre>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">body</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> green</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">my-class-1</span><span style="color:#1E754F;--shiki-dark:#4D9375"> a</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> inherit</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">my-class-2</span><span style="color:#1E754F;--shiki-dark:#4D9375"> a</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> initial</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">my-class-3</span><span style="color:#1E754F;--shiki-dark:#4D9375"> a</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> unset</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="重置所有属性值"><a class="anchor" href="#重置所有属性值">#</a> 重置所有属性值</h3>
+<p>CSS 的简写属性 <code>all</code> 可以用于同时将这些继承值中的一个应用于（几乎）所有属性。它的值可以是其中任意一个（<code>inherit</code>、<code>initial</code>、<code>unset</code> 或 <code>revert</code>）。这是一种撤销对样式所做更改的简便方法，以便回到之前已知的起点。</p>
+<p>就是把什么color什么的全部重置</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">blockquote</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  background-color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> orange</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  border</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 2</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#A65E2B;--shiki-dark:#C99076"> solid</span><span style="color:#A65E2B;--shiki-dark:#C99076"> blue</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">fix-this</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  all</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#A65E2B;--shiki-dark:#C99076"> unset</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h2 id="css值和单位"><a class="anchor" href="#css值和单位">#</a> CSS值和单位</h2>
+<h3 id="数值-长度和百分比"><a class="anchor" href="#数值-长度和百分比">#</a> 数值 长度和百分比</h3>
+<p>以下全部归类为数值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;integer&gt;</code></td>
+<td style="text-align:left"><code>&lt;integer&gt;</code> 是一个整数，比如 <code>1024</code> 或 <code>-55</code>。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;number&gt;</code></td>
+<td style="text-align:left"><code>&lt;number&gt;</code> 表示一个十进制数——它可能有小数部分，也可能没有。例如 <code>0.255</code>、<code>128</code> 或 <code>-1.2</code>。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;dimension&gt;</code></td>
+<td style="text-align:left"><code>&lt;dimension&gt;</code> 是一个 <code>&lt;number&gt;</code>。它有一个附加的单位，例如 <code>45deg</code>、<code>5s</code> 或 <code>10px</code>。<code>&lt;dimension&gt;</code> 是一个伞形类别，包括 <code>&lt;length&gt;</code>、<code>&lt;angle&gt;</code>、<code>&lt;time&gt;</code> 和 <code>&lt;resolution&gt;</code> 类型。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;percentage&gt;</code></td>
+<td style="text-align:left"><code>&lt;percentage&gt;</code> 表示一些其他值的一部分，例如 <code>50%</code>。百分比值总是相对于另一个量。例如，一个元素的长度相对于其父元素的长度。</td>
+</tr>
+</tbody>
+</table>
+<p>以下都是<strong>绝对</strong>长度单位——它们与其他任何东西都没有关系，通常被认为总是相同的大小。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">单位</th>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">等价换算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>cm</code></td>
+<td style="text-align:left">厘米</td>
+<td style="text-align:left">1cm = 37.8px</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>mm</code></td>
+<td style="text-align:left">毫米</td>
+<td style="text-align:left">1mm = 3.78px</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Q</code></td>
+<td style="text-align:left">四分之一毫米</td>
+<td style="text-align:left">1Q = 0.945px = 0.25mm</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>in</code></td>
+<td style="text-align:left">英寸</td>
+<td style="text-align:left">1in = 96px = 2.54cm</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>pc</code></td>
+<td style="text-align:left">派卡</td>
+<td style="text-align:left">1pc = 16px ≈ 0.4233cm</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>pt</code></td>
+<td style="text-align:left">磅</td>
+<td style="text-align:left">1pt = 4/3 px ≈ 0.3527mm</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>px</code></td>
+<td style="text-align:left">像素</td>
+<td style="text-align:left">1px ≈ 0.2646mm</td>
+</tr>
+</tbody>
+</table>
+<p>这些单位大多在用于印刷而非屏幕输出时更有用。例如，我们通常不在屏幕上使用 <code>cm</code>（厘米）。你唯一应该常用的值是 <code>px</code>（像素） 。</p>
+<p><strong>相对长度单位</strong></p>
+<p>相对长度单位是相对于其他某些东西的。例如：</p>
+<ul>
+<li><code>em</code> 相对于本元素的字体大小，或者在用于 <code>font-size</code>时相对于父元素的字体大小。<code>rem</code> 相对于根元素的字体大小。</li>
+<li><code>vh</code> 和 <code>vw</code> 分别相对于视口的高度和宽度。</li>
+</ul>
+<p>🔸 举个例子：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">html</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 16</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 1.5</span><span style="color:#AB5959;--shiki-dark:#CB7676">em</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> /* 1.5 * 16px = 24px */</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">container</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 2</span><span style="color:#AB5959;--shiki-dark:#CB7676">em</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">   /* 2 * 16px = 32px */</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">container</span><span style="color:#1E754F;--shiki-dark:#4D9375"> p</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 1.5</span><span style="color:#AB5959;--shiki-dark:#CB7676">em</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> /* 1.5 * 32px = 48px */</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<blockquote>
+<p>所以：<code>em</code> 是“级联放大”的，容易产生 <strong>递归放大问题</strong>，在布局复杂时可能不稳定。</p>
+</blockquote>
+<hr>
+<p><mark>rem机制：</mark></p>
+<ul>
+<li>始终是 <strong>相对于根元素 <code>&lt;html&gt;</code> 的字体大小</strong>。</li>
+<li>不受嵌套层级影响，<strong>计算更稳定、更可控</strong>。</li>
+</ul>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">html</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 16</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 1.5</span><span style="color:#AB5959;--shiki-dark:#CB7676">rem</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> /* 始终是 1.5 * 16px = 24px */</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">container</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 2</span><span style="color:#AB5959;--shiki-dark:#CB7676">rem</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> /* 始终是 2 * 16px = 32px */</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">container</span><span style="color:#1E754F;--shiki-dark:#4D9375"> p</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 1.5</span><span style="color:#AB5959;--shiki-dark:#CB7676">rem</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> /* 依然是 24px，不会乘父级 */</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="行高单位"><a class="anchor" href="#行高单位">#</a> 行高单位</h3>
+<h4 id="lh基于当前元素的-计算行高"><a class="anchor" href="#lh基于当前元素的-计算行高">#</a> <code>lh</code>：基于当前元素的 <strong>计算行高</strong></h4>
+<ul>
+<li><code>1lh</code> = 当前元素的实际 <code>line-height</code> 值（<strong>不是 <code>font-size</code></strong>）。</li>
+<li>可用于设置高度、间距等，与文字行高保持一致。</li>
+</ul>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">p</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 16</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  line-height</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 1.5</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> /* 1.5 * 16px = 24px */</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  margin-bottom</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">lh</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> /* 24px */</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>👉 实际效果：<code>margin-bottom: 1lh</code> 会等于 <code>24px</code>，即该段落的实际行高。</p>
+<hr>
+<h4 id="rlh基于根元素的-计算行高"><a class="anchor" href="#rlh基于根元素的-计算行高">#</a> <code>rlh</code>：基于根元素的 <strong>计算行高</strong></h4>
+<ul>
+<li><code>1rlh</code> = 根元素的 <code>line-height</code>（不是字体大小）。</li>
+<li>保持整个页面布局在统一的基准线上非常有用。</li>
+</ul>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">html</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  font-size</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 16</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  line-height</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 1.5</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> /* 24px */</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">h1</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  margin-bottom</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 2</span><span style="color:#AB5959;--shiki-dark:#CB7676">rlh</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> /* 48px */</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="百分比"><a class="anchor" href="#百分比">#</a> 百分比</h3>
+<p>百分比是相对父元素来计算的</p>
+<h3 id="数字"><a class="anchor" href="#数字">#</a> 数字</h3>
+<p>补充一下<code>opacity</code>控制元素的不透明度，从0（完全透明）到1（不透明）</p>
+<h3 id="颜色"><a class="anchor" href="#颜色">#</a> 颜色</h3>
+<p>现代计算机支持的标准颜色系统是 24 位色，它通过红、绿、蓝三个通道的不同组合来显示约 1670 万种不同的颜色，每个通道有 256 种不同的值（256 x 256 x 256 = 16,777,216）。</p>
+<h4 id="951-颜色关键字"><a class="anchor" href="#951-颜色关键字">#</a> 9.5.1 颜色关键字</h4>
+<blockquote>
+<p>颜色关键字数量有限，一般不会在产生环境的网站中使用</p>
+</blockquote>
+<h4 id="952-16进制rgb值"><a class="anchor" href="#952-16进制rgb值">#</a> 9.5.2 16进制RGB值</h4>
+<p><strong>6位格式：<code>#RRGGBB</code></strong></p>
+<ul>
+<li><code>RR</code>：代表红色的强度，用两位16进制数表示（范围从 <code>00</code> 到 <code>FF</code>）。</li>
+<li><code>GG</code>：代表绿色的强度，用两位16进制数表示（范围从 <code>00</code> 到 <code>FF</code>）。</li>
+<li><code>BB</code>：代表蓝色的强度，用两位16进制数表示（范围从 <code>00</code> 到 <code>FF</code>）。</li>
+<li>每一对16进制数可以表示从0（无该颜色成分）到255（该颜色成分最强）的值。例如，<code>#FF0000</code> 表示纯红色（红色为FF即255，绿色为00，蓝色为00）。</li>
+</ul>
+<p><strong>3位格式：<code>#RGB</code></strong></p>
+<ul>
+<li>这是6位格式的缩写形式。当每对16进制数字相同时（例如，<code>RR</code> 中的两个R相同，<code>GG</code> 中的两个G相同，<code>BB</code> 中的两个B相同），可以将其缩写。</li>
+<li>例如，<code>#F00</code> 等同于 <code>#FF0000</code>（纯红色），<code>#0F0</code> 等同于 <code>#00FF00</code>（纯绿色），<code>#ABC</code> 等同于 <code>#AABBCC</code>。</li>
+</ul>
+<p>比如：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">box</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  padding</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 10</span><span style="color:#AB5959;--shiki-dark:#CB7676">px</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  margin</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 0.5</span><span style="color:#AB5959;--shiki-dark:#CB7676">em</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 0</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  border-radius</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 0.5</span><span style="color:#AB5959;--shiki-dark:#CB7676">em</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">one</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  background-color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#999999;--shiki-dark:#666666"> #</span><span style="color:#A65E2B;--shiki-dark:#C99076">02798b</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">two</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  background-color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#999999;--shiki-dark:#666666"> #</span><span style="color:#A65E2B;--shiki-dark:#C99076">c55da1</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">three</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  background-color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#999999;--shiki-dark:#666666"> #</span><span style="color:#A65E2B;--shiki-dark:#C99076">128a7d</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h4 id="953-rgb值"><a class="anchor" href="#953-rgb值">#</a> 9.5.3 RGB值</h4>
+<p>基本形式就是<code>rgb()</code></p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">three</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  background-color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#998418;--shiki-dark:#B8A965"> rgb</span><span style="color:#1e754f;--shiki-dark:#4d9375">(</span><span style="color:#2F798A;--shiki-dark:#4C9A91">18</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 138</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 125</span><span style="color:#1e754f;--shiki-dark:#4d9375">)</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h4 id="954-hsl"><a class="anchor" href="#954-hsl">#</a> 9.5.4 HSL</h4>
+<ul>
+<li><strong>色相（Hue）</strong></li>
+<li><strong>饱和度（Saturation）</strong>：颜色的饱和度是多少？它接受一个 0–100% 的值，其中 0 表示无颜色（会显示为灰色），100% 表示完全饱和的颜色。</li>
+<li><strong>亮度（Lightness）</strong>：颜色的亮度或明度是多少？它接受一个 0–100% 的值，其中 0 表示无亮度（会显示为完全黑色），100% 表示完全亮度（会显示为完全白色）。</li>
+</ul>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">one</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  background-color</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#998418;--shiki-dark:#B8A965"> hsl</span><span style="color:#1e754f;--shiki-dark:#4d9375">(</span><span style="color:#2F798A;--shiki-dark:#4C9A91">188</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 97</span><span style="color:#AB5959;--shiki-dark:#CB7676">%</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 28</span><span style="color:#AB5959;--shiki-dark:#CB7676">%</span><span style="color:#1e754f;--shiki-dark:#4d9375">)</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="图像"><a class="anchor" href="#图像">#</a> 图像</h3>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-css"><span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">image</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  background-image</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#998418;--shiki-dark:#B8A965"> url</span><span style="color:#1e754f;--shiki-dark:#4d9375">(</span><span style="color:#B07D48;--shiki-dark:#BD976A">https://mdn.github.io/shared-assets/images/examples/big-star.png</span><span style="color:#1e754f;--shiki-dark:#4d9375">)</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">.</span><span style="color:#B07D48;--shiki-dark:#BD976A">gradient</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">  background-image</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#998418;--shiki-dark:#B8A965"> linear-gradient</span><span style="color:#1e754f;--shiki-dark:#4d9375">(</span></span>
+<span class="line"><span style="color:#2F798A;--shiki-dark:#4C9A91">    90</span><span style="color:#AB5959;--shiki-dark:#CB7676">deg</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">    rgb</span><span style="color:#a65e2b;--shiki-dark:#d4976c">(</span><span style="color:#2F798A;--shiki-dark:#4C9A91">119</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 0</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 255</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> / </span><span style="color:#2F798A;--shiki-dark:#4C9A91">39</span><span style="color:#AB5959;--shiki-dark:#CB7676">%</span><span style="color:#a65e2b;--shiki-dark:#d4976c">)</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">    rgb</span><span style="color:#a65e2b;--shiki-dark:#d4976c">(</span><span style="color:#2F798A;--shiki-dark:#4C9A91">0</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 212</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 255</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> / </span><span style="color:#2F798A;--shiki-dark:#4C9A91">100</span><span style="color:#AB5959;--shiki-dark:#CB7676">%</span><span style="color:#a65e2b;--shiki-dark:#d4976c">)</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">  </span><span style="color:#1e754f;--shiki-dark:#4d9375">)</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="位置"><a class="anchor" href="#位置">#</a> 位置</h3>
+<p><code>&lt;position&gt;</code>值类型表示一组二维坐标，用于定位背景图像等元素。它可以接受诸如 <code>top</code>、<code>left</code>、<code>bottom</code>、<code>right</code> 和 <code>center</code> 等关键字，将元素与二维盒子的特定边界对齐，同时还可以使用长度值来表示从盒子顶部和左侧边缘的偏移量。</p>
+<div class="tags"><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" rel="tag"><i class="ic i-tag"></i>编程语言</a><a href="/tags/CSS/" rel="tag"><i class="ic i-tag"></i>CSS</a><a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="ic i-tag"></i>前端</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i></span><span class="text">更新于 </span><time title="修改时间：2025-10-13 15:00:00" itemprop="dateModified" datetime="2025-10-13T15:00:00+08:00">2025-10-13</time></span></div><div class="reward"><button><i class="ic i-heartbeat"></i>赞赏</button><p>请我喝[茶]~(￣▽￣)~*</p><div id="qr"><div><img loading="lazy" src="/assets/wechatpay.avif" alt="Luchron 微信支付"><p>微信支付</p></div><div><img loading="lazy" src="/assets/alipay.avif" alt="Luchron 支付宝"><p>支付宝</p></div></div></div><div id="copyright"><ul><li class="author"><strong>本文作者：</strong>Luchron<i class="ic i-at"><em>@</em></i>絶対忘れ てやらないよ</li><li class="link"><strong>本文链接：</strong><a href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/CSS/" title="CSS">http://localhost:4000/2025/10/13/技术积累/前端/CSS/</a></li><li class="license"><strong>版权声明：</strong>本站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/JS/" rel="prev" itemprop="url" data-background-image="//assets/01.jpg" title="JavaScript"><span class="type">上一篇</span><span class="category"><i class="ic i-flag"></i>技术积累</span><h3>JavaScript</h3></a></div><div class="item right"><a href="/2025/10/13/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/" rel="next" itemprop="url" data-background-image="//assets/01.jpg" title="数据结构基础"><span class="type">下一篇</span><span class="category"><i class="ic i-flag"></i>课堂笔记</span><h3>数据结构基础</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFcss"><span class="toc-number">1.</span> <span class="toc-text"> 什么是CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#css%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80"><span class="toc-number">1.1.</span> <span class="toc-text"> CSS语法基础</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#css%E6%98%AF%E5%A6%82%E4%BD%95%E5%BA%94%E7%94%A8%E5%88%B0html%E4%B8%8A%E7%9A%84"><span class="toc-number">1.2.</span> <span class="toc-text"> CSS是如何应用到HTML上的</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8Bcss"><span class="toc-number">2.</span> <span class="toc-text"> 开始CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96html%E5%85%83%E7%B4%A0"><span class="toc-number">2.1.</span> <span class="toc-text"> 格式化HTML元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%B9%E5%8F%98%E5%85%83%E7%B4%A0%E7%9A%84%E9%BB%98%E8%AE%A4%E8%A1%8C%E4%B8%BA"><span class="toc-number">2.2.</span> <span class="toc-text"> 改变元素的默认行为</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%B1%BB%E5%90%8D"><span class="toc-number">2.3.</span> <span class="toc-text"> 使用类名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE%E5%85%83%E7%B4%A0%E5%9C%A8%E6%96%87%E6%A1%A3%E4%B8%AD%E7%9A%84%E4%BD%8D%E7%BD%AE%E7%A1%AE%E5%AE%9A%E6%A0%B7%E5%BC%8F"><span class="toc-number">2.4.</span> <span class="toc-text"> 根据元素在文档中的位置确定样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE%E7%8A%B6%E6%80%81%E7%A1%AE%E5%AE%9A%E6%A0%B7%E5%BC%8F"><span class="toc-number">2.5.</span> <span class="toc-text"> 根据状态确定样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8%E5%A4%9A%E7%A7%8D"><span class="toc-number">2.6.</span> <span class="toc-text"> 同时使用多种</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">3.</span> <span class="toc-text"> CSS选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E5%88%97%E8%A1%A8"><span class="toc-number">3.1.</span> <span class="toc-text"> 选择器列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E7%A7%8D%E7%B1%BB"><span class="toc-number">3.2.</span> <span class="toc-text"> 选择器种类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%B1%BB%E5%9E%8B%E9%80%89%E6%8B%A9%E5%99%A8-type-selector"><span class="toc-number">3.2.1.</span> <span class="toc-text"> 1. 类型选择器 (Type Selector)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8-class-selector"><span class="toc-number">3.2.2.</span> <span class="toc-text"> 2. 类选择器 (Class Selector)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-id-%E9%80%89%E6%8B%A9%E5%99%A8-id-selector"><span class="toc-number">3.2.3.</span> <span class="toc-text"> 3. ID 选择器 (ID Selector)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%A0%87%E7%AD%BE%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8-attribute-selector"><span class="toc-number">3.2.4.</span> <span class="toc-text"> 4. 标签属性选择器 (Attribute Selector)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E4%BC%AA%E7%B1%BB%E4%B8%8E%E4%BC%AA%E5%85%83%E7%B4%A0-pseudo-classes-and-pseudo-elements"><span class="toc-number">3.2.5.</span> <span class="toc-text"> 5. 伪类与伪元素 (Pseudo-classes and Pseudo-elements)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E7%BB%84%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8-combinator-selectors"><span class="toc-number">3.2.6.</span> <span class="toc-text"> 6. 组合选择器 (Combinator Selectors)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text"> 属性选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#presence-and-value-selectors"><span class="toc-number">4.1.</span> <span class="toc-text"> Presence and value selectors</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-attr-%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.1.1.</span> <span class="toc-text"> 1. [attr] 选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-attrvalue-%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.1.2.</span> <span class="toc-text"> 2. [attr=value] 选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-attr~value-%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.1.3.</span> <span class="toc-text"> 3. [attr~=value] 选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-attrvalue-%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.1.4.</span> <span class="toc-text"> 4. [attr|=value] 选择器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%80%89%E6%8B%A9%E5%8C%B9%E9%85%8D%E5%99%A8"><span class="toc-number">4.2.</span> <span class="toc-text"> 字符串选择匹配器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F"><span class="toc-number">4.3.</span> <span class="toc-text"> 大小写敏感</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%AA%E7%B1%BB%E5%92%8C%E4%BC%AA%E5%85%83%E7%B4%A0"><span class="toc-number">5.</span> <span class="toc-text"> 伪类和伪元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E4%BC%AA%E7%B1%BB"><span class="toc-number">5.1.</span> <span class="toc-text"> 简单的伪类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E8%A1%8C%E4%B8%BA%E7%B1%BB%E4%BC%AA%E7%B1%BB"><span class="toc-number">5.2.</span> <span class="toc-text"> 用户行为类伪类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%AA%E5%85%83%E7%B4%A0"><span class="toc-number">5.3.</span> <span class="toc-text"> 伪元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%AA%E7%B1%BB%E5%92%8C%E4%BC%AA%E5%85%83%E7%B4%A0%E7%BB%93%E5%90%88"><span class="toc-number">5.4.</span> <span class="toc-text"> 伪类和伪元素结合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%B8%A6%E6%9C%89before-%E5%92%8Cafter-%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-number">5.5.</span> <span class="toc-text"> 生成带有::before 和::after 的内容</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text"> 关系选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">6.1.</span> <span class="toc-text"> 后代选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%A7%A3%E9%87%8A"><span class="toc-number">6.1.0.0.1.</span> <span class="toc-text"> 解释：</span></a></li></ol></li></ol></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%90%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">6.2.</span> <span class="toc-text"> 子代选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%82%BB%E6%8E%A5%E5%85%84%E5%BC%9F"><span class="toc-number">6.3.</span> <span class="toc-text"> 邻接兄弟</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E7%94%A8%E5%85%84%E5%BC%9F"><span class="toc-number">6.4.</span> <span class="toc-text"> 通用兄弟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-number">7.</span> <span class="toc-text"> 盒模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#css%E6%A0%87%E6%B3%A8%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-number">7.1.</span> <span class="toc-text"> CSS标注盒模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%BF%E4%BB%A3%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-number">7.2.</span> <span class="toc-text"> 替代盒模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D"><span class="toc-number">7.3.</span> <span class="toc-text"> 外边距</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%B9%E6%A1%86"><span class="toc-number">7.4.</span> <span class="toc-text"> 边框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-number">7.5.</span> <span class="toc-text"> 行内盒模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B1%82%E5%8F%A0-%E4%BC%98%E5%85%88%E7%BA%A7%E4%B8%8E%E7%BB%A7%E6%89%BF"><span class="toc-number">8.</span> <span class="toc-text"> 层叠、优先级与继承</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%82%E5%8F%A0"><span class="toc-number">8.1.</span> <span class="toc-text"> 层叠</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-number">8.2.</span> <span class="toc-text"> 优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-number">8.3.</span> <span class="toc-text"> 继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E7%BB%A7%E6%89%BF"><span class="toc-number">8.4.</span> <span class="toc-text"> 控制继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E7%BD%AE%E6%89%80%E6%9C%89%E5%B1%9E%E6%80%A7%E5%80%BC"><span class="toc-number">8.5.</span> <span class="toc-text"> 重置所有属性值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css%E5%80%BC%E5%92%8C%E5%8D%95%E4%BD%8D"><span class="toc-number">9.</span> <span class="toc-text"> CSS值和单位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%80%BC-%E9%95%BF%E5%BA%A6%E5%92%8C%E7%99%BE%E5%88%86%E6%AF%94"><span class="toc-number">9.1.</span> <span class="toc-text"> 数值 长度和百分比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E9%AB%98%E5%8D%95%E4%BD%8D"><span class="toc-number">9.2.</span> <span class="toc-text"> 行高单位</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#lh%E5%9F%BA%E4%BA%8E%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84-%E8%AE%A1%E7%AE%97%E8%A1%8C%E9%AB%98"><span class="toc-number">9.2.1.</span> <span class="toc-text"> lh：基于当前元素的 计算行高</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#rlh%E5%9F%BA%E4%BA%8E%E6%A0%B9%E5%85%83%E7%B4%A0%E7%9A%84-%E8%AE%A1%E7%AE%97%E8%A1%8C%E9%AB%98"><span class="toc-number">9.2.2.</span> <span class="toc-text"> rlh：基于根元素的 计算行高</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BE%E5%88%86%E6%AF%94"><span class="toc-number">9.3.</span> <span class="toc-text"> 百分比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97"><span class="toc-number">9.4.</span> <span class="toc-text"> 数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%9C%E8%89%B2"><span class="toc-number">9.5.</span> <span class="toc-text"> 颜色</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#951-%E9%A2%9C%E8%89%B2%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">9.5.1.</span> <span class="toc-text"> 9.5.1 颜色关键字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#952-16%E8%BF%9B%E5%88%B6rgb%E5%80%BC"><span class="toc-number">9.5.2.</span> <span class="toc-text"> 9.5.2 16进制RGB值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#953-rgb%E5%80%BC"><span class="toc-number">9.5.3.</span> <span class="toc-text"> 9.5.3 RGB值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#954-hsl"><span class="toc-number">9.5.4.</span> <span class="toc-text"> 9.5.4 HSL</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F"><span class="toc-number">9.6.</span> <span class="toc-text"> 图像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%8D%E7%BD%AE"><span class="toc-number">9.7.</span> <span class="toc-text"> 位置</span></a></li></ol></li></div><div class="related panel pjax" data-title="系列文章"><ul><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/api%E7%9A%84%E5%88%B6%E5%AE%9A/" rel="bookmark" title="api的制定">api的制定</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/shell%E8%84%9A%E6%9C%AC/" rel="bookmark" title="shell脚本">shell脚本</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_learn/" rel="bookmark" title="git简介">git简介</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_apply/" rel="bookmark" title="git 应用">git 应用</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/Go/" rel="bookmark" title="Go">Go</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/markdown/Typora%20markdown%E6%95%99%E7%A8%8B/" rel="bookmark" title="markdown">markdown</a></li><li class="active"><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/CSS/" rel="bookmark" title="CSS">CSS</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/JS/" rel="bookmark" title="JavaScript">JavaScript</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/HTML/" rel="bookmark" title="HTML">HTML</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/NPM/" rel="bookmark" title="NPM">NPM</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/React/" rel="bookmark" title="React">React</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/fatch%20api/" rel="bookmark" title="fetch api">fetch api</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/%E5%85%B3%E4%BA%8E%E5%89%8D%E7%AB%AF/" rel="bookmark" title="关于前端">关于前端</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/typescript/" rel="bookmark" title="TypeScript">TypeScript</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C#/" rel="bookmark" title="C#">C#</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="image" loading="lazy" decoding="async" itemprop="image" alt="Luchron" src="/assets/avatar.avif"><p class="name" itemprop="name">Luchron</p><div class="description" itemprop="description">未下眉头，又上心头</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">19</span><span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">3</span><span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">18</span><span class="name">标签</span></a></div></nav><div class="social"><a target="_blank" rel="noopener" href="https://github.com/yourname" class="item github" title="https://github.com/yourname"><i class="ic i-github"></i></a></div><div class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item dropdown"><a href="#" onclick="return false;"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li></div></div></div></div><ul id="quick"><li class="prev pjax"><a href="/2025/10/13/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/JS/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div><div id="player"></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/Go/">Go</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/React/">React</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/HTML/">HTML</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/%E5%85%B3%E4%BA%8E%E5%89%8D%E7%AB%AF/">关于前端</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_apply/">git 应用</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_learn/">git简介</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/JS/">JavaScript</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/typescript/">TypeScript</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2026/03/20/hello-world/">Hello World</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/shell%E8%84%9A%E6%9C%AC/">shell脚本</a></span></li></ul></div><div class="rpost pjax"><h2>最新评论</h2></div></div><div class="status"><div class="copyright">© 2022 -<span itemprop="copyrightYear">2026</span><span class="with-love"><i class="ic i-sakura rotate"></i></span><span class="author" itemprop="copyrightHolder">Luchron @ Luchron's Blog</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i></span><span title="站点总字数">306k 字</span><span class="post-meta-divider"> | </span><span class="post-meta-item-icon"><i class="ic i-coffee"></i></span><span title="站点阅读时长">4:38</span></div><div class="powered-by">基于 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> &amp; Theme.<a target="_blank" rel="noopener" href="https://github.com/theme-shoka-x/hexo-theme-shokaX/">ShokaX</a></div></div></div></footer></div><script data-config="" type="text/javascript">var LOCAL = {
+    ispost: true,
+    path: `2025/10/13/技术积累/前端/CSS/`,
+    favicon: {
+        show: `（●´3｀●）やれやれだぜ`,
+        hide: `(´Д｀)大変だ！`
+    },
+    search: {
+        placeholder: "文章搜索",
+        empty: "关于 「 ${query} 」，什么也没搜到",
+        stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    nocopy: "false",
+    copyright: `复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。`,
+    copy_tex: false,
+    katex: false,
+    mermaid: false,
+    audio: undefined,
+    nocopy: false,
+    outime: true,
+    template: `<div class="note warning"><p><span class="label warning">文章时效性提示</span><br>这是一篇发布于 {{publish}} 天前，最后一次更新在 {{updated}} 天前的文章，部分信息可能已经发生改变，请注意甄别。</p></div>`,
+    quiz: {
+        choice: `单选题`,
+        multiple: `多选题`,
+        true_false: `判断题`,
+        essay: `问答题`,
+        gap_fill: `填空题`,
+        mistake: `错题备注`
+    }
+};
+</script><script src="/js/siteInit.js?v=0.5.4" type="module" fetchpriority="high" defer=""></script></body></html>

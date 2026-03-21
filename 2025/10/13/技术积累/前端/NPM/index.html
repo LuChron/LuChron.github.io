@@ -1,0 +1,571 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"><meta name="renderer" content="webkit"><link rel="icon" type="image/ico" sizes="32x32" href="/assets/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="alternate" href="/rss.xml" title="絶対忘れ てやらないよ" type="application/rss+xml"><link rel="alternate" href="/atom.xml" title="絶対忘れ てやらないよ" type="application/atom+xml"><link rel="alternate" type="application/json" title="絶対忘れ てやらないよ" href="http://localhost:4000/feed.json"><link rel="preconnect" href="https://s4.zstatic.net"><link rel="preconnect" href="https://at.alicdn.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CFredericka%20the%20Great:400,400italic,700,700italic%7CNoto%20Serif%20JP:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CInconsolata:400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext" media="none" onload="this.media='all'"><link rel="modulepreload" href="/js/siteInit.js"><link rel="modulepreload" href="/js/nyx-player-V2MWNUB3.js"><link rel="modulepreload" href="/js/copy-tex-BSIFCPVN.js"><link rel="modulepreload" href="/js/post-BFPLUYWY.js"><link rel="modulepreload" href="/js/chunk-5YCYNXSP.js"><link rel="modulepreload" href="/js/index.esm-VAXQ4E3Y.js"><link rel="modulepreload" href="/js/chunk-HJSTZ4VX.js"><link rel="modulepreload" href="/js/chunk-RWXZJNSV.js"><link rel="stylesheet" href="/css/siteInit.css" media="none" onload="this.media='all'"><link rel="preload" href="//assets/01.jpg" as="image" fetchpriority="high"><meta name="keywords" content="前端,"><meta name="description" content="NPM 介绍"><link rel="canonical" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/NPM/"><link rel="stylesheet" href="/css/post.css?v=0.5.4"><link rel="stylesheet" href="/css/mermaid.css?v=0.5.4"><!-- 临时处理--><link rel="stylesheet" media="none" onload="this.media='all'" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css"><title>NPM</title><meta name="generator" content="Hexo 7.3.0"></head><body itemscope="" itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="pagefind_mount"></div><div id="container"><header id="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">NPM</h1><div class="meta"><span class="item" title="创建时间：2025-10-13 14:30:00"><span class="icon"><i class="ic i-calendar"></i></span><span class="text">发表于</span><time itemprop="dateCreated datePublished" datetime="2025-10-13T14:30:00+08:00">2025-10-13</time></span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i></span><span class="text">本文字数</span><span>13k</span><span class="text">字</span></span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i></span><span class="text">阅读时长</span><span>12 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span><span class="line"></span><span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">Luchron's Blog</a></li></ul><ul class="right" id="rightNav"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div class="pjax" id="imgs"><img src="/assets/01.avif" loading="eager" decoding="async" fetchpriority="high" alt="絶対忘れ てやらないよ"></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><main><div class="inner"><div class="pjax" id="main"><div class="article wrap"><div class="breadcrumb" itemlistelement="" itemscope="" itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i><span><a href="/">首页</a></span><i class="ic i-angle-right"></i><span class="current" itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" itemprop="item" rel="index" title="分类于技术积累"><span itemprop="name">技术积累<meta itemprop="position" content="0"></span></a></span></div><article class="post block" itemscope="itemscope" itemtype="http://schema.org/Article" data-pagefind-body="data-pagefind-body" lang="zh-CN"><link itemprop="mainEntityOfPage" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/NPM/"><span hidden="hidden" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="image" content="/assets/avatar.jpg"><meta itemprop="name" content="Luchron"><meta itemprop="description" content="狗窝, 未下眉头，又上心头"></span><span hidden="hidden" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="絶対忘れ てやらないよ"></span><div class="body md" itemprop="articleBody"><h2 id="npm-使用介绍"><a class="anchor" href="#npm-使用介绍">#</a> NPM 使用介绍</h2>
+<p>NPM（Node Package Manager）是一个 JavaScript 包管理工具，也是 Node.js 的默认包管理器。</p>
+<p>NPM 允许开发者轻松地下载、安装、共享、管理项目的依赖库和工具。</p>
+<p>NPM 是 Node.js 自带的包管理工具，因此，通常你只需安装 Node.js，NPM 就会自动安装在系统中。</p>
+<p><strong>主要功能：</strong></p>
+<ul>
+<li><strong>包管理</strong>：NPM 可以帮助你安装并管理项目所需的各种第三方库（包）。例如，可以通过简单的命令来安装、更新、或删除依赖。</li>
+<li><strong>版本管理</strong>：NPM 支持版本控制，允许你锁定某个特定版本的依赖，或根据需求选择最新的版本。</li>
+<li><strong>包发布</strong>：NPM 允许开发者将自己的库发布到 NPM 仓库中，其他开发者可以通过 NPM 下载并使用这些库。</li>
+<li><strong>命令行工具</strong>：NPM 提供了强大的命令行工具，可以用于安装包、运行脚本、初始化项目等多种操作。</li>
+</ul>
+<p>由于新版的 Node.js 已经集成了 NPM，所以我们可以直接通过输入 <strong>npm -v</strong> 来测试是否成功安装，出现版本提示表示安装成功:</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">$</span><span style="color:#B56959;--shiki-dark:#C98A7D"> npm</span><span style="color:#A65E2B;--shiki-dark:#C99076"> -v</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">2.3.0</span></span></code></pre>
+<hr>
+<h2 id="使用-npm-命令安装模块"><a class="anchor" href="#使用-npm-命令安装模块">#</a> 使用 npm 命令安装模块</h2>
+<p>npm 安装 Node.js 模块语法格式如下：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">$</span><span style="color:#B56959;--shiki-dark:#C98A7D"> npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> install</span><span style="color:#AB5959;--shiki-dark:#CB7676"> </span><span style="color:#AB5959;--shiki-dark:#CB7676">&lt;</span><span style="color:#B56959;--shiki-dark:#C98A7D">Module</span><span style="color:#B56959;--shiki-dark:#C98A7D"> Nam</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">e</span><span style="color:#AB5959;--shiki-dark:#CB7676">&gt;</span></span></code></pre>
+<p>以下实例，我们使用 npm 命令安装常用的 Node.js web框架模块 <strong>express</strong>:</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">$</span><span style="color:#B56959;--shiki-dark:#C98A7D"> npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> install</span><span style="color:#B56959;--shiki-dark:#C98A7D"> express</span></span></code></pre>
+<p>安装好之后，express 包就放在了工程目录下的 node_modules 目录中，因此在代码中只需要通过 <strong>require('express')</strong> 的方式就好，无需指定第三方包路径。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-js"><span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">var</span><span style="color:#B07D48;--shiki-dark:#BD976A"> express</span><span style="color:#999999;--shiki-dark:#666666"> =</span><span style="color:#59873A;--shiki-dark:#80A665"> require</span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="color:#B56959;--shiki-dark:#C98A7D">express</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#999999;--shiki-dark:#666666">;</span></span></code></pre>
+<hr>
+<h2 id="全局安装与本地安装"><a class="anchor" href="#全局安装与本地安装">#</a> 全局安装与本地安装</h2>
+<p>npm 的包安装分为本地安装（local）、全局安装（global）两种，从敲的命令行来看，差别只是有没有 <strong>-g</strong> 参数。</p>
+<p>**本地安装：**将包安装到 node_modules 目录，并将信息保存到 package.json 的 dependencies 中。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> install</span><span style="color:#B56959;--shiki-dark:#C98A7D"> express</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">          # 本地安装</span></span></code></pre>
+<p>**全局安装：**用于安装命令行工具或需要在多个项目中使用的包。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> install</span><span style="color:#B56959;--shiki-dark:#C98A7D"> express</span><span style="color:#A65E2B;--shiki-dark:#C99076"> -g</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">   # 全局安装</span></span></code></pre>
+<p>如果出现以下错误：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> err!</span><span style="color:#B56959;--shiki-dark:#C98A7D"> Error:</span><span style="color:#B56959;--shiki-dark:#C98A7D"> connect</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ECONNREFUSED</span><span style="color:#B56959;--shiki-dark:#C98A7D"> 127.0.0.1:8087</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span></span></code></pre>
+<p>解决办法为：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">$</span><span style="color:#B56959;--shiki-dark:#C98A7D"> npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> config</span><span style="color:#B56959;--shiki-dark:#C98A7D"> set</span><span style="color:#B56959;--shiki-dark:#C98A7D"> proxy</span><span style="color:#B56959;--shiki-dark:#C98A7D"> null</span></span></code></pre>
+<h3 id="本地安装"><a class="anchor" href="#本地安装">#</a> 本地安装</h3>
+<ul>
+<li><strong>作用范围</strong>：默认情况下，npm 会将包安装在当前项目的 <code>node_modules</code> 文件夹中。这意味着每个使用该包的项目都会有自己的包副本。</li>
+<li><strong>用途</strong>：本地安装通常用于项目依赖。每个项目可以有自己的依赖版本，这有助于确保项目的稳定性和可复现性。</li>
+<li><strong>安装命令</strong>：在项目目录中运行 <code>npm install &lt;package-name&gt;</code> 会将包安装在 <code>node_modules</code> 文件夹中，并在 <code>package.json</code> 文件中添加依赖项。</li>
+<li><strong>版本管理</strong>：通过 <code>package.json</code> 和 <code>package-lock.json</code> 文件管理依赖的版本，确保项目在不同环境中的一致性。</li>
+</ul>
+<h3 id="全局安装"><a class="anchor" href="#全局安装">#</a> 全局安装</h3>
+<ul>
+<li><strong>作用范围</strong>：全局安装会将包安装在系统级别的目录中，通常是 <code>/usr/local/bin</code>（在 Unix-like 系统上）或 <code>%AppData%\npm</code>（在 Windows 上）。</li>
+<li><strong>用途</strong>：全局安装用于那些不需要在每个项目中重复安装的工具或命令行实用程序。例如，安装一个全局的 <code>create-react-app</code> 可以用于创建新的 React 项目。</li>
+<li><strong>安装命令</strong>：使用 <code>-g</code> 标志来全局安装包，例如 <code>npm install -g &lt;package-name&gt;</code>。</li>
+<li><strong>版本管理</strong>：全局安装的包版本由 npm 管理，但不会在项目的 <code>package.json</code> 中体现。这意味着全局安装的包可能在不同项目之间共享，但也可能因为版本冲突而导致问题。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">特性</th>
+<th style="text-align:left">本地安装</th>
+<th style="text-align:left">全局安装</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>安装范围</strong></td>
+<td style="text-align:left">仅在当前项目中可用</td>
+<td style="text-align:left">在系统的全局环境中可用</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>命令使用</strong></td>
+<td style="text-align:left"><code>npm install package-name</code></td>
+<td style="text-align:left"><code>npm install -g package-name</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>安装位置</strong></td>
+<td style="text-align:left"><code>node_modules</code> 目录</td>
+<td style="text-align:left">系统全局目录（依 OS 而异）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>使用场景</strong></td>
+<td style="text-align:left">项目依赖（库、框架）</td>
+<td style="text-align:left">CLI 工具、项目生成器</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>访问方式</strong></td>
+<td style="text-align:left">通过 <code>require()</code> 或 <code>import</code> 使用</td>
+<td style="text-align:left">在命令行中直接使用</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>依赖声明</strong></td>
+<td style="text-align:left">在 <code>package.json</code> 中记录</td>
+<td style="text-align:left">不在 <code>package.json</code> 中记录</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>版本控制</strong></td>
+<td style="text-align:left">不同项目中可用不同版本</td>
+<td style="text-align:left">系统中只保留一个版本</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>权限问题</strong></td>
+<td style="text-align:left">无需特殊权限</td>
+<td style="text-align:left">可能需要管理员权限</td>
+</tr>
+</tbody>
+</table>
+<p>如果你希望具备两者功能，则需要在两个地方安装它或使用 <strong>npm link</strong>。</p>
+<p>接下来我们使用全局方式安装 express</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">$</span><span style="color:#B56959;--shiki-dark:#C98A7D"> npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> install</span><span style="color:#B56959;--shiki-dark:#C98A7D"> express</span><span style="color:#A65E2B;--shiki-dark:#C99076"> -g</span></span></code></pre>
+<p>安装过程输出如下内容，第一行输出了模块的版本号及安装位置。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">express@4.13.3</span><span style="color:#B56959;--shiki-dark:#C98A7D"> node_modules/express</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> escape-html@1.0.2</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> range-parser@1.0.2</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> merge-descriptors@1.0.0</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> array-flatten@1.1.1</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> cookie@0.1.3</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> utils-merge@1.0.0</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> parseurl@1.3.0</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> cookie-signature@1.0.6</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> methods@1.1.1</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> fresh@0.3.0</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> vary@1.0.1</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> path-to-regexp@0.1.7</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> content-type@1.0.1</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> etag@1.7.0</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> serve-static@1.10.0</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> content-disposition@0.5.0</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> depd@1.0.1</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> qs@4.0.0</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> finalhandler@0.4.0</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">unpipe@1.0.0</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> on-finished@2.3.0</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">ee-first@1.1.1</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> proxy-addr@1.0.8</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">forwarded@0.1.0, </span><span style="color:#B56959;--shiki-dark:#C98A7D">ipaddr.js@1.0.1</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> debug@2.2.0</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">ms@0.7.1</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> type-is@1.6.8</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">media-typer@0.3.0, </span><span style="color:#B56959;--shiki-dark:#C98A7D">mime-types@2.1.6</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> accepts@1.2.12</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">negotiator@0.5.3, </span><span style="color:#B56959;--shiki-dark:#C98A7D">mime-types@2.1.6</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">└──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> send@0.13.0</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">destroy@1.0.3, </span><span style="color:#B56959;--shiki-dark:#C98A7D">statuses@1.2.1,</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ms@0.7.1,</span><span style="color:#B56959;--shiki-dark:#C98A7D"> mime@1.3.4,</span><span style="color:#B56959;--shiki-dark:#C98A7D"> http-errors@1.3.1</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span></span></code></pre>
+<h3 id="查看安装信息"><a class="anchor" href="#查看安装信息">#</a> 查看安装信息</h3>
+<p>你可以使用以下命令来查看所有全局安装的模块：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">$</span><span style="color:#B56959;--shiki-dark:#C98A7D"> npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> list</span><span style="color:#A65E2B;--shiki-dark:#C99076"> -g</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">├─┬</span><span style="color:#B56959;--shiki-dark:#C98A7D"> cnpm@4.3.2</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">│</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> auto-correct@1.0.0</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">│</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> bagpipe@0.3.5</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">│</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ├──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> colors@1.1.2</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">│</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ├─┬</span><span style="color:#B56959;--shiki-dark:#C98A7D"> commander@2.9.0</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">│</span><span style="color:#B56959;--shiki-dark:#C98A7D"> │</span><span style="color:#B56959;--shiki-dark:#C98A7D"> └──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> graceful-readlink@1.0.1</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">│</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ├─┬</span><span style="color:#B56959;--shiki-dark:#C98A7D"> cross-spawn@0.2.9</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">│</span><span style="color:#B56959;--shiki-dark:#C98A7D"> │</span><span style="color:#B56959;--shiki-dark:#C98A7D"> └──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> lru-cache@2.7.3</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">……</span></span></code></pre>
+<p>如果要查看某个模块的版本号，可以使用命令如下：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">$</span><span style="color:#B56959;--shiki-dark:#C98A7D"> npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> list</span><span style="color:#B56959;--shiki-dark:#C98A7D"> grunt</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">projectName@projectVersion</span><span style="color:#B56959;--shiki-dark:#C98A7D"> /path/to/project/folder</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">└──</span><span style="color:#B56959;--shiki-dark:#C98A7D"> grunt@0.4.1</span></span></code></pre>
+<hr>
+<h2 id="卸载模块"><a class="anchor" href="#卸载模块">#</a> 卸载模块</h2>
+<p>我们可以使用以下命令来卸载 Node.js 模块。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">$</span><span style="color:#B56959;--shiki-dark:#C98A7D"> npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> uninstall</span><span style="color:#B56959;--shiki-dark:#C98A7D"> express</span></span></code></pre>
+<p>卸载后，你可以到 /node_modules/ 目录下查看包是否还存在，或者使用以下命令查看：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">$</span><span style="color:#B56959;--shiki-dark:#C98A7D"> npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ls</span></span></code></pre>
+<hr>
+<h2 id="更新模块"><a class="anchor" href="#更新模块">#</a> 更新模块</h2>
+<p>我们可以使用以下命令更新模块：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">$</span><span style="color:#B56959;--shiki-dark:#C98A7D"> npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> update</span><span style="color:#B56959;--shiki-dark:#C98A7D"> express</span></span></code></pre>
+<hr>
+<h2 id="搜索模块"><a class="anchor" href="#搜索模块">#</a> 搜索模块</h2>
+<p>使用以下来搜索模块：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">$</span><span style="color:#B56959;--shiki-dark:#C98A7D"> npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> search</span><span style="color:#B56959;--shiki-dark:#C98A7D"> express</span></span></code></pre>
+<hr>
+<h2 id="创建模块"><a class="anchor" href="#创建模块">#</a> 创建模块</h2>
+<p>创建模块，package.json 文件是必不可少的。我们可以使用 NPM 生成 package.json 文件，生成的文件包含了基本的结果。</p>
+<blockquote>
+<p>什么是packeage.json ？</p>
+<p><code>package.json</code> 是 <strong>Node.js/前端项目的核心配置文件</strong>，相当于项目的“说明书 + 依赖清单”。类似<code>requirements.txt</code></p>
+<p>放在项目根目录里，一般长这样：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-json"><span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577"> "</span><span style="color:#998418;--shiki-dark:#B8A965">name</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">my-app</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577"> "</span><span style="color:#998418;--shiki-dark:#B8A965">version</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">1.0.0</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577"> "</span><span style="color:#998418;--shiki-dark:#B8A965">scripts</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#1e754f;--shiki-dark:#4d9375">{</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">   "</span><span style="color:#998418;--shiki-dark:#B8A965">dev</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">next dev</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">   "</span><span style="color:#998418;--shiki-dark:#B8A965">build</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">next build</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">   "</span><span style="color:#998418;--shiki-dark:#B8A965">start</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">next start</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#1e754f;--shiki-dark:#4d9375">}</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577"> "</span><span style="color:#998418;--shiki-dark:#B8A965">dependencies</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#1e754f;--shiki-dark:#4d9375">{</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">   "</span><span style="color:#998418;--shiki-dark:#B8A965">next</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">14.2.3</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">   "</span><span style="color:#998418;--shiki-dark:#B8A965">react</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">18.2.0</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">   "</span><span style="color:#998418;--shiki-dark:#B8A965">react-dom</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">18.2.0</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#1e754f;--shiki-dark:#4d9375">}</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577"> "</span><span style="color:#998418;--shiki-dark:#B8A965">devDependencies</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#1e754f;--shiki-dark:#4d9375">{</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">   "</span><span style="color:#998418;--shiki-dark:#B8A965">typescript</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">^5.3.3</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">   "</span><span style="color:#998418;--shiki-dark:#B8A965">prisma</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">^6.14.0</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#1e754f;--shiki-dark:#4d9375">}</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<ol>
+<li><strong>项目元信息 (metadata)</strong></li>
+</ol>
+<ul>
+<li><code>name</code>: 项目名字</li>
+<li><code>version</code>: 版本号</li>
+<li>作者、许可证等等</li>
+</ul>
+<ol start="2">
+<li><strong>依赖管理</strong></li>
+</ol>
+<ul>
+<li><code>dependencies</code>: 运行项目时需要的库（生产环境也要用）</li>
+<li><code>devDependencies</code>: 只在开发时需要的库（类型文件、测试工具、编译器等）</li>
+</ul>
+<ol start="3">
+<li><strong>脚本 (scripts)</strong></li>
+</ol>
+<ul>
+<li>定义常用命令，简化操作。<br>
+比如：</li>
+</ul>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">pnpm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> run</span><span style="color:#B56959;--shiki-dark:#C98A7D"> dev</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">   # 实际执行 next dev</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">pnpm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> run</span><span style="color:#B56959;--shiki-dark:#C98A7D"> build</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> # 实际执行 next build</span></span></code></pre>
+<ol start="4">
+<li><strong>配置 (config)</strong></li>
+</ol>
+<ul>
+<li>有些库（比如 ESLint、Prettier、Jest）可以直接在 <code>package.json</code> 里放配置。</li>
+</ul>
+<p>更具体内容请见后文。</p>
+</blockquote>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">$</span><span style="color:#B56959;--shiki-dark:#C98A7D"> npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> init</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">This</span><span style="color:#B56959;--shiki-dark:#C98A7D"> utility</span><span style="color:#B56959;--shiki-dark:#C98A7D"> will</span><span style="color:#B56959;--shiki-dark:#C98A7D"> walk</span><span style="color:#B56959;--shiki-dark:#C98A7D"> you</span><span style="color:#B56959;--shiki-dark:#C98A7D"> through</span><span style="color:#B56959;--shiki-dark:#C98A7D"> creating</span><span style="color:#B56959;--shiki-dark:#C98A7D"> a</span><span style="color:#B56959;--shiki-dark:#C98A7D"> package.json</span><span style="color:#B56959;--shiki-dark:#C98A7D"> file.</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">It</span><span style="color:#B56959;--shiki-dark:#C98A7D"> only</span><span style="color:#B56959;--shiki-dark:#C98A7D"> covers</span><span style="color:#B56959;--shiki-dark:#C98A7D"> the</span><span style="color:#B56959;--shiki-dark:#C98A7D"> most</span><span style="color:#B56959;--shiki-dark:#C98A7D"> common</span><span style="color:#B56959;--shiki-dark:#C98A7D"> items,</span><span style="color:#B56959;--shiki-dark:#C98A7D"> and</span><span style="color:#B56959;--shiki-dark:#C98A7D"> tries</span><span style="color:#B56959;--shiki-dark:#C98A7D"> to</span><span style="color:#B56959;--shiki-dark:#C98A7D"> guess</span><span style="color:#B56959;--shiki-dark:#C98A7D"> sensible</span><span style="color:#B56959;--shiki-dark:#C98A7D"> defaults.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">See</span><span style="color:#999999;--shiki-dark:#666666"> `</span><span style="color:#59873A;--shiki-dark:#80A665">npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> help json</span><span style="color:#999999;--shiki-dark:#666666">`</span><span style="color:#1E754F;--shiki-dark:#4D9375"> for</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> definitive documentation on these fields</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">and</span><span style="color:#B56959;--shiki-dark:#C98A7D"> exactly</span><span style="color:#B56959;--shiki-dark:#C98A7D"> what</span><span style="color:#B56959;--shiki-dark:#C98A7D"> they</span><span style="color:#B56959;--shiki-dark:#C98A7D"> do.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">Use</span><span style="color:#999999;--shiki-dark:#666666"> `</span><span style="color:#59873A;--shiki-dark:#80A665">npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> install </span><span style="color:#AB5959;--shiki-dark:#CB7676">&lt;</span><span style="color:#B56959;--shiki-dark:#C98A7D">pkg</span><span style="color:#AB5959;--shiki-dark:#CB7676">&gt;</span><span style="color:#A65E2B;--shiki-dark:#C99076"> --save</span><span style="color:#999999;--shiki-dark:#666666">`</span><span style="color:#59873A;--shiki-dark:#80A665"> afterwards</span><span style="color:#B56959;--shiki-dark:#C98A7D"> to</span><span style="color:#B56959;--shiki-dark:#C98A7D"> install</span><span style="color:#B56959;--shiki-dark:#C98A7D"> a</span><span style="color:#B56959;--shiki-dark:#C98A7D"> package</span><span style="color:#B56959;--shiki-dark:#C98A7D"> and</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">save</span><span style="color:#B56959;--shiki-dark:#C98A7D"> it</span><span style="color:#B56959;--shiki-dark:#C98A7D"> as</span><span style="color:#B56959;--shiki-dark:#C98A7D"> a</span><span style="color:#B56959;--shiki-dark:#C98A7D"> dependency</span><span style="color:#B56959;--shiki-dark:#C98A7D"> in</span><span style="color:#B56959;--shiki-dark:#C98A7D"> the</span><span style="color:#B56959;--shiki-dark:#C98A7D"> package.json</span><span style="color:#B56959;--shiki-dark:#C98A7D"> file.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">Press</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ^C</span><span style="color:#B56959;--shiki-dark:#C98A7D"> at</span><span style="color:#B56959;--shiki-dark:#C98A7D"> any</span><span style="color:#B56959;--shiki-dark:#C98A7D"> time</span><span style="color:#B56959;--shiki-dark:#C98A7D"> to</span><span style="color:#B56959;--shiki-dark:#C98A7D"> quit.</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">name:</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">node_modules</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> runoob                   </span><span style="color:#A0ADA0;--shiki-dark:#758575DD"># 模块名</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">version:</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">1.0.0</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">description:</span><span style="color:#B56959;--shiki-dark:#C98A7D"> Node.js</span><span style="color:#B56959;--shiki-dark:#C98A7D"> 测试模块</span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#59873A;--shiki-dark:#80A665">www.runoob.com</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">  # 描述</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">entry</span><span style="color:#B56959;--shiki-dark:#C98A7D"> point:</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">index.js</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">test</span><span style="color:#B56959;--shiki-dark:#C98A7D"> command:</span><span style="color:#B56959;--shiki-dark:#C98A7D"> make</span><span style="color:#B56959;--shiki-dark:#C98A7D"> test</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">git</span><span style="color:#B56959;--shiki-dark:#C98A7D"> repository:</span><span style="color:#B56959;--shiki-dark:#C98A7D"> https://github.com/runoob/runoob.git</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">  # Github 地址</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">keywords:</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">author:</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">license:</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">ISC</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">About</span><span style="color:#B56959;--shiki-dark:#C98A7D"> to</span><span style="color:#B56959;--shiki-dark:#C98A7D"> write</span><span style="color:#B56959;--shiki-dark:#C98A7D"> to</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ……/node_modules/package.json:</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">      # 生成地址</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">  "name"</span><span style="color:#998418;--shiki-dark:#B8A965">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">runoob</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">,</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">  "version"</span><span style="color:#998418;--shiki-dark:#B8A965">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">1.0.0</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">,</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">  "description"</span><span style="color:#998418;--shiki-dark:#B8A965">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">Node.js 测试模块(www.runoob.com)</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">,</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">  ……</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">Is</span><span style="color:#B56959;--shiki-dark:#C98A7D"> this</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ok?</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">yes</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> yes</span></span></code></pre>
+<p>以上的信息，你需要根据你自己的情况输入。在最后输入 "yes" 后会生成 package.json 文件。</p>
+<p>接下来我们可以使用以下命令在 npm 资源库中注册用户（使用邮箱注册）：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">$</span><span style="color:#B56959;--shiki-dark:#C98A7D"> npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> adduser</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">Username:</span><span style="color:#B56959;--shiki-dark:#C98A7D"> mcmohd</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">Password:</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">Email:</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">this </span><span style="color:#B56959;--shiki-dark:#C98A7D">IS</span><span style="color:#B56959;--shiki-dark:#C98A7D"> public</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> mcmohd@gmail.com</span></span></code></pre>
+<p>接下来我们就用以下命令来发布模块：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">$</span><span style="color:#B56959;--shiki-dark:#C98A7D"> npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> publish</span></span></code></pre>
+<p>如果你以上的步骤都操作正确，你就可以跟其他模块一样使用 npm 来安装。</p>
+<h2 id="版本号"><a class="anchor" href="#版本号">#</a> 版本号</h2>
+<p>使用 NPM 下载和发布代码时都会接触到版本号，NPM 使用语义版本号来管理代码，这里简单介绍一下。</p>
+<p>版本号遵循语义化版本控制（SemVer），格式为 MAJOR.MINOR.PATCH，并可附加额外标记。</p>
+<ul>
+<li><strong>MAJOR（主版本）</strong>：当你做了不兼容的 API 改动时增加。例如：<code>2.0.0</code>。</li>
+<li><strong>MINOR（次版本）</strong>：当你添加新功能但保持向后兼容时增加。例如：<code>1.1.0</code>。</li>
+<li><strong>PATCH（补丁版本）</strong>：当你修复 bug 而不增加新功能时增加。例如：<code>1.0.1</code>。</li>
+</ul>
+<h3 id="额外标记"><a class="anchor" href="#额外标记">#</a> 额外标记</h3>
+<ul>
+<li><strong>预发布版本</strong>：如 <code>1.0.0-alpha</code> 或 <code>1.0.0-beta.1</code>，表示该版本仍在测试中。</li>
+<li><strong>构建元数据</strong>：如 <code>1.0.0+build.1</code>，提供有关构建的信息。</li>
+</ul>
+<h3 id="安装示例"><a class="anchor" href="#安装示例">#</a> 安装示例</h3>
+<ul>
+<li>安装特定版本：<code>npm install package-name@1.2.3</code></li>
+<li>安装最新的主版本：<code>npm install package-name@^1.2.3</code> （安装 <code>1.x.x</code> 的最新版本）</li>
+</ul>
+<hr>
+<h2 id="npm-常用命令"><a class="anchor" href="#npm-常用命令">#</a> NPM 常用命令</h2>
+<p>NPM 提供了很多命令，可以使用 <strong>npm help</strong> 可查看所有命令。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>npm init</code></td>
+<td style="text-align:left">初始化一个新的 <code>package.json</code> 文件，交互式输入信息。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm init -y</code></td>
+<td style="text-align:left">快速创建带有默认设置的 <code>package.json</code> 文件。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm install package-name</code></td>
+<td style="text-align:left">本地安装指定包。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm install -g package-name</code></td>
+<td style="text-align:left">全局安装指定包，使其在系统范围内可用。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm install</code></td>
+<td style="text-align:left">安装 <code>package.json</code> 中列出的所有依赖。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm install package-name --save-dev</code></td>
+<td style="text-align:left">安装包并添加到 <code>devDependencies</code>。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm update package-name</code></td>
+<td style="text-align:left">更新指定的依赖包。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm uninstall package-name</code></td>
+<td style="text-align:left">卸载指定的依赖包。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm uninstall -g package-name</code></td>
+<td style="text-align:left">全局卸载指定的包。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm list</code></td>
+<td style="text-align:left">查看当前项目的已安装依赖包列表。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm list -g --depth=0</code></td>
+<td style="text-align:left">查看全局已安装的依赖包列表（不展开依赖树）。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm info package-name</code></td>
+<td style="text-align:left">查看包的详细信息，包括版本和依赖等。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm login</code></td>
+<td style="text-align:left">登录到 NPM 账号。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm publish</code></td>
+<td style="text-align:left">发布当前包到 NPM 注册表。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm unpublish package-name</code></td>
+<td style="text-align:left">从 NPM 注册表中撤销发布的包（一般限 24 小时内）。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm cache clean --force</code></td>
+<td style="text-align:left">清理 NPM 缓存。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm audit</code></td>
+<td style="text-align:left">检查项目依赖中的安全漏洞。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm audit fix</code></td>
+<td style="text-align:left">自动修复已知的漏洞。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm run script-name</code></td>
+<td style="text-align:left">运行 <code>package.json</code> 中定义的脚本，例如 <code>npm run start</code>。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm start</code></td>
+<td style="text-align:left">运行 <code>start</code> 脚本（等同于 <code>npm run start</code>）。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm test</code></td>
+<td style="text-align:left">运行 <code>test</code> 脚本。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm build</code></td>
+<td style="text-align:left">运行 <code>build</code> 脚本。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm outdated</code></td>
+<td style="text-align:left">列出项目中有可更新版本的依赖包。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm version patch/minor/major</code></td>
+<td style="text-align:left">更新 <code>package.json</code> 中的版本号，自动更新版本。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>npm ci</code></td>
+<td style="text-align:left">使用 <code>package-lock.json</code> 快速安装依赖，适用于 CI/CD 环境。</td>
+</tr>
+</tbody>
+</table>
+<p>除了本章介绍的部分外，NPM 还提供了很多功能，package.json 里也有很多其它有用的字段。</p>
+<p>除了可以在 <a target="_blank" rel="noopener" href="https://docs.npmjs.com/">https://docs.npmjs.com/</a> 查看官方文档外，这里再介绍一些NPM常用命令。</p>
+<hr>
+<h2 id="packagejson-的详细说明与使用"><a class="anchor" href="#packagejson-的详细说明与使用">#</a> package.json 的详细说明与使用</h2>
+<p>package.json 是 Node.js 项目中的一个核心文件，包含了项目的元数据、依赖、脚本等信息。</p>
+<p>package.json 文件用于描述项目的元数据和依赖关系，它通常位于项目的根目录中，并且是项目的配置文件。</p>
+<p>package.json 文件是一个 JSON 格式的文件，包含以下基本字段：</p>
+<ul>
+<li><code>name</code>：项目的名称，应该是唯一的，通常使用小写字母和连字符。</li>
+<li><code>version</code>：项目的版本号，遵循语义化版本控制（Semantic Versioning）。</li>
+<li><code>description</code>：项目的简短描述。</li>
+<li><code>main</code>：项目的入口文件，通常是应用程序的启动文件。</li>
+<li><code>scripts</code>：定义了一系列的命令行脚本，可以在项目中执行特定的任务。</li>
+<li><code>dependencies</code>：列出了项目运行所需的所有依赖包及其版本。</li>
+<li><code>devDependencies</code>：列出了只在开发过程中需要的依赖包及其版本。</li>
+<li><code>peerDependencies</code>：列出了项目期望其依赖包也依赖的包。</li>
+<li><code>optionalDependencies</code>：列出了可选的依赖包。</li>
+<li><code>engines</code>：指定了项目兼容的 Node.js 版本。</li>
+<li><code>repository</code>：项目的代码仓库信息，如 GitHub 仓库的 URL。</li>
+<li><code>keywords</code>：项目的关键词，有助于在 npm 搜索中找到项目。</li>
+<li><code>author</code>：项目的作者信息。</li>
+<li><code>license</code>：项目的许可证信息。</li>
+</ul>
+<p><strong>使用方法：</strong></p>
+<ol>
+<li><strong>初始化项目</strong>：在项目目录中运行 <code>npm init</code> 命令，npm 会引导你创建一个 <code>package.json</code> 文件，或者自动生成一个包含默认值的 <code>package.json</code>。</li>
+<li><strong>安装依赖</strong>：使用 <code>npm install &lt;package-name&gt;</code> 命令安装依赖，npm 会自动将依赖添加到 <code>package.json</code> 文件的 <code>dependencies</code> 或 <code>devDependencies</code> 中，并创建 <code>package-lock.json</code> 文件以锁定依赖的版本。</li>
+<li><strong>管理脚本</strong>：在 <code>scripts</code> 字段中定义命令，例如 <code>"start": "node app.js"</code>，然后可以通过 <code>npm start</code> 命令来运行这些脚本。</li>
+<li><strong>版本控制</strong>：使用 <code>npm version</code> 命令来管理项目的版本号，npm 会自动更新 <code>package.json</code> 中的版本号，并生成一个新的 Git 标签。</li>
+<li><strong>发布包</strong>：当项目准备好发布到 npm 时，可以使用 <code>npm publish</code> 命令，npm 会读取 <code>package.json</code> 中的信息来发布包。</li>
+<li><strong>依赖管理</strong>：<code>package.json</code> 和 <code>package-lock.json</code> 文件一起工作，确保项目在不同环境中的依赖版本一致。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字段</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>name</strong></td>
+<td style="text-align:left">项目的名称，通常是小写字母和连字符。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>version</strong></td>
+<td style="text-align:left">项目的版本号，遵循 <a target="_blank" rel="noopener" href="https://semver.org/">语义化版本规范 (SemVer)</a>。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>description</strong></td>
+<td style="text-align:left">项目的简短描述。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>main</strong></td>
+<td style="text-align:left">项目的入口文件，默认为 <code>index.js</code>。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>scripts</strong></td>
+<td style="text-align:left">定义项目可执行的脚本命令，如 <code>npm start</code>。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>dependencies</strong></td>
+<td style="text-align:left">项目运行时需要的依赖库，会在安装时加入 <code>node_modules</code>。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>devDependencies</strong></td>
+<td style="text-align:left">开发时使用的依赖库，不会在生产环境中安装。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>keywords</strong></td>
+<td style="text-align:left">关键字数组，有助于描述项目并在 NPM 搜索中找到项目。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>author</strong></td>
+<td style="text-align:left">项目的作者信息。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>license</strong></td>
+<td style="text-align:left">项目的许可证类型，如 <code>MIT</code>、<code>ISC</code>。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="使用-packagejson-的好处"><a class="anchor" href="#使用-packagejson-的好处">#</a> 使用 package.json 的好处</h3>
+<ul>
+<li><strong>依赖管理</strong>：集中管理项目的依赖项及其版本。</li>
+<li><strong>自动化任务</strong>：通过 <code>scripts</code> 字段可以方便地运行常见的任务。</li>
+<li><strong>版本控制</strong>：确保项目及其依赖版本的一致性，便于团队协作。</li>
+<li><strong>描述项目</strong>：为项目提供元数据信息，便于发布和共享。</li>
+</ul>
+<p>一个例子：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-json"><span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">  "</span><span style="color:#998418;--shiki-dark:#B8A965">name</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">my-project</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">  "</span><span style="color:#998418;--shiki-dark:#B8A965">version</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">1.0.0</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">  "</span><span style="color:#998418;--shiki-dark:#B8A965">description</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">A simple Node.js project</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">  "</span><span style="color:#998418;--shiki-dark:#B8A965">main</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">app.js</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">  "</span><span style="color:#998418;--shiki-dark:#B8A965">scripts</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#1e754f;--shiki-dark:#4d9375">{</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">    "</span><span style="color:#998418;--shiki-dark:#B8A965">start</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">node app.js</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">    "</span><span style="color:#998418;--shiki-dark:#B8A965">test</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">echo </span><span style="color:#A65E2B;--shiki-dark:#C99076">\"</span><span style="color:#B56959;--shiki-dark:#C98A7D">Error: no test specified</span><span style="color:#A65E2B;--shiki-dark:#C99076">\"</span><span style="color:#B56959;--shiki-dark:#C98A7D"> &amp;&amp; exit 1</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">  </span><span style="color:#1e754f;--shiki-dark:#4d9375">}</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">  "</span><span style="color:#998418;--shiki-dark:#B8A965">dependencies</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#1e754f;--shiki-dark:#4d9375">{</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">    "</span><span style="color:#998418;--shiki-dark:#B8A965">express</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">^4.17.1</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">  </span><span style="color:#1e754f;--shiki-dark:#4d9375">}</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">  "</span><span style="color:#998418;--shiki-dark:#B8A965">devDependencies</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#1e754f;--shiki-dark:#4d9375">{</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">    "</span><span style="color:#998418;--shiki-dark:#B8A965">nodemon</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">^2.0.20</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">  </span><span style="color:#1e754f;--shiki-dark:#4d9375">}</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">  "</span><span style="color:#998418;--shiki-dark:#B8A965">keywords</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#1e754f;--shiki-dark:#4d9375">[</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">node</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">npm</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">example</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#1e754f;--shiki-dark:#4d9375">]</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">  "</span><span style="color:#998418;--shiki-dark:#B8A965">author</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">Your Name</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">  "</span><span style="color:#998418;--shiki-dark:#B8A965">license</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">MIT</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h3 id="依赖管理"><a class="anchor" href="#依赖管理">#</a> 依赖管理</h3>
+<p><strong>dependencies</strong>：存储项目运行所需的依赖。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-json"><span class="line"><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">dependencies</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">: </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">  "</span><span style="color:#998418;--shiki-dark:#B8A965">express</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">^4.17.1</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>安装依赖时使用：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> install</span><span style="color:#B56959;--shiki-dark:#C98A7D"> express</span></span></code></pre>
+<p><strong>devDependencies</strong>：存储项目开发期间需要的依赖。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-json"><span class="line"><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">devDependencies</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">: </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">  "</span><span style="color:#998418;--shiki-dark:#B8A965">nodemon</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">^2.0.20</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>安装依赖时使用：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> install</span><span style="color:#B56959;--shiki-dark:#C98A7D"> nodemon</span><span style="color:#A65E2B;--shiki-dark:#C99076"> --save-dev</span></span></code></pre>
+<h3 id="scripts-字段"><a class="anchor" href="#scripts-字段">#</a> scripts 字段</h3>
+<p>scripts 字段用于定义可通过 npm run &lt;script&gt; 执行的命令。常见的脚本包括：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-json"><span class="line"><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">scripts</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">: </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">  "</span><span style="color:#998418;--shiki-dark:#B8A965">start</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">node app.js</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">  "</span><span style="color:#998418;--shiki-dark:#B8A965">test</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">jest</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">  "</span><span style="color:#998418;--shiki-dark:#B8A965">build</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">webpack --mode production</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="color:#99841877;--shiki-dark:#B8A96577">  "</span><span style="color:#998418;--shiki-dark:#B8A965">dev</span><span style="color:#99841877;--shiki-dark:#B8A96577">"</span><span style="color:#999999;--shiki-dark:#666666">:</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">nodemon app.js</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>运行脚本示例：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> run</span><span style="color:#B56959;--shiki-dark:#C98A7D"> dev</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">   # 执行 "nodemon app.js"</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> start</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">     # 等同于 "node app.js"，可以直接用 npm start 运行</span></span></code></pre>
+<h3 id="版本号中的符号说明"><a class="anchor" href="#版本号中的符号说明">#</a> 版本号中的符号说明</h3>
+<ul>
+<li><strong><code>^</code></strong>（插入符）：表示安装与当前主版本兼容的最新版本。例如，<code>^4.17.1</code> 会安装 <code>4.x.x</code> 中的最新版本。</li>
+<li><strong><code>~</code></strong>（波浪号）：表示安装与当前次版本兼容的最新版本。例如，<code>~4.17.1</code> 会安装 <code>4.17.x</code> 中的最新版本。</li>
+</ul>
+<h3 id="常用命令"><a class="anchor" href="#常用命令">#</a> 常用命令</h3>
+<p>初始化 package.json 文件：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> init</span></span></code></pre>
+<p>使用 npm init -y 可以快速生成默认的 package.json 文件。</p>
+<p>查看项目依赖：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> list</span><span style="color:#A65E2B;--shiki-dark:#C99076"> --depth=0</span></span></code></pre>
+<p>更新依赖：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-shell"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">npm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> update</span><span style="color:#B56959;--shiki-dark:#C98A7D"> package-name</span></span></code></pre>
+<h3 id="注意事项"><a class="anchor" href="#注意事项">#</a> 注意事项</h3>
+<ul>
+<li>保持 <code>package.json</code> 文件的简洁和准确，避免不必要的字段。</li>
+<li>使用 <code>package-lock.json</code> 来锁定依赖的版本，以确保项目在不同环境中的一致性。</li>
+<li>定期更新依赖，以利用最新的功能和安全修复</li>
+</ul>
+<div class="tags"><a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="ic i-tag"></i>前端</a><a href="/tags/NPM/" rel="tag"><i class="ic i-tag"></i>NPM</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i></span><span class="text">更新于 </span><time title="修改时间：2025-10-13 15:00:00" itemprop="dateModified" datetime="2025-10-13T15:00:00+08:00">2025-10-13</time></span></div><div class="reward"><button><i class="ic i-heartbeat"></i>赞赏</button><p>请我喝[茶]~(￣▽￣)~*</p><div id="qr"><div><img loading="lazy" src="/assets/wechatpay.avif" alt="Luchron 微信支付"><p>微信支付</p></div><div><img loading="lazy" src="/assets/alipay.avif" alt="Luchron 支付宝"><p>支付宝</p></div></div></div><div id="copyright"><ul><li class="author"><strong>本文作者：</strong>Luchron<i class="ic i-at"><em>@</em></i>絶対忘れ てやらないよ</li><li class="link"><strong>本文链接：</strong><a href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/NPM/" title="NPM">http://localhost:4000/2025/10/13/技术积累/前端/NPM/</a></li><li class="license"><strong>版权声明：</strong>本站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/React/" rel="prev" itemprop="url" data-background-image="//assets/01.jpg" title="React"><span class="type">上一篇</span><span class="category"><i class="ic i-flag"></i>技术积累</span><h3>React</h3></a></div><div class="item right"><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/HTML/" rel="next" itemprop="url" data-background-image="//assets/01.jpg" title="HTML"><span class="type">下一篇</span><span class="category"><i class="ic i-flag"></i>技术积累</span><h3>HTML</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#npm-%E4%BD%BF%E7%94%A8%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text"> NPM 使用介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-npm-%E5%91%BD%E4%BB%A4%E5%AE%89%E8%A3%85%E6%A8%A1%E5%9D%97"><span class="toc-number">2.</span> <span class="toc-text"> 使用 npm 命令安装模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85%E4%B8%8E%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text"> 全局安装与本地安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85"><span class="toc-number">3.1.</span> <span class="toc-text"> 本地安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85"><span class="toc-number">3.2.</span> <span class="toc-text"> 全局安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%AE%89%E8%A3%85%E4%BF%A1%E6%81%AF"><span class="toc-number">3.3.</span> <span class="toc-text"> 查看安装信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%B8%E8%BD%BD%E6%A8%A1%E5%9D%97"><span class="toc-number">4.</span> <span class="toc-text"> 卸载模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E6%A8%A1%E5%9D%97"><span class="toc-number">5.</span> <span class="toc-text"> 更新模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E6%A8%A1%E5%9D%97"><span class="toc-number">6.</span> <span class="toc-text"> 搜索模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9D%97"><span class="toc-number">7.</span> <span class="toc-text"> 创建模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E5%8F%B7"><span class="toc-number">8.</span> <span class="toc-text"> 版本号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%9D%E5%A4%96%E6%A0%87%E8%AE%B0"><span class="toc-number">8.1.</span> <span class="toc-text"> 额外标记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B"><span class="toc-number">8.2.</span> <span class="toc-text"> 安装示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#npm-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">9.</span> <span class="toc-text"> NPM 常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#packagejson-%E7%9A%84%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E%E4%B8%8E%E4%BD%BF%E7%94%A8"><span class="toc-number">10.</span> <span class="toc-text"> package.json 的详细说明与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-packagejson-%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-number">10.1.</span> <span class="toc-text"> 使用 package.json 的好处</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86"><span class="toc-number">10.2.</span> <span class="toc-text"> 依赖管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#scripts-%E5%AD%97%E6%AE%B5"><span class="toc-number">10.3.</span> <span class="toc-text"> scripts 字段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E5%8F%B7%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7%E8%AF%B4%E6%98%8E"><span class="toc-number">10.4.</span> <span class="toc-text"> 版本号中的符号说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">10.5.</span> <span class="toc-text"> 常用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">10.6.</span> <span class="toc-text"> 注意事项</span></a></li></ol></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/api%E7%9A%84%E5%88%B6%E5%AE%9A/" rel="bookmark" title="api的制定">api的制定</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/shell%E8%84%9A%E6%9C%AC/" rel="bookmark" title="shell脚本">shell脚本</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_learn/" rel="bookmark" title="git简介">git简介</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_apply/" rel="bookmark" title="git 应用">git 应用</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/Go/" rel="bookmark" title="Go">Go</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/markdown/Typora%20markdown%E6%95%99%E7%A8%8B/" rel="bookmark" title="markdown">markdown</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/CSS/" rel="bookmark" title="CSS">CSS</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/JS/" rel="bookmark" title="JavaScript">JavaScript</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/HTML/" rel="bookmark" title="HTML">HTML</a></li><li class="active"><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/NPM/" rel="bookmark" title="NPM">NPM</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/React/" rel="bookmark" title="React">React</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/fatch%20api/" rel="bookmark" title="fetch api">fetch api</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/%E5%85%B3%E4%BA%8E%E5%89%8D%E7%AB%AF/" rel="bookmark" title="关于前端">关于前端</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/typescript/" rel="bookmark" title="TypeScript">TypeScript</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C#/" rel="bookmark" title="C#">C#</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="image" loading="lazy" decoding="async" itemprop="image" alt="Luchron" src="/assets/avatar.avif"><p class="name" itemprop="name">Luchron</p><div class="description" itemprop="description">未下眉头，又上心头</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">19</span><span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">3</span><span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">18</span><span class="name">标签</span></a></div></nav><div class="social"><a target="_blank" rel="noopener" href="https://github.com/yourname" class="item github" title="https://github.com/yourname"><i class="ic i-github"></i></a></div><div class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item dropdown"><a href="#" onclick="return false;"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li></div></div></div></div><ul id="quick"><li class="prev pjax"><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/HTML/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/React/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div><div id="player"></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/%E5%85%B3%E4%BA%8E%E6%88%91/" title="分类于关于我">关于我</a></div><span><a href="/2025/10/13/about%20me/">about me</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_learn/">git简介</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C#/">C#</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/shell%E8%84%9A%E6%9C%AC/">shell脚本</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" title="分类于课堂笔记">课堂笔记</a></div><span><a href="/2025/10/13/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/">数据结构基础</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" title="分类于课堂笔记">课堂笔记</a></div><span><a href="/2025/10/13/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/">离散数学</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_apply/">git 应用</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/NPM/">NPM</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/typescript/">TypeScript</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/markdown/Typora%20markdown%E6%95%99%E7%A8%8B/">markdown</a></span></li></ul></div><div class="rpost pjax"><h2>最新评论</h2></div></div><div class="status"><div class="copyright">© 2022 -<span itemprop="copyrightYear">2026</span><span class="with-love"><i class="ic i-sakura rotate"></i></span><span class="author" itemprop="copyrightHolder">Luchron @ Luchron's Blog</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i></span><span title="站点总字数">306k 字</span><span class="post-meta-divider"> | </span><span class="post-meta-item-icon"><i class="ic i-coffee"></i></span><span title="站点阅读时长">4:38</span></div><div class="powered-by">基于 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> &amp; Theme.<a target="_blank" rel="noopener" href="https://github.com/theme-shoka-x/hexo-theme-shokaX/">ShokaX</a></div></div></div></footer></div><script data-config="" type="text/javascript">var LOCAL = {
+    ispost: true,
+    path: `2025/10/13/技术积累/前端/NPM/`,
+    favicon: {
+        show: `（●´3｀●）やれやれだぜ`,
+        hide: `(´Д｀)大変だ！`
+    },
+    search: {
+        placeholder: "文章搜索",
+        empty: "关于 「 ${query} 」，什么也没搜到",
+        stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    nocopy: "false",
+    copyright: `复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。`,
+    copy_tex: false,
+    katex: false,
+    mermaid: false,
+    audio: undefined,
+    nocopy: false,
+    outime: true,
+    template: `<div class="note warning"><p><span class="label warning">文章时效性提示</span><br>这是一篇发布于 {{publish}} 天前，最后一次更新在 {{updated}} 天前的文章，部分信息可能已经发生改变，请注意甄别。</p></div>`,
+    quiz: {
+        choice: `单选题`,
+        multiple: `多选题`,
+        true_false: `判断题`,
+        essay: `问答题`,
+        gap_fill: `填空题`,
+        mistake: `错题备注`
+    }
+};
+</script><script src="/js/siteInit.js?v=0.5.4" type="module" fetchpriority="high" defer=""></script></body></html>
