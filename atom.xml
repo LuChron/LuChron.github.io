@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://luchron.github.io</id>
     <title>絶対忘れ てやらないよ</title>
     <subtitle>狗窝</subtitle>
-    <icon>http://localhost:4000/assets/favicon.ico</icon>
-    <link href="http://localhost:4000" />
+    <icon>https://luchron.github.io/assets/favicon.ico</icon>
+    <link href="https://luchron.github.io" />
     <author>
       <name>Luchron</name>
     </author>
@@ -13,9 +13,9 @@
     <category term=" Blog" />
     <category term=" Hexo" />
     <entry>
-        <id>http://localhost:4000/2026/03/20/hello-world/</id>
+        <id>https://luchron.github.io/2026/03/20/hello-world/</id>
         <title>Hello World</title>
-        <link rel="alternate" href="http://localhost:4000/2026/03/20/hello-world/"/>
+        <link rel="alternate" href="https://luchron.github.io/2026/03/20/hello-world/"/>
         <content type="html">&lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
 &lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
@@ -34,9 +34,9 @@
         <updated>2026-03-20T14:59:36.750Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/about%20me/</id>
+        <id>https://luchron.github.io/2025/10/13/about%20me/</id>
         <title>about me</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/about%20me/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/about%20me/"/>
         <content type="html">&lt;h2 id=&#34;luchrons-notebook&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#luchrons-notebook&#34;&gt;#&lt;/a&gt; LuChron&#39;s Notebook&lt;/h2&gt;
 &lt;h2 id=&#34;关于&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关于&#34;&gt;#&lt;/a&gt; 关于&lt;/h2&gt;
 &lt;p&gt;这里整理和分享了我的一些学习成果。&lt;/p&gt;
@@ -78,13 +78,13 @@
 &lt;p&gt;照片puq自取……&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
-        <category term="关于我" scheme="http://localhost:4000/categories/%E5%85%B3%E4%BA%8E%E6%88%91/" />
+        <category term="关于我" scheme="https://luchron.github.io/categories/%E5%85%B3%E4%BA%8E%E6%88%91/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/api%E7%9A%84%E5%88%B6%E5%AE%9A/</id>
+        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/api%E7%9A%84%E5%88%B6%E5%AE%9A/</id>
         <title>api的制定</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/api%E7%9A%84%E5%88%B6%E5%AE%9A/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/api%E7%9A%84%E5%88%B6%E5%AE%9A/"/>
         <content type="html">&lt;h2 id=&#34;api的作用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#api的作用&#34;&gt;#&lt;/a&gt; API的作用&lt;/h2&gt;
 &lt;p&gt;API（Application Programming Interface，应用程序编程接口）是前端和后端进行通信和交换数据的一种规范。我们在API中确定前后端交互的路径、方法和参数。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -241,14 +241,14 @@
 &lt;h2 id=&#34;apifox&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#apifox&#34;&gt;#&lt;/a&gt; &lt;strong&gt;Apifox&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;简化api的设计&lt;/p&gt;
 </content>
-        <category term="技术积累" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
-        <category term="api" scheme="http://localhost:4000/tags/api/" />
+        <category term="技术积累" scheme="https://luchron.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
+        <category term="api" scheme="https://luchron.github.io/tags/api/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/shell%E8%84%9A%E6%9C%AC/</id>
+        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/shell%E8%84%9A%E6%9C%AC/</id>
         <title>shell脚本</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/shell%E8%84%9A%E6%9C%AC/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/shell%E8%84%9A%E6%9C%AC/"/>
         <content type="html">&lt;h2 id=&#34;shell-脚本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#shell-脚本&#34;&gt;#&lt;/a&gt; Shell 脚本&lt;/h2&gt;
 &lt;p&gt;Shell 脚本（shell script），是一种为 shell 编写的脚本程序。&lt;/p&gt;
 &lt;h2 id=&#34;shell-环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#shell-环境&#34;&gt;#&lt;/a&gt; Shell 环境&lt;/h2&gt;
@@ -991,15 +991,15 @@
 &lt;pre class=&#34;shiki shiki-themes vitesse-light vitesse-dark&#34; style=&#34;background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee&#34; tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt;command1&lt;/span&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt;&amp;#x3C;&lt;/span&gt;&lt;span style=&#34;color:#B56959;--shiki-dark:#C98A7D&#34;&gt; infile&lt;/span&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt;&gt;&lt;/span&gt;&lt;span style=&#34;color:#B56959;--shiki-dark:#C98A7D&#34;&gt; outfile&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;同时替换输入和输出，执行command1，从文件infile读取内容，然后将输出写入到outfile中。&lt;/p&gt;
 </content>
-        <category term="技术积累" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
-        <category term="shell" scheme="http://localhost:4000/tags/shell/" />
-        <category term="linux" scheme="http://localhost:4000/tags/linux/" />
+        <category term="技术积累" scheme="https://luchron.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
+        <category term="shell" scheme="https://luchron.github.io/tags/shell/" />
+        <category term="linux" scheme="https://luchron.github.io/tags/linux/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/</id>
+        <id>https://luchron.github.io/2025/10/13/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/</id>
         <title>离散数学</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/"/>
         <content type="html">&lt;h2 id=&#34;离散数学&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#离散数学&#34;&gt;#&lt;/a&gt; 离散数学&lt;/h2&gt;
 &lt;h3 id=&#34;chap3-algorithms&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#chap3-algorithms&#34;&gt;#&lt;/a&gt; Chap3 Algorithms&lt;/h3&gt;
 &lt;h5 id=&#34;搜索算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搜索算法&#34;&gt;#&lt;/a&gt; 搜索算法&lt;/h5&gt;
@@ -1424,14 +1424,14 @@
 &lt;p&gt;会对你理解和记忆很有帮助，要不要？你只需要回我【要】就行~&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
-        <category term="课堂笔记" scheme="http://localhost:4000/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" />
-        <category term="课堂笔记" scheme="http://localhost:4000/tags/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" />
+        <category term="课堂笔记" scheme="https://luchron.github.io/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" />
+        <category term="课堂笔记" scheme="https://luchron.github.io/tags/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_learn/</id>
+        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_learn/</id>
         <title>git简介</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_learn/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_learn/"/>
         <content type="html">&lt;h2 id=&#34;git简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git简介&#34;&gt;#&lt;/a&gt; Git简介&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;git&lt;/strong&gt; : 分布式版本控制系统（DVCS，Distributed Version Control System）&lt;/p&gt;
 &lt;ul&gt;
@@ -1714,14 +1714,14 @@
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt;# 不排除.gitignore&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt;.gitignore&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 </content>
-        <category term="技术积累" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
-        <category term="git" scheme="http://localhost:4000/tags/git/" />
+        <category term="技术积累" scheme="https://luchron.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
+        <category term="git" scheme="https://luchron.github.io/tags/git/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_apply/</id>
+        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_apply/</id>
         <title>git 应用</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_apply/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_apply/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;下面是补充的一些内容&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1862,14 +1862,14 @@
 &lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;/assets/%E5%9B%BE%E7%89%87/image-20250424235837378.png&#34; alt=&#34;image-20250424235837378&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;所以说这个还会有冲突的，如果修改了同一个位置会有冲突，还是需要手动解决的。&lt;/p&gt;
 </content>
-        <category term="技术积累" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
-        <category term="git" scheme="http://localhost:4000/tags/git/" />
+        <category term="技术积累" scheme="https://luchron.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
+        <category term="git" scheme="https://luchron.github.io/tags/git/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/Go/</id>
+        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/Go/</id>
         <title>Go</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/Go/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/Go/"/>
         <content type="html">&lt;h2 id=&#34;一个go程序由哪些部分组成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一个go程序由哪些部分组成&#34;&gt;#&lt;/a&gt; 一个Go程序由哪些部分组成？&lt;/h2&gt;
 &lt;p&gt;一个典型的Go程序主要包含以下几个核心部分：&lt;/p&gt;
 &lt;pre class=&#34;shiki shiki-themes vitesse-light vitesse-dark&#34; style=&#34;background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee&#34; tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#1E754F;--shiki-dark:#4D9375&#34;&gt;package&lt;/span&gt;&lt;span style=&#34;color:#2E8F82;--shiki-dark:#5DA994&#34;&gt; main&lt;/span&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt;                // 1. 包声明&lt;/span&gt;&lt;/span&gt;
@@ -2234,16 +2234,16 @@
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;log&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;Flags&lt;/span&gt;&lt;span style=&#34;color:#393A34;--shiki-dark:#DBD7CAEE&#34;&gt;：&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;设置日志格式标志&lt;/span&gt;&lt;span style=&#34;color:#393A34;--shiki-dark:#DBD7CAEE&#34;&gt;（&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;如日期&lt;/span&gt;&lt;span style=&#34;color:#393A34;--shiki-dark:#DBD7CAEE&#34;&gt;、&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;时间&lt;/span&gt;&lt;span style=&#34;color:#393A34;--shiki-dark:#DBD7CAEE&#34;&gt;、&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;微秒&lt;/span&gt;&lt;span style=&#34;color:#393A34;--shiki-dark:#DBD7CAEE&#34;&gt;、&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;文件行号&lt;/span&gt;&lt;span style=&#34;color:#393A34;--shiki-dark:#DBD7CAEE&#34;&gt;）。&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;log&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;SetOutput&lt;/span&gt;&lt;span style=&#34;color:#393A34;--shiki-dark:#DBD7CAEE&#34;&gt;：&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;更改日志输出位置&lt;/span&gt;&lt;span style=&#34;color:#393A34;--shiki-dark:#DBD7CAEE&#34;&gt;（&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;如文件&lt;/span&gt;&lt;span style=&#34;color:#393A34;--shiki-dark:#DBD7CAEE&#34;&gt;）。&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 </content>
-        <category term="技术积累" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
-        <category term="Go" scheme="http://localhost:4000/tags/Go/" />
-        <category term="编程语言" scheme="http://localhost:4000/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" />
-        <category term="后端" scheme="http://localhost:4000/tags/%E5%90%8E%E7%AB%AF/" />
+        <category term="技术积累" scheme="https://luchron.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
+        <category term="Go" scheme="https://luchron.github.io/tags/Go/" />
+        <category term="编程语言" scheme="https://luchron.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" />
+        <category term="后端" scheme="https://luchron.github.io/tags/%E5%90%8E%E7%AB%AF/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/markdown/Typora%20markdown%E6%95%99%E7%A8%8B/</id>
+        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/markdown/Typora%20markdown%E6%95%99%E7%A8%8B/</id>
         <title>markdown</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/markdown/Typora%20markdown%E6%95%99%E7%A8%8B/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/markdown/Typora%20markdown%E6%95%99%E7%A8%8B/"/>
         <content type="html">&lt;h2 id=&#34;标题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#标题&#34;&gt;#&lt;/a&gt; 标题&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;语法：# (一级标题) ## (二级标题) ### (三级标题) ......&lt;/p&gt;
@@ -2569,14 +2569,14 @@ H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#393A34;--shiki-dark:#DBD7CAEE&#34;&gt;F&lt;/span&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#393A34;--shiki-dark:#DBD7CAEE&#34;&gt;竖向流程图&lt;/span&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 </content>
-        <category term="技术积累" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
-        <category term="markdown" scheme="http://localhost:4000/tags/markdown/" />
+        <category term="技术积累" scheme="https://luchron.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
+        <category term="markdown" scheme="https://luchron.github.io/tags/markdown/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/</id>
+        <id>https://luchron.github.io/2025/10/13/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/</id>
         <title>数据结构基础</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/"/>
         <content type="html">&lt;h2 id=&#34;课程评分&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课程评分&#34;&gt;#&lt;/a&gt; 课程评分&lt;/h2&gt;
 &lt;h3 id=&#34;quiz&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quiz&#34;&gt;#&lt;/a&gt; quiz&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -5189,14 +5189,14 @@ H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
 &lt;h2 id=&#34;lecture-14&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture-14&#34;&gt;#&lt;/a&gt; Lecture 14&lt;/h2&gt;
 &lt;p&gt;哈希：&lt;a href=&#34;https://www.bilibili.com/video/BV1SZ4y1z7wT/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=47f903011c96ee0729b73b35fe07ad7e&#34;&gt;https://www.bilibili.com/video/BV1SZ4y1z7wT/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=47f903011c96ee0729b73b35fe07ad7e&lt;/a&gt;&lt;/p&gt;
 </content>
-        <category term="课堂笔记" scheme="http://localhost:4000/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" />
-        <category term="课堂笔记" scheme="http://localhost:4000/tags/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" />
+        <category term="课堂笔记" scheme="https://luchron.github.io/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" />
+        <category term="课堂笔记" scheme="https://luchron.github.io/tags/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/CSS/</id>
+        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/CSS/</id>
         <title>CSS</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/CSS/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/CSS/"/>
         <content type="html">&lt;h2 id=&#34;什么是css&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是css&#34;&gt;#&lt;/a&gt; 什么是CSS&lt;/h2&gt;
 &lt;p&gt;使用 CSS，您可以精确控制 HTML 元素在浏览器中的外观，以您喜欢的任何设计和布局向用户展示您的文档。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -5992,16 +5992,16 @@ H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
 &lt;h3 id=&#34;位置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#位置&#34;&gt;#&lt;/a&gt; 位置&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;position&amp;gt;&lt;/code&gt;值类型表示一组二维坐标，用于定位背景图像等元素。它可以接受诸如 &lt;code&gt;top&lt;/code&gt;、&lt;code&gt;left&lt;/code&gt;、&lt;code&gt;bottom&lt;/code&gt;、&lt;code&gt;right&lt;/code&gt; 和 &lt;code&gt;center&lt;/code&gt; 等关键字，将元素与二维盒子的特定边界对齐，同时还可以使用长度值来表示从盒子顶部和左侧边缘的偏移量。&lt;/p&gt;
 </content>
-        <category term="技术积累" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
-        <category term="编程语言" scheme="http://localhost:4000/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" />
-        <category term="CSS" scheme="http://localhost:4000/tags/CSS/" />
-        <category term="前端" scheme="http://localhost:4000/tags/%E5%89%8D%E7%AB%AF/" />
+        <category term="技术积累" scheme="https://luchron.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
+        <category term="编程语言" scheme="https://luchron.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" />
+        <category term="CSS" scheme="https://luchron.github.io/tags/CSS/" />
+        <category term="前端" scheme="https://luchron.github.io/tags/%E5%89%8D%E7%AB%AF/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/JS/</id>
+        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/JS/</id>
         <title>JavaScript</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/JS/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/JS/"/>
         <content type="html">&lt;h2 id=&#34;js基本语法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#js基本语法&#34;&gt;#&lt;/a&gt; JS基本语法&lt;/h2&gt;
 &lt;h2 id=&#34;预备语法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#预备语法&#34;&gt;#&lt;/a&gt; 预备语法&lt;/h2&gt;
 &lt;pre class=&#34;shiki shiki-themes vitesse-light vitesse-dark&#34; style=&#34;background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee&#34; tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt;// 注释方式和C很像，这是单行注释&lt;/span&gt;&lt;/span&gt;
@@ -6489,16 +6489,16 @@ H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;let 值可以修改，const值不可以修改。const声明数组的时候可以改变&lt;/p&gt;
 </content>
-        <category term="技术积累" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
-        <category term="编程语言" scheme="http://localhost:4000/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" />
-        <category term="前端" scheme="http://localhost:4000/tags/%E5%89%8D%E7%AB%AF/" />
-        <category term="JavaScript" scheme="http://localhost:4000/tags/JavaScript/" />
+        <category term="技术积累" scheme="https://luchron.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
+        <category term="编程语言" scheme="https://luchron.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" />
+        <category term="前端" scheme="https://luchron.github.io/tags/%E5%89%8D%E7%AB%AF/" />
+        <category term="JavaScript" scheme="https://luchron.github.io/tags/JavaScript/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/HTML/</id>
+        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/HTML/</id>
         <title>HTML</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/HTML/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/HTML/"/>
         <content type="html">&lt;h2 id=&#34;序章-html&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#序章-html&#34;&gt;#&lt;/a&gt; 序章 HTML&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;HTML 用于指定你的网页内容应被识别为段落、列表、标题、链接、图像、多媒体播放器、表单或是其他可用元素之一，甚至是你定义的新元素。&lt;/p&gt;
@@ -7133,16 +7133,16 @@ Username: &amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;user&amp;qu
 &amp;lt;input type=&amp;quot;submit&amp;quot; value=&amp;quot;Submit&amp;quot;&amp;gt;&lt;br /&gt;
 &amp;lt;/form&amp;gt;&lt;/p&gt;
 </content>
-        <category term="技术积累" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
-        <category term="编程语言" scheme="http://localhost:4000/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" />
-        <category term="前端" scheme="http://localhost:4000/tags/%E5%89%8D%E7%AB%AF/" />
-        <category term="HTML" scheme="http://localhost:4000/tags/HTML/" />
+        <category term="技术积累" scheme="https://luchron.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
+        <category term="编程语言" scheme="https://luchron.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" />
+        <category term="前端" scheme="https://luchron.github.io/tags/%E5%89%8D%E7%AB%AF/" />
+        <category term="HTML" scheme="https://luchron.github.io/tags/HTML/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/NPM/</id>
+        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/NPM/</id>
         <title>NPM</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/NPM/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/NPM/"/>
         <content type="html">&lt;h2 id=&#34;npm-使用介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#npm-使用介绍&#34;&gt;#&lt;/a&gt; NPM 使用介绍&lt;/h2&gt;
 &lt;p&gt;NPM（Node Package Manager）是一个 JavaScript 包管理工具，也是 Node.js 的默认包管理器。&lt;/p&gt;
 &lt;p&gt;NPM 允许开发者轻松地下载、安装、共享、管理项目的依赖库和工具。&lt;/p&gt;
@@ -7684,15 +7684,15 @@ Username: &amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;user&amp;qu
 &lt;li&gt;定期更新依赖，以利用最新的功能和安全修复&lt;/li&gt;
 &lt;/ul&gt;
 </content>
-        <category term="技术积累" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
-        <category term="前端" scheme="http://localhost:4000/tags/%E5%89%8D%E7%AB%AF/" />
-        <category term="NPM" scheme="http://localhost:4000/tags/NPM/" />
+        <category term="技术积累" scheme="https://luchron.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
+        <category term="前端" scheme="https://luchron.github.io/tags/%E5%89%8D%E7%AB%AF/" />
+        <category term="NPM" scheme="https://luchron.github.io/tags/NPM/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/React/</id>
+        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/React/</id>
         <title>React</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/React/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/React/"/>
         <content type="html">&lt;h2 id=&#34;dom&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dom&#34;&gt;#&lt;/a&gt; DOM&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这里补充一个常识&lt;/p&gt;
@@ -9366,15 +9366,15 @@ React 就从这里开始渲染一整棵组件树。&lt;/li&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt;    navigate&lt;/span&gt;&lt;span style=&#34;color:#1e754f;--shiki-dark:#4d9375&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#AB5959;--shiki-dark:#CB7676&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#2F798A;--shiki-dark:#4C9A91&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#1e754f;--shiki-dark:#4d9375&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt;/*后退&amp;#x3C;-*/&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 </content>
-        <category term="技术积累" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
-        <category term="前端" scheme="http://localhost:4000/tags/%E5%89%8D%E7%AB%AF/" />
-        <category term="React" scheme="http://localhost:4000/tags/React/" />
+        <category term="技术积累" scheme="https://luchron.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
+        <category term="前端" scheme="https://luchron.github.io/tags/%E5%89%8D%E7%AB%AF/" />
+        <category term="React" scheme="https://luchron.github.io/tags/React/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/fatch%20api/</id>
+        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/fatch%20api/</id>
         <title>fetch api</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/fatch%20api/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/fatch%20api/"/>
         <content type="html">&lt;h2 id=&#34;fetch-api&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#fetch-api&#34;&gt;#&lt;/a&gt; Fetch API&lt;/h2&gt;
 &lt;p&gt;Fetch API 是一种现代的、功能强大的网络请求工具，它允许你通过 JavaScript 异步地请求资源，而不需要使用传统的 XMLHttpRequest 对象。&lt;/p&gt;
 &lt;p&gt;Fetch API 可以简洁地发起 HTTP 请求，并处理服务器的响应。&lt;/p&gt;
@@ -9507,15 +9507,15 @@ React 就从这里开始渲染一整棵组件树。&lt;/li&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt;then&lt;/span&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;data&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt; =&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;&gt;&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt; console&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt;log&lt;/span&gt;&lt;span style=&#34;color:#1e754f;--shiki-dark:#4d9375&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;data&lt;/span&gt;&lt;span style=&#34;color:#1e754f;--shiki-dark:#4d9375&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;)&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt;catch&lt;/span&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;error&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt; =&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;&gt;&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt; console&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt;error&lt;/span&gt;&lt;span style=&#34;color:#1e754f;--shiki-dark:#4d9375&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#B5695977;--shiki-dark:#C98A7D77&#34;&gt;&#39;&lt;/span&gt;&lt;span style=&#34;color:#B56959;--shiki-dark:#C98A7D&#34;&gt;Error:&lt;/span&gt;&lt;span style=&#34;color:#B5695977;--shiki-dark:#C98A7D77&#34;&gt;&#39;&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt; error&lt;/span&gt;&lt;span style=&#34;color:#1e754f;--shiki-dark:#4d9375&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 </content>
-        <category term="技术积累" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
-        <category term="前端" scheme="http://localhost:4000/tags/%E5%89%8D%E7%AB%AF/" />
-        <category term="fetch api" scheme="http://localhost:4000/tags/fetch-api/" />
+        <category term="技术积累" scheme="https://luchron.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
+        <category term="前端" scheme="https://luchron.github.io/tags/%E5%89%8D%E7%AB%AF/" />
+        <category term="fetch api" scheme="https://luchron.github.io/tags/fetch-api/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/%E5%85%B3%E4%BA%8E%E5%89%8D%E7%AB%AF/</id>
+        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/%E5%85%B3%E4%BA%8E%E5%89%8D%E7%AB%AF/</id>
         <title>关于前端</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/%E5%85%B3%E4%BA%8E%E5%89%8D%E7%AB%AF/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/%E5%85%B3%E4%BA%8E%E5%89%8D%E7%AB%AF/"/>
         <content type="html">&lt;h2 id=&#34;mdn&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mdn&#34;&gt;#&lt;/a&gt; MDN&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;什么是MDN？这是一个web工程师的开发者社区&lt;/p&gt;
@@ -9873,14 +9873,14 @@ React 就从这里开始渲染一整棵组件树。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;错误处理细节&lt;/strong&gt;: 再次强调，HTTP 错误状态码 (4xx, 5xx) 不会使 &lt;code&gt;fetch()&lt;/code&gt; Promise &lt;code&gt;reject&lt;/code&gt;。&lt;/li&gt;
 &lt;/ul&gt;
 </content>
-        <category term="技术积累" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
-        <category term="前端" scheme="http://localhost:4000/tags/%E5%89%8D%E7%AB%AF/" />
+        <category term="技术积累" scheme="https://luchron.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
+        <category term="前端" scheme="https://luchron.github.io/tags/%E5%89%8D%E7%AB%AF/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/typescript/</id>
+        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/typescript/</id>
         <title>TypeScript</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/typescript/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/typescript/"/>
         <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
 &lt;p&gt;写在前面：之前学习js的时候不怎么扎实。当时好多没看懂。学习C#之后发现比较好理解了。这里我再系统学习一下typescript。&lt;/p&gt;
 &lt;h3 id=&#34;javascript-与-typescript-的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#javascript-与-typescript-的区别&#34;&gt;#&lt;/a&gt; JavaScript 与 TypeScript 的区别&lt;/h3&gt;
@@ -11171,16 +11171,16 @@ React 就从这里开始渲染一整棵组件树。&lt;/li&gt;
 &lt;span class=&#34;line&#34;&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;console&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt;log&lt;/span&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#B07D48;--shiki-dark:#BD976A&#34;&gt;stringBox&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#59873A;--shiki-dark:#80A665&#34;&gt;getValue&lt;/span&gt;&lt;span style=&#34;color:#1e754f;--shiki-dark:#4d9375&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#1e754f;--shiki-dark:#4d9375&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#2993a3;--shiki-dark:#5eaab5&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#999999;--shiki-dark:#666666&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#A0ADA0;--shiki-dark:#758575DD&#34;&gt; // 输出: TypeScript&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;解析：&lt;/strong&gt; 在这个例子中，&lt;code&gt;Box&lt;/code&gt; 是一个泛型类，使用 &lt;code&gt;&amp;lt;T&amp;gt;&lt;/code&gt; 表示泛型类型。构造函数和方法都可以使用泛型类型 &lt;code&gt;T&lt;/code&gt;。通过实例化 &lt;code&gt;Box&amp;lt;string&amp;gt;&lt;/code&gt;，我们创建了一个存储字符串的 &lt;code&gt;Box&lt;/code&gt; 实例，并通过 &lt;code&gt;getValue&lt;/code&gt; 方法获取了存储的值。&lt;/p&gt;
 </content>
-        <category term="技术积累" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
-        <category term="编程语言" scheme="http://localhost:4000/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" />
-        <category term="前端" scheme="http://localhost:4000/tags/%E5%89%8D%E7%AB%AF/" />
-        <category term="TypeScript" scheme="http://localhost:4000/tags/TypeScript/" />
+        <category term="技术积累" scheme="https://luchron.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
+        <category term="编程语言" scheme="https://luchron.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" />
+        <category term="前端" scheme="https://luchron.github.io/tags/%E5%89%8D%E7%AB%AF/" />
+        <category term="TypeScript" scheme="https://luchron.github.io/tags/TypeScript/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C#/</id>
+        <id>https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C#/</id>
         <title>C#</title>
-        <link rel="alternate" href="http://localhost:4000/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C#/"/>
+        <link rel="alternate" href="https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C#/"/>
         <content type="html">&lt;h2 id=&#34;c是什么&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#c是什么&#34;&gt;#&lt;/a&gt; C#是什么&lt;/h2&gt;
 &lt;p&gt;编程分类：动态如python，静态如C等&lt;/p&gt;
 &lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;/assets/%E5%9B%BE%E7%89%87/image-20250715101133244.png&#34; alt=&#34;image-20250715101133244&#34; /&gt;&lt;/p&gt;
@@ -13261,9 +13261,9 @@ Dog对象的Name字段被赋值为&amp;quot;Tom&amp;quot;（继承自Animal）&l
 &lt;h2 id=&#34;异步编程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#异步编程&#34;&gt;#&lt;/a&gt; 异步编程&lt;/h2&gt;
 &lt;p&gt;未完待续……&lt;/p&gt;
 </content>
-        <category term="技术积累" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
-        <category term="编程语言" scheme="http://localhost:4000/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" />
-        <category term="C#" scheme="http://localhost:4000/tags/C/" />
+        <category term="技术积累" scheme="https://luchron.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" />
+        <category term="编程语言" scheme="https://luchron.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" />
+        <category term="C#" scheme="https://luchron.github.io/tags/C/" />
         <updated>2025-10-13T06:30:00.000Z</updated>
     </entry>
 </feed>
