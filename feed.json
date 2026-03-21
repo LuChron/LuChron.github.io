@@ -15,16 +15,6 @@
             "tags": []
         },
         {
-            "id": "https://luchron.github.io/2025/10/13/about%20me/",
-            "url": "https://luchron.github.io/2025/10/13/about%20me/",
-            "title": "about me",
-            "date_published": "2025-10-13T06:30:00.000Z",
-            "content_html": "<h2 id=\"luchrons-notebook\"><a class=\"anchor\" href=\"#luchrons-notebook\">#</a> LuChron's Notebook</h2>\n<h2 id=\"关于\"><a class=\"anchor\" href=\"#关于\">#</a> 关于</h2>\n<p>这里整理和分享了我的一些学习成果。</p>\n<h2 id=\"简单介绍一下\"><a class=\"anchor\" href=\"#简单介绍一下\">#</a> 简单介绍一下</h2>\n<blockquote>\n<p>姓名：LuChron</p>\n<p>籍贯：河北</p>\n</blockquote>\n<p>这放网站上不是等着被开盒吗qaq（虽然也没人看</p>\n<h2 id=\"我想做的事\"><a class=\"anchor\" href=\"#我想做的事\">#</a> 我想做的事</h2>\n<ul>\n<li>再看一场解解的演唱会</li>\n<li>去阿勒泰滑雪！</li>\n</ul>\n<h2 id=\"碎碎念\"><a class=\"anchor\" href=\"#碎碎念\">#</a> 碎碎念</h2>\n<p>期待我的晚安短信吧~</p>\n<h2 id=\"我喜欢的一些东西\"><a class=\"anchor\" href=\"#我喜欢的一些东西\">#</a> 我喜欢的一些东西</h2>\n<h3 id=\"滑雪\"><a class=\"anchor\" href=\"#滑雪\">#</a> 滑雪</h3>\n<p>超爱滑雪，双板爱好者</p>\n<blockquote>\n<p>菜鸟一个，妄想学会卡宾，实则半吊子平行式，想玩公园但又很怂……</p>\n</blockquote>\n<h3 id=\"音乐\"><a class=\"anchor\" href=\"#音乐\">#</a> 音乐</h3>\n<p>许嵩和邓紫棋，演唱会抢票可以互助👊👊👊</p>\n<h3 id=\"游戏\"><a class=\"anchor\" href=\"#游戏\">#</a> 游戏</h3>\n<p>成分复杂：三角洲，王者荣耀，原神……加我加我</p>\n<h3 id=\"记录\"><a class=\"anchor\" href=\"#记录\">#</a> 记录</h3>\n<p>喜欢拍但是水平，额，怎么形容，扣脚吧）有空喜欢剪剪视频</p>\n<h3 id=\"美术\"><a class=\"anchor\" href=\"#美术\">#</a> 美术</h3>\n<p>书法/国画，不过差不多都还给老师了……</p>\n<h3 id=\"娱乐\"><a class=\"anchor\" href=\"#娱乐\">#</a> 娱乐</h3>\n<p>显然，孤独摇滚爱好者，期待第二季</p>\n<h2 id=\"学习积累\"><a class=\"anchor\" href=\"#学习积累\">#</a> 学习积累</h2>\n<p>这里就是啦，不够没啥能看的，bug一堆，搭建纯图一乐，见笑了……</p>\n<h2 id=\"联系我\"><a class=\"anchor\" href=\"#联系我\">#</a> 联系我</h2>\n<p>&lt;img src=&quot;/assets/图片/d385bad43429918d047de755c6ef60c9.png&quot; style=&quot;zoom:33%;&quot; /&gt;</p>\n<hr />\n<blockquote>\n<p>照片puq自取……</p>\n</blockquote>\n",
-            "tags": [
-                "关于我"
-            ]
-        },
-        {
             "id": "https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/api%E7%9A%84%E5%88%B6%E5%AE%9A/",
             "url": "https://luchron.github.io/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/api%E7%9A%84%E5%88%B6%E5%AE%9A/",
             "title": "api的制定",
@@ -224,6 +214,16 @@
                 "技术积累",
                 "编程语言",
                 "C#"
+            ]
+        },
+        {
+            "id": "https://luchron.github.io/2025/10/13/%E5%85%B3%E4%BA%8E%E6%88%91/about%20me/",
+            "url": "https://luchron.github.io/2025/10/13/%E5%85%B3%E4%BA%8E%E6%88%91/about%20me/",
+            "title": "about me",
+            "date_published": "2025-10-13T06:30:00.000Z",
+            "content_html": "<h2 id=\"luchrons-notebook\"><a class=\"anchor\" href=\"#luchrons-notebook\">#</a> LuChron's Notebook</h2>\n<h2 id=\"关于\"><a class=\"anchor\" href=\"#关于\">#</a> 关于</h2>\n<p>这里整理和分享了我的一些学习成果。</p>\n<h2 id=\"简单介绍一下\"><a class=\"anchor\" href=\"#简单介绍一下\">#</a> 简单介绍一下</h2>\n<blockquote>\n<p>姓名：LuChron</p>\n<p>籍贯：河北</p>\n</blockquote>\n<p>这放网站上不是等着被开盒吗qaq（虽然也没人看</p>\n<h2 id=\"我想做的事\"><a class=\"anchor\" href=\"#我想做的事\">#</a> 我想做的事</h2>\n<ul>\n<li>再看一场解解的演唱会</li>\n<li>去阿勒泰滑雪！</li>\n</ul>\n<h2 id=\"我喜欢的一些东西\"><a class=\"anchor\" href=\"#我喜欢的一些东西\">#</a> 我喜欢的一些东西</h2>\n<h3 id=\"滑雪\"><a class=\"anchor\" href=\"#滑雪\">#</a> 滑雪</h3>\n<p>超爱滑雪，双板爱好者</p>\n<blockquote>\n<p>菜鸟一个，妄想学会卡宾，实则半吊子平行式，想玩公园但又很怂……</p>\n</blockquote>\n<h3 id=\"音乐\"><a class=\"anchor\" href=\"#音乐\">#</a> 音乐</h3>\n<p>喜欢的比较多，尤爱邓紫棋和许嵩，<s>可以帮我抢票吗</s></p>\n<h3 id=\"游戏\"><a class=\"anchor\" href=\"#游戏\">#</a> 游戏</h3>\n<p>成分复杂：三角洲，王者荣耀，原神……加我加我！ <s>其实都没时间玩了</s></p>\n<h3 id=\"记录\"><a class=\"anchor\" href=\"#记录\">#</a> 记录</h3>\n<p>喜欢拍照！有一台小小的佳能r8。有空也剪剪视频</p>\n<p>不过欢迎大家找我出去玩！</p>\n<h3 id=\"美术\"><a class=\"anchor\" href=\"#美术\">#</a> 美术</h3>\n<p>书法/国画，不过差不多都还给老师了……</p>\n<h2 id=\"学习积累\"><a class=\"anchor\" href=\"#学习积累\">#</a> 学习积累</h2>\n<p>这里就是啦，不够没啥能看的，bug一堆，搭建纯图一乐，见笑了……</p>\n<h2 id=\"联系我\"><a class=\"anchor\" href=\"#联系我\">#</a> 联系我</h2>\n<p><img loading=\"lazy\" src=\"/assets/%E5%9B%BE%E7%89%87/d385bad43429918d047de755c6ef60c9.png\" alt=\"联系我二维码\" width=\"33%\" /></p>\n<h2 id=\"碎碎念\"><a class=\"anchor\" href=\"#碎碎念\">#</a> 碎碎念</h2>\n",
+            "tags": [
+                "关于我"
             ]
         }
     ]
