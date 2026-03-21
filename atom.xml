@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://LuChron.github.io</id>
+    <id>https://luchron.github.io</id>
     <title>絶対忘れ てやらないよ</title>
     <subtitle>狗窝</subtitle>
     <icon>https://luchron.github.io/assets/favicon.ico</icon>
-    <link href="https://LuChron.github.io" />
+    <link href="https://luchron.github.io" />
     <author>
       <name>Luchron</name>
     </author>
