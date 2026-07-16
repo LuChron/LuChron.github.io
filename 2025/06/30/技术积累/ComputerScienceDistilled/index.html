@@ -1,0 +1,644 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"><meta name="renderer" content="webkit"><link rel="icon" type="image/ico" sizes="32x32" href="/assets/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="alternate" href="/rss.xml" title="絶対忘れてやらないよ" type="application/rss+xml"><link rel="alternate" href="/atom.xml" title="絶対忘れてやらないよ" type="application/atom+xml"><link rel="alternate" type="application/json" title="絶対忘れてやらないよ" href="https://luchron.github.io/feed.json"><link rel="preconnect" href="https://s4.zstatic.net"><link rel="preconnect" href="https://at.alicdn.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CFredericka%20the%20Great:400,400italic,700,700italic%7CNoto%20Serif%20JP:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CInconsolata:400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext" media="none" onload="this.media='all'"><link rel="modulepreload" href="/js/siteInit.js"><link rel="modulepreload" href="/js/nyx-player-HGUYDKEU.js"><link rel="modulepreload" href="/js/copy-tex-FIB26BBA.js"><link rel="modulepreload" href="/js/post-S7SVO5ZB.js"><link rel="modulepreload" href="/js/chunk-WN4FGWSR.js"><link rel="modulepreload" href="/js/pagefind-ROWL75QD.js"><link rel="modulepreload" href="/js/index.esm-V2O4HKJY.js"><link rel="modulepreload" href="/js/chunk-HJSTZ4VX.js"><link rel="modulepreload" href="/js/chunk-HZLNKXMP.js"><link rel="stylesheet" href="/css/siteInit.css" media="none" onload="this.media='all'"><link rel="preload" href="//assets/04.jpg" as="image" fetchpriority="high"><meta name="keywords" content="读书笔记"><meta name="description" content="《Computer Science Distilled》读书笔记"><link rel="canonical" href="https://luchron.github.io/2025/06/30/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/ComputerScienceDistilled/"><link rel="stylesheet" href="/css/post.css?v=0.5.4"><link rel="stylesheet" href="/css/mermaid.css?v=0.5.4"><!-- 临时处理--><link rel="stylesheet" media="none" onload="this.media='all'" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css"><title>《Computer Science Distilled》读书笔记</title><meta name="generator" content="Hexo 7.3.0"></head><body itemscope="" itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="pagefind_mount"></div><div id="container"><header id="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">《Computer Science Distilled》读书笔记</h1><div class="meta"><span class="item" title="创建时间：2025-06-30 10:40:07"><span class="icon"><i class="ic i-calendar"></i></span><span class="text">发表于</span><time itemprop="dateCreated datePublished" datetime="2025-06-30T10:40:07+08:00">2025-06-30</time></span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i></span><span class="text">本文字数</span><span>16k</span><span class="text">字</span></span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i></span><span class="text">阅读时长</span><span>14 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span><span class="line"></span><span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">LuChron's Blog</a></li></ul><ul class="right" id="rightNav"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div class="pjax" id="imgs"><img src="/assets/04.avif" loading="eager" decoding="async" fetchpriority="high" alt="絶対忘れてやらないよ"></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><main><div class="inner"><div class="pjax" id="main"><div class="article wrap"><div class="breadcrumb" itemlistelement="" itemscope="" itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i><span><a href="/">首页</a></span><i class="ic i-angle-right"></i><span class="current" itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" itemprop="item" rel="index" title="分类于技术积累"><span itemprop="name">技术积累<meta itemprop="position" content="0"></span></a></span></div><article class="post block" itemscope="itemscope" itemtype="http://schema.org/Article" data-pagefind-body="data-pagefind-body" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://luchron.github.io/2025/06/30/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/ComputerScienceDistilled/"><span hidden="hidden" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="image" content="/assets/avatar.jpg"><meta itemprop="name" content="Luchron"><meta itemprop="description" content="狗窝, 未下眉头，又上心头"></span><span hidden="hidden" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="絶対忘れてやらないよ"></span><div class="body md" itemprop="articleBody"><blockquote>
+<p>[!Important]</p>
+<p>本文部分离散数学已涉及内容不再赘述</p>
+<p>学习借助 gemini</p>
+</blockquote>
+<h1 id="chapter-3-strategy"><a class="anchor" href="#chapter-3-strategy">#</a> Chapter 3 : Strategy</h1>
+<table>
+<thead>
+<tr>
+<th>策略 (Strategy)</th>
+<th>核心思想</th>
+<th>优点</th>
+<th>缺点/适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>迭代 &amp; 递归</strong></td>
+<td>控制流程的基本方式</td>
+<td>基础，直接</td>
+<td>它们本身是工具，服务于其他策略</td>
+</tr>
+<tr>
+<td><strong>暴力破解</strong></td>
+<td>尝试所有可能</td>
+<td>简单，保证找到最优解</td>
+<td>效率极低，仅适用于小规模问题</td>
+</tr>
+<tr>
+<td><strong>回溯</strong></td>
+<td>智能搜索，走不通就退回</td>
+<td>比暴力破解高效，系统性强</td>
+<td>解决约束满足问题，如谜题</td>
+</tr>
+<tr>
+<td><strong>启发式</strong></td>
+<td>找“足够好”的快速解</td>
+<td>速度极快</td>
+<td>不保证最优，是种权衡</td>
+</tr>
+<tr>
+<td><strong>分治</strong></td>
+<td>分解、解决、合并</td>
+<td>效率高，逻辑清晰</td>
+<td>适用于子问题相互独立的情况</td>
+</tr>
+<tr>
+<td><strong>动态规划</strong></td>
+<td>记录结果，避免重复计算</td>
+<td>极大提升效率，化指数为多项式</td>
+<td>适用于子问题重叠的情况</td>
+</tr>
+<tr>
+<td><strong>分支界定</strong></td>
+<td>评估边界，剪掉无效分支</td>
+<td>智能优化搜索，高效</td>
+<td>适用于最优化问题（求最大/最小值）</td>
+</tr>
+</tbody>
+</table>
+<h1 id="chapter-4-data"><a class="anchor" href="#chapter-4-data">#</a> Chapter 4 : Data</h1>
+<h2 id="41-抽象数据类型-abstract-data-types-adts"><a class="anchor" href="#41-抽象数据类型-abstract-data-types-adts">#</a> 4.1 抽象数据类型 (Abstract Data Types, ADTs)</h2>
+<p><strong>使用 ADT 的好处：</strong></p>
+<ul>
+<li><strong>代码更简洁：</strong> 你的算法代码只跟 ADT 互动，不用关心底层细节。</li>
+<li><strong>灵活性高</strong></li>
+<li><strong>可复用性强：</strong> 一套写好的数据处理模块（比如一个处理“列表”的模块）可以在任何需要“列表”的地方使用。</li>
+</ul>
+<h2 id="42-常见抽象-common-abstractions"><a class="anchor" href="#42-常见抽象-common-abstractions">#</a> 4.2 常见抽象 (Common Abstractions)</h2>
+<ul>
+<li><strong>栈 (Stack):</strong>
+<ul>
+<li><strong>原则：</strong> 后进先出 (LIFO - Last-In, First-Out)。</li>
+<li><strong>操作：</strong> <code>push</code> (入栈), <code>pop</code> (出栈)。</li>
+</ul>
+</li>
+<li><strong>队列 (Queue):</strong>
+<ul>
+<li><strong>原则：</strong> 先进先出 (FIFO - First-In, First-Out)。</li>
+<li><strong>操作：</strong> <code>enqueue</code> (入队), <code>dequeue</code> (出队)。</li>
+</ul>
+</li>
+<li><strong>优先队列 (Priority Queue):</strong>
+<ul>
+<li><strong>原则：</strong> 不论谁先进来，优先级最高的先出去。</li>
+<li><strong>例子：</strong> 操作系统的任务调度（重要的系统进程比普通应用优先级高）。</li>
+</ul>
+</li>
+<li><strong>列表 (List)</strong></li>
+<li><strong>映射 (Map) / 字典 (Dictionary):</strong>
+<ul>
+<li><strong>一句话解释：</strong> 像一本真正的字典，通过一个“键”（Key，比如一个单词）可以快速查到对应的“值”（Value，比如单词的释义）。</li>
+<li><strong>例子：</strong> 电话簿（姓名 -&gt; 电话号码）、存储用户配置（配置项名称 -&gt; 配置值）。</li>
+</ul>
+</li>
+<li><strong>集合 (Set):</strong>
+<ul>
+<li><strong>例子：</strong> 一个班级里的所有学生名单（每个学生都是唯一的）。</li>
+</ul>
+</li>
+</ul>
+<h2 id="43-数据结构-data-structures"><a class="anchor" href="#43-数据结构-data-structures">#</a> 4.3 数据结构 (Data Structures)</h2>
+<p>选择哪种数据结构直接决定了程序的性能。</p>
+<ul>
+<li>
+<p><strong>数组 (Array):</strong></p>
+<ul>
+<li><strong>物理结构：</strong> 内存中一块<strong>连续</strong>的空间，像一排连号的储物柜。</li>
+<li><strong>优点：</strong> <strong>访问速度极快</strong>。因为地址是连续的，可以通过索引直接计算出任何一个元素的位置（O(1) 复杂度），实现“指哪打哪”。</li>
+<li><strong>缺点：</strong> <strong>大小固定</strong>，不灵活。在中间插入或删除元素非常慢，因为需要移动后面的所有元素（O(n) 复杂度）。</li>
+</ul>
+</li>
+<li>
+<p><strong>链表 (Linked List):</strong></p>
+<ul>
+<li><strong>物理结构：</strong> 内存中<strong>分散</strong>的节点，像一个寻宝游戏，每个节点里存着数据和指向下一个节点的“线索”（指针）。</li>
+<li><strong>优点：</strong> <strong>大小灵活</strong>，可以动态增长。在中间插入或删除元素非常快（O(1) 复杂度），只需要改变相邻节点的“线索”即可。</li>
+<li><strong>缺点：</strong> <strong>访问速度慢</strong>。想找第 n 个元素，必须从第一个开始，顺着线索一个一个往下找（O(n) 复杂度）。（书中还提到了<strong>双向链表</strong>，增加了“回头看”的线索，更灵活但占用更多空间）。</li>
+</ul>
+</li>
+<li>
+<p><strong>树 (Tree):</strong></p>
+<ul>
+<li><strong>物理结构：</strong> 像一个家族树或文件系统，是分层级的结构。</li>
+<li><strong>重点是二叉搜索树 (Binary Search Tree, BST):</strong> 一种特殊的树，左边的子节点比父节点小，右边的比父节点大。</li>
+<li><strong>优点：</strong> 在<strong>平衡</strong>的情况下，查找、插入、删除都很快（O(log n) 复杂度）。</li>
+<li><strong>缺点：</strong> 容易变得<strong>不平衡</strong>，退化成链表，性能急剧下降到 O(n)。解决方案是使用<strong>自平衡树</strong>（如红黑树）。</li>
+</ul>
+</li>
+<li>
+<p><strong>哈希表 (Hash Table):</strong></p>
+<ul>
+<li><strong>物理结构：</strong> 本质上是一个数组，但它通过一个神奇的<strong>哈希函数 (hash function)</strong>，能把任意的“键”转换成一个数组索引。</li>
+<li><strong>优点：</strong> <strong>查找、插入、删除的平均速度都快到不可思议</strong>（O(1) 复杂度）。是实现 Map 和 Set 的首选。</li>
+<li><strong>缺点：</strong> 可能会发生<strong>哈希冲突</strong>（两个不同的键被算到了同一个索引上），需要额外处理。比较消耗内存，且元素是无序的。</li>
+</ul>
+</li>
+</ul>
+<h1 id="chapter-5-algorithms"><a class="anchor" href="#chapter-5-algorithms">#</a> Chapter 5 : <strong>Algorithms</strong></h1>
+<blockquote>
+<p>在前人的基础上选择最好的算法。本章主要介绍了四大类问题的经典算法。</p>
+</blockquote>
+<h2 id="51-排序-sorting"><a class="anchor" href="#51-排序-sorting">#</a> 5.1 排序 (Sorting)</h2>
+<ul>
+<li>
+<p><strong>简单的算法 (O(n²))</strong>:</p>
+<ul>
+<li><strong>选择排序 (Selection Sort):</strong> 每次都从剩下的里面找最小的放前面。</li>
+<li><strong>插入排序 (Insertion Sort):</strong> 像打牌时整理手牌一样，每次把一张新牌插入到已排好序的部分。</li>
+<li><strong>关键点：</strong> 这些算法简单直观，但在数据量大时会变得非常慢。不过，<strong>插入排序对于“基本有序”的数据，速度飞快，接近 O(n)</strong>，这是它的一大优势。</li>
+</ul>
+</li>
+<li>
+<p><strong>高效的算法 (O(n log n))</strong>:</p>
+<ul>
+<li><strong>归并排序 (Merge Sort):</strong> （第三章讲过）典型的“分治”策略，稳定可靠。</li>
+<li><strong>快速排序 (Quicksort):</strong> 另一种“分治”策略。
+<ul>
+<li><strong>工作方式：</strong> 随机挑一个元素作为“基准”(pivot)。把比它小的放左边，比它大的放右边。然后对左右两堆重复这个过程。</li>
+<li><strong>关键点：</strong> 名字里就带个“快”字，在实践中通常是性能最好的排序算法之一。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="52-搜索-searching"><a class="anchor" href="#52-搜索-searching">#</a> 5.2 搜索 (Searching)</h2>
+<ul>
+<li>
+<p><strong>顺序搜索 (Sequential Search):</strong></p>
+<ul>
+<li><strong>方法：</strong> 一个一个地找。</li>
+<li><strong>复杂度：</strong> O(n)。这是最笨的方法。</li>
+</ul>
+</li>
+<li>
+<p><strong>二分搜索 (Binary Search):</strong></p>
+<ul>
+<li><strong>前提：</strong> <strong>数据必须是有序的！</strong></li>
+<li><strong>方法：</strong> 每次都看中间的元素。如果目标比它大，就扔掉前半部分；如果比它小，就扔掉后半部分。每次都把搜索范围缩小一半。</li>
+<li><strong>复杂度：</strong> O(log n)。非常高效。</li>
+</ul>
+</li>
+<li>
+<p><strong>哈希表搜索 (Hash Table Search):</strong></p>
+<ul>
+<li><strong>前提：</strong> 数据存储在哈希表中。</li>
+<li><strong>方法：</strong> 通过哈希函数直接计算出位置。</li>
+<li><strong>复杂度：</strong> O(1)。理论上最快，近乎瞬时。</li>
+</ul>
+</li>
+</ul>
+<h2 id="53-图-graphs"><a class="anchor" href="#53-图-graphs">#</a> 5.3 图 (Graphs)</h2>
+<ul>
+<li>
+<p><strong>图的遍历 (Graph Traversal)</strong></p>
+<ul>
+<li><strong>深度优先搜索 (DFS - Depth-First Search): <strong>使用</strong>栈 (Stack)</strong> 来实现。</li>
+<li><strong>广度优先搜索 (BFS - Breadth-First Search):</strong> 它使用<strong>队列 (Queue)</strong> 来实现。</li>
+<li><strong>关键点：</strong> DFS 占用内存少，实现简单。BFS 能找到起点到终点的<strong>最短路径（指经过的边最少）</strong>。</li>
+</ul>
+</li>
+<li>
+<p><strong>最短路径寻找 (Path Finding):</strong></p>
+<ul>
+<li><strong>迪科斯彻算法 (Dijkstra's Algorithm)</strong>。
+<ul>
+<li><strong>注意：</strong> Dijkstra 算法不能处理带有<strong>负权重</strong>边的图。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>图着色 (Graph Coloring):</strong></p>
+<ul>
+<li><strong>问题：</strong> 给图的每个节点“涂色”，要求任意两个相连的节点颜色不能相同。</li>
+<li><strong>例子：</strong> 为手机基站分配频率，相邻基站频率不能相同以避免干扰。</li>
+<li><strong>关键点：</strong> 这是一个著名的 <strong>NP-完全问题</strong>，意味着目前没有已知的“高效”算法。</li>
+</ul>
+</li>
+</ul>
+<h2 id="54-运筹学-operations-research"><a class="anchor" href="#54-运筹学-operations-research">#</a> 5.4 运筹学 (Operations Research)</h2>
+<p>运筹学用于解决资源分配和决策优化问题。</p>
+<ul>
+<li><strong>线性规划 (Linear Programming):</strong>
+<ul>
+<li><strong>问题类型：</strong> 当你的<strong>目标</strong>（如利润最大化）和<strong>约束</strong>（如预算、原材料限制）都能表示成<strong>线性</strong>方程时，就属于线性规划问题。</li>
+<li><strong>例子：</strong> 家具厂如何安排生产两种柜子，在满足成本和空间限制的前提下，让存储容量最大化。</li>
+<li><strong>解决方法：单纯形法 (Simplex Method)</strong>。</li>
+<li><strong>关键点：</strong> 你<strong>不需要自己实现单纯形法</strong>。你需要做的是<strong>识别出这是一个线性规划问题</strong>，然后把你的目标和约束方程输入到一个现成的“单纯形求解器”里，它会直接告诉你答案。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>这里类似数学建模的线性规划算法吧，可以根据目标函数和约束条件求出极值</p>
+</blockquote>
+<h1 id="chapter-6-databases"><a class="anchor" href="#chapter-6-databases">#</a> Chapter 6 : Databases</h1>
+<blockquote>
+<p>核心主题：持久化数据的结构化管理与抽象</p>
+</blockquote>
+<h2 id="61-关系型模型-relational-model"><a class="anchor" href="#61-关系型模型-relational-model">#</a> <strong>6.1 关系型模型 (Relational Model)</strong></h2>
+<p><strong>6.1.1 核心构成要素 (Core Components):</strong></p>
+<ul>
+<li><strong>关系 (Relation) / 表 (Table):</strong> 数据的基本组织单位，是一个二维结构，由元组（行）和属性（列）构成。</li>
+<li><strong>元组 (Tuple) / 行 (Row):</strong> 代表一个实体（Entity）的实例。</li>
+<li><strong>属性 (Attribute) / 列 (Column/Field):</strong> 描述实体的一个特征，具有严格的数据类型（如 <code>INTEGER</code>, <code>VARCHAR</code>, <code>TIMESTAMP</code>）。</li>
+<li><strong>模式 (Schema):</strong> 对关系的结构化定义，包括其属性、数据类型以及完整性约束。关系型数据库是<strong>强模式 (Strong Schema)</strong> 或 <strong>Schema-on-Write</strong> 的，数据在写入前必须符合预定义的模式。</li>
+</ul>
+<p><strong>6.1.2 完整性与关系 (Integrity &amp; Relationships):</strong></p>
+<ul>
+<li><strong>主键 (Primary Key):</strong> 在关系中唯一标识一个元组的一个或一组属性。其值必须是唯一的（Entity Integrity）且非空。</li>
+<li><strong>外键 (Foreign Key):</strong> 一个关系中的属性（或属性组），其值是另一个关系的主键。外键是建立两个关系之间<strong>参照完整性 (Referential Integrity)</strong> 的机制。</li>
+<li><strong>规范化 (Normalization):</strong>
+<ul>
+<li><strong>目标:</strong> 最小化数据冗余，避免数据异常（插入异常、更新异常、删除异常）。</li>
+<li><strong>过程:</strong> 通过一系列范式（Normal Forms, 如 1NF, 2NF, 3NF, BCNF）对数据库模式进行分解和优化的过程。</li>
+<li><strong>权衡:</strong> 高度规范化可以最大程度减少冗余，但可能导致查询时需要进行更多的连接操作，影响性能。在实践中，有时会为了性能而进行<strong>反规范化 (Denormalization)</strong>。</li>
+</ul>
+</li>
+</ul>
+<p><strong>6.1.3 查询与操作 (Querying &amp; Operations):</strong></p>
+<ul>
+<li><strong>SQL (Structured Query Language):</strong> 声明式的、事实上的行业标准查询语言。
+<ul>
+<li><strong>DML (Data Manipulation Language):</strong> <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>。</li>
+<li><strong>DDL (Data Definition Language):</strong> <code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>。</li>
+<li><strong>JOIN 操作:</strong> 关系模型的核心操作，用于根据关系（外键）组合来自多个表的数据。常见的 JOIN 类型包括 <code>INNER JOIN</code>, <code>LEFT/RIGHT JOIN</code>, <code>FULL OUTER JOIN</code>。JOIN 是关系型数据库功能强大的体现，但也是主要的性能瓶颈来源，其计算复杂度可能与连接表的笛卡尔积相关。</li>
+</ul>
+</li>
+<li><strong>索引 (Index):</strong>
+<ul>
+<li><strong>目的:</strong> 提高 <code>SELECT</code> 查询的性能，尤其是带有 <code>WHERE</code> 子句的查询，以及 <code>ORDER BY</code> 操作。</li>
+<li><strong>底层实现:</strong> 通常是 <strong>B-Tree</strong> 或其变体（如 B+ Tree），这种数据结构特别适合块存储设备（如硬盘）的 I/O 特性。</li>
+<li><strong>代价:</strong> 索引会占用额外的存储空间，并<strong>降低写操作（<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>）的性能</strong>，因为每次写操作都需要更新相关的索引。因此，索引策略是数据库性能优化的关键，需要在读性能和写性能之间进行权衡。</li>
+</ul>
+</li>
+<li><strong>事务 (Transactions) 与 ACID:</strong>
+<ul>
+<li><strong>事务:</strong> 一组必须作为一个整体、原子性地执行的数据库操作单元。</li>
+<li><strong>ACID 属性:</strong> 关系型数据库对事务处理的核心保证。
+<ul>
+<li><strong>原子性 (Atomicity):</strong> 事务要么全部成功，要么全部失败回滚。</li>
+<li><strong>一致性 (Consistency):</strong> 事务使数据库从一个一致的状态转移到另一个一致的状态。</li>
+<li><strong>隔离性 (Isolation):</strong> 并发执行的事务之间互不干扰，如同串行执行一样。通过锁机制和多版本并发控制（MVCC）实现。</li>
+<li><strong>持久性 (Durability):</strong> 一旦事务提交，其结果就是永久性的，即使系统崩溃也不会丢失。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>[!Note]</p>
+<p>这里SQL语法参见</p>
+</blockquote>
+<hr>
+<h2 id="62-非关系型模型-non-relational-nosql"><a class="anchor" href="#62-非关系型模型-non-relational-nosql">#</a> <strong>6.2 非关系型模型 (Non-Relational / NoSQL)</strong></h2>
+<p>NoSQL 是一系列数据库模型的总称，旨在解决关系型模型在某些场景下的局限性，特别是在<strong>大规模 (Scale)</strong>、<strong>高性能 (Performance)</strong> 和<strong>高可用性 (Availability)</strong> 方面的挑战。</p>
+<p><strong>6.2.1 核心设计哲学:</strong></p>
+<ul>
+<li><strong>模式灵活性 (Schema Flexibility):</strong> 通常是弱模式或无模式 (<strong>Schema-on-Read</strong>)，允许数据结构动态变化。</li>
+<li><strong>水平扩展 (Horizontal Scaling / Scale-out):</strong> 设计上易于通过增加更多普通服务器来扩展系统能力，而非依赖昂贵的单一高性能服务器（纵向扩展）。</li>
+<li><strong>性能导向:</strong> 通常通过反规范化（数据冗余）来避免昂贵的 JOIN 操作，优化特定应用的读写性能。</li>
+</ul>
+<p><strong>6.2.2 主流 NoSQL 模型:</strong></p>
+<ul>
+<li><strong>文档存储 (Document Store) - e.g., MongoDB, Couchbase:</strong>
+<ul>
+<li><strong>数据单元:</strong> 文档（通常是 JSON/BSON/XML 格式）。</li>
+<li><strong>特点:</strong> 半结构化，适合存储复杂的、有层次结构的对象。数据聚合在一起，一次查询即可获取完整实体。</li>
+</ul>
+</li>
+<li><strong>键值存储 (Key-Value Store) - e.g., Redis, Riak, Memcached:</strong>
+<ul>
+<li><strong>数据单元:</strong> (Key, Value) 对。</li>
+<li><strong>特点:</strong> 模型最简单，本质上是持久化的哈希表。读写性能极高，通常 O(1)。</li>
+<li><strong>核心用途:</strong> 高速缓存、会话管理、实时计数器等。</li>
+</ul>
+</li>
+<li><strong>图数据库 (Graph Database) - e.g., Neo4j, JanusGraph:</strong>
+<ul>
+<li><strong>数据单元:</strong> 节点 (Nodes/Vertices) 和 边 (Edges/Relationships)。节点和边都可以有属性。</li>
+<li><strong>特点:</strong> 专门用于存储和查询实体间的复杂、多对多关系。在进行深度关系遍历（如“朋友的朋友”）时，性能远超关系型数据库。</li>
+</ul>
+</li>
+<li><strong>列式存储 (Column-Family Store) - e.g., Apache Cassandra, HBase:</strong>
+<ul>
+<li><strong>特点:</strong> 数据按列族而非行进行存储。适合大规模数据集的聚合查询和分析（OLAP 场景）。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="63-分布式系统-distributed-systems-concepts"><a class="anchor" href="#63-分布式系统-distributed-systems-concepts">#</a> <strong>6.3 分布式系统 (Distributed Systems Concepts)</strong></h2>
+<p>无论是 SQL 还是 NoSQL，当数据规模和并发量超过单机承载能力时，都必须走向分布式。</p>
+<ul>
+<li><strong>复制 (Replication):</strong>
+<ul>
+<li><strong>目的:</strong> 提高可用性 (Availability) 和读取吞吐量。</li>
+<li><strong>模式:</strong> 主从复制 (Master-Slave)、多主复制 (Multi-Master)。</li>
+</ul>
+</li>
+<li><strong>分片 (Sharding / Partitioning):</strong>
+<ul>
+<li><strong>目的:</strong> 解决单机存储容量和写入性能瓶颈。</li>
+<li><strong>策略:</strong> 根据分片键（Shard Key）将数据水平切分到不同的节点上。</li>
+</ul>
+</li>
+<li><strong>CAP 定理 (CAP Theorem):</strong>
+<ul>
+<li>一个分布式系统在以下三个特性中，最多只能同时满足两个：
+<ul>
+<li><strong>一致性 (Consistency):</strong> 所有节点在同一时间看到相同的数据。</li>
+<li><strong>可用性 (Availability):</strong> 每个请求都能收到一个（非错误）响应。</li>
+<li><strong>分区容错性 (Partition Tolerance):</strong> 系统在网络分区（节点间通信中断）的情况下仍能继续运行。</li>
+</ul>
+</li>
+<li><strong>实践:</strong> 由于网络分区是不可避免的，现代分布式系统必须支持分区容错性。因此，设计者必须在<strong>一致性 (CP)</strong> 和<strong>可用性 (AP)</strong> 之间做出选择。传统关系型数据库倾向于 CP，而许多 NoSQL 系统倾向于 AP。</li>
+</ul>
+</li>
+<li><strong>一致性模型:</strong>
+<ul>
+<li><strong>强一致性 (Strong Consistency):</strong> ACID 模型所追求的。</li>
+<li><strong>最终一致性 (Eventual Consistency):</strong> BASE 模型（Basically Available, Soft state, Eventually consistent）的核心。系统保证在没有新的更新操作时，所有副本的数据最终会达到一致状态。这是许多高可用 NoSQL 系统的设计基础。</li>
+</ul>
+</li>
+</ul>
+<h2 id="64-数据交换格式-data-serialization-formats"><a class="anchor" href="#64-数据交换格式-data-serialization-formats">#</a> <strong>6.4 数据交换格式 (Data Serialization Formats)</strong></h2>
+<p>用于数据库备份、迁移和系统间通信。</p>
+<ul>
+<li><strong>SQL Dumps:</strong> 关系型数据库的标准，生成包含 DDL 和 DML 语句的 <code>.sql</code> 文件。</li>
+<li><strong>JSON (JavaScript Object Notation):</strong> 轻量级、易于人类阅读和机器解析。已成为 Web API 和 NoSQL 文档存储的事实标准。</li>
+<li><strong>XML (eXtensible Markup Language):</strong> 结构化、可扩展，但较为冗长。在企业级 SOA 和配置文件中仍有应用。</li>
+<li><strong>CSV (Comma-Separated Values):</strong> 简单，通用，适合表格数据的基本交换。</li>
+</ul>
+<h1 id="chapter-7-computers"><a class="anchor" href="#chapter-7-computers">#</a> Chapter 7 : <strong>Computers</strong></h1>
+<blockquote>
+<p>[!important]</p>
+<p>本章部分内容数字逻辑设计课程与超算课程已有涉及，不再赘述</p>
+</blockquote>
+<h2 id="71-计算机架构-architecture"><a class="anchor" href="#71-计算机架构-architecture">#</a> 7.1 计算机架构 (Architecture)</h2>
+<p>一台计算机最核心的两个部分是：</p>
+<ul>
+<li>
+<p><strong>内存 (RAM - Random Access Memory):</strong></p>
+<ul>
+<li><strong>作用：</strong> 用来存放<strong>所有</strong>当前正在运行的程序的<strong>指令</strong>和<strong>数据</strong>。</li>
+<li><strong>结构：</strong> 它被分成很多个小格子，每个格子叫一个<strong>内存单元 (cell)</strong>，通常能存一个<strong>字节 (byte)</strong> 的数据。每个格子都有一个独一无二的<strong>地址</strong>，就像门牌号。</li>
+<li><strong>工作方式：</strong> 通过<strong>地址总线 (address bus)</strong> 告诉内存“我要访问哪个门牌号”，然后通过<strong>数据总线 (data bus)</strong> 把数据存进去或取出来。</li>
+</ul>
+</li>
+<li>
+<p><strong>中央处理器 (CPU - Central Processing Unit):</strong></p>
+<ul>
+<li><strong>作用：</strong> 这是计算机的“大脑”，负责<strong>执行指令</strong>和<strong>进行计算</strong>。</li>
+<li><strong>内部结构：</strong> CPU 内部有极少量、但速度飞快的存储单元，叫做<strong>寄存器 (registers)</strong>。CPU 所有的计算（加法、比较等）都<strong>只能在寄存器上进行</strong>。</li>
+<li><strong>指令集 (Instruction Set):</strong> 每个 CPU 都有一套它能理解的“指令清单”，比如“从内存地址 X 读取数据到寄存器 R1”、“把寄存器 R1 和 R2 的值相加”、“如果寄存器 R3 的值是0，就跳转到指令 Y 去执行”。</li>
+<li><strong>工作循环 (Fetch-Execute Cycle):</strong> CPU 永远在重复做一件事：
+<ol>
+<li><strong>取指 (Fetch):</strong> 根据一个叫<strong>程序计数器 (Program Counter, PC)</strong> 的特殊寄存器里存的地址，去内存里取出下一条指令。</li>
+<li><strong>译码 (Decode):</strong> 理解这条指令是要干什么。</li>
+<li><strong>执行 (Execute):</strong> 干活。可能是计算，也可能是搬运数据。</li>
+<li><strong>写回 (Write-back):</strong> 把结果存回寄存器或内存。</li>
+<li>然后 PC 指向下一条指令，无限循环。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>核心关系：</strong> CPU 无法直接处理庞大的内存数据。它需要不断地把指令和数据从内存这个“大仓库”搬到寄存器这个“工作台”上进行处理，处理完再放回去。这个“搬运”过程的效率，直接决定了计算机的性能。</p>
+<h2 id="72-编译器-compilers"><a class="anchor" href="#72-编译器-compilers">#</a> 7.2 编译器 (Compilers)</h2>
+<p>我们写的代码（如 Python, Java, C++）叫做<strong>高级语言</strong>，CPU 完全看不懂。CPU 只认识由 0 和 1 组成的<strong>机器码 (machine code)</strong>。</p>
+<p><strong>编译器</strong>就是一个神奇的翻译程序，它的工作就是把你写的高级语言代码，<strong>一次性地</strong>翻译成 CPU 能懂的机器码。</p>
+<ul>
+<li>
+<p><strong>为什么需要编译器？</strong></p>
+<ul>
+<li>直接写机器码是反人类的，极其繁琐且容易出错。</li>
+<li>高级语言让我们能用更接近人类思维的方式来表达复杂的逻辑。</li>
+</ul>
+</li>
+<li>
+<p><strong>编译过程发生了什么？</strong></p>
+<ul>
+<li><code>x = y + z;</code> 这句简单的高级代码，可能会被编译器翻译成好几条机器指令：
+<ol>
+<li>从内存加载 <code>y</code> 的值到寄存器 R1。</li>
+<li>从内存加载 <code>z</code> 的值到寄存器 R2。</li>
+<li>把 R1 和 R2 的值相加，结果存入 R3。</li>
+<li>把 R3 的值存回内存中 <code>x</code> 的位置。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>编译器优化 (Compiler Optimizations):</strong> 现代编译器非常智能。它们在翻译的同时，还会想方设法地优化代码，让生成的机器码更高效。比如，它会自动帮你消除不必要的计算，或者重新安排指令顺序来提高执行效率。这也是为什么我们常说“不要进行过早的手动微观优化”，因为编译器可能比你做得更好。</p>
+</li>
+<li>
+<p><strong>解释器 (Interpreter):</strong> 像 Python, JavaScript 这类语言，通常使用<strong>解释器</strong>。解释器是<strong>一边翻译一边执行</strong>的，而不是一次性翻译完。这让开发调试更方便快捷，但运行速度通常比编译型语言慢。</p>
+</li>
+</ul>
+<blockquote>
+<p>这就是分流面试的题目吧）</p>
+</blockquote>
+<h2 id="73-内存层次-memory-hierarchy"><a class="anchor" href="#73-内存层次-memory-hierarchy">#</a> 7.3 内存层次 (Memory Hierarchy)</h2>
+<p>CPU 的计算速度和内存的访问速度之间存在巨大的鸿沟，这就是**“处理器-内存性能差距” (Processor-Memory Gap)**。CPU 一秒钟能做几十亿次计算，但去内存取一次数据可能要等上几百个计算周期，大部分时间都在“发呆”。</p>
+<p>为了解决这个问题，于是有了<strong>内存层次结构</strong>：</p>
+<ul>
+<li><strong>顶层：寄存器 (Registers)</strong>
+<ul>
+<li><strong>位置：</strong> 在 CPU 内部。</li>
+<li><strong>速度：</strong> 最快，接近光速（1个时钟周期）。</li>
+<li><strong>容量：</strong> 极小 (KB 级别)。</li>
+<li><strong>作用：</strong> CPU 的工作台。</li>
+</ul>
+</li>
+<li><strong>第二层：缓存 (Cache - L1, L2, L3)</strong>
+<ul>
+<li><strong>位置：</strong> 集成在 CPU 芯片上或紧挨着 CPU。</li>
+<li><strong>速度：</strong> 非常快（几十到几百个时钟周期）。</li>
+<li><strong>容量：</strong> 较小 (MB 级别)。</li>
+<li><strong>工作方式：</strong> 缓存是一个“小抄”，它会自动把 CPU 最近常用以及其周边的数据，从大而慢的内存中复制一份进来。当 CPU 需要数据时，它会<strong>先看缓存里有没有</strong>，如果有（称为<strong>缓存命中, cache hit</strong>），就直接拿走，速度飞快！如果缓存里没有（称为<strong>缓存未命中, cache miss</strong>），才去慢悠悠的内存里取。</li>
+</ul>
+</li>
+<li><strong>第三层：主内存 (Main Memory / RAM)</strong>
+<ul>
+<li><strong>位置：</strong> 主板上的内存条。</li>
+<li><strong>速度：</strong> 较慢（几百到上千个时钟周期）。</li>
+<li><strong>容量：</strong> 较大 (GB 级别)。</li>
+<li><strong>作用：</strong> 存放所有正在运行的程序和数据。</li>
+</ul>
+</li>
+<li><strong>底层：二级存储 (Secondary Storage - 硬盘/SSD)</strong>
+<ul>
+<li><strong>位置：</strong> 独立的硬盘设备。</li>
+<li><strong>速度：</strong> 极慢（百万个时钟周期以上）。</li>
+<li><strong>容量：</strong> 巨大 (TB 级别)。</li>
+<li><strong>作用：</strong> 永久存储数据和程序。当内存不够用时，操作系统会把内存中不常用的部分临时存到硬盘上（这个过程叫<strong>交换, swapping</strong>），但这会导致性能急剧下降，即**“系统颠簸” (Thrashing)**。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>这个和超算讲的差不多哎</p>
+</blockquote>
+<h1 id="chapter-8-programming"><a class="anchor" href="#chapter-8-programming">#</a> <strong>Chapter 8 : Programming</strong></h1>
+<blockquote>
+<p><strong>核心主题：编程语言的本质、构成与思想范式</strong></p>
+</blockquote>
+<hr>
+<h2 id="81-语言学-linguistics"><a class="anchor" href="#81-语言学-linguistics">#</a> **8.1 语言学 (Linguistics) **</h2>
+<p>任何编程语言都是用于表达计算思想的符号系统，其基本构成要素如下：</p>
+<ul>
+<li>
+<p><strong>值 (Values):</strong></p>
+<ul>
+<li><strong>定义:</strong> 程序中用来表示和操作信息的实体。是编程语言的“一等公民”(First-Class Citizens)，意味着它们可以被创建、作为参数传递、作为函数返回值等。</li>
+<li><strong>分类:</strong>
+<ul>
+<li><strong>原生值 (Primitive Values):</strong> 如 <code>integer</code>, <code>float</code>, <code>boolean</code>, <code>string</code>。</li>
+<li><strong>复合值 (Compound Values):</strong> 由其他值构成的结构，如 <code>struct</code>, <code>object</code>, <code>array</code>。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>表达式 (Expressions):</strong></p>
+<ul>
+<li><strong>定义:</strong> 任何可以被求值（reduce）并<strong>产生一个值</strong>的代码片段。</li>
+<li><strong>构成:</strong>
+<ul>
+<li><strong>字面量 (Literals):</strong> 值的直接表示，如 <code>42</code>, <code>"hello"</code>, <code>true</code>。</li>
+<li><strong>函数调用 (Function Calls):</strong> 如 <code>calculate_sum(a, b)</code>。</li>
+<li><strong>操作符 (Operators):</strong> 连接其他表达式构成更复杂的表达式，如 <code>2 * (a + b)</code>。</li>
+</ul>
+</li>
+<li><strong>关键特性:</strong> 表达式必须有返回值。</li>
+</ul>
+</li>
+<li>
+<p><strong>语句 (Statements):</strong></p>
+<ul>
+<li><strong>定义:</strong> 指示计算机<strong>执行一个动作</strong>或改变程序状态的指令。</li>
+<li><strong>分类:</strong>
+<ul>
+<li><strong>简单语句:</strong> 如赋值 <code>x = 5</code>，函数调用 <code>print("done")</code>。</li>
+<li><strong>复合语句/控制流语句:</strong> 如 <code>if-else</code> 条件判断、<code>for</code>/<code>while</code> 循环。</li>
+<li><strong>定义语句 (Definitions):</strong> 创建新的实体（如变量、函数）并为其绑定名称。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="82-变量-variables"><a class="anchor" href="#82-变量-variables">#</a> **8.2 变量 (Variables) **</h2>
+<ul>
+<li>
+<p><strong>定义:</strong> 变量是<strong>名称 (Name)</strong> 与<strong>值 (Value)</strong> 所在内存地址的<strong>绑定 (Binding)</strong>。它是程序状态管理的核心机制。</p>
+</li>
+<li>
+<p><strong>变量类型系统 (Variable Typing):</strong></p>
+<ul>
+<li><strong>静态类型 (Static Typing):</strong>
+<ul>
+<li><strong>特点:</strong> 变量类型在<strong>编译时</strong>就已确定且不可更改（如 <code>int count;</code>）。</li>
+<li><strong>优点:</strong> 编译器可进行早期类型检查，安全性高；利于编译器进行性能优化。</li>
+<li><strong>缺点:</strong> 编码灵活性较低，较为繁琐。</li>
+<li><strong>代表语言:</strong> C++, Java, C#, Go。</li>
+</ul>
+</li>
+<li><strong>动态类型 (Dynamic Typing):</strong>
+<ul>
+<li><strong>特点:</strong> 变量类型在<strong>运行时</strong>确定，可随时改变（如 <code>x = 10; x = "hello";</code>）。</li>
+<li><strong>优点:</strong> 编码快速、灵活，适合快速原型开发。</li>
+<li><strong>缺点:</strong> 类型错误需在运行时才能发现，依赖充分的测试；存在一定的性能开销。</li>
+<li><strong>代表语言:</strong> Python, JavaScript, Ruby。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>作用域 (Scope) 与命名空间 (Namespace):</strong></p>
+<ul>
+<li><strong>作用域:</strong> 一个名称绑定（如变量名）在程序中有效的上下文区域。通常分为<strong>全局作用域 (Global Scope)</strong> 和<strong>局部作用域 (Local Scope)</strong>（如函数内部）。</li>
+<li><strong>目的:</strong> 避免在大型程序中出现<strong>名称冲突 (Name Collision)</strong>。</li>
+<li><strong>命名空间:</strong> 程序中所有可用的名称的集合。应保持命名空间的<strong>洁净 (clean)</strong>，避免不必要的全局变量和导入，防止<strong>命名空间污染 (Namespace Pollution)</strong>。</li>
+</ul>
+</li>
+</ul>
+<h2 id="83-编程范式-programming-paradigms"><a class="anchor" href="#83-编程范式-programming-paradigms">#</a> **8.3 编程范式 (Programming Paradigms) **</h2>
+<p>编程范式是程序设计的方法论和风格。</p>
+<h5 id="831-命令式编程-imperative-programming"><a class="anchor" href="#831-命令式编程-imperative-programming">#</a> <strong>8.3.1 命令式编程 (Imperative Programming)</strong></h5>
+<ul>
+<li><strong>核心思想:</strong> <strong>关注“如何做”(How)</strong>。通过一系列明确的指令（命令）来逐步修改程序的状态，最终达到目标。</li>
+<li><strong>特点:</strong> 代码是状态变化的指令序列，与冯·诺依曼计算机架构的底层工作方式（指令序列、内存读写）直接对应。</li>
+<li><strong>子范式:</strong>
+<ul>
+<li><strong>过程式编程 (Procedural):</strong> 将代码组织成可复用的<strong>过程 (Procedures)</strong> 或<strong>函数 (Functions)</strong>。这是结构化编程的基础。</li>
+<li><strong>面向对象编程 (Object-Oriented, OOP):</strong> 将<strong>数据 (Data)</strong> 和操作数据的<strong>方法 (Methods)</strong> 封装在<strong>对象 (Objects)</strong> 中。通过封装、继承、多态来管理复杂性。</li>
+</ul>
+</li>
+</ul>
+<h5 id="832-声明式编程-declarative-programming"><a class="anchor" href="#832-声明式编程-declarative-programming">#</a> <strong>8.3.2 声明式编程 (Declarative Programming)</strong></h5>
+<ul>
+<li><strong>核心思想:</strong> <strong>关注“做什么”(What)</strong>。只描述期望达成的目标或结果，而将具体的实现步骤交给语言的执行引擎。</li>
+<li><strong>特点:</strong> 代码可读性高，更接近问题本身的逻辑描述，而非执行步骤。</li>
+<li><strong>代表:</strong> SQL (<code>SELECT...</code>)，HTML (<code>&lt;p&gt;...</code>)。</li>
+<li><strong>重要子范式：函数式编程 (Functional Programming, FP)</strong>
+<ul>
+<li><strong>核心:</strong> 将计算视为数学函数的求值，避免状态改变和可变数据。</li>
+<li><strong>关键概念:</strong>
+<ul>
+<li><strong>纯函数 (Pure Functions):</strong> 无副作用（不修改外部状态），对于相同的输入总是有相同的输出。</li>
+<li><strong>不可变性 (Immutability):</strong> 数据一旦创建就不能被修改，任何修改都将产生新的数据副本。</li>
+<li><strong>高阶函数 (Higher-Order Functions):</strong> 函数可以作为参数或返回值。
+<ul>
+<li><code>map</code>: 对集合中每个元素应用一个函数，返回新集合。</li>
+<li><code>filter</code>: 根据一个判断函数筛选集合中的元素，返回新集合。</li>
+<li><code>reduce</code>: 将集合中的所有元素聚合为一个单一的值。</li>
+</ul>
+</li>
+<li><strong>闭包 (Closure):</strong> 函数可以“捕获”并记住其创建时所在的环境（变量）。这使得函数可以携带状态，是实现柯里化(Currying)、延迟求值(Lazy Evaluation)等高级技术的基础。</li>
+<li><strong>模式匹配 (Pattern Matching):</strong> 允许函数根据输入的结构或值来定义不同的行为，是 <code>if/else</code> 或 <code>switch</code> 的更强大、更声明式的替代方案。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="833-逻辑编程-logic-programming"><a class="anchor" href="#833-逻辑编程-logic-programming">#</a> <strong>8.3.3 逻辑编程 (Logic Programming)</strong></h5>
+<ul>
+<li><strong>核心思想:</strong> <strong>描述“事实与规则”(Facts and Rules)</strong>。程序由一系列逻辑断言构成。</li>
+<li><strong>执行方式:</strong> 程序员定义一个逻辑模型，然后向系统<strong>查询 (Query)</strong>。系统使用内置的<strong>逻辑推理引擎</strong>（如回溯算法）在解空间中搜索满足查询条件的答案。</li>
+<li><strong>代表语言:</strong> Prolog。</li>
+<li><strong>应用领域:</strong> 人工智能、专家系统、自然语言处理、定理证明等。</li>
+</ul>
+<blockquote>
+<p>这部分其实没大看懂……</p>
+</blockquote>
+<div class="tags"><a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag"><i class="ic i-tag"></i>读书笔记</a></div></div><footer><div class="meta"></div><div id="copyright"><ul><li class="author"><strong>本文作者：</strong>Luchron<i class="ic i-at"><em>@</em></i>絶対忘れてやらないよ</li><li class="link"><strong>本文链接：</strong><a href="https://luchron.github.io/2025/06/30/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/ComputerScienceDistilled/" title="《Computer Science Distilled》读书笔记">https://luchron.github.io/2025/06/30/技术积累/ComputerScienceDistilled/</a></li><li class="license"><strong>版权声明：</strong>本站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/2025/06/28/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/" rel="prev" itemprop="url" data-background-image="//assets/01.jpg" title="数字逻辑设计"><span class="type">上一篇</span><span class="category"><i class="ic i-flag"></i>课堂笔记</span><h3>数字逻辑设计</h3></a></div><div class="item right"><a href="/2025/07/03/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" rel="next" itemprop="url" data-background-image="//assets/01.jpg" title="数据库基础"><span class="type">下一篇</span><span class="category"><i class="ic i-flag"></i>技术积累</span><h3>数据库基础</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-3-strategy"><span class="toc-number">1.</span> <span class="toc-text"> Chapter 3 : Strategy</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-4-data"><span class="toc-number">2.</span> <span class="toc-text"> Chapter 4 : Data</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#41-%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-abstract-data-types-adts"><span class="toc-number">2.1.</span> <span class="toc-text"> 4.1 抽象数据类型 (Abstract Data Types, ADTs)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#42-%E5%B8%B8%E8%A7%81%E6%8A%BD%E8%B1%A1-common-abstractions"><span class="toc-number">2.2.</span> <span class="toc-text"> 4.2 常见抽象 (Common Abstractions)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#43-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-data-structures"><span class="toc-number">2.3.</span> <span class="toc-text"> 4.3 数据结构 (Data Structures)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-5-algorithms"><span class="toc-number">3.</span> <span class="toc-text"> Chapter 5 : Algorithms</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#51-%E6%8E%92%E5%BA%8F-sorting"><span class="toc-number">3.1.</span> <span class="toc-text"> 5.1 排序 (Sorting)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#52-%E6%90%9C%E7%B4%A2-searching"><span class="toc-number">3.2.</span> <span class="toc-text"> 5.2 搜索 (Searching)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#53-%E5%9B%BE-graphs"><span class="toc-number">3.3.</span> <span class="toc-text"> 5.3 图 (Graphs)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#54-%E8%BF%90%E7%AD%B9%E5%AD%A6-operations-research"><span class="toc-number">3.4.</span> <span class="toc-text"> 5.4 运筹学 (Operations Research)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-6-databases"><span class="toc-number">4.</span> <span class="toc-text"> Chapter 6 : Databases</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#61-%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%A8%A1%E5%9E%8B-relational-model"><span class="toc-number">4.1.</span> <span class="toc-text"> 6.1 关系型模型 (Relational Model)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#62-%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%A8%A1%E5%9E%8B-non-relational-nosql"><span class="toc-number">4.2.</span> <span class="toc-text"> 6.2 非关系型模型 (Non-Relational / NoSQL)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#63-%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F-distributed-systems-concepts"><span class="toc-number">4.3.</span> <span class="toc-text"> 6.3 分布式系统 (Distributed Systems Concepts)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#64-%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2%E6%A0%BC%E5%BC%8F-data-serialization-formats"><span class="toc-number">4.4.</span> <span class="toc-text"> 6.4 数据交换格式 (Data Serialization Formats)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-7-computers"><span class="toc-number">5.</span> <span class="toc-text"> Chapter 7 : Computers</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#71-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%9E%B6%E6%9E%84-architecture"><span class="toc-number">5.1.</span> <span class="toc-text"> 7.1 计算机架构 (Architecture)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#72-%E7%BC%96%E8%AF%91%E5%99%A8-compilers"><span class="toc-number">5.2.</span> <span class="toc-text"> 7.2 编译器 (Compilers)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#73-%E5%86%85%E5%AD%98%E5%B1%82%E6%AC%A1-memory-hierarchy"><span class="toc-number">5.3.</span> <span class="toc-text"> 7.3 内存层次 (Memory Hierarchy)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-8-programming"><span class="toc-number">6.</span> <span class="toc-text"> Chapter 8 : Programming</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#81-%E8%AF%AD%E8%A8%80%E5%AD%A6-linguistics"><span class="toc-number">6.1.</span> <span class="toc-text"> **8.1 语言学 (Linguistics) **</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#82-%E5%8F%98%E9%87%8F-variables"><span class="toc-number">6.2.</span> <span class="toc-text"> **8.2 变量 (Variables) **</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#83-%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F-programming-paradigms"><span class="toc-number">6.3.</span> <span class="toc-text"> **8.3 编程范式 (Programming Paradigms) **</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#831-%E5%91%BD%E4%BB%A4%E5%BC%8F%E7%BC%96%E7%A8%8B-imperative-programming"><span class="toc-number">6.3.0.0.1.</span> <span class="toc-text"> 8.3.1 命令式编程 (Imperative Programming)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#832-%E5%A3%B0%E6%98%8E%E5%BC%8F%E7%BC%96%E7%A8%8B-declarative-programming"><span class="toc-number">6.3.0.0.2.</span> <span class="toc-text"> 8.3.2 声明式编程 (Declarative Programming)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#833-%E9%80%BB%E8%BE%91%E7%BC%96%E7%A8%8B-logic-programming"><span class="toc-number">6.3.0.0.3.</span> <span class="toc-text"> 8.3.3 逻辑编程 (Logic Programming)</span></a></li></ol></li></ol></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li><a href="/2025/05/18/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/%E7%99%BB%E5%BD%95%E4%B8%8E%E9%89%B4%E6%9D%83/" rel="bookmark" title="登录与鉴权">登录与鉴权</a></li><li class="active"><a href="/2025/06/30/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/ComputerScienceDistilled/" rel="bookmark" title="《Computer Science Distilled》读书笔记">《Computer Science Distilled》读书笔记</a></li><li><a href="/2025/07/03/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" rel="bookmark" title="数据库基础">数据库基础</a></li><li><a href="/2025/08/18/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%8E%B0%E4%BB%A3CSharp%E5%9F%BA%E7%A1%80/" rel="bookmark" title="现代 C# 基础">现代 C# 基础</a></li><li><a href="/2025/09/15/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/React%E7%AC%94%E8%AE%B0/" rel="bookmark" title="React 笔记">React 笔记</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/api%E7%9A%84%E5%88%B6%E5%AE%9A/" rel="bookmark" title="api的制定">api的制定</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/shell%E8%84%9A%E6%9C%AC/" rel="bookmark" title="shell脚本">shell脚本</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_apply/" rel="bookmark" title="git 应用">git 应用</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/markdown/Typora%20markdown%E6%95%99%E7%A8%8B/" rel="bookmark" title="markdown">markdown</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_learn/" rel="bookmark" title="git简介">git简介</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/CSS/" rel="bookmark" title="CSS">CSS</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/JS/" rel="bookmark" title="JavaScript">JavaScript</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/HTML/" rel="bookmark" title="HTML">HTML</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/NPM/" rel="bookmark" title="NPM">NPM</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/fatch%20api/" rel="bookmark" title="fetch api">fetch api</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/%E5%85%B3%E4%BA%8E%E5%89%8D%E7%AB%AF/" rel="bookmark" title="关于前端">关于前端</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/React/" rel="bookmark" title="React">React</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/Go/" rel="bookmark" title="Go">Go</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/typescript/" rel="bookmark" title="TypeScript">TypeScript</a></li><li><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Csharp/" rel="bookmark" title="C#">C#</a></li><li><a href="/2025/11/14/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/numpy/" rel="bookmark" title="NumPy">NumPy</a></li><li><a href="/2025/12/20/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/CMake/" rel="bookmark" title="CMake">CMake</a></li><li><a href="/2026/06/24/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/MySQL%E5%85%A5%E9%97%A8/" rel="bookmark" title="MySQL 入门">MySQL 入门</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="image" loading="lazy" decoding="async" itemprop="image" alt="Luchron" src="/assets/avatar.avif"><p class="name" itemprop="name">Luchron</p><div class="description" itemprop="description">未下眉头，又上心头</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">48</span><span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">5</span><span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">47</span><span class="name">标签</span></a></div></nav><div class="social"><a target="_blank" rel="noopener" href="https://github.com/LuChron" class="item github" title="https://github.com/LuChron"><i class="ic i-github"></i></a><a href="mailto:3454410481@qq.com" class="item email" title="mailto:3454410481@qq.com"><i class="ic i-envelope"></i></a></div><div class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item dropdown"><a href="#" onclick="return false;"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li></div></div></div></div><ul id="quick"><li class="prev pjax"><a href="/2025/07/03/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/2025/06/28/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div><div id="player"></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/" title="分类于科研学习">科研学习</a></div><span><a href="/2026/04/19/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/VGGT/">VGGT 论文阅读</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/" title="分类于超算短学期">超算短学期</a></div><span><a href="/2025/07/11/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/HPC%E5%9F%BA%E7%A1%80%E6%A6%82%E8%BF%B0/">HPC 基础概述</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_learn/">git简介</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/07/03/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/">数据库基础</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2026/06/24/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/MySQL%E5%85%A5%E9%97%A8/">MySQL 入门</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/" title="分类于超算短学期">超算短学期</a></div><span><a href="/2025/08/09/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/%E5%90%91%E9%87%8F%E5%8C%96%E8%AE%A1%E7%AE%97/">向量化计算</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/" title="分类于超算短学期">超算短学期</a></div><span><a href="/2025/08/10/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/Solver%E7%AC%94%E8%AE%B0/">Solver Challenge 笔记</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Csharp/">C#</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/Go/">Go</a></span></li></ul></div></div><div class="status"><div class="copyright">© 2022 -<span itemprop="copyrightYear">2026</span><span class="with-love"><i class="ic i-sakura rotate"></i></span><span class="author" itemprop="copyrightHolder">Luchron @ LuChron's Blog</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i></span><span title="站点总字数">995k 字</span><span class="post-meta-divider"> | </span><span class="post-meta-item-icon"><i class="ic i-coffee"></i></span><span title="站点阅读时长">15:04</span></div><div class="powered-by">基于 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> &amp; Theme.<a target="_blank" rel="noopener" href="https://github.com/theme-shoka-x/hexo-theme-shokaX/">ShokaX</a></div></div></div></footer></div><script data-config="" type="text/javascript">var LOCAL = {
+    ispost: true,
+    path: `2025/06/30/技术积累/ComputerScienceDistilled/`,
+    favicon: {
+        show: `你回来了(￣▽￣)`,
+        hide: `她跑掉了(╥﹏╥)`
+    },
+    search: {
+        placeholder: "文章搜索",
+        empty: "关于 「 ${query} 」，什么也没搜到",
+        stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    nocopy: "false",
+    copyright: `复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。`,
+    copy_tex: false,
+    katex: false,
+    mermaid: false,
+    audio: undefined,
+    nocopy: false,
+    outime: true,
+    template: `<div class="note warning"><p><span class="label warning">文章时效性提示</span><br>这是一篇发布于 {{publish}} 天前，最后一次更新在 {{updated}} 天前的文章，部分信息可能已经发生改变，请注意甄别。</p></div>`,
+    quiz: {
+        choice: `单选题`,
+        multiple: `多选题`,
+        true_false: `判断题`,
+        essay: `问答题`,
+        gap_fill: `填空题`,
+        mistake: `错题备注`
+    }
+};
+</script><script src="/js/siteInit.js?v=0.5.4" type="module" fetchpriority="high" defer=""></script></body></html>

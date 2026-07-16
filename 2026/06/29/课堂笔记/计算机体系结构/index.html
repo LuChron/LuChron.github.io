@@ -1,0 +1,1368 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"><meta name="renderer" content="webkit"><link rel="icon" type="image/ico" sizes="32x32" href="/assets/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="alternate" href="/rss.xml" title="絶対忘れてやらないよ" type="application/rss+xml"><link rel="alternate" href="/atom.xml" title="絶対忘れてやらないよ" type="application/atom+xml"><link rel="alternate" type="application/json" title="絶対忘れてやらないよ" href="https://luchron.github.io/feed.json"><link rel="preconnect" href="https://s4.zstatic.net"><link rel="preconnect" href="https://at.alicdn.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CFredericka%20the%20Great:400,400italic,700,700italic%7CNoto%20Serif%20JP:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CInconsolata:400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext" media="none" onload="this.media='all'"><link rel="modulepreload" href="/js/siteInit.js"><link rel="modulepreload" href="/js/nyx-player-HGUYDKEU.js"><link rel="modulepreload" href="/js/copy-tex-FIB26BBA.js"><link rel="modulepreload" href="/js/post-S7SVO5ZB.js"><link rel="modulepreload" href="/js/chunk-WN4FGWSR.js"><link rel="modulepreload" href="/js/pagefind-ROWL75QD.js"><link rel="modulepreload" href="/js/index.esm-V2O4HKJY.js"><link rel="modulepreload" href="/js/chunk-HJSTZ4VX.js"><link rel="modulepreload" href="/js/chunk-HZLNKXMP.js"><link rel="stylesheet" href="/css/siteInit.css" media="none" onload="this.media='all'"><link rel="preload" href="//assets/02.jpg" as="image" fetchpriority="high"><meta name="keywords" content="课堂笔记,"><meta name="description" content="计算机体系结构课程笔记"><link rel="canonical" href="https://luchron.github.io/2026/06/29/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"><link rel="stylesheet" href="/css/post.css?v=0.5.4"><link rel="stylesheet" href="/css/mermaid.css?v=0.5.4"><!-- 临时处理--><link rel="stylesheet" media="none" onload="this.media='all'" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css"><title>计算机体系结构</title><meta name="generator" content="Hexo 7.3.0"></head><body itemscope="" itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="pagefind_mount"></div><div id="container"><header id="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">计算机体系结构</h1><div class="meta"><span class="item" title="创建时间：2026-06-29 21:22:00"><span class="icon"><i class="ic i-calendar"></i></span><span class="text">发表于</span><time itemprop="dateCreated datePublished" datetime="2026-06-29T21:22:00+08:00">2026-06-29</time></span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i></span><span class="text">本文字数</span><span>36k</span><span class="text">字</span></span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i></span><span class="text">阅读时长</span><span>33 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span><span class="line"></span><span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">LuChron's Blog</a></li></ul><ul class="right" id="rightNav"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div class="pjax" id="imgs"><img src="/assets/02.avif" loading="eager" decoding="async" fetchpriority="high" alt="絶対忘れてやらないよ"></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><main><div class="inner"><div class="pjax" id="main"><div class="article wrap"><div class="breadcrumb" itemlistelement="" itemscope="" itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i><span><a href="/">首页</a></span><i class="ic i-angle-right"></i><span class="current" itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" itemprop="item" rel="index" title="分类于课堂笔记"><span itemprop="name">课堂笔记<meta itemprop="position" content="0"></span></a></span></div><article class="post block" itemscope="itemscope" itemtype="http://schema.org/Article" data-pagefind-body="data-pagefind-body" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://luchron.github.io/2026/06/29/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"><span hidden="hidden" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="image" content="/assets/avatar.jpg"><meta itemprop="name" content="Luchron"><meta itemprop="description" content="狗窝, 未下眉头，又上心头"></span><span hidden="hidden" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="絶対忘れてやらないよ"></span><div class="body md" itemprop="articleBody"><h2 id="chap-1"><a class="anchor" href="#chap-1">#</a> CHAP 1</h2>
+<p>CPU为主的时代已经过去了，现在主要吃的是GPU，计算能力要强太多</p>
+<p>什么是体系结构</p>
+<h3 id="可靠性"><a class="anchor" href="#可靠性">#</a> 可靠性</h3>
+<p>性能与面积的平方根成正比</p>
+<p><strong>模块可靠性（module reliability）</strong>：从一个参考的初始时刻开始，对连续的服务实现的衡量</p>
+<ul>
+<li>
+<p><strong>平均故障时间（mean time to failure, MTTF）</strong>：它的倒数即为故障率，可用 FIT（failure in time）表示</p>
+</li>
+<li>
+<p><strong>平均修复时间（mean time to repair, MTTR）</strong></p>
+</li>
+<li>
+<p><strong>平均故障间隔时间（mean time between failure, MTBF）</strong></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>M</mi><mi>T</mi><mi>B</mi><mi>F</mi><mo>=</mo><mi>M</mi><mi>T</mi><mi>T</mi><mi>F</mi><mo>+</mo><mi>M</mi><mi>T</mi><mi>T</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">MTBF = MTTF + MTTR
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">MTBF</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">MTTF</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">MTTR</span></span></span></span></span></p>
+</li>
+<li>
+<p><strong>模块可用性（module availability）</strong>：对实现和中断两种状态交替的服务实现的衡量，计算公式为：</p>
+</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Module&nbsp;availability</mtext><mo>=</mo><mfrac><mrow><mi>M</mi><mi>T</mi><mi>T</mi><mi>F</mi></mrow><mrow><mi>M</mi><mi>T</mi><mi>T</mi><mi>F</mi><mo>+</mo><mi>M</mi><mi>T</mi><mi>T</mi><mi>R</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{Module availability} =
+\frac{MTTF}{MTTF + MTTR}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Module&nbsp;availability</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1297em;vertical-align:-0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">MTTF</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">MTTR</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">MTTF</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>​</p>
+<h4 id="measuring-reporting-and-summarizing-performance"><a class="anchor" href="#measuring-reporting-and-summarizing-performance">#</a> Measuring, Reporting and Summarizing Performance</h4>
+<ul>
+<li>
+<p>**Benchmark（基准测试 / 基准）**一般指：</p>
+<blockquote>
+<p>用一组<strong>标准测试或指标</strong>来评估系统、软件或硬件性能的方法。</p>
+</blockquote>
+</li>
+</ul>
+<p>MIPS：每百万条指令执行的时间</p>
+<ul>
+<li>简单来说，性能和执行时间成反比，即：$$performance=\frac{1}{execution\ time}$$</li>
+</ul>
+<h3 id="关于能耗"><a class="anchor" href="#关于能耗">#</a> 关于能耗</h3>
+<ul>
+<li>
+<p><strong>动态功率</strong>：与开关晶体管相关</p>
+<ul>
+<li>能耗：</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mtext>Energy</mtext><mrow><mi>d</mi><mi>y</mi><mi>n</mi><mi>a</mi><mi>m</mi><mi>i</mi><mi>c</mi></mrow></msub><mo>∝</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>×</mo><mtext>Capacitive&nbsp;load</mtext><mo>×</mo><msup><mtext>Voltage</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\text{Energy}_{dynamic}
+\propto
+\frac{1}{2}
+\times \text{Capacitive load}
+\times \text{Voltage}^2
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0636em;vertical-align:-0.3802em;"></span><span class="mord"><span class="mord text"><span class="mord">Energy</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.242em;"><span style="top:-2.4559em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mord mathnormal mtight">nami</span><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3802em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∝</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Capacitive&nbsp;load</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0929em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord text"><span class="mord">Voltage</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8984em;"><span style="top:-3.1473em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></p>
+<ul>
+<li>功率：</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mtext>Power</mtext><mrow><mi>d</mi><mi>y</mi><mi>n</mi><mi>a</mi><mi>m</mi><mi>i</mi><mi>c</mi></mrow></msub><mo>∝</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>×</mo><mtext>Capacitive&nbsp;load</mtext><mo>×</mo><msup><mtext>Voltage</mtext><mn>2</mn></msup><mo>×</mo><mtext>Frequency&nbsp;switched</mtext></mrow><annotation encoding="application/x-tex">\text{Power}_{dynamic}
+\propto
+\frac{1}{2}
+\times \text{Capacitive load}
+\times \text{Voltage}^2
+\times \text{Frequency switched}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord text"><span class="mord">Power</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mord mathnormal mtight">nami</span><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∝</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Capacitive&nbsp;load</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0929em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord text"><span class="mord">Voltage</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8984em;"><span style="top:-3.1473em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Frequency&nbsp;switched</span></span></span></span></span></span></p>
+</li>
+<li>
+<p><strong>静态功率</strong>：与电流泄露相关</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mtext>Power</mtext><mrow><mi>s</mi><mi>t</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>c</mi></mrow></msub><mo>∝</mo><msub><mtext>Current</mtext><mrow><mi>s</mi><mi>t</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>c</mi></mrow></msub><mo>×</mo><mtext>Voltage</mtext></mrow><annotation encoding="application/x-tex">\text{Power}_{static}
+\propto
+\text{Current}_{static}
+\times \text{Voltage}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">Power</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∝</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">Current</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Voltage</span></span></span></span></span></span></p>
+</li>
+</ul>
+<h3 id="阿姆达尔定律"><a class="anchor" href="#阿姆达尔定律">#</a> 阿姆达尔定律</h3>
+<p>阿姆达尔定律：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>T</mi><mrow><mi>i</mi><mi>m</mi><mi>p</mi><mi>r</mi><mi>o</mi><mi>v</mi><mi>e</mi><mi>d</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>T</mi><mrow><mi>a</mi><mi>f</mi><mi>f</mi><mi>e</mi><mi>c</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub><mrow><mi>i</mi><mi>m</mi><mi>p</mi><mi>r</mi><mi>o</mi><mi>v</mi><mi>e</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mtext>&nbsp;</mtext><mi>f</mi><mi>a</mi><mi>c</mi><mi>t</mi><mi>o</mi><mi>r</mi></mrow></mfrac><mo>+</mo><msub><mi>T</mi><mrow><mi>u</mi><mi>n</mi><mi>a</mi><mi>f</mi><mi>f</mi><mi>e</mi><mi>c</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub></mrow><annotation encoding="application/x-tex">T_{improved} = \frac{T_{affected}}{improvement\  factor}+T_{unaffected}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">im</span><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">ro</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">d</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2408em;vertical-align:-0.8804em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">im</span><span class="mord mathnormal">p</span><span class="mord mathnormal">ro</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">e</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mspace">&nbsp;</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">or</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight" style="margin-right:0.10764em;">ff</span><span class="mord mathnormal mtight">ec</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">d</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">na</span><span class="mord mathnormal mtight" style="margin-right:0.10764em;">ff</span><span class="mord mathnormal mtight">ec</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">d</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+<p>这个问题的核心是使用阿姆达尔定律来计算加速比。该定律的公式为：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mi>p</mi><mi>e</mi><mi>e</mi><mi>d</mi><mtext>&nbsp;</mtext><mi>u</mi><mi>p</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>P</mi><mo stretchy="false">)</mo><mo>+</mo><mfrac><mi>P</mi><mi>N</mi></mfrac></mrow></mfrac></mrow><annotation encoding="application/x-tex">Speed\ up=
+
+\frac{1}{(1−P)+\frac{P}{N}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Sp</span><span class="mord mathnormal">ee</span><span class="mord mathnormal">d</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">u</span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4288em;vertical-align:-1.1073em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.2377em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.1073em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>其中：</p>
+<ul>
+<li><strong>P</strong>: 程序中可以并行化的部分所占的比例（例如，50% 就是 0.5）。</li>
+<li><strong>N</strong>: 用于并行化部分的处理器（核心）数量。</li>
+<li><strong>(1 - P)</strong>: 程序中必须串行执行的部分所占的比例。</li>
+<li><strong>speed up</strong>即加速比</li>
+</ul>
+<p>那么公式最后的样子就是：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mtext>Execution&nbsp;time</mtext><mtext>new</mtext></msub><mo>=</mo><msub><mtext>Execution&nbsp;time</mtext><mtext>old</mtext></msub><mo>×</mo><mrow><mo fence="true">(</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><msub><mtext>Fraction</mtext><mtext>enhanced</mtext></msub><mo stretchy="false">)</mo><mo>+</mo><mfrac><msub><mtext>Fraction</mtext><mtext>enhanced</mtext></msub><msub><mtext>Speedup</mtext><mtext>enhanced</mtext></msub></mfrac><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">\text{Execution time}_{\text{new}}
+=
+\text{Execution time}_{\text{old}}
+\times
+\left(
+(1-\text{Fraction}_{\text{enhanced}})
++
+\frac{\text{Fraction}_{\text{enhanced}}}{\text{Speedup}_{\text{enhanced}}}
+\right)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">Execution&nbsp;time</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">new</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">Execution&nbsp;time</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">old</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord text"><span class="mord">Fraction</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">enhanced</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord text"><span class="mord">Speedup</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.242em;"><span style="top:-2.4559em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">enhanced</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2441em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord text"><span class="mord">Fraction</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">enhanced</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9301em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span></span></span></span></span></p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mi>r</mi><mi>a</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><msub><mi>n</mi><mrow><mi>e</mi><mi>n</mi><mi>h</mi><mi>a</mi><mi>n</mi><mi>c</mi><mi>e</mi><mi>d</mi></mrow></msub></mrow><annotation encoding="application/x-tex">Fraction_{enhanced}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span><span class="mord mathnormal">t</span><span class="mord mathnormal">i</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">nhan</span><span class="mord mathnormal mtight">ce</span><span class="mord mathnormal mtight">d</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 就是可以优化得到的百分比</li>
+</ul>
+<p>所以移项就可以得到：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mtext>Speedup</mtext><mtext>overall</mtext></msub><mo>=</mo><mfrac><msub><mtext>Execution&nbsp;time</mtext><mtext>old</mtext></msub><msub><mtext>Execution&nbsp;time</mtext><mtext>new</mtext></msub></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><msub><mtext>Fraction</mtext><mtext>enhanced</mtext></msub><mo stretchy="false">)</mo><mo>+</mo><mfrac><msub><mtext>Fraction</mtext><mtext>enhanced</mtext></msub><msub><mtext>Speedup</mtext><mtext>enhanced</mtext></msub></mfrac></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{Speedup}_{\text{overall}}
+=
+\frac{\text{Execution time}_{\text{old}}}
+{\text{Execution time}_{\text{new}}}
+=
+\frac{1}
+{(1-\text{Fraction}_{\text{enhanced}})
++
+\frac{\text{Fraction}_{\text{enhanced}}}{\text{Speedup}_{\text{enhanced}}}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9386em;vertical-align:-0.2441em;"></span><span class="mord"><span class="mord text"><span class="mord">Speedup</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.242em;"><span style="top:-2.4559em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">overall</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2441em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1963em;vertical-align:-0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord text"><span class="mord">Execution&nbsp;time</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">new</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord text"><span class="mord">Execution&nbsp;time</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">old</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.6367em;vertical-align:-1.3153em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.2158em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord text"><span class="mord">Fraction</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">enhanced</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8942em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">Speedup</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2302em;"><span style="top:-2.2341em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">enhanced</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2659em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4159em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">Fraction</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3488em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">enhanced</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1512em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5311em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.3153em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<h3 id="isa"><a class="anchor" href="#isa">#</a> ISA</h3>
+<p>Instruction Set Architecture（指令集架构）。<strong>ISA 是硬件和软件之间的接口规范。</strong></p>
+<p>也就是它规定了：CPU 能看懂哪些指令、这些指令怎么编码、寄存器有哪些、内存怎么访问、程序如何控制跳转、中断异常怎么处理等等。比如常见的 ISA 有：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>x86 / x86-64</span></span>
+<span class="line"><span>ARM</span></span>
+<span class="line"><span>RISC-V</span></span>
+<span class="line"><span>MIPS</span></span></code></pre>
+<p>它们就像不同 CPU 的“语言规则”。程序最终要变成 CPU 能执行的机器指令，而这些机器指令必须符合某一种 ISA。</p>
+<p>举个简单例子，比如加法，在某种 ISA 里可能有指令：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>add x1, x2, x3</span></span></code></pre>
+<p>意思是：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>x1 = x2 + x3</span></span></code></pre>
+<p>那么 ISA 就要规定：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>add 这条指令存在</span></span>
+<span class="line"><span>它有几个操作数</span></span>
+<span class="line"><span>x1/x2/x3 是什么寄存器</span></span>
+<span class="line"><span>这条指令的机器码怎么编码</span></span>
+<span class="line"><span>结果写回哪里</span></span>
+<span class="line"><span>是否影响状态位</span></span></code></pre>
+<p>CPU 只要实现了这个 ISA，它就必须能正确执行这类指令。</p>
+<h4 id="isa-类别"><a class="anchor" href="#isa-类别">#</a> ISA 类别</h4>
+<ul>
+<li><strong>栈架构</strong>(stack architecture)：ALU加法等</li>
+<li><strong>累加器架构</strong>(accumulator architecture)：把操作数和结果都放进去，既是原操作数也是结果</li>
+<li><strong>通用目的寄存器架构</strong>(general-purpose register architecture, GRA)：</li>
+</ul>
+<h2 id="chap-2"><a class="anchor" href="#chap-2">#</a> CHAP 2</h2>
+<ul>
+<li>SRAM：现存cache什么的</li>
+<li>DRAM</li>
+</ul>
+<p>我们会选取中间即为选出来当作数组的index，通过tag再来比较（先做索引，再做比较）</p>
+<p>direct map的一个问题就是一个萝卜一个坑，所以我们增加它的关联度，叫做组相连。</p>
+<ul>
+<li>fully</li>
+<li>分组</li>
+</ul>
+<p>如上所述，实际上无论是直接拿指令数，还是拿失效率作为衡量指标，都是有一些缺陷的，更好的测量方法是使用<strong>平均存储器访问时间</strong>(average memory access time, AMAT) 作为指标，对应的计算公式为：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>v</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>g</mi><mi>e</mi><mtext>&nbsp;</mtext><mi>m</mi><mi>e</mi><mi>m</mi><mi>o</mi><mi>r</mi><mi>y</mi><mtext>&nbsp;</mtext><mi>a</mi><mi>c</mi><mi>c</mi><mi>e</mi><mi>s</mi><mi>s</mi><mtext>&nbsp;</mtext><mi>t</mi><mi>i</mi><mi>m</mi><mi>e</mi><mo>=</mo><mi>H</mi><mi>i</mi><mi>t</mi><mtext>&nbsp;</mtext><mi>t</mi><mi>i</mi><mi>m</mi><mi>e</mi><mo>+</mo><mi>M</mi><mi>i</mi><mi>s</mi><mi>s</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mo>×</mo><mi>M</mi><mi>i</mi><mi>s</mi><mi>s</mi><mtext>&nbsp;</mtext><mi>p</mi><mi>e</mi><mi>n</mi><mi>a</mi><mi>l</mi><mi>t</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">Average \  memory \  access \  time=Hit\  time+Miss rate×Miss \ penalty
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal" style="margin-right:0.02778em;">er</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">e</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.03588em;">ory</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">a</span><span class="mord mathnormal">ccess</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">t</span><span class="mord mathnormal">im</span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">t</span><span class="mord mathnormal">im</span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.02778em;">ssr</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal">i</span><span class="mord mathnormal">ss</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">p</span><span class="mord mathnormal">e</span><span class="mord mathnormal">na</span><span class="mord mathnormal">lt</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span></span></p>
+<p>单位可以是绝对时间，也可以是周期数。这种方法实际上还是一种间接的测量方法</p>
+<p>多级缓存：为了减少miss penalty。</p>
+<p>我们常见的就是两级。这个肯定不是越多越好的。一般非常快的缓存一般也很贵。</p>
+<ul>
+<li>
+<p>引入多级高速缓存后，我们需要重新考虑 AMAT 的定义了——现在的计算公式变成了：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Average&nbsp;memory&nbsp;access&nbsp;time</mtext><mo>=</mo><msub><mtext>Hit&nbsp;time</mtext><mrow><mi>L</mi><mn>1</mn></mrow></msub><mo>+</mo><msub><mtext>Miss&nbsp;rate</mtext><mrow><mi>L</mi><mn>1</mn></mrow></msub><mo>×</mo><mrow><mo fence="true">(</mo><msub><mtext>Hit&nbsp;time</mtext><mrow><mi>L</mi><mn>2</mn></mrow></msub><mo>+</mo><msub><mtext>Miss&nbsp;rate</mtext><mrow><mi>L</mi><mn>2</mn></mrow></msub><mo>×</mo><msub><mtext>Miss&nbsp;penalty</mtext><mrow><mi>L</mi><mn>2</mn></mrow></msub><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">\text{Average memory access time}
+=
+\text{Hit time}_{L1}
++
+\text{Miss rate}_{L1}
+\times
+\left(
+\text{Hit time}_{L2}
++
+\text{Miss rate}_{L2}
+\times
+\text{Miss penalty}_{L2}
+\right)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Average&nbsp;memory&nbsp;access&nbsp;time</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">Hit&nbsp;time</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">Miss&nbsp;rate</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord"><span class="mord text"><span class="mord">Hit&nbsp;time</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord text"><span class="mord">Miss&nbsp;rate</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord text"><span class="mord">Miss&nbsp;penalty</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2342em;"><span style="top:-2.4559em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2441em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">)</span></span></span></span></span></span></p>
+<p>为了消除歧义，有必要在这里对“失效率”做进一步的阐述：</p>
+<ul>
+<li>
+<p><strong>局部失效率（local miss rate）</strong> = 在某个高速缓存的失效次数 / 在该高速缓存中总的存储器访问次数</p>
+<ul>
+<li>L1 和 L2 的局部失效率分别为：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>Miss&nbsp;rate</mtext><mrow><mi>L</mi><mn>1</mn></mrow></msub><mo separator="true">,</mo><msub><mtext>Miss&nbsp;rate</mtext><mrow><mi>L</mi><mn>2</mn></mrow></msub></mrow><annotation encoding="application/x-tex">\text{Miss rate}_{L1}, \text{Miss rate}_{L2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord text"><span class="mord">Miss&nbsp;rate</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord text"><span class="mord">Miss&nbsp;rate</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+<li>
+<p><strong>全局失效率（global miss rate）</strong> = 在某个高速缓存的失效次数 / 来自处理器的总的存储器访问次数</p>
+<ul>
+<li>L1 和 L2 的全局失效率分别为：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>Miss&nbsp;rate</mtext><mrow><mi>L</mi><mn>1</mn></mrow></msub><mo separator="true">,</mo><msub><mtext>Miss&nbsp;rate</mtext><mrow><mi>L</mi><mn>1</mn></mrow></msub><mo>×</mo><msub><mtext>Miss&nbsp;rate</mtext><mrow><mi>L</mi><mn>2</mn></mrow></msub></mrow><annotation encoding="application/x-tex">\text{Miss rate}_{L1}, \text{Miss rate}_{L1} \times \text{Miss rate}_{L2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord text"><span class="mord">Miss&nbsp;rate</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord text"><span class="mord">Miss&nbsp;rate</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">Miss&nbsp;rate</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+</ul>
+<p>对于多级高速缓存而言，全局失效率是一种更合适的衡量指标。</p>
+<p>如果不想考虑失效率的话，可以用每条指令的失效数作为衡量指标，计算公式为：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Average&nbsp;memory&nbsp;stalls&nbsp;per&nbsp;instruction</mtext><mo>=</mo><msub><mtext>Misses&nbsp;per&nbsp;instruction</mtext><mrow><mi>L</mi><mn>1</mn></mrow></msub><mo>×</mo><msub><mtext>Hit&nbsp;time</mtext><mrow><mi>L</mi><mn>2</mn></mrow></msub><mo>+</mo><msub><mtext>Misses&nbsp;per&nbsp;instruction</mtext><mrow><mi>L</mi><mn>2</mn></mrow></msub><mo>×</mo><msub><mtext>Miss&nbsp;penalty</mtext><mrow><mi>L</mi><mn>2</mn></mrow></msub></mrow><annotation encoding="application/x-tex">\text{Average memory stalls per instruction}
+=
+\text{Misses per instruction}_{L1}
+\times
+\text{Hit time}_{L2}
++
+\text{Misses per instruction}_{L2}
+\times
+\text{Miss penalty}_{L2}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Average&nbsp;memory&nbsp;stalls&nbsp;per&nbsp;instruction</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9275em;vertical-align:-0.2441em;"></span><span class="mord"><span class="mord text"><span class="mord">Misses&nbsp;per&nbsp;instruction</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2342em;"><span style="top:-2.4559em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2441em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">Hit&nbsp;time</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9275em;vertical-align:-0.2441em;"></span><span class="mord"><span class="mord text"><span class="mord">Misses&nbsp;per&nbsp;instruction</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2342em;"><span style="top:-2.4559em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2441em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9386em;vertical-align:-0.2441em;"></span><span class="mord"><span class="mord text"><span class="mord">Miss&nbsp;penalty</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2342em;"><span style="top:-2.4559em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2441em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+</li>
+</ul>
+<p>我们可以将上一章介绍的处理器执行时间的计算公式用于评估高速缓存的性能，不过需要额外加上存储器停顿周期数（memory stall cycles）：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>CPU&nbsp;execution&nbsp;time</mtext><mo>=</mo><mo stretchy="false">(</mo><mtext>CPU&nbsp;clock&nbsp;cycles</mtext><mo>+</mo><mtext>Memory&nbsp;stall&nbsp;cycles</mtext><mo stretchy="false">)</mo><mo>×</mo><mtext>Clock&nbsp;cycle&nbsp;time</mtext></mrow><annotation encoding="application/x-tex">\text{CPU execution time}
+=
+(\text{CPU clock cycles} + \text{Memory stall cycles})
+\times \text{Clock cycle time}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">CPU&nbsp;execution&nbsp;time</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord text"><span class="mord">CPU&nbsp;clock&nbsp;cycles</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Memory&nbsp;stall&nbsp;cycles</span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Clock&nbsp;cycle&nbsp;time</span></span></span></span></span></span></p>
+<hr>
+<p>而存储器停顿周期数由失效数和失效损失（miss penalty）共同决定：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Memory&nbsp;stall&nbsp;cycles</mtext><mo>=</mo><mtext>Number&nbsp;of&nbsp;misses</mtext><mo>×</mo><mtext>Miss&nbsp;penalty</mtext></mrow><annotation encoding="application/x-tex">\text{Memory stall cycles}
+=
+\text{Number of misses} \times \text{Miss penalty}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Memory&nbsp;stall&nbsp;cycles</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord">Number&nbsp;of&nbsp;misses</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Miss&nbsp;penalty</span></span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>=</mo><mi>I</mi><mi>C</mi><mo>×</mo><mfrac><mtext>Misses</mtext><mtext>Instruction</mtext></mfrac><mo>×</mo><mtext>Miss&nbsp;penalty</mtext></mrow><annotation encoding="application/x-tex">= IC \times \frac{\text{Misses}}{\text{Instruction}} \times \text{Miss penalty}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Instruction</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Misses</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Miss&nbsp;penalty</span></span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>=</mo><mi>I</mi><mi>C</mi><mo>×</mo><mfrac><mtext>Memory&nbsp;accesses</mtext><mtext>Instruction</mtext></mfrac><mo>×</mo><mtext>Miss&nbsp;rate</mtext><mo>×</mo><mtext>Miss&nbsp;penalty</mtext></mrow><annotation encoding="application/x-tex">= IC \times \frac{\text{Memory accesses}}{\text{Instruction}} \times \text{Miss rate} \times \text{Miss penalty}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Instruction</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Memory&nbsp;accesses</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord">Miss&nbsp;rate</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Miss&nbsp;penalty</span></span></span></span></span></span></p>
+<blockquote>
+<p>就是多少访问内存的指令，访问了会访问不到的概率，再乘上访问不到去读内存的损失。</p>
+</blockquote>
+<hr>
+<p>进一步区分读写：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Miss&nbsp;stall&nbsp;clock&nbsp;cycles</mtext><mo>=</mo><mi>I</mi><mi>C</mi><mo>×</mo><mtext>Reads&nbsp;per&nbsp;instruction</mtext><mo>×</mo><mtext>Read&nbsp;miss&nbsp;rate</mtext><mo>×</mo><mtext>Read&nbsp;miss&nbsp;penalty</mtext></mrow><annotation encoding="application/x-tex">\text{Miss stall clock cycles}
+=
+IC \times \text{Reads per instruction} \times \text{Read miss rate} \times \text{Read miss penalty}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Miss&nbsp;stall&nbsp;clock&nbsp;cycles</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Reads&nbsp;per&nbsp;instruction</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord">Read&nbsp;miss&nbsp;rate</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Read&nbsp;miss&nbsp;penalty</span></span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>+</mo><mi>I</mi><mi>C</mi><mo>×</mo><mtext>Writes&nbsp;per&nbsp;instruction</mtext><mo>×</mo><mtext>Write&nbsp;miss&nbsp;rate</mtext><mo>×</mo><mtext>Write&nbsp;miss&nbsp;penalty</mtext></mrow><annotation encoding="application/x-tex">+ IC \times \text{Writes per instruction} \times \text{Write miss rate} \times \text{Write miss penalty}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Writes&nbsp;per&nbsp;instruction</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord">Write&nbsp;miss&nbsp;rate</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Write&nbsp;miss&nbsp;penalty</span></span></span></span></span></span></p>
+<h3 id="cache存放"><a class="anchor" href="#cache存放">#</a> cache存放</h3>
+<p><strong>直接映射</strong>(direct mapped)：每个数据块在存储器中只有一块确定的位置，计算公式为：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Block&nbsp;address&nbsp;</mtext><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><mtext>&nbsp;(Number&nbsp;of&nbsp;blocks&nbsp;in&nbsp;memory)</mtext></mrow><annotation encoding="application/x-tex">\text{Block address}\  \bmod \ \text{(Number of blocks in memory)}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord">Block&nbsp;address</span></span><span class="mspace">&nbsp;</span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace">&nbsp;</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(Number&nbsp;of&nbsp;blocks&nbsp;in&nbsp;memory)</span></span></span></span></span></span></p>
+<p>&lt;img src="/assets/图片/103.png" alt="img" style="zoom:33%;" /&gt;</p>
+<p><strong>全相联</strong>(fully associative)：数据块可以放在存储器中的任意位置上</p>
+<p>&lt;img src="/assets/图片/104.png" alt="img" style="zoom:33%;" /&gt;</p>
+<p><strong>组相联</strong>(set associative)：每个数据块被限制在存储器的某个<strong>组</strong>(set) 中，而每个组包含了 n 个可放数据块的地方，数据块可以在组内的 n 个地方任意挑选（这样的组相联称为 <strong>n 路组相联</strong>(n-way set associative)）。组的位置的计算公式为：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Block&nbsp;address&nbsp;</mtext><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><mtext>&nbsp;(Number&nbsp;of&nbsp;blocks&nbsp;in&nbsp;memory)</mtext></mrow><annotation encoding="application/x-tex">\text{Block address}\  \bmod \ \text{(Number of blocks in memory)}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord">Block&nbsp;address</span></span><span class="mspace">&nbsp;</span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace">&nbsp;</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(Number&nbsp;of&nbsp;blocks&nbsp;in&nbsp;memory)</span></span></span></span></span></span></p>
+<ul>
+<li>直接映射 = 1 路组相联，全相联 = m 路组相联（假设存储器容量为 m 个块）</li>
+</ul>
+<h3 id="block-identification"><a class="anchor" href="#block-identification">#</a> Block Identification</h3>
+<p>每个高速缓存块都有一个唯一的地址，而这个地址被分为多个字段，用于实现数据块的识别，具体可以分为：</p>
+<p>&lt;img src="/assets/图片/3-1780230675792-5.png" alt="img" style="zoom:33%;" /&gt;</p>
+<ul>
+<li>
+<p><strong>块地址</strong>(block address)</p>
+<ul>
+<li><strong>标签</strong>(tag)：检查某个高速缓存块是否为处理器所需要的数据块（比对一下标签是否匹配），这个搜索过程一般是并行执行的</li>
+<li><strong>索引</strong>(index)：在组相联中用于选择具体的组（竖着的是组）
+<ul>
+<li>位数 = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mi>o</mi><mi>g</mi><msub><mtext>⁡</mtext><mn>2</mn></msub><mo stretchy="false">(</mo><mi>s</mi><mi>e</mi><mi>t</mi><mi>s</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">log⁡_2(sets)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord"><span class="mord">⁡</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">se</span><span class="mord mathnormal">t</span><span class="mord mathnormal">s</span><span class="mclose">)</span></span></span></span></li>
+<li>如果是全相联的话，就没有索引位，因为没有组</li>
+</ul>
+</li>
+<li>相联程度越高，标签位越多，而索引位越少</li>
+</ul>
+</li>
+<li>
+<p><strong>块偏移</strong>(block offset)：</p>
+<ul>
+<li>位数 = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mi>o</mi><msub><mi>g</mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>s</mi><mi>i</mi><mi>z</mi><mi>e</mi><mtext>&nbsp;</mtext><mi>o</mi><mi>f</mi><mtext>&nbsp;</mtext><mi>b</mi><mi>l</mi><mi>o</mi><mi>c</mi><mi>k</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">log_{2}(size\ of\ block)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">s</span><span class="mord mathnormal">i</span><span class="mord mathnormal">ze</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">b</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">oc</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span></li>
+</ul>
+</li>
+<li>
+<p>此外还有一位<strong>有效位</strong>(valid bit)：用于表示某个高速缓存块是否持有有效地址。如果该位为 0 的话，表明地址无效，因此不能参与比较</p>
+</li>
+</ul>
+<p>&lt;img src="/assets/图片/9-1780230926199-8.png" alt="img" style="zoom: 50%;" /&gt;</p>
+<p>one word (4 bytes).</p>
+<ul>
+<li>64-bit addresses</li>
+<li>A direct-mapped cache</li>
+<li>The cache size is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">2^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span> blocks, so <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> bits are used for the index</li>
+<li>The block size is
+<ul>
+<li>✓ <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">2^m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span></span></span></span></span></span></span> words (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mi>m</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{m+2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="mbin mtight">+</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span> bytes = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mi>m</mi><mo>+</mo><mn>5</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{m+5}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="mbin mtight">+</span><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></span> bits)</li>
+<li>✓ <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span> bits are used for the word within the block, and two bits are used for the byte part of the address</li>
+</ul>
+</li>
+</ul>
+<p>tag     <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>64</mn><mo>−</mo><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo>+</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">64 - (n + m + 2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">64</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mclose">)</span></span></span></span></p>
+<p>cache   <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>×</mo><mtext>(block&nbsp;size</mtext><mo>+</mo><mtext>tag&nbsp;size</mtext><mo>+</mo><mtext>Valid&nbsp;size)</mtext><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">2^n \times \text{(block size} + \text{tag size} + \text{Valid size)}.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7477em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(block&nbsp;size</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8623em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">tag&nbsp;size</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Valid&nbsp;size)</span></span><span class="mord">.</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><msup><mn>2</mn><mi>n</mi></msup><mo>×</mo><mo stretchy="false">(</mo><msup><mn>2</mn><mi>m</mi></msup><mo>×</mo><mn>32</mn><mo>+</mo><mo stretchy="false">(</mo><mn>64</mn><mo>−</mo><mi>n</mi><mo>−</mo><mi>m</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">= 2^n \times (2^m \times 32 + (64 - n - m - 2) + 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7477em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">32</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">64</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><msup><mn>2</mn><mi>n</mi></msup><mo>×</mo><mo stretchy="false">(</mo><msup><mn>2</mn><mi>m</mi></msup><mo>×</mo><mn>32</mn><mo>+</mo><mn>63</mn><mo>−</mo><mi>n</mi><mo>−</mo><mi>m</mi><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">= 2^n \times (2^m \times 32 + 63 - n - m).</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7477em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">32</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">63</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mclose">)</span><span class="mord">.</span></span></span></span></p>
+<p>但是如果有多个cache多个样本呢？我们有一个cache写了，其他cache里面的内容应该要无效。所以应该有cache一致性的问题。所以我们要把cache理解为一个状态机。</p>
+<h3 id="hit-miss"><a class="anchor" href="#hit-miss">#</a> hit &amp; miss</h3>
+<ul>
+<li>
+<p><strong>cache hit</strong>   If the cache reports a hit, the computer continues using the data as if nothing happened.</p>
+</li>
+<li>
+<p><strong>cache miss</strong>  For a cache miss, we can stall the entire processor, essentially freezing the contents of the temporary and programmer-visible registers, while we wait for memory.</p>
+</li>
+</ul>
+<p>我们看看miss会带来哪些事情。我们引发miss检测的地址就要进行PC-4，就是把当前PC-4的内容发给memory，然后把从memory获得的数据写入cache写入，把valid bit置1等等。具体如下：</p>
+<ol>
+<li>Send the original PC value to the memory. (PC-4)</li>
+<li>Instruct main memory to perform a read and wait for the memory to complete its access.</li>
+<li>Write the cache entry, putting the data from memory in the data portion of the entry, writing the upper bits of the address (from the ALU) into the tag field, and turning the valid bit on.</li>
+<li>Restart the instruction execution at the first step, which will refetch the instruction, this time finding it in the cache.</li>
+</ol>
+<h3 id="block-replacement"><a class="anchor" href="#block-replacement">#</a> Block replacement</h3>
+<p>当失效发生时，控制器必须决定将哪个数据块作为被替换的块，用以存放处理器所需的数据。有以下几种可选的替换策略：</p>
+<ul>
+<li>对于<strong>直接映射</strong>，由于每个数据块的位置是唯一的，所以无需选择，直接替换某个确定的数据块</li>
+<li>对于<strong>组相联</strong>和<strong>全相联</strong>：
+<ul>
+<li><strong>随机</strong> (random)：在某个组中随机挑选一个块
+<ul>
+<li>最大的优点是实现简单，只需一个随机数生成器就能实现</li>
+<li>生成的随机数应均匀覆盖到高速缓存中每一个数据块</li>
+<li>缺点是可能会驱逐那些最近被访问的块</li>
+</ul>
+</li>
+<li><strong>最近最少使用</strong> (least recently used, LRU)：替换最久没使用过的数据块（借助了时间局部性的特征）
+<ul>
+<li>缺点是实现复杂，所以可以使用某种 LRU 的近似实现，比如用一组 bit 来记录某个组内的数据块的访问情况</li>
+</ul>
+</li>
+<li><strong>先进先出</strong> (first in, first out)：也是一种 LRU 的近似实现（因为 LRU 的实现较为复杂），替换最早存在的数据块</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>OPT 替换方法：最优化算法，替换最远会用到的。</li>
+</ul>
+<p>那么随着N的增大，效率不会下降，我们叫它堆栈型的替换算法，stack替换算法。</p>
+<blockquote>
+<p>随着分配给进程的内存页框数增加，缺页次数不会增加的替换算法</p>
+</blockquote>
+<p>典型的 <strong>stack 替换算法</strong>：LRU OPT。不是 stack 替换算法的典型例子：FIFO</p>
+<p><strong>硬件实现</strong>：比如用ABC这三个触发器的值，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mrow><mi>A</mi><mi>B</mi></mrow></msub><mtext>&nbsp;</mtext><msub><mi>T</mi><mrow><mi>A</mi><mi>C</mi></mrow></msub><mtext>&nbsp;</mtext><msub><mi>T</mi><mrow><mi>B</mi><mi>C</mi></mrow></msub></mrow><annotation encoding="application/x-tex">T_{AB}\  T_{AC}\  T_{BC}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">A</span><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace">&nbsp;</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">A</span><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace">&nbsp;</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">BC</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，值可以是0或1，然后我们这样就可以判断三个块的先后顺序。</p>
+<h3 id="write-strategy"><a class="anchor" href="#write-strategy">#</a> Write Strategy</h3>
+<p>关于写的策略。</p>
+<p>大部分的处理器 - 高速缓存访问操作都是<strong>读取</strong>操作，而且处理器需要等待读取完毕才能继续执行，而无需等待写入操作，所以为了遵循 "Make common case fast" 这一思想，我们需要着重优化读取高速缓存的表现。然而，根据阿姆达尔定律，仅仅考虑读取的优化是不够的，我们还必须考虑<strong>写入</strong>操作的速度。</p>
+<p>通常有两种大的分类，我们有两种分类，针对写命中而言。</p>
+<p><strong>写穿</strong> (write through)：写入的信息除了写入高速缓存的数据块外，还会写入下一级内存的数据块里。</p>
+<blockquote>
+<p>就是写cache的时候同时写memory，同步的写</p>
+</blockquote>
+<ul>
+<li>优点：实现简单，简化<strong>数据一致性</strong>(data coherency) 的实现</li>
+<li>处理器必须等待写穿完成才能继续执行下一步，这种情况称为<strong>写停顿</strong>(write stall)。为了减少这种情况的发生，一种常见的优化方法是增加一个<strong>写缓冲区</strong>(write buffer)，允许处理器在数据写入缓冲区的同时继续执行后续任务，实现了处理器执行和内存更新这两项工作的重叠，节省时间。
+<ul>
+<li>但如果处理器的频率太高，且有很多的存储指令，可能导致写缓冲区的<strong>饱和</strong>(saturation)。缓解饱和问题的做法是在写缓冲区和主存之间再加一级（L2）高速缓存</li>
+</ul>
+</li>
+</ul>
+<p>&lt;img src="/assets/图片/61.png" alt="img" style="zoom:67%;" /&gt;</p>
+<p><strong>写回</strong> (write back)：信息只写入到高速缓存的数据块内。但是一旦高速缓存中被<strong>修改过的</strong>数据块（脏块）里将要被替代，那么要将这个数据块写入到下一级内存中，确保之前的更新作用于底层内存中。</p>
+<ul>
+<li>此时高速缓存引入一个<strong>脏位</strong>(dirty bit)，作为记录某个数据块的修改情况的状态位。当脏位置 1 时，表明这个数据块是“脏”的（即被修改过了）</li>
+<li>优点：速度快（对高速缓存的多次写入的同时，可能只需对主存写入一次），使用更少的内存带宽（更适用于多核处理器），省电</li>
+</ul>
+<p>对于 I/O 设备和多核处理器而言，它们希望同时有写回策略的速度和写穿策略的数据一致性。</p>
+<p>如果写入<strong>失效</strong>的话，则会采取以下两种策略之一：</p>
+<ul>
+<li><strong>写分配</strong> (write allocate)：当写入失效发生时，首先将目标地址所在的整个数据块从主存（或下一级缓存）加载到高速缓存中，然后再对这个新加载的高速缓存块执行写入操作。
+<ul>
+<li>对应<strong>写回</strong>策略</li>
+</ul>
+</li>
+<li><strong>非写分配</strong> (no-write allocate/write around)：数据直接写入主存（或下一级高速缓存），而不将该数据块加载到当前高速缓存中，使写失效不影响高速缓存。
+<ul>
+<li>对应<strong>写穿</strong>策略</li>
+</ul>
+</li>
+</ul>
+<p>e.g.</p>
+<blockquote>
+<p>&lt;img src="/assets/图片/4-1780890842700-1.png" alt="img" style="zoom:33%;" /&gt;</p>
+<p>解答：</p>
+<p>&lt;img src="/assets/图片/107.png" alt="img" style="zoom:33%;" /&gt;</p>
+</blockquote>
+<h3 id="性能计算"><a class="anchor" href="#性能计算">#</a> 性能计算</h3>
+<p>我们可以将上一章介绍的处理器执行时间的计算公式用于评估高速缓存的性能，不过需要额外加上<strong>存储器停顿周期数</strong>（memory stall cycles）：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>CPU&nbsp;execution&nbsp;time</mtext><mo>=</mo><mo stretchy="false">(</mo><mtext>CPU&nbsp;clock&nbsp;cycles</mtext><mo>+</mo><mtext>Memory&nbsp;stall&nbsp;cycles</mtext><mo stretchy="false">)</mo><mo>×</mo><mtext>Clock&nbsp;cycle&nbsp;time</mtext></mrow><annotation encoding="application/x-tex">\text{CPU execution time}
+=
+(\text{CPU clock cycles} + \text{Memory stall cycles})
+\times
+\text{Clock cycle time}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">CPU&nbsp;execution&nbsp;time</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord text"><span class="mord">CPU&nbsp;clock&nbsp;cycles</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Memory&nbsp;stall&nbsp;cycles</span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Clock&nbsp;cycle&nbsp;time</span></span></span></span></span></span></p>
+<p>而存储器停顿周期数由失效数和<strong>失效损失</strong>（miss penalty）共同决定。（IC）是instruction count</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.25em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mtext>Memory&nbsp;stall&nbsp;cycles</mtext></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mtext>Numbers&nbsp;of&nbsp;misses</mtext><mo>×</mo><mtext>Miss&nbsp;penalty</mtext></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mtext>IC</mtext><mo>×</mo><mfrac><mtext>Misses</mtext><mtext>Instruction</mtext></mfrac><mo>×</mo><mtext>Miss&nbsp;penalty</mtext></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mtext>IC</mtext><mo>×</mo><mfrac><mtext>Memory&nbsp;accesses</mtext><mtext>Instruction</mtext></mfrac><mo>×</mo><mtext>Miss&nbsp;rate</mtext><mo>×</mo><mtext>Miss&nbsp;penalty</mtext></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+\text{Memory stall cycles}
+&amp;= \text{Numbers of misses} \times \text{Miss penalty} \\
+&amp;= \text{IC} \times \frac{\text{Misses}}{\text{Instruction}} \times \text{Miss penalty} \\
+&amp;= \text{IC} \times \frac{\text{Memory accesses}}{\text{Instruction}}
+\times \text{Miss rate} \times \text{Miss penalty}
+\end{aligned}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:6.1927em;vertical-align:-2.8463em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:3.3463em;"><span style="top:-5.8667em;"><span class="pstrut" style="height:3.3603em;"></span><span class="mord"><span class="mord text"><span class="mord">Memory&nbsp;stall&nbsp;cycles</span></span></span></span><span style="top:-3.8463em;"><span class="pstrut" style="height:3.3603em;"></span><span class="mord"></span></span><span style="top:-1.5em;"><span class="pstrut" style="height:3.3603em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.8463em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:3.3463em;"><span style="top:-5.8667em;"><span class="pstrut" style="height:3.3603em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord text"><span class="mord">Numbers&nbsp;of&nbsp;misses</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">Miss&nbsp;penalty</span></span></span></span><span style="top:-3.8463em;"><span class="pstrut" style="height:3.3603em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord text"><span class="mord">IC</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Instruction</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Misses</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">Miss&nbsp;penalty</span></span></span></span><span style="top:-1.5em;"><span class="pstrut" style="height:3.3603em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord text"><span class="mord">IC</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Instruction</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Memory&nbsp;accesses</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">Miss&nbsp;rate</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">Miss&nbsp;penalty</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.8463em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+<ul>
+<li>其中最后一行式子更容易计算，因为这些量更容易被测量</li>
+<li>失效损失实际上会随情况发生变化，但便于计算，我们就假定它是一个常数</li>
+<li><strong>失效率</strong>（miss rate）：导致失效的高速缓存访问的比重</li>
+<li>此外，失效损失和失效率在读和写的情况下会有所不同，所以如有必要可以分开讨论：</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.25em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mtext>Miss&nbsp;stall&nbsp;clock&nbsp;cycles</mtext><mo>=</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mtext>&nbsp;IC</mtext><mo>×</mo><mtext>Reads&nbsp;per&nbsp;instruction</mtext><mo>×</mo><mtext>Read&nbsp;miss&nbsp;rate</mtext><mo>×</mo><mtext>Read&nbsp;miss&nbsp;penalty</mtext></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>+</mo><mtext>IC</mtext><mo>×</mo><mtext>Writes&nbsp;per&nbsp;instruction</mtext><mo>×</mo><mtext>Write&nbsp;miss&nbsp;rate</mtext><mo>×</mo><mtext>Write&nbsp;miss&nbsp;penalty</mtext></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+\text{Miss stall clock cycles}
+=&amp;\ \text{IC} \times \text{Reads per instruction}
+\times \text{Read miss rate}
+\times \text{Read miss penalty} \\
+&amp;+ \text{IC} \times \text{Writes per instruction}
+\times \text{Write miss rate}
+\times \text{Write miss penalty}
+\end{aligned}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3em;vertical-align:-1.25em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.75em;"><span style="top:-3.91em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Miss&nbsp;stall&nbsp;clock&nbsp;cycles</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.25em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.75em;"><span style="top:-3.91em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mspace">&nbsp;</span><span class="mord text"><span class="mord">IC</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">Reads&nbsp;per&nbsp;instruction</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">Read&nbsp;miss&nbsp;rate</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">Read&nbsp;miss&nbsp;penalty</span></span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">IC</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">Writes&nbsp;per&nbsp;instruction</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">Write&nbsp;miss&nbsp;rate</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">Write&nbsp;miss&nbsp;penalty</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.25em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>上面的换算，展开就是：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mtext>Misses</mtext><mtext>Instruction</mtext></mfrac><mo>=</mo><mfrac><mrow><mtext>Miss&nbsp;rate</mtext><mo>×</mo><mtext>Memory&nbsp;accesses</mtext></mrow><mtext>Instruction&nbsp;count</mtext></mfrac><mo>=</mo><mtext>Miss&nbsp;rate</mtext><mo>×</mo><mfrac><mtext>Memory&nbsp;accesses</mtext><mtext>Instruction</mtext></mfrac></mrow><annotation encoding="application/x-tex">\frac{\text{Misses}}{\text{Instruction}}
+=
+\frac{\text{Miss rate} \times \text{Memory accesses}}{\text{Instruction count}}
+=
+\text{Miss rate} \times \frac{\text{Memory accesses}}{\text{Instruction}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Instruction</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Misses</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Instruction&nbsp;count</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Miss&nbsp;rate</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">Memory&nbsp;accesses</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord">Miss&nbsp;rate</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Instruction</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Memory&nbsp;accesses</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>如上所述，实际上无论是直接拿指令数，还是拿失效率作为衡量指标，都是有一些缺陷的，更好的测量方法是使用<strong>平均存储器访问时间</strong>（average memory access time，AMAT）作为指标，对应的计算公式为：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Average&nbsp;memory&nbsp;access&nbsp;time</mtext><mo>=</mo><mtext>Hit&nbsp;time</mtext><mo>+</mo><mtext>Miss&nbsp;rate</mtext><mo>×</mo><mtext>Miss&nbsp;penalty</mtext></mrow><annotation encoding="application/x-tex">\text{Average memory access time}
+=
+\text{Hit time}
++
+\text{Miss rate} \times \text{Miss penalty}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Average&nbsp;memory&nbsp;access&nbsp;time</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord">Hit&nbsp;time</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord">Miss&nbsp;rate</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Miss&nbsp;penalty</span></span></span></span></span></span></p>
+<h4 id="impact-of-caches-on-processor-performance"><a class="anchor" href="#impact-of-caches-on-processor-performance">#</a> Impact of Caches on Processor Performance</h4>
+<p>下面来探讨高速缓存的 AMAT 对处理器性能的影响。</p>
+<ul>
+<li>虽然实际上可能有其他原因导致处理器的停顿，但为了便于讨论，我们假定只有存储器的停顿导致处理器的停顿</li>
+<li>对于有序处理器而言，AMAT 确实能预测处理器的性能；但是对于乱序处理器（之后的章节会介绍）而言就没那么简单了</li>
+<li>高速缓存的失效对于低 CPI 和高时钟频率的处理器而言有双重影响：
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>P</mi><msub><mi>I</mi><mrow><mi>e</mi><mi>x</mi><mi>e</mi><mi>c</mi><mi>u</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">CPI_{execution}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">CP</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">x</span><span class="mord mathnormal mtight">ec</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的值越低，高速缓存失效周期数的相对影响更大（就是相同的物理失效时间，在现代CPU造成的周期数会更多）</li>
+<li>即使对于两个存储器层级相同的两台电脑而言，时钟频率更高的处理器在每次失效中会有更多的时钟周期数，因此存储器在 CPI 的占比会更高</li>
+</ul>
+</li>
+</ul>
+<h4 id="乱序处理器"><a class="anchor" href="#乱序处理器">#</a> 乱序处理器</h4>
+<p>乱序处理器：<strong>只要数据依赖允许，CPU 就会跳过慢的指令，先执行后面的快指令。</strong></p>
+<p>对于乱序处理器而言，一件麻烦的事就是如何定义“失效损失”。下面我们仅将不重叠的时延作为失效损失来考虑，具体公式为：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mtext>Memory&nbsp;stall&nbsp;cycles</mtext><mtext>Instruction</mtext></mfrac><mo>=</mo><mfrac><mtext>Misses</mtext><mtext>Instruction</mtext></mfrac><mo>×</mo><mo stretchy="false">(</mo><mtext>Total&nbsp;miss&nbsp;latency</mtext><mo>−</mo><mtext>Overlapped&nbsp;miss&nbsp;latency</mtext><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\frac{\text{Memory stall cycles}}{\text{Instruction}}
+=
+\frac{\text{Misses}}{\text{Instruction}}
+\times
+(\text{Total miss latency} - \text{Overlapped miss latency})
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Instruction</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Memory&nbsp;stall&nbsp;cycles</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Instruction</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Misses</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord text"><span class="mord">Total&nbsp;miss&nbsp;latency</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Overlapped&nbsp;miss&nbsp;latency</span></span><span class="mclose">)</span></span></span></span></span></p>
+<h4 id="计算公式"><a class="anchor" href="#计算公式">#</a> 计算公式</h4>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/12.avif" alt="img"></p>
+<h3 id="virtual-memory"><a class="anchor" href="#virtual-memory">#</a> Virtual memory</h3>
+<p><strong>虚拟内存</strong>(virtual memory) 将物理内存划分为块，并且将其分配到不同的进程中。内存地址是从虚拟上连续的，但是在物理上不一定连续。下图展示了虚拟地址到物理地址的映射情况：</p>
+<p>&lt;img src="/assets/图片/35.png" alt="img" style="zoom: 33%;" /&gt;</p>
+<p>虚拟内存的作用包括：</p>
+<ul>
+<li>共享受保护的内存空间
+<ul>
+<li>虚拟内存采取一种<strong>保护</strong>机制，防止属于某个进程的内存块被其他进程访问</li>
+</ul>
+</li>
+<li>自动管理存储器层级
+<ul>
+<li>不必分配连续的物理内存</li>
+</ul>
+</li>
+</ul>
+<p>高速缓存与虚拟内存的不同之处有：</p>
+<ul>
+<li>高速缓存失效的替换是由硬件控制的，而虚拟内存的替换是由操作系统控制的</li>
+<li>处理器地址的大小决定了虚拟内存的大小，而高速缓存的大小与处理器地址的大小无关</li>
+</ul>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/36.avif" alt="img"></p>
+<p>下面是虚拟内存中常见的一些概念，包括：</p>
+<ul>
+<li><strong>页</strong>(page)/<strong>段</strong>(segment)（类比高速缓存的数据块）
+<ul>
+<li><strong>页</strong>：定长的虚拟内存数据块，一般是 4KB 到 8KB 左右
+<ul>
+<li>按页寻址：定长的地址被划分为页编号和页偏移量</li>
+<li>对编译器而言，这种地址空间更简单</li>
+</ul>
+</li>
+<li><strong>段</strong>：变长的虚拟内存数据块，最大可以到 64KB 到 4GB 左右，最小可以只有 1B
+<ul>
+<li>按段寻址：使用 1 个字来表示段编号，另 1 个字表示段偏移量</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="基本结构"><a class="anchor" href="#基本结构">#</a> 基本结构</h4>
+<ul>
+<li>数据块放置：<strong>全相联</strong>
+<ul>
+<li>理由：虚拟内存的失效损失相当相当大（数百万个时钟周期数），因此需要尽可能地降低失效率，而全相联的失效率最低。</li>
+</ul>
+</li>
+<li>数据块识别：通过页 / 段编号来索引对应的页 / 段
+<ul>
+<li>通常使用<strong>页表</strong>(page table) 这一数据结构来存储虚拟内存数据块的物理地址（段的话还要存储偏移量），作为虚拟地址转换为物理地址的参照依据。</li>
+</ul>
+</li>
+</ul>
+<p>&lt;img src="/assets/图片/39-1780914650307-9.png" alt="img" style="zoom:50%;" /&gt;</p>
+<ul>
+<li>页表的大小就是虚拟地址空间中的页数量。有些计算机为了减小这一数据结构大小，会对虚拟地址采用<strong>哈希函数</strong>，使得其大小等于内存中物理页的数量，这种数据结构称为<strong>逆页表</strong>(inversed page table)。</li>
+<li>为了减少地址转换的时间，通常还会用到一种名为转换后备缓冲区 (translation lookaside buffer, 以下简称 <strong>TLB</strong>) 的部件</li>
+</ul>
+<p>&lt;img src="/assets/图片/page_table_tlb.webp" alt="page_table_tlb" style="zoom: 50%;" /&gt;</p>
+<ul>
+<li>数据块替换：<strong>LRU</strong>，具体会用到一个使用位 / 引用位 (use/reference bit)。操作系统会周期性地清除使用位，随后又添上去，这样便可以记录一段时间内页的访问情况。</li>
+<li>写入策略：<strong>写回</strong>
+<ul>
+<li>理由：内存和处理器访问时间的巨大差异，所以不可能使用写穿策略</li>
+<li>虚拟内存系统用到 1 个<strong>脏位</strong>(dirty bit)，允许数据块在因从硬盘读取而被改变的时候写入到硬盘中</li>
+</ul>
+</li>
+</ul>
+<h2 id="chap-3"><a class="anchor" href="#chap-3">#</a> CHAP 3</h2>
+<blockquote>
+<p>Instruction-Level Parallelism：指令集并行</p>
+</blockquote>
+<p>本章我们来学习第一种并行技术：<strong>指令级并行</strong>(intruction-level parallelism, ILP)，它允许指令能够被并行计算。我们在计组中学过的<strong>流水线</strong>就是其中一种指令级并行技术。</p>
+<p>有两类利用指令集并行的方法，在本章笔记中会对它们进行详细介绍：</p>
+<ul>
+<li>基于<strong>硬件</strong>的<strong>动态</strong>并行</li>
+<li>基于软件（<strong>编译器</strong>）的<strong>静态</strong>（编译时）并行</li>
+</ul>
+<p>大多数处理器采用的都是基于<strong>硬件</strong>的方法，并且该方法主宰了台式机和服务器的市场。虽然有人在基于编译器的方法上做了不少努力，但这种方法目前还是仅限于领域特定的环境或者结构良好的且具备较大程度的数据级并行的科学应用中。</p>
+<blockquote>
+<p>尽管 ILP 对处理器性能带来不少提升，但它受到程序和处理器自身的局限。因此后来人们开始在多核处理器，即<strong>线程级并行</strong>上做出努力。</p>
+</blockquote>
+<p>流水线 CPU 的 CPI 计算公式为：Pipeline CPI = Ideal pipeline CPI + Structural stalls + Data hazard stalls + Control stalls。其中等号右侧第一项<strong>理想流水线 CPI</strong>是对实现中最大性能的衡量。通过降低等号右侧的每一项，我们能够降低总的流水线 CPI。</p>
+<h3 id="基本块"><a class="anchor" href="#基本块">#</a> 基本块</h3>
+<p>在学习 ILP 时，我们会遇到一个概念：<strong>基本块</strong>(basic block)，它是一段小规模的代码序列，既满足没有分支进入到它这里（除非它是入口）），也保证没有分支从它这里出去（除非它是出口）。由于基本块包含的指令不多（通常为 4-7 条），且指令间可能存在<a target="_blank" rel="noopener" href="https://note.noughtq.top/sys/ca/3#dependences-in-instructions">依赖</a>，因此很难用流水线优化。为了获取足够大的性能提升，我们应发掘<strong>多个基本块之间</strong>的 ILP。</p>
+<p>其中最简单也最常用的方法是采用迭代循环——这类并行也被称为<strong>循环级并行</strong>(loop-level parallelism)。举个例子：下面给出两个有 1000 个元素的数组相加的例子：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>for (i = 0; i &lt; 1000; i++)</span></span>
+<span class="line"><span>    x[i] += y[i];</span></span></code></pre>
+<p>不难发现，虽然每个迭代的内部没有什么重叠好言，但是对于任意两个迭代而言，它们之间毫不相干，因此可以重叠在一起执行。</p>
+<h3 id="dependences-in-instructions"><a class="anchor" href="#dependences-in-instructions">#</a> Dependences in Instructions</h3>
+<p>如果两条指令是并行的话，意味着它们能够在同一个流水线中同时执行，且不会造成任何停顿（假设流水线有足够多的资源，不会造成结构冒险问题）。但如果两条指令是有依赖关系的话，那么它们就不能并行了，必须按顺序执行。因此，在设计 ILP 时，我们必须要考虑指令之间是否存在<strong>依赖关系</strong>(dependence)。依赖关系一般分为<strong>数据依赖</strong>(data dependence)、<strong>名称依赖</strong>(name dependence) 和<strong>控制依赖</strong>(control dependence) 三种类型，下面将详细介绍。</p>
+<blockquote>
+<p>注：单条指令间的依赖关系（比如 <code>add x1, x1, x1</code>）不视为存在依赖。</p>
+</blockquote>
+<h4 id="data-dependences"><a class="anchor" href="#data-dependences">#</a> Data Dependences</h4>
+<p>如果满足下列条件，那我们称指令 j 数据依赖于指令 i：</p>
+<ul>
+<li>指令 i 的执行结果会被指令 j 用到</li>
+<li>指令 j 数据依赖于指令 k，而指令 k 数据依赖于指令 i</li>
+</ul>
+<p>第二个条件告诉我们：多条指令间可能存在一条<strong>依赖链</strong>，甚至这条链可以遍布于整个程序中。</p>
+<p>如果两条指令间存在数据依赖关系，则必须保留这两条指令的执行顺序，不得让它们同时执行。并且数据依赖关系表明指令间存在单个或多个<strong>数据冒险</strong>的问题，所以硬要同时执行这样的指令的话就会带来不小的麻烦。</p>
+<h4 id="name-dependences"><a class="anchor" href="#name-dependences">#</a> Name Dependences</h4>
+<p>当两条指令使用相同的寄存器或内存位置（称为<strong>名称</strong>(name)），但这两条指令之间没有关于该名称的数据流时，我们认为发生了<strong>名称依赖</strong>(name dependences)。有以下两类名称依赖（假设指令 j 的程序顺序在指令 i 后面）：</p>
+<ul>
+<li><strong>反依赖</strong>(antidependence)：指令 j 向指令 i 读取的寄存器或内存位置上进行写操作</li>
+<li><strong>输出依赖</strong>(output dependence)：当指令 i 和 j 向同一个寄存器或内存位置上进行写操作</li>
+</ul>
+<p>正如定义所言，由于具有名称依赖的两条指令之间不存在数据流，所以这种依赖不是真正的依赖，也就是说这样的指令可以并行执行或重新排序，只要改变这些指令使用的名称（寄存器或内存位置），让指令间不冲突就行了。</p>
+<p>对于寄存器而言，这种重命名操作更加容易（称为<strong>寄存器重命名</strong>(register renaming)），可以用编译器或由硬件动态处理。</p>
+<h4 id="data-hazards"><a class="anchor" href="#data-hazards">#</a> Data Hazards</h4>
+<p>回顾一下<strong>冒险</strong>(hazard) 的概念：当指令间存在名称或数据依赖时，如果这样的指令足够接近，能够被重叠执行的话，那么就可能会改变访问和依赖相关的操作数的顺序，此时冒险就发生了。为了避免冒险的发生，在并行时必须保留那些会影响到程序执行结果的<strong>程序顺序</strong>(program order)，即按源程序顺序来执行指令的顺序。</p>
+<p>对于<strong>数据冒险</strong>(data hazard)，我们根据指令的读写访问顺序，将其划分为以下几类（还是假设指令 j 的程序顺序在指令 i 的后面）：</p>
+<ul>
+<li>
+<p><strong>RAW</strong>(read after write)：j 尝试在 i 写入某个源操作数之前读取它，这样 j 就会得到旧的数据。这是最常见的一类冒险，且对应真正的<strong>数据依赖</strong>（即<strong>真依赖</strong>(true dependence)）。比如：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-asm"><span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">; r1 上有 RAW 冒险</span></span>
+<span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">add</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> r1, r2, r3</span></span>
+<span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">sub</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> r4, r1, r3</span></span></code></pre>
+</li>
+<li>
+<p><strong>WAW</strong>(write after write)：如果j 尝试在 i 写入某个操作数之前向它写入，这样导致写操作的执行顺序错误，该操作数的最终结果是 i 写入的结果而非 j。该冒险对应<strong>输出依赖</strong>，且仅存在于允许在多个阶段写入数据的流水线，或者允许指令在前一条指令停顿时继续执行的情况下。比如：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-asm"><span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">; r1 上有 WAW 冒险</span></span>
+<span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">add</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> r1, r2, r3</span></span>
+<span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">sub</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> r1, r4, r3</span></span></code></pre>
+</li>
+<li>
+<p><strong>WAR</strong>(write after read)：j 尝试在 i 读取某个目的操作数之前先向它写入，这样 i 就会错误地得到了新的数据。该冒险对应<strong>反依赖</strong>，在大多数静态发射的流水线中不会发生。比如：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-asm"><span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">; r1 上有 WAR 冒险</span></span>
+<span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">sub</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> r4, r1, r3</span></span>
+<span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">add</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> r1, r2, r3</span></span></code></pre>
+</li>
+</ul>
+<h4 id="control-dependences"><a class="anchor" href="#control-dependences">#</a> Control Dependences</h4>
+<p><strong>控制依赖</strong>(control dependence) 决定了指令 i 关于分支指令的顺序。除了程序的第一个基本块外，所有指令都和某些分支之间存在控制依赖，并且这些控制依赖必须被保留下来，以保留程序顺序。考虑以下代码块：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-asm"><span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">if p1 </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">    S1</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">if p2 </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">    S2</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>不难发现：<code>S1</code> 控制依赖于 <code>p1</code>，<code>S2</code> 控制依赖于 <code>p2</code> 而非 <code>p1</code>。</p>
+<blockquote>
+<p>控制依赖 = 一条指令是否执行，取决于前面某个分支（branch）的结果。</p>
+</blockquote>
+<p>控制依赖带来以下约束：</p>
+<ul>
+<li>关于某个分支控制依赖的指令不得被移动到分支之<strong>前</strong>，否则的话该指令就<strong>不被</strong>该分支所<strong>控制</strong></li>
+<li>不受某个分支控制依赖的指令不得被移动到分支之<strong>后</strong>，否则的话该指令就要被该分支所<strong>控制</strong></li>
+</ul>
+<p>事实上，我们不需要严格保留控制依赖，而只需要保留两个关键的性质：<strong>异常行为</strong>(exception behaviour) 和<strong>数据流</strong>(data flow)。</p>
+<ul>
+<li>保留<strong>异常行为</strong>意味着任何对指令执行顺序作出的改动，不能改变程序如何产生异常的。
+<ul>
+<li>更松弛的版本是：对指令执行的重新排序不得导致程序中出现新的异常。</li>
+<li>之后介绍的<strong>推测</strong>(speculation) 技术能够让我们忽视选取分支带来的异常，从而允许我们在保留数据依赖的情况下对指令进行重排。</li>
+</ul>
+</li>
+<li><strong>数据流</strong>是指令间产生结果或接受输入中的数据值的真实流动。分支让数据流变得动态，因为它们让数据源可以来自很多地方。通过保留控制依赖，就能够阻止对数据流的非法变化。
+<ul>
+<li>之后介绍的<strong>推测</strong>还能用于这种情况：在减小控制依赖的影响时，还能维护数据流。</li>
+</ul>
+</li>
+</ul>
+<p>有时，违反了控制依赖不会影响到异常行为或数据流。</p>
+<p>控制依赖可通过实现控制冒险检测（导致控制停顿的发生）来被保留。我们可通过一系列的硬件或让软件工艺来消除或减小控制停顿的发生次数。</p>
+<h3 id="dynamic-scheduling"><a class="anchor" href="#dynamic-scheduling">#</a> Dynamic Scheduling</h3>
+<p>先简单回顾<strong>静态调度</strong>(static scheduling) 的概念：静态调度的流水线处理器在获取指令后会发射该指令，除非发现该指令存在数据依赖且无法通过前递 (forwarding) 来隐藏该指令，此时冒险检测硬件会暂停流水线，直到依赖清除后在获取新的指令。</p>
+<p>本节我们将介绍<strong>动态调度</strong>(dynamic scheduling)，它是一种在程序执行时，根据当前的处理器状态和资源可用性来决定指令执行顺序的技术。具体来说，它通过硬件重排指令的执行，以减少停顿，同时维护了（即不会改变）数据流和异常行为。它的优点有：</p>
+<ul>
+<li>可以让在某个流水线上被编译的代码在其他流水线上也能高效运行，消除了多份二进制文件以及重新编译的需求</li>
+<li>能够处理在编译时没有被发现的依赖，比如内存引用或数据依赖分支，或者采用现代的动态链接或分派</li>
+<li>能让处理器容忍无法预测的时延，比如对于高速缓存失效，可通过在等待失效解决时执行其他代码来实现这一点</li>
+</ul>
+<p>简单流水线技术的一大限制是采用<strong>有序</strong>(in-order) 指令发射和执行，即指令按照<strong>程序顺序</strong>发射，如果有指令停顿了，后面的指令就不得继续执行。因此，如果两条很接近的指令间存在依赖，那么就会导致冒险发生，因而产生停顿；如果有多个功能单元的话，那这些单元在停顿期间就处于空闲状态了。对于下面的指令序列：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>fdiv.d  f0, f2, f4</span></span>
+<span class="line"><span>fadd.d  f10, f0, f8</span></span>
+<span class="line"><span>fsub.d  f12, f8, f14</span></span></code></pre>
+<p>前两条指令存在依赖关系，因而产生停顿。第三条指令和前两条没有依赖关系，但也不得不跟着一起停顿。所以我们希望在停顿发生时还能继续执行第三条指令。为了做到这一点，我们将发射过程分为两部分：检查任何的结构冒险，以及等待数据冒险的消失。因此我们仍然使用有序的指令发射，但我们希望当处理器的操作数空闲时就能执行指令，这样的流水线做的就是<strong>乱序执行</strong>(out-of-order execution)。</p>
+<p>乱序执行会引入 <strong>WAR</strong> 和 <strong>WAW</strong> 冒险的可能，这在原来的流水线中是没有的，不过这两类冒险都可以用<strong>寄存器重命名</strong>来避免。</p>
+<p>e.g.</p>
+<blockquote>
+<p>对于以下指令序列：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>fdiv.d  f0, f2, f4</span></span>
+<span class="line"><span>fmul.d  f6, f0, f8</span></span>
+<span class="line"><span>fadd.d  f0, f10, f14</span></span></code></pre>
+<ul>
+<li>第 2、3 条指令间存在反依赖，所以若第 3 条指令先于前一条指令执行的话，就会违背该依赖，导致 WAR 冒险的发生</li>
+<li>第 1、3 条指令间存在输出依赖，所以若第 3 条指令先于第 1 条指令执行的话，就会违背该依赖，导致 WAW 冒险的发生</li>
+</ul>
+</blockquote>
+<p>我们要完成重命名的工作，我们这里提供两个算法。</p>
+<h4 id="scoreboarding"><a class="anchor" href="#scoreboarding">#</a> Scoreboarding</h4>
+<p><strong>记分板</strong>是一项能够让指令在有足够资源以及没有数据依赖的情况下乱序执行的技术。它的目标是通过尽早执行指令，维护执行速率至每时钟周期一条指令。因此，当下一条要执行的指令被停顿时，可以发射和执行其他不依赖于任何当前处于活跃或停顿状态的指令的指令。可以看到，记分板会对指令的发射、执行以及对所有的冒险检测负责，可见其责任重大。</p>
+<p>我们把ID分为两个阶段，分别是IS和RO，在IS段检测结构冲突（多条指令在同一时刻需要使用同一个硬件资源），如果没有结构冲突就放进来（这个一定是顺序进来的），然后在RO段实现乱序。</p>
+<p>&lt;img src="<a target="_blank" rel="noopener" href="https://note.noughtq.top/sys/ca/images/C3/31.png">https://note.noughtq.top/sys/ca/images/C3/31.png</a>" alt="img" style="zoom:50%;" /&gt;</p>
+<blockquote>
+<p>e.g.如下图指令</p>
+<p>&lt;img src="/assets/图片/59.png" alt="img" style="zoom:50%;" /&gt;</p>
+<p>我们把指令先分为IS、RO、EX、WB四个阶段。所以指令状态表：</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/60.avif" alt="	"></p>
+<p>这上面第一条已经弹出了，所以记录的是2 3 4 5</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/61-1782101765865-1.avif" alt="img"></p>
+<p>上面这个表格是功能部件状态表，下面这个表格是结果寄存器表</p>
+<p>（这里有几个点，首先有两个乘法单元，然后sub和add算同一个Add运算单元</p>
+<p>上图：功能寄存器表，Busy代表忙还是闲，Op代表什么操作，Fi代表结果寄存器名称，Fj和Fk代表源操作数来自哪个寄存器，对应的Qj和Qk代表源操作数来源于哪个功能部件（如果有依赖的话），Rj、Rk有三种状态：如上图（如果yes的话就是在等那个no）</p>
+<p>然后下一步：</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/62.avif" alt="img"></p>
+<p>此时的寄存器表：</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/63.avif" alt=""></p>
+<p>这个连哥哥都是no就是都已经读过了，但是因为在写的时候前面有的寄存器还没有读，所以要等待。</p>
+<p>那么最后的最后，就是这样：</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/64.avif" alt="img"></p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/65.avif" alt="img"></p>
+</blockquote>
+<p>这就是乱序算法的基础。那么如果我们给他更多的细节：</p>
+<blockquote>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/66.avif" alt="img"></p>
+<p>解答：</p>
+<p><img loading="lazy" src="https://note.noughtq.top/sys/ca/images/C3/67.png" alt="img"></p>
+<p>一般考试就写右上角这个表格</p>
+</blockquote>
+<h4 id="tomasulos-algorithm"><a class="anchor" href="#tomasulos-algorithm">#</a> Tomasulo's Algorithm</h4>
+<p>在使用托马苏洛算法的动态调度处理器中，</p>
+<ul>
+<li>RAW 冒险可通过在操作数空闲时就执行指令来避免</li>
+<li>WAR 和 WAW 冒险可通过<strong>寄存器重命名</strong>(register renaming) 来消除。</li>
+</ul>
+<p>其中寄存器重命名通过重命名所有的目标寄存器，包括等待先前指令读 / 写的寄存器来实现，这样的话乱序写操作就不会影响到任何依赖于操作数先前值的指令。如果有足够多可用的寄存器的话，编译器就会实现这种重命名。</p>
+<blockquote>
+<p>Tomasulo = Scoreboard + 寄存器重命名</p>
+</blockquote>
+<p>但是真正存在数据依赖的时候就要保持。没关系的我们就可以改。</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/10-1782114911612-1.avif" alt="img"></p>
+<p>这个绿色的就相当是buffer（叫保留栈），左侧是load/store buffer，检测buffer是否有容量（前面scoreboard检测的是功能部件是否忙），没有容量就卡在队列。对于右侧加发部件有三个，乘法有两个。</p>
+<p>这个buffer不是一个普通的buffer，扩容同时还能乱序</p>
+<p>这个蓝色的线，是通过线传送到对应的位置。</p>
+<p>对应的冒险解决方法：</p>
+<p><strong>解决 RAW（写后读 - 数据依赖）</strong></p>
+<p><strong>问题</strong>：指令 B 需要读指令 A 还没算出来的结果。<br>
+<strong>解决方案：等待广播（CDB）</strong></p>
+<ul>
+<li><strong>计分板的做法</strong>：指令 B 停在门口，不停地盯着寄存器看，直到寄存器有值。</li>
+<li><strong>Tomasulo 的做法</strong>：<strong>Issue 阶段</strong>：指令 B 发现 F2（指令 A 要写的）还没好，它就在自己的预约站（比如 Add1）里的 Qj 栏位写下：<strong>“我在等 Load2 厨师的结果”</strong>。<strong>等待中</strong>：指令 B 就坐在位子上，盯着蓝色的广播线（CDB）。<strong>解决</strong>：当 Load2 算完，对着全服广播：“我是 Load2，结果是 100！” 指令 B 听到后，直接把 100 抓到自己的 Vj 栏位。</li>
+<li><strong>总结</strong>：它不看寄存器，它直接<strong>跨过寄存器</strong>跟生产者（Tag）对接。</li>
+</ul>
+<p><strong>解决 WAW（写后写 - 名相关冒险）</strong></p>
+<p><strong>问题</strong>：指令 A 要写 F6，指令 B 也要写 F6。如果 B 比 A 先写完，F6 的值就错了。<br>
+<strong>解决方案：寄存器重命名（Register Renaming）</strong></p>
+<ul>
+<li><strong>Tomasulo 的绝招</strong>：<strong>指令 A 发射</strong>：寄存器状态表里 F6 标记为 Qi = Load1（意为：现在 F6 由 Load1 承包了）。<strong>指令 B 发射</strong>：紧接着，F6 在表里立刻改记为 Qi = Add2（意为：不，现在 F6 归 Add2 管了）。<strong>写回时</strong>：当 Load1 终于算完广播时，它想把结果写回寄存器。但它一看寄存器表：<strong>“诶？F6 的老板已经变成 Add2 了，不是我了。”</strong> 于是 Load1 就<strong>放弃</strong>写回寄存器，它的结果只会被那些还在等它的指令（预约站）抓走。</li>
+<li><strong>总结</strong>：寄存器永远只记录**最后一条（最新）**指令的工号。旧指令的结果广播完就消失了，不会污染寄存器。</li>
+</ul>
+<p><strong>解决 WAR（读后写 - 名相关冒险）</strong></p>
+<p><strong>问题</strong>：指令 A 要读 F6，指令 B 紧接着要改写 F6。如果 B 跑得快，先把 F6 改了，A 就读到了错误的新值。<br>
+<strong>解决方案：值捕捉（Value Capture）</strong></p>
+<ul>
+<li><strong>Tomasulo 的做法</strong>：<strong>关键点在 Issue 阶段</strong>：当指令 A（读取者）进入预约站的一瞬间，它会看 F6 寄存器。如果 F6 现在是有值的，指令 A 会<strong>立刻把这个值复制一份</strong>存到自己的预约站（Vj 栏位）里。<strong>互不干扰</strong>：一旦指令 A 把值“抱进”了预约站，寄存器里的 F6 就算被指令 B 改成天王老子，也影响不到指令 A 了，因为 A 已经用的是自家的备份。</li>
+<li><strong>总结</strong>：通过提前把数据读进缓冲区，切断了指令与寄存器之间的实时联系。</li>
+</ul>
+<p>​</p>
+<blockquote>
+<p>同样的例子：</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20260622234459581-1782143101067-1.avif" alt="image-20260622234459581"></p>
+<p>状态：</p>
+<p><img loading="lazy" src="https://note.noughtq.top/sys/ca/images/C3/69.png" alt="img"><br>
+<img loading="lazy" src="https://note.noughtq.top/sys/ca/images/C3/70.png" alt="img"></p>
+<p>这里的Qj Qk对应的是源操作数的保留栈的名称，下面是结果寄存器表。</p>
+<p>e.g.</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/73.avif" alt="img"></p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/74.avif" alt="img"></p>
+</blockquote>
+<h3 id="hardware-based-speculation"><a class="anchor" href="#hardware-based-speculation">#</a> Hardware-Based Speculation</h3>
+<p>实现推测背后的关键思想是允许指令乱序执行，但强迫它们<strong>按顺序</strong>提交，以阻止任何不可更改的行为。所以在使用推测技术时，需要将<strong>完成执行</strong>的过程和<strong>指令提交</strong>分开来；并且需要额外的硬件缓冲区来保留已执行完毕的，但未提交的指令结果。这种缓冲区称为<strong>重排缓冲区</strong>(reorder buffer, <strong>ROB</strong>)，逻辑上是一个 FIFO 的队列，而物理上是一块位于内存的缓冲区。由于 ROB 和存储缓冲区类似，所以之后就将存储缓冲区并到 ROB 里面了。</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/75.avif" alt="img"></p>
+<p>就是tomasulo算法多了一个commit阶段，这个commit阶段必须按照原来指令的顺序。</p>
+<p>e.g.</p>
+<p><img loading="lazy" src="https://note.noughtq.top/sys/ca/images/C3/76.png" alt="img"></p>
+<p>&lt;video src="/assets/图片/77.mp4" controls=""&gt;&lt;/video&gt;</p>
+<h3 id="multiple-issue"><a class="anchor" href="#multiple-issue">#</a> Multiple Issue</h3>
+<p>指令的并行中，除了动态调度，还有静态调度、多流出的方法</p>
+<p>前面讲到的技术都是通过消除数据、控制停顿来提升 CPI 的。为了进一步提升性能，我们希望 CPI 降到 1 以下，这意味着需要在一个时钟周期内发射多条指令。所以本节我们就来讨论一下<strong>多发射处理器</strong>(multi-issue processor) 的设计，它包含以下几类：</p>
+<ul>
+<li>静态调度超标量 (superscalar) 处理器</li>
+<li>VLIW（very long instruction word，超长指令字）处理器</li>
+<li>动态调度超标量处理器</li>
+</ul>
+<p>其中：</p>
+<ul>
+<li>超标量处理器
+<ul>
+<li>在每个时钟周期内发射的指令数会变化</li>
+<li>假设有一个最大上限 n，那么称这种处理器为 n 发射</li>
+<li>既可用编译器实现静态调度，又可用托马苏洛算法实现动态调度</li>
+<li>对于通用计算而言，该方法是目前最成功的方法</li>
+</ul>
+</li>
+<li>VLIW 处理器
+<ul>
+<li>在每个时钟周期内发射固定量（4-16）的指令，并被格式化为一个大指令，或者一个固定的带有并行的指令包</li>
+<li>在指令包内，指令间的并行会被显式表示</li>
+<li>由编译器静态调度</li>
+<li>它被成功用于数字信号处理和多媒体应用</li>
+</ul>
+</li>
+</ul>
+<p>下图比较了单发射以及各类多发射的示意图：</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/79.avif" alt="img"></p>
+<p>这个需要很多硬件支持。</p>
+<h4 id="using-static-scheduling"><a class="anchor" href="#using-static-scheduling">#</a> Using Static Scheduling</h4>
+<p>先来考虑<strong>静态调度的超标量处理器</strong>：</p>
+<ul>
+<li>
+<p>在典型的超标量处理器中，每时钟周期可发射 1-8 条指令</p>
+</li>
+<li>
+<p>指令按顺序流出，<strong>冲突检测</strong>(conflict detection) 便是在指令流出的时候进行的</p>
+<ul>
+<li>在当前指令序列中没有<strong>数据冲突</strong>或<strong>闭冲突</strong>(close conflict)</li>
+</ul>
+</li>
+<li>
+<p>例子：4 发射的静态调度超标量处理器</p>
+<ul>
+<li>在 IF 阶段，处理器会接收 1-4 个来自取指元件的指令</li>
+<li>在 1 个时钟周期内，有可能所有指令都可以流出，也有可能只流出部分指令</li>
+</ul>
+</li>
+<li>
+<p>外发元件 (ongoing component) 会检测结构冲突和数据冲突，通常分为 2 个阶段实现</p>
+<ul>
+<li>阶段 1：在外发包 (outgoing package) 内执行冲突检测，选择那些能首先流出的指令</li>
+<li>阶段 2：检查这些被选中的指令是否和正在执行的指令冲突</li>
+</ul>
+</li>
+<li>
+<p>RISC-V 实现超标量的方法：</p>
+<ul>
+<li>假设每时钟周期流出 2 条指令（64 bits）：1 条整数指令 + 1 条浮点数指令
+<ul>
+<li>这样的并行使得硬件的增加量不那么大</li>
+</ul>
+</li>
+<li>加载、存储、分支指令都属于整数指令</li>
+<li>还假设浮点数指令的执行需要 2 个时钟周期</li>
+<li>浮点数加载和存储指令会用到整数部分的硬件，这样会增加浮点数寄存器的访问冲突；缓解方法是增加浮点数寄存器的读 / 写端口</li>
+</ul>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/80.avif" alt="img"></p>
+</li>
+</ul>
+<p>再来看 <strong>VLIW</strong></p>
+<ul>
+<li>采用多个独立的功能单元，将多个运算打包成一个非常长的指令，或者让指令包里的指令满足相同的约束
+<ul>
+<li>由于这两种方法没有本质区别，所以下面仅考虑前者</li>
+</ul>
+</li>
+<li>指令字被划分为多个字段，这些字段被称为<strong>运算槽</strong>(operation slot)，它们能直接且独立地控制一个功能单元</li>
+<li>所有的处理和指令排布都是由编译器完成的</li>
+<li>由于 VLIW 的优势随着发射率的提升而增加，因此我们考虑更宽发射的处理器</li>
+</ul>
+<p>为了让功能单元保持工作状态，需要让代码有足够多的并行，这点可通过前面介绍过的<strong>循环展开</strong>和<strong>代码调度</strong>来实现。如果展开得到的是直线代码（没有跳转），那么可以用到作用于单个基本块上的<strong>局部调度</strong>(local scheduling) 技术；如果发现并行要在分支间调度代码，那么必须要用更为复杂的<strong>全局调度</strong>(global scheduling) 算法。</p>
+<p>VLIW 模型存在一些技术上和逻辑上的问题</p>
+<ul>
+<li><strong>技术</strong>问题：
+<ul>
+<li><strong>代码规模</strong>的增加，有以下解决方案：
+<ul>
+<li>软件调度可通过大量的循环展开来提升并行</li>
+<li>采取更聪明的编码方式</li>
+<li>压缩内存里的指令，当需要将指令读到高速缓存时再解压</li>
+</ul>
+</li>
+<li><strong>锁步</strong>(lockstep) 操作的局限：任何功能单元流水线的停顿会导致整个处理器的停顿，因为所有的功能单元必须保持同步
+<ul>
+<li>最新的处理器中，功能单元的运作更加独立，且编译器用于在发射时避免冒险，而硬件检查允许指令的不同步执行</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>逻辑</strong>问题：二进制代码的兼容性不足，这使得在不同实现之间的迁移变得困难
+<ul>
+<li>在严格的 VLIW 方法中，代码序列同时利用到指令集定义和详细的流水线结构（包括功能单元及其时延），所以不同的功能单元以及时延需要不同版本的代码</li>
+</ul>
+</li>
+</ul>
+<h2 id="chap-4"><a class="anchor" href="#chap-4">#</a> CHAP 4</h2>
+<p>SIMD（Single Instruction Multiple Data）：<strong>单指令多数据流</strong></p>
+<p>这就把处理器分为向量和标量处理器</p>
+<h3 id="vector-architecture"><a class="anchor" href="#vector-architecture">#</a> Vector Architecture</h3>
+<p><strong>向量架构</strong>的大致原理可以概括为：获取分散在内存中的数据元素集，将它们放在一个较大的顺序寄存器堆内，在寄存器堆上对数据进行操作，最后将结果分散放回到内存中。</p>
+<ul>
+<li>单条指令作用在多个向量数据上，导致在独立的数据元素上有多个寄存器 - 寄存器运算</li>
+<li>作为由编译器控制的缓冲区，这些寄存器堆能够隐藏内存时延，并且能够利用好内存带宽</li>
+<li><strong>功率墙</strong>(power wall) 使得架构师看重那些能够以不达到无序超标量处理器那么高的成本为代价，就能获取高性能的架构，而向量架构正符合这样的要求——仅需在一个简单的标量处理器上用到<strong>向量指令</strong>(vector instructions)，就能够提升性能。</li>
+</ul>
+<p>矢量流水线的特点：</p>
+<ol>
+<li>低相关性：矢量运算中的元素通常独立，便于并行处理（如矩阵加法）</li>
+<li>潜在问题：若矢量处理不当（如数据依赖或资源冲突），可能导致性能下降或功能切换开销</li>
+</ol>
+<p>矢量流水线处理需解决的问题：如何优化对矢量/数组的操作（如数据预取、并行计算），以充分发挥流水线的并行性能</p>
+<p>矢量处理方式分类：</p>
+<ol>
+<li>horizontal processing（水平处理）：逐元素顺序计算，适合标量处理器，但效率低（需多次功能切换）</li>
+<li>vertical processing（垂直处理）：按列并行计算（需硬件支持），适合矢量处理器，可同时处理多列数据</li>
+<li>vertical and horizontal processing（混合处理）：结合两者优势，分组并行（如 SIMD 指令集）</li>
+</ol>
+<blockquote>
+<p>计算 D = A x (B + C)，（A，B，C，D 为长度为 N 的矢量）</p>
+<p><strong>水平处理</strong></p>
+<p>矢量按行从左到右逐元素计算：</p>
+<ol>
+<li>d1 ← a1 x (b1 + c1)</li>
+<li>d2 ← a2 x (b2 + c2)</li>
+<li>...</li>
+<li>dn ← an x (bn + cn)</li>
+</ol>
+<p>需编写循环程序处理：</p>
+<ol>
+<li>ki ← bi + ci</li>
+<li>di ← ai x ki</li>
+</ol>
+<p>data related（数据相关）次数：N 次</p>
+<p>Function switching（功能切换）次数：2N 次</p>
+<p><strong>混合处理</strong></p>
+<ol>
+<li>数据分组：将长矢量（N）划分为 S 个组（每组 n 个元素），剩余元素（r）单独成组，共 S + 1 个组</li>
+<li>组内垂直处理：每组内所有元素并行计算（如 SIMD 同时计算 n 个 bi + ci）</li>
+<li>组间水平处理：各组串行处理（依次处理第 1 组 → 第 2 组 → … → 第 S + 1 组）</li>
+</ol>
+</blockquote>
+<h3 id="cray-1"><a class="anchor" href="#cray-1">#</a> CRAY-1</h3>
+<p>CRAY-1 采用寄存器-寄存器结构，其矢量寄存器（V0-V7）可存储 64 个 64 位元素，支持高速并行计算。</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/ca_ch6_img2.avif" alt="Img 2"></p>
+<p>一共是8拍：</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/49.avif" alt="img"></p>
+<p>三种执行方式的时钟周期对比：</p>
+<p>串行执行：3N + 22</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/51.avif" alt="img"></p>
+<p>1、2 并行：2N + 15</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/52.avif" alt="img"></p>
+<p>使用 link technology：N + 16</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/53.avif" alt="img"></p>
+<h3 id="array-processor"><a class="anchor" href="#array-processor">#</a> Array Processor</h3>
+<p><strong>阵列处理器</strong></p>
+<p>包含大量同构处理单元（PE，processing elements），通过特定方式互连形成阵列结构</p>
+<p>所有 PE 同步执行相同指令，适用于规则数据并行计算（如图像处理、矩阵运算）</p>
+<p>根据系统中存储器的组成方式，阵列处理器可分为两种基本结构：</p>
+<ol>
+<li>Distributed memory：分布式内存结构</li>
+<li>Centralized shared memory：集中式共享内存结构</li>
+</ol>
+<p>包含大量同构处理单元（PE，processing elements），通过特定方式互连形成阵列结构</p>
+<p>所有 PE 同步执行相同指令，适用于规则数据并行计算（如图像处理、矩阵运算）</p>
+<p>根据系统中存储器的组成方式，阵列处理器可分为两种基本结构：</p>
+<ol>
+<li>Distributed memory：分布式内存结构</li>
+<li>Centralized shared memory：集中式共享内存结构</li>
+</ol>
+<h2 id="chap-5"><a class="anchor" href="#chap-5">#</a> CHAP 5</h2>
+<p>本章主要探索的是<strong>线程级并行</strong>(thread-level parallelism, <strong>TLP</strong>)。而 TLP 利用到了 <strong>MIMD</strong>(multiple instructions, multiple data)。</p>
+<blockquote>
+<p><strong>SIMD</strong></p>
+<p>假设：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>A=[1,2,3,4]</span></span>
+<span class="line"><span>B=[5,6,7,8]</span></span></code></pre>
+<p>计算：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>C=A+B</span></span></code></pre>
+<p>SIMD内部相当于：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>Lane0: 1+5</span></span>
+<span class="line"><span>Lane1: 2+6</span></span>
+<span class="line"><span>Lane2: 3+7</span></span>
+<span class="line"><span>Lane3: 4+8</span></span></code></pre>
+<p><strong>MIMD</strong></p>
+<p>例如四核CPU：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>Core0: 运行浏览器</span></span>
+<span class="line"><span>Core1: 运行微信</span></span>
+<span class="line"><span>Core2: 编译代码</span></span>
+<span class="line"><span>Core3: 播放视频</span></span></code></pre>
+<p>执行的代码完全不同：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>Core0 → Load网页</span></span>
+<span class="line"><span>Core1 → 收消息</span></span>
+<span class="line"><span>Core2 → GCC编译</span></span>
+<span class="line"><span>Core3 → 解码视频</span></span></code></pre>
+</blockquote>
+<p>前面提到过，由于 ILP 工艺进步的放缓，单处理器 (uniprocessor) 的发展逐渐走向尾声，因而<strong>多处理器</strong>(multiprocessor) 的重要性日渐提升——它由一组紧密耦合的处理器构成，这些处理器受操作系统控制，并通过一个共享的地址空间来共享内存（不一定只有一块物理内存）。多处理器通过以下两类不同的软件模型来实现 TLP：</p>
+<ul>
+<li><strong>并行处理</strong>(parallel processing)：一组在单任务上协作的紧密耦合的线程执行</li>
+<li><strong>请求级并行</strong>(request-level parallelism)：来自一名或多名用户的多个相对独立的进程执行
+<ul>
+<li>运行在多个处理器上的单一应用程序会利用请求级并行，例如数据库响应查询，或者通过多个独立运行的应用程序（后者通常被称为<strong>多道程序设计</strong>(multiprogramming)）</li>
+</ul>
+</li>
+</ul>
+<p>多处理器既包含具有多个核心的单芯片系统，即所谓的<strong>多核</strong>(multicore)，也涵盖由多个芯片组成的计算机，其中每个芯片通常也是一个多核单元。</p>
+<p>之后我们还会探讨<strong>多线程</strong>(multithreading) 技术——这是一种支持在单个多发射处理器上以交错方式执行多个线程的技术。许多多核处理器同样包含对多线程的支持。</p>
+<p>我们将多处理器定义为由紧耦合处理器组成的计算机，这些处理器的协调与使用由单一处理器系统控制，通过共享地址空间来共享存储器。此类处理器通过两种不同的软件模型来开发线程级并行</p>
+<ol>
+<li>运行一组紧密合的线程，协同完成同一项任务，这种情况通常被称为 parallel processing（并行处理）</li>
+<li>执行可能由一或多位用户发起的多个相对独立的进程，这是一种 request-level parallelism（请求级并行）形式。请求级并行可以由单个应用程序开发（这个应用程序在多个处理器上运行，比如响应查询请求的数据库程序），也可以由多个独立运行的应用程序开发，通常称为 multiprogramming（多重编程）</li>
+</ol>
+<h3 id="introduction"><a class="anchor" href="#introduction">#</a> Introduction</h3>
+<p>弗林分类法（Flynn's Taxonomy）</p>
+<ol>
+<li>SISD：传统串行计算机架构（如普通 CPU），所有现代 CPU 都支持这种模式</li>
+<li>MISD：理论存在但实际应用极少（仅用于特定容错系统）</li>
+<li>SIMD：
+<ul>
+<li>数据级并行典范（如 GPU/向量处理器）</li>
+<li>适合规则数据并行任务（图像处理/科学计算）</li>
+<li>现代 CPU 的 SSE/AVX 指令集也属于 SIMD</li>
+</ul>
+</li>
+<li>MIMD：
+<ul>
+<li>最通用的并行模式（如多核 CPU/分布式集群）</li>
+<li>每个处理器可独立运行不同程序</li>
+<li>MIMD 系统中的每个节点本身可能是超标量处理器</li>
+</ul>
+</li>
+</ol>
+<p>对于现有的共享内存多处理器，根据其内存组织的不同，可以划分为以下两大类：</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20260623151253183.avif" alt="image-20260623151253183"></p>
+<p>这是两个的区别很明显</p>
+<p>第一类称为 <strong>symmetric (shared-memory) multiprocessors</strong>（对称（共享存储器）多处理器）（<strong>SMP</strong>），或 <strong>centralized shared-memory multiprocessors</strong>（集中式共享存储器多处理器），其特点是核心数目较少，通常不超过 8 个。由于此类多处理器中的处理器数目如此之小，所以处理器有可能共享一个集中式存储器，所有处理器能够平等地访问它，这就是对称一词的由来。在多核芯片中，采用一种集中方式在核心之间高效地共享存储器，现有多核心都是 SMP。当连接一个以上的多核心时，每个多核心会有独立的存储器，所以存储器为分布式，而非集中式</p>
+<p>SMP 体系结构有时也称为 <strong>uniform memory access</strong>（一致存储器访问）（<strong>UMA</strong>）多处理器，这一名称来自以下事实：所有处理器访问存储器的延迟都是一致的，即使存储器的组织方式被分为多个组时也是如此</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/ca_ch5_img4.avif" alt="Img 4"></p>
+<p>在另一种设计方法中，多处理器采用物理分布式存储器，称为 <strong>distributed shared memory</strong>（分布式共享存储器）（<strong>DSM</strong>）。为了支持更多的处理器，存储器必须分散在处理器之间，而不应当是集中式的；否则，存储器系统就无法在不大幅延长访问延迟的情况下为大量处理器提供带宽支持。随着处理器性能的快速提高以及处理器存储器带宽需求的相应增加，越来越小的多处理器都优选采用分布式存储器。多核心处理器的推广意味着甚至两芯片多处理器都采用分布式存储器。处理器数目的增大也提升了对高宽带互连的需求</p>
+<p>将存储器分散在节点之间，既增加了带宽，也缩短了到本地存储器的延迟。DSM 多处理器也被称为 <strong>NUMA</strong>（<strong>nonuniform memory access</strong>，非一致存储器访问），这是因为它的访问时间取决于数据字在存储器中的位置。DSM 的关键缺点是在处理器之间传送数据的过程多少变得更复杂了一些，DSM 需要在软件中多花费一些力气，以充分利用分布式存储器提升的存储器带宽。因为所有多核心多处理器（处理器芯片或插槽多于一个）都使用了分布式存储器，所以我们将从这个角度来解释分布式存储器多处理器的工作方式</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/ca_ch5_img5.avif" alt="Img 5"></p>
+<p>在 SMP 和 DSM 这两种体系结构中，线程之间的通信是通过共享地址空间完成的，也就是说，任何一个拥有正确寻址权限的处理器都可以向任意存储器位置发出存储器引用。与 SMP 和 DSM 相关联的 shared memory（共享存储器）一词是指共享 address space（地址空间)这一事实</p>
+<h3 id="challenges-of-parallel-processing"><a class="anchor" href="#challenges-of-parallel-processing">#</a> Challenges of Parallel Processing</h3>
+<p>Parallel Processing：强调多个处理器协同工作（如超级计算机/服务器集群），与单机上运行多个程序的"多道程序设计"有本质区别</p>
+<p>优势：</p>
+<ol>
+<li>突破性能瓶颈：指出单处理器在指令级并行 (ILP) 上面临分支预测错误、数据依赖、内存延迟等根本性限制</li>
+<li>经济效益：利用量产的商用处理器构建高性能系统，比定制大型机更经济</li>
+<li>弹性扩展：通过增加处理器数量线性提升算力（注：实际中可能受阿姆达尔定律限制）</li>
+<li>高可靠性：分布式架构天然具备容错能力</li>
+</ol>
+<p>多处理器的两个重要障碍：</p>
+<ol>
+<li>程序中可用的并行有限</li>
+<li>通信的成本较高：并行处理器进行远程访问所带来的长时延迟<br>
+<img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/ca_ch5_img6.avif" alt="Img 6"></li>
+</ol>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/ca_ch5_img7.avif" alt="Img 7"></p>
+<h3 id="multiprocessor-cache-coherence"><a class="anchor" href="#multiprocessor-cache-coherence">#</a> Multiprocessor Cache Coherence</h3>
+<p>因为有很多cache，所以要有一致性协议。</p>
+<h4 id="总线监听协议"><a class="anchor" href="#总线监听协议">#</a> 总线监听协议</h4>
+<p><strong>监听</strong>(snooping)：</p>
+<ul>
+<li>每个持有物理内存块数据拷贝的高速缓存均可追踪该块的共享状态</li>
+<li>在 SMP 中，各个核心的高速缓存通常通过广播介质（如核心自带的高速缓存与共享高速缓存 / 内存之间的<strong>总线</strong>）实现互通，并且所有的高速缓存控制器通过持续监控或<strong>监听</strong>(snoop) 介质，以确认自身是否拥有在总线上，或交换访问中请求的目标数据块拷贝</li>
+<li>侦听技术同样适用于多芯片多处理器的一致性协议</li>
+</ul>
+<p><strong>监听协议</strong>在采用微处理器（单核），并通过总线连接至单一共享内存的多处理器系统中广受欢迎。其中，<strong>总线</strong>为实现监听协议提供了便捷的广播媒介。</p>
+<p>要维持高速缓存一致性要求，有以下两种方法：</p>
+<ul>
+<li><strong>写无效协议</strong>(write invalidate protocol)：确保处理器在写入数据项前拥有对该项的<strong>独占访问权</strong>
+<ul>
+<li>独占访问能保证在对一个共享缓存行执行写入操作时，其他所有高速缓存中该缓存行的副本均被无效化。</li>
+<li>其他处理器后续读取时会发生高速缓存失效，需要从内存或持有有效副本的高速缓存中获取更新的数据（因此读取时延更长），从而减少总线上重复写入的带宽消耗。</li>
+<li>若存在两个处理器试图同时写入同一数据的情况，其中一方将获胜，导致另一方的数据拷贝失效；另一方若要完成其写入操作，就必须获取包含最新更新值的数据新拷贝。</li>
+<li>由此可见，此协议确保了<strong>写串行化</strong>。</li>
+<li>这是目前最主流的协议。</li>
+</ul>
+</li>
+</ul>
+<h4 id="msi"><a class="anchor" href="#msi">#</a> MSI</h4>
+<p>我们考虑的简单协议有三种状态：</p>
+<ol>
+<li>invalid（无效）：表明专用缓存中的块可能被共享</li>
+<li>share（共享）</li>
+<li>modified（已修改）：表明已经在专用缓存中更新了这个块。注意，已修改状态隐含表明这个块是独占的</li>
+</ol>
+<p>先前描述的一致性协议是一种简单的三状态协议，通常以其状态的首字母来指代，因此被称为 <strong>MSI</strong>（Modified（修改），Shared（共享），Invalid（无效））协议。</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/ca_ch5_img11.avif" alt="Img 11"></p>
+<p>​</p>
+<p>操作关键点：当一个核心执行操作时，会引发“多米诺骨牌”效应：</p>
+<ul>
+<li><strong>读请求（Read Hit/Miss）</strong>：如果你是 <strong>I</strong>，想读数据，状态会变成 <strong>S</strong>。如果此时有人的状态是 <strong>M</strong>，那个人必须先把数据<strong>写回内存</strong>，然后你们两个都变成 <strong>S</strong>。</li>
+<li><strong>写请求（Write Hit/Miss）</strong>：如果你想写数据，你必须进入 <strong>M</strong> 状态。<strong>关键点</strong>：在你进入 <strong>M</strong> 之前，<strong>必须让总线上其他所有核心的同一地址状态全部变成 I</strong>（这就是“写失效”协议：Write Invalidate）。</li>
+</ul>
+<h4 id="mesi"><a class="anchor" href="#mesi">#</a> MESI</h4>
+<p><strong>MESI</strong> 协议：增加了<strong>独占</strong>(exclusive) 状态，形成四种状态：修改 (modified)、独占 (exclusive)、共享 (shared) 和无效 (invalid)。</p>
+<ul>
+<li>
+<p><strong>独占状态</strong>表示缓存块仅存在于单一高速缓存中，且未被修改。</p>
+</li>
+<li>
+<p>若某个块处于独占状态，对其进行写入时无需产生失效信号，从而优化了同一高速缓存先读取后写入该数据块的场景。</p>
+</li>
+<li>
+<p>当然，当对处于独占状态的块的读失效发生时，必须将该块转为共享状态以维持一致性。</p>
+</li>
+<li>
+<p>添加独占状态的好处在于：当同一个核再次写入处于独占状态的数据块时，既不需要获取总线访问权，也不需生成失效信号，因为系统明确知晓该数据块仅存在于本地的这个高速缓存中；处理器只需将其状态改为已修改即可实现更新。</p>
+</li>
+<li>
+<p>通过将一致性状态位编码为独占状态位、并用脏位标识修改情况即可轻松实现该状态的扩展应用。</p>
+</li>
+<li>
+<p>下面是 MESI 协议的状态图（jxh 版本）：</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/38.avif" alt="img"></p>
+</li>
+</ul>
+<p>MESI 的四个状态</p>
+<ul>
+<li><strong>M (Modified，已修改)</strong>：<strong>唯一</strong>拥有，且<strong>已修改</strong>。缓存值与内存不一致，需要写回。</li>
+<li><strong>E (Exclusive，独占)</strong>：<strong>唯一</strong>拥有，但<strong>未修改</strong>。缓存值与内存<strong>一致</strong>。这是升级的核心！</li>
+<li><strong>S (Shared，共享)</strong>：<strong>多人</strong>拥有，且<strong>未修改</strong>。大家都和内存一致。</li>
+<li><strong>I (Invalid，无效)</strong>：废弃数据。</li>
+</ul>
+<p>为什么要加个 "E"：（MESI vs MSI 的核心区别）</p>
+<blockquote>
+<p>在 <strong>MSI</strong> 协议里：<br>
+如果你想写（修改）一个处于 <strong>S</strong> 状态的数据，你<strong>必须</strong>在总线上发一条广播通知：“我要改数据了，你们都给我变 I！”。<br>
+即使当时<strong>全天下只有你一个人</strong>缓存了这块数据，你也得发广播，这很浪费总线带宽。</p>
+<p>在 <strong>MESI</strong> 协议里：</p>
+<ol>
+<li><strong>初次读取</strong>：当你读一个数据时，如果发现别人都没读，你的状态直接标记为 <strong>E（独占）</strong>。</li>
+<li><strong>静默升级</strong>：如果你想修改这个 <strong>E</strong> 状态的数据，因为它是“独占”的，你百分之百确定别人手里没有。所以你可以<strong>直接把 E 改成 M，不需要在总线上发任何通知</strong>。</li>
+</ol>
+<p><strong>结论：</strong> MESI 大大减少了在只有一个核操作数据时的总线通信压力。</p>
+</blockquote>
+<h2 id="备考"><a class="anchor" href="#备考">#</a> 备考</h2>
+<h3 id="一些单位"><a class="anchor" href="#一些单位">#</a> <strong>一些单位</strong></h3>
+<ul>
+<li>bit - Binary digit</li>
+<li>nibble - four bits</li>
+<li>byte - eight bits</li>
+<li>word - four bytes (32 bits) on many embedded/mobile processors and eight bytes (64 bits) on many desktops and servers.</li>
+<li>kibibyte (KiB) [kilobyte (KB)] - 2^10 (1,024) bytes</li>
+<li>mebibyte (MiB) [megabyte (MB)] - 2^20 (1,048,576) bytes</li>
+<li>gibibyte (GiB) [gigabyte (GB)] - 2^30 (1,073,741,824) bytes</li>
+<li>tebibyte (TiB) [terabyte (TB)] - 2^40 (1,099,511,627,776) bytes</li>
+<li>pebibyte (PiB) [petabyte (PB)] - 2^50 (1,125,899,906,842,624) bytes</li>
+</ul>
+<h3 id="cpi公式"><a class="anchor" href="#cpi公式">#</a> CPI公式：</h3>
+<p>CPI = CPU Clock Cycles / Instruction Count</p>
+<p>CPU Clock Cycles = Instruction Count × CPI</p>
+<p>CPU Time = Instruction Count × CPI × Clock Period</p>
+<p>CPU Time = (Instruction Count × CPI) / Clock Rate</p>
+<h3 id="cache"><a class="anchor" href="#cache">#</a> <strong>cache</strong></h3>
+<p>必须明白的名词：</p>
+<table>
+<thead>
+<tr>
+<th>Column 1</th>
+<th>Column 2</th>
+<th>Column 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cache</td>
+<td>full associative</td>
+<td>write allocate</td>
+</tr>
+<tr>
+<td>Virtual memory</td>
+<td>dirty bit</td>
+<td>unified cache</td>
+</tr>
+<tr>
+<td>Memory stall cycles</td>
+<td>block</td>
+<td>block offset</td>
+</tr>
+<tr>
+<td>misses per instruction</td>
+<td>direct mapped</td>
+<td>write back</td>
+</tr>
+<tr>
+<td>Valid bit</td>
+<td>data cache</td>
+<td>locality</td>
+</tr>
+<tr>
+<td>Block address</td>
+<td>hit time</td>
+<td>address trace</td>
+</tr>
+<tr>
+<td>Write through</td>
+<td>cache miss</td>
+<td>set</td>
+</tr>
+<tr>
+<td>Instruction cache</td>
+<td>page fault</td>
+<td>miss rate</td>
+</tr>
+<tr>
+<td>random replacement</td>
+<td>index field</td>
+<td>cache hit</td>
+</tr>
+<tr>
+<td>Average memory access time</td>
+<td>page</td>
+<td>tag field</td>
+</tr>
+<tr>
+<td>n-way set associative</td>
+<td>no-write allocate</td>
+<td>miss penalty</td>
+</tr>
+<tr>
+<td>Least-recently used</td>
+<td>write buffer</td>
+<td>write stall</td>
+</tr>
+</tbody>
+</table>
+<h3 id="四个问题"><a class="anchor" href="#四个问题">#</a> 四个问题</h3>
+<p>Caching is a general concept used in processors, operating systems, file systems, and applications.</p>
+<p>There are Four Questions for Memory Hierarchy Designers</p>
+<ul>
+<li>
+<p>Q1: Where can a block be placed in the upper level/main memory? <em>(Block placement)</em></p>
+<ul>
+<li>Fully Associative</li>
+<li>Set Associative</li>
+<li>Direct Mapped</li>
+</ul>
+</li>
+<li>
+<p>Q2: How is a block found if it is in the upper level/main memory? <em>(Block identification)</em></p>
+<ul>
+<li>Tag</li>
+<li>Block</li>
+</ul>
+</li>
+<li>
+<p>Q3: Which block should be replaced on a (Virtual Memory) miss? <em>(Block replacement)</em></p>
+<ul>
+<li>Random</li>
+<li>LRU</li>
+<li>FIFO</li>
+</ul>
+</li>
+<li>
+<p>Q4: What happens on a write? <em>(Write strategy)</em></p>
+<ul>
+<li>Write Back</li>
+<li>Write Through (with Write Buffer)</li>
+</ul>
+</li>
+</ul>
+<h3 id="读写策略"><a class="anchor" href="#读写策略">#</a> <strong>读写策略</strong></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Hit</th>
+<th>Miss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Read Cache</td>
+<td>Read through</td>
+<td>Read allocate</td>
+</tr>
+<tr>
+<td>Write Cache</td>
+<td><strong>Write-through</strong>&lt;br&gt;- write is done synchronously both to the cache and to the backing store&lt;br&gt;- the data is written to memory</td>
+<td><strong>No-write allocate (write around)</strong>&lt;br&gt;- The block is only written to main memory&lt;br&gt;- It is not stored in the cache</td>
+</tr>
+<tr>
+<td>Write Cache</td>
+<td><strong>Write-back</strong>&lt;br&gt;- writing is done only to the cache&lt;br&gt;- the data is NOT written to memory</td>
+<td><strong>Write allocate</strong>&lt;br&gt;- The block is loaded into the cache on a miss before anything else occurs</td>
+</tr>
+</tbody>
+</table>
+<p>注意谁跟谁对应，还有dirty bit的设定</p>
+<h3 id="amat"><a class="anchor" href="#amat">#</a> AMAT</h3>
+<p>Hence, there are more than 20 cache optimizations into four categories:</p>
+<p>[<br>
+AMAT = HitTime + MissRate \times MissPenalty<br>
+]</p>
+<ol>
+<li>
+<p>Reduce the miss penalty</p>
+<ul>
+<li>multilevel caches</li>
+<li>critical word first</li>
+<li>read miss before write miss</li>
+<li>merging write buffers</li>
+<li>victim caches</li>
+</ul>
+</li>
+<li>
+<p>Reduce the miss rate</p>
+<ul>
+<li>larger block size</li>
+<li>large cache size</li>
+<li>higher associativity</li>
+<li>way prediction and pseudo-associativity</li>
+<li>compiler optimizations</li>
+</ul>
+</li>
+<li>
+<p>Reduce the miss penalty and miss rate via parallelism</p>
+<ul>
+<li>non-blocking caches</li>
+<li>hardware prefetching</li>
+<li>compiler prefetching</li>
+</ul>
+</li>
+<li>
+<p>Reduce the time to hit in the cache</p>
+<ul>
+<li>small and simple caches</li>
+<li>avoiding address translation</li>
+<li>pipelined cache access</li>
+<li>trace caches</li>
+</ul>
+</li>
+</ol>
+<h1 average="" memory="" access="" time="" id="text"><a class="anchor" href="#text">#</a> [<br>
+\text</h1>
+<p>\frac{\text{Whole accesses time}}<br>
+{\text{All memory accesses in program}}<br>
+]</p>
+<h1 id=""><a class="anchor" href="#">#</a> [</h1>
+<p>\frac{\text{Accesses time on hitting}+\text{Accesses time on miss}}<br>
+{\text{All memory accesses in program}}<br>
+]</p>
+<p>[<br>
+= HitTime + (MissRate \times MissPenalty)<br>
+]</p>
+<h1 id="-2"><a class="anchor" href="#-2">#</a> [</h1>
+<p>(HitTime_{Inst}<br>
++<br>
+MissRate_{Inst}<br>
+\times<br>
+MissPenalty_{Inst})<br>
+\times<br>
+Inst%<br>
+]</p>
+<p>[<br>
++<br>
+(HitTime_{Data}<br>
++<br>
+MissRate_{Data}<br>
+\times<br>
+MissPenalty_{Data})<br>
+\times<br>
+Data%<br>
+]</p>
+<h1 id="cputime"><a class="anchor" href="#cputime">#</a> [<br>
+CPUTime</h1>
+<p>IC<br>
+\times<br>
+\left(<br>
+\frac{AluOps}{Inst}<br>
+\times<br>
+CPI_{AluOps}<br>
++<br>
+\frac{MemAccess}{Inst}<br>
+\times<br>
+AMAT<br>
+\right)<br>
+\times<br>
+CycleTime<br>
+]</p>
+<h3 id="tlb"><a class="anchor" href="#tlb">#</a> TLB</h3>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20260623225136882.avif" alt="image-20260623225136882"></p>
+<p>还有virtual memory</p>
+<h3 id="cache计算"><a class="anchor" href="#cache计算">#</a> cache计算</h3>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20260623225211269.avif" alt="image-20260623225211269"></p>
+<h3 id="ilp动态调度"><a class="anchor" href="#ilp动态调度">#</a> ILP：动态调度</h3>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20260623230344750-1782227026549-1.avif" alt="image-20260623230344750"></p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20260623230358471.avif" alt="image-20260623230358471"></p>
+<p>考察大题，大概考 带ROB的tomasulo。</p>
+<p>指令怎么走，流程；指令相关性，hazard，乱序下来会执行多少拍。</p>
+<h3 id="uma"><a class="anchor" href="#uma">#</a> UMA</h3>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20260623230940178.avif" alt="image-20260623230940178"></p>
+<h3 id="flynn"><a class="anchor" href="#flynn">#</a> Flynn</h3>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20260623230808440.avif" alt="image-20260623230808440"></p>
+<h3 id="cache一致性"><a class="anchor" href="#cache一致性">#</a> cache一致性</h3>
+<p>介绍了两种，基于目录的，分布式架构，总线的监听协议，SMI等</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20260623230949159.avif" alt="image-20260623230949159"></p>
+<div class="tags"><a href="/tags/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" rel="tag"><i class="ic i-tag"></i>课堂笔记</a><a href="/tags/%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" rel="tag"><i class="ic i-tag"></i>体系结构</a></div></div><footer><div class="meta"></div><div id="copyright"><ul><li class="author"><strong>本文作者：</strong>Luchron<i class="ic i-at"><em>@</em></i>絶対忘れてやらないよ</li><li class="link"><strong>本文链接：</strong><a href="https://luchron.github.io/2026/06/29/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" title="计算机体系结构">https://luchron.github.io/2026/06/29/课堂笔记/计算机体系结构/</a></li><li class="license"><strong>版权声明：</strong>本站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/2026/06/26/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/" rel="prev" itemprop="url" data-background-image="//assets/04.jpg" title="数据库系统"><span class="type">上一篇</span><span class="category"><i class="ic i-flag"></i>课堂笔记</span><h3>数据库系统</h3></a></div><div class="item right"><a href="/2026/07/15/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="next" itemprop="url" data-background-image="//assets/03.jpg" title="深度学习"><span class="type">下一篇</span><span class="category"><i class="ic i-flag"></i>课堂笔记</span><h3>深度学习</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#chap-1"><span class="toc-number">1.</span> <span class="toc-text"> CHAP 1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E9%9D%A0%E6%80%A7"><span class="toc-number">1.1.</span> <span class="toc-text"> 可靠性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#measuring-reporting-and-summarizing-performance"><span class="toc-number">1.1.1.</span> <span class="toc-text"> Measuring, Reporting and Summarizing Performance</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E8%83%BD%E8%80%97"><span class="toc-number">1.2.</span> <span class="toc-text"> 关于能耗</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BF%E5%A7%86%E8%BE%BE%E5%B0%94%E5%AE%9A%E5%BE%8B"><span class="toc-number">1.3.</span> <span class="toc-text"> 阿姆达尔定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#isa"><span class="toc-number">1.4.</span> <span class="toc-text"> ISA</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#isa-%E7%B1%BB%E5%88%AB"><span class="toc-number">1.4.1.</span> <span class="toc-text"> ISA 类别</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chap-2"><span class="toc-number">2.</span> <span class="toc-text"> CHAP 2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cache%E5%AD%98%E6%94%BE"><span class="toc-number">2.1.</span> <span class="toc-text"> cache存放</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#block-identification"><span class="toc-number">2.2.</span> <span class="toc-text"> Block Identification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hit-miss"><span class="toc-number">2.3.</span> <span class="toc-text"> hit &amp; miss</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#block-replacement"><span class="toc-number">2.4.</span> <span class="toc-text"> Block replacement</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#write-strategy"><span class="toc-number">2.5.</span> <span class="toc-text"> Write Strategy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E8%AE%A1%E7%AE%97"><span class="toc-number">2.6.</span> <span class="toc-text"> 性能计算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#impact-of-caches-on-processor-performance"><span class="toc-number">2.6.1.</span> <span class="toc-text"> Impact of Caches on Processor Performance</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%B1%E5%BA%8F%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-number">2.6.2.</span> <span class="toc-text"> 乱序处理器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F"><span class="toc-number">2.6.3.</span> <span class="toc-text"> 计算公式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#virtual-memory"><span class="toc-number">2.7.</span> <span class="toc-text"> Virtual memory</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">2.7.1.</span> <span class="toc-text"> 基本结构</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chap-3"><span class="toc-number">3.</span> <span class="toc-text"> CHAP 3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%9D%97"><span class="toc-number">3.1.</span> <span class="toc-text"> 基本块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dependences-in-instructions"><span class="toc-number">3.2.</span> <span class="toc-text"> Dependences in Instructions</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#data-dependences"><span class="toc-number">3.2.1.</span> <span class="toc-text"> Data Dependences</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#name-dependences"><span class="toc-number">3.2.2.</span> <span class="toc-text"> Name Dependences</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#data-hazards"><span class="toc-number">3.2.3.</span> <span class="toc-text"> Data Hazards</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#control-dependences"><span class="toc-number">3.2.4.</span> <span class="toc-text"> Control Dependences</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dynamic-scheduling"><span class="toc-number">3.3.</span> <span class="toc-text"> Dynamic Scheduling</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#scoreboarding"><span class="toc-number">3.3.1.</span> <span class="toc-text"> Scoreboarding</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tomasulos-algorithm"><span class="toc-number">3.3.2.</span> <span class="toc-text"> Tomasulo's Algorithm</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hardware-based-speculation"><span class="toc-number">3.4.</span> <span class="toc-text"> Hardware-Based Speculation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#multiple-issue"><span class="toc-number">3.5.</span> <span class="toc-text"> Multiple Issue</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#using-static-scheduling"><span class="toc-number">3.5.1.</span> <span class="toc-text"> Using Static Scheduling</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chap-4"><span class="toc-number">4.</span> <span class="toc-text"> CHAP 4</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#vector-architecture"><span class="toc-number">4.1.</span> <span class="toc-text"> Vector Architecture</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cray-1"><span class="toc-number">4.2.</span> <span class="toc-text"> CRAY-1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#array-processor"><span class="toc-number">4.3.</span> <span class="toc-text"> Array Processor</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chap-5"><span class="toc-number">5.</span> <span class="toc-text"> CHAP 5</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#introduction"><span class="toc-number">5.1.</span> <span class="toc-text"> Introduction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#challenges-of-parallel-processing"><span class="toc-number">5.2.</span> <span class="toc-text"> Challenges of Parallel Processing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#multiprocessor-cache-coherence"><span class="toc-number">5.3.</span> <span class="toc-text"> Multiprocessor Cache Coherence</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BA%BF%E7%9B%91%E5%90%AC%E5%8D%8F%E8%AE%AE"><span class="toc-number">5.3.1.</span> <span class="toc-text"> 总线监听协议</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#msi"><span class="toc-number">5.3.2.</span> <span class="toc-text"> MSI</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mesi"><span class="toc-number">5.3.3.</span> <span class="toc-text"> MESI</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%87%E8%80%83"><span class="toc-number">6.</span> <span class="toc-text"> 备考</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E5%8D%95%E4%BD%8D"><span class="toc-number">6.1.</span> <span class="toc-text"> 一些单位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cpi%E5%85%AC%E5%BC%8F"><span class="toc-number">6.2.</span> <span class="toc-text"> CPI公式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cache"><span class="toc-number">6.3.</span> <span class="toc-text"> cache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E4%B8%AA%E9%97%AE%E9%A2%98"><span class="toc-number">6.4.</span> <span class="toc-text"> 四个问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%BB%E5%86%99%E7%AD%96%E7%95%A5"><span class="toc-number">6.5.</span> <span class="toc-text"> 读写策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#amat"><span class="toc-number">6.6.</span> <span class="toc-text"> AMAT</span></a></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#text"><span class="toc-number"></span> <span class="toc-text"> [
+\text</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number"></span> <span class="toc-text"> [</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#-2"><span class="toc-number"></span> <span class="toc-text"> [</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cputime"><span class="toc-number"></span> <span class="toc-text"> [
+CPUTime</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tlb"><span class="toc-number">0.1.</span> <span class="toc-text"> TLB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cache%E8%AE%A1%E7%AE%97"><span class="toc-number">0.2.</span> <span class="toc-text"> cache计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ilp%E5%8A%A8%E6%80%81%E8%B0%83%E5%BA%A6"><span class="toc-number">0.3.</span> <span class="toc-text"> ILP：动态调度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#uma"><span class="toc-number">0.4.</span> <span class="toc-text"> UMA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flynn"><span class="toc-number">0.5.</span> <span class="toc-text"> Flynn</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cache%E4%B8%80%E8%87%B4%E6%80%A7"><span class="toc-number">0.6.</span> <span class="toc-text"> cache一致性</span></a></li></ol></li></div><div class="related panel pjax" data-title="系列文章"><ul><li><a href="/2025/06/28/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/" rel="bookmark" title="数字逻辑设计">数字逻辑设计</a></li><li><a href="/2025/08/08/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/CS61A/" rel="bookmark" title="CS61A">CS61A</a></li><li><a href="/2025/09/28/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="bookmark" title="高级数据结构 (ADS)">高级数据结构 (ADS)</a></li><li><a href="/2025/10/13/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/" rel="bookmark" title="数据结构基础">数据结构基础</a></li><li><a href="/2025/10/13/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" rel="bookmark" title="离散数学">离散数学</a></li><li><a href="/2026/04/01/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" rel="bookmark" title="面向对象程序设计 (OOP)">面向对象程序设计 (OOP)</a></li><li><a href="/2026/06/26/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/" rel="bookmark" title="数据库系统">数据库系统</a></li><li class="active"><a href="/2026/06/29/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" rel="bookmark" title="计算机体系结构">计算机体系结构</a></li><li><a href="/2026/07/15/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="bookmark" title="深度学习">深度学习</a></li><li><a href="/2026/07/15/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/" rel="bookmark" title="自然语言处理 (NLP)">自然语言处理 (NLP)</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="image" loading="lazy" decoding="async" itemprop="image" alt="Luchron" src="/assets/avatar.avif"><p class="name" itemprop="name">Luchron</p><div class="description" itemprop="description">未下眉头，又上心头</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">48</span><span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">5</span><span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">47</span><span class="name">标签</span></a></div></nav><div class="social"><a target="_blank" rel="noopener" href="https://github.com/LuChron" class="item github" title="https://github.com/LuChron"><i class="ic i-github"></i></a><a href="mailto:3454410481@qq.com" class="item email" title="mailto:3454410481@qq.com"><i class="ic i-envelope"></i></a></div><div class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item dropdown"><a href="#" onclick="return false;"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li></div></div></div></div><ul id="quick"><li class="prev pjax"><a href="/2026/07/15/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/2026/06/26/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div><div id="player"></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/%E5%85%B3%E4%BA%8E%E6%88%91/" title="分类于关于我">关于我</a></div><span><a href="/2025/10/13/%E5%85%B3%E4%BA%8E%E6%88%91/about%20me/">about me</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/" title="分类于科研学习">科研学习</a></div><span><a href="/2026/05/03/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/%E6%A8%A1%E5%9E%8B%E9%87%8F%E5%8C%96/">模型量化</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" title="分类于课堂笔记">课堂笔记</a></div><span><a href="/2026/07/15/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/" title="分类于科研学习">科研学习</a></div><span><a href="/2026/01/21/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/PhysTwin/">PhysTwin 论文阅读</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2026/03/24/hello-world/">Hello World</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/React/">React</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/" title="分类于超算短学期">超算短学期</a></div><span><a href="/2025/08/10/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/Solver%E7%AC%94%E8%AE%B0/">Solver Challenge 笔记</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/typescript/">TypeScript</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/git/git_learn/">git简介</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/05/18/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/%E7%99%BB%E5%BD%95%E4%B8%8E%E9%89%B4%E6%9D%83/">登录与鉴权</a></span></li></ul></div></div><div class="status"><div class="copyright">© 2022 -<span itemprop="copyrightYear">2026</span><span class="with-love"><i class="ic i-sakura rotate"></i></span><span class="author" itemprop="copyrightHolder">Luchron @ LuChron's Blog</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i></span><span title="站点总字数">995k 字</span><span class="post-meta-divider"> | </span><span class="post-meta-item-icon"><i class="ic i-coffee"></i></span><span title="站点阅读时长">15:04</span></div><div class="powered-by">基于 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> &amp; Theme.<a target="_blank" rel="noopener" href="https://github.com/theme-shoka-x/hexo-theme-shokaX/">ShokaX</a></div></div></div></footer></div><script data-config="" type="text/javascript">var LOCAL = {
+    ispost: true,
+    path: `2026/06/29/课堂笔记/计算机体系结构/`,
+    favicon: {
+        show: `你回来了(￣▽￣)`,
+        hide: `她跑掉了(╥﹏╥)`
+    },
+    search: {
+        placeholder: "文章搜索",
+        empty: "关于 「 ${query} 」，什么也没搜到",
+        stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    nocopy: "false",
+    copyright: `复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。`,
+    copy_tex: false,
+    katex: false,
+    mermaid: false,
+    audio: undefined,
+    nocopy: false,
+    outime: true,
+    template: `<div class="note warning"><p><span class="label warning">文章时效性提示</span><br>这是一篇发布于 {{publish}} 天前，最后一次更新在 {{updated}} 天前的文章，部分信息可能已经发生改变，请注意甄别。</p></div>`,
+    quiz: {
+        choice: `单选题`,
+        multiple: `多选题`,
+        true_false: `判断题`,
+        essay: `问答题`,
+        gap_fill: `填空题`,
+        mistake: `错题备注`
+    }
+};
+</script><script src="/js/siteInit.js?v=0.5.4" type="module" fetchpriority="high" defer=""></script></body></html>

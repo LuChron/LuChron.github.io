@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"><meta name="renderer" content="webkit"><link rel="icon" type="image/ico" sizes="32x32" href="/assets/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="alternate" href="/rss.xml" title="絶対忘れてやらないよ" type="application/rss+xml"><link rel="alternate" href="/atom.xml" title="絶対忘れてやらないよ" type="application/atom+xml"><link rel="alternate" type="application/json" title="絶対忘れてやらないよ" href="https://luchron.github.io/feed.json"><link rel="preconnect" href="https://s4.zstatic.net"><link rel="preconnect" href="https://at.alicdn.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CFredericka%20the%20Great:400,400italic,700,700italic%7CNoto%20Serif%20JP:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CInconsolata:400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext" media="none" onload="this.media='all'"><link rel="modulepreload" href="/js/siteInit.js"><link rel="modulepreload" href="/js/nyx-player-HGUYDKEU.js"><link rel="modulepreload" href="/js/copy-tex-FIB26BBA.js"><link rel="modulepreload" href="/js/post-S7SVO5ZB.js"><link rel="modulepreload" href="/js/chunk-WN4FGWSR.js"><link rel="modulepreload" href="/js/pagefind-ROWL75QD.js"><link rel="modulepreload" href="/js/index.esm-V2O4HKJY.js"><link rel="modulepreload" href="/js/chunk-HJSTZ4VX.js"><link rel="modulepreload" href="/js/chunk-HZLNKXMP.js"><link rel="stylesheet" href="/css/siteInit.css" media="none" onload="this.media='all'"><link rel="preload" href="//assets/02.jpg" as="image" fetchpriority="high"><meta name="keywords" content="科研,仿真"><meta name="description" content="NVIDIA Isaac Sim 机器人仿真平台介绍"><link rel="canonical" href="https://luchron.github.io/2026/03/11/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/IsaacSim/"><link rel="stylesheet" href="/css/post.css?v=0.5.4"><link rel="stylesheet" href="/css/mermaid.css?v=0.5.4"><!-- 临时处理--><link rel="stylesheet" media="none" onload="this.media='all'" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css"><title>Isaac Sim</title><meta name="generator" content="Hexo 7.3.0"></head><body itemscope="" itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="pagefind_mount"></div><div id="container"><header id="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">Isaac Sim</h1><div class="meta"><span class="item" title="创建时间：2026-03-11 20:50:22"><span class="icon"><i class="ic i-calendar"></i></span><span class="text">发表于</span><time itemprop="dateCreated datePublished" datetime="2026-03-11T20:50:22+08:00">2026-03-11</time></span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i></span><span class="text">本文字数</span><span>3.6k</span><span class="text">字</span></span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i></span><span class="text">阅读时长</span><span>3 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span><span class="line"></span><span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">LuChron's Blog</a></li></ul><ul class="right" id="rightNav"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div class="pjax" id="imgs"><img src="/assets/02.avif" loading="eager" decoding="async" fetchpriority="high" alt="絶対忘れてやらないよ"></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><main><div class="inner"><div class="pjax" id="main"><div class="article wrap"><div class="breadcrumb" itemlistelement="" itemscope="" itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i><span><a href="/">首页</a></span><i class="ic i-angle-right"></i><span class="current" itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/categories/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/" itemprop="item" rel="index" title="分类于科研学习"><span itemprop="name">科研学习<meta itemprop="position" content="0"></span></a></span></div><article class="post block" itemscope="itemscope" itemtype="http://schema.org/Article" data-pagefind-body="data-pagefind-body" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://luchron.github.io/2026/03/11/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/IsaacSim/"><span hidden="hidden" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="image" content="/assets/avatar.jpg"><meta itemprop="name" content="Luchron"><meta itemprop="description" content="狗窝, 未下眉头，又上心头"></span><span hidden="hidden" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="絶対忘れてやらないよ"></span><div class="body md" itemprop="articleBody"><p>在了解了 IsaacLab 之后，再来看 <strong>Isaac Sim</strong> 就会非常清晰了。</p>
+<p><strong>Isaac Sim 是 NVIDIA 开发的一个极其强大的“机器人仿真通用平台”（即一个虚拟的物理世界），而 IsaacLab 只是搭建在这个平台之上的一个专门用于强化学习的“插件”或“应用”。</strong></p>
+<p>打个比方：<strong>Isaac Sim 就像是操作系统（或者是 Unreal/Unity 这样的游戏引擎）</strong>，它提供物理规则、光影渲染、基础模型；而 <strong>IsaacLab 则是运行在它上面的一款“AI 训练营游戏”</strong>。</p>
+<hr>
+<h3 id="1-isaac-sim-的底层基石"><a class="anchor" href="#1-isaac-sim-的底层基石">#</a> 1. Isaac Sim 的底层基石</h3>
+<p>Isaac Sim 之所以强大，是因为它并不是从零写的一个独立软件，它是构建在 <strong>NVIDIA Omniverse</strong> 平台之上的核心应用。它集成了英伟达最顶尖的几项技术：</p>
+<ul>
+<li><strong>USD (Universal Scene Description)</strong>：这是皮克斯（Pixar）开源的一种 3D 场景通用描述格式。你可以把它理解为“3D 界的 HTML”。传统的机器模型（如 URDF、SDF）在 Isaac Sim 中都会被转换成 USD 格式。这使得 CAD 工程师、动画师和机器人专家可以在同一个虚拟场景里无缝协作。</li>
+<li><strong>PhysX 5 物理引擎</strong>：不仅能极其精确地模拟刚体（比如金属机器人的碰撞、重力、摩擦力），还能模拟柔性物体（布料、海绵）、流体，甚至模拟齿轮的咬合和电机的扭矩。这种高精度的物理模拟是实现“Sim-to-Real（仿真到现实）”的基础。</li>
+<li><strong>RTX 光线追踪渲染技术</strong>：Isaac Sim 生成的画面是电影级的、照片级的。这不仅仅是为了好看，更重要的是为了<strong>欺骗机器人的眼睛（摄像头）</strong>，让基于视觉的 AI 模型在虚拟世界里看到的画面，和真实世界一模一样。</li>
+</ul>
+<hr>
+<h3 id="2-isaac-sim-的核心功能"><a class="anchor" href="#2-isaac-sim-的核心功能">#</a> 2. Isaac Sim 的核心功能</h3>
+<p>作为一个专为机器人打造的仿真器，它自带了非常多专门针对机器人学（Robotics）的硬核功能：</p>
+<h4 id="a-高逼真度的传感器模拟-sensor-simulation"><a class="anchor" href="#a-高逼真度的传感器模拟-sensor-simulation">#</a> A. 高逼真度的传感器模拟 (Sensor Simulation)</h4>
+<p>现实中的机器人靠传感器感知世界，Isaac Sim 能在虚拟环境里完美模拟这些传感器，并输出极其逼真的数据：</p>
+<ul>
+<li><strong>RGB-D 相机</strong>：输出彩色图像和深度图（且包含真实的镜头畸变、噪点）。</li>
+<li><strong>LiDAR（激光雷达）</strong>：模拟真实的激光射线打在物体上的反射，输出精确的点云数据（支持各类主流雷达型号，如 Velodyne、Ouster 等）。</li>
+<li><strong>IMU / 接触传感器 / 力矩传感器</strong>：模拟机器人的姿态、加速度和受力情况。</li>
+</ul>
+<h4 id="b-合成数据生成-synthetic-data-generation-sdg"><a class="anchor" href="#b-合成数据生成-synthetic-data-generation-sdg">#</a> B. 合成数据生成 (Synthetic Data Generation - SDG)</h4>
+<p>这是 Isaac Sim 的一大杀手锏（内置工具名为 <strong>Omniverse Replicator</strong>）。<br>
+以前训练视觉 AI（比如识别传送带上的瑕疵零件），需要人工拍几万张照片并手动框选标注。在 Isaac Sim 里，因为它是上帝视角，它知道场景里每个物体的精确位置和轮廓。所以它可以<strong>自动、无限量地生成带有完美标签（2D/3D 边界框、语义分割、实例分割）的训练图像</strong>。</p>
+<h4 id="c-ros-ros-2-无缝桥接-ros-bridge"><a class="anchor" href="#c-ros-ros-2-无缝桥接-ros-bridge">#</a> C. ROS / ROS 2 无缝桥接 (ROS Bridge)</h4>
+<p><strong>ROS (Robot Operating System)</strong> 是机器人界使用最广的中间件。Isaac Sim 内置了极其完善的 ROS/ROS 2 接口。<br>
+这意味着什么？你可以把现实中机器人大脑里跑的 ROS 代码一字不改，直接连上 Isaac Sim。在电脑里通过 ROS 发指令，虚拟机器人就会动；虚拟传感器收集到的数据，也会通过 ROS 传回给你的算法。<strong>它是测试机器人软件代码的最佳试验场。</strong></p>
+<h4 id="d-域随机化-domain-randomization"><a class="anchor" href="#d-域随机化-domain-randomization">#</a> D. 域随机化 (Domain Randomization)</h4>
+<p>为了防止 AI 在虚拟环境里“死记硬背”（过拟合），Isaac Sim 可以一键打乱世界规则：随机改变光照颜色、随机改变地板纹理、随机增加物体的质量、稍微改变电机的摩擦力。这让训练出来的 AI 拥有极强的泛化能力，到了真实世界也不会懵圈。</p>
+<hr>
+<h3 id="3-isaac-sim-的主要应用场景"><a class="anchor" href="#3-isaac-sim-的主要应用场景">#</a> 3. Isaac Sim 的主要应用场景</h3>
+<p>除了支撑 IsaacLab 做强化学习之外，Isaac Sim 在工业界和学术界还有更广泛的用途：</p>
+<ol>
+<li><strong>工厂与仓库的“数字孪生”（Digital Twins）</strong>：<br>
+比如宝马（BMW）和亚马逊（Amazon）使用 Isaac Sim 1:1 在电脑里重建了整个庞大的工厂和物流中心。在里面模拟几百台 AGV 小车（移动机器人）和机械臂协同工作，测试最优的路线规划，避免在现实中发生碰撞。</li>
+<li><strong>机器人软件的 CI/CD（持续集成/持续部署）</strong>：<br>
+机器人公司在发布新版自动驾驶或导航代码前，不需要拿几百万的真机器去冒险测试。直接在 Isaac Sim 的虚拟测试场跑几万公里的里程，验证代码没有 Bug后再部署。</li>
+<li><strong>视觉 AI 模型训练</strong>：<br>
+利用前面提到的 SDG 合成数据生成，低成本、快速地训练工业质检模型或机器人抓取模型。</li>
+</ol>
+<hr>
+<h3 id="4-总结isaac-sim-与周边生态的关系"><a class="anchor" href="#4-总结isaac-sim-与周边生态的关系">#</a> 4. 总结：Isaac Sim 与周边生态的关系</h3>
+<p>理清下面这个逻辑链条，你就彻底懂了英伟达的机器人布局：</p>
+<ol>
+<li><strong>NVIDIA Omniverse</strong>：最底层的 3D 计算与协作平台（地基）。</li>
+<li><strong>Isaac Sim</strong>：建在地基上的“虚拟机器人世界”（提供物理、渲染、传感器和数据）。</li>
+<li><strong>IsaacLab / Isaac Gym</strong>：在 Isaac Sim 这个世界里专门用于“AI 强化学习提速”的训练框架。</li>
+<li><strong>Isaac ROS</strong>：英伟达提供的一系列可以在真实机器人上跑的、经过 GPU 加速的算法包（比如 VSLAM 导航）。</li>
+</ol>
+<p><strong>缺点/门槛</strong>：<br>
+和 IsaacLab 一样，Isaac Sim 是一个典型的“重型武器”。它的体积庞大（几十个 G），对显卡要求极高（官方建议 RTX 3070 起步，真正搞科研通常需要 RTX 4090 或更高级别的显存），并且主要在 Ubuntu (Linux) 环境下发挥最佳性能。但只要跨过了硬件门槛，它就是目前市面上最先进、最无可替代的机器人仿真神器。</p>
+<h2 id="引言"><a class="anchor" href="#引言">#</a> 引言</h2>
+<p>在机器人技术和人工智能飞速发展的今天，仿真技术已成为开发和测试机器人系统不可或缺的工具。NVIDIA Isaac Sim 作为一款基于 Omniverse 平台构建的高性能机器人仿真工具包，正受到越来越多开发者和研究人员的青睐。</p>
+<p>Isaac Sim 不仅仅是一个简单的模拟器，它是一个完整的机器人开发生态系统，提供了从虚拟环境构建、物理精确模拟到传感器数据生成和机器学习模型 训练的全套工具链。无论是学术研究还是工业应用，Isaac Sim 都能提供强大的支持。</p>
+<h2 id="isaac-sim-概述与核心概念"><a class="anchor" href="#isaac-sim-概述与核心概念">#</a> Isaac Sim 概述与核心概念</h2>
+<h4 id="什么是-isaac-sim"><a class="anchor" href="#什么是-isaac-sim">#</a> 什么是 Isaac Sim</h4>
+<p>NVIDIA Isaac Sim 是 NVIDIA Omniverse 平台的机器人仿真工具包，具备构建虚拟机器人世界和实验的关键功能。它为研究人员和从业人员提供了创建健壮、物理精确仿真和合成数据集所需的工具和工作流程 。</p>
+<p>Isaac Sim 通过 ROS/ROS2 支持导航和操控应用，可以模拟 RGB-D、Lidar 和 IMU 等传感器的传感器数据，用于多种计算机视觉技术，如领域随机化、真值标签、分割和边界框。</p>
+<h4 id="isaac-sim-的架构"><a class="anchor" href="#isaac-sim-的架构">#</a> Isaac Sim 的架构</h4>
+<p>Isaac Sim 建立在两个核心基础之上：</p>
+<ul>
+<li>
+<p>Omniverse Kit：用于构建原生 Omniverse 应用程序和微服务的工具包。</p>
+</li>
+<li>
+<p>USD (Universal Scene Description)：由皮克斯动画公司制定的通用场景描述格式，是一个高性能可扩展的软件平台，用于协作构建动画 3D 场景。</p>
+</li>
+</ul>
+<h4 id="isaac-sim-的应用场景"><a class="anchor" href="#isaac-sim-的应用场景">#</a> Isaac Sim 的应用场景</h4>
+<p>Isaac Sim 在机器人技术领域有广泛的应用：</p>
+<ul>
+<li>
+<p>机器人学习与强化学习：为训练机器学习模型提供合成数据和模拟环境</p>
+</li>
+<li>
+<p>算法开发与测试：在安全、可控的虚拟环境中开发和验证算法</p>
+</li>
+<li>
+<p>系统验证：在实际部署前对完整机器人系统进行测试</p>
+</li>
+<li>
+<p>合成数据生成：生成带有标注的训练数据用于计算机视觉任务</p>
+</li>
+<li>
+<p>人机协作模拟：模拟人类与机器人互动的场景</p>
+</li>
+</ul>
+<blockquote>
+<p>就是那个应用界面，后续笔记待补充</p>
+</blockquote>
+<div class="tags"><a href="/tags/%E7%A7%91%E7%A0%94/" rel="tag"><i class="ic i-tag"></i>科研</a><a href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/" rel="tag"><i class="ic i-tag"></i>机器人</a><a href="/tags/%E4%BB%BF%E7%9C%9F/" rel="tag"><i class="ic i-tag"></i>仿真</a></div></div><footer><div class="meta"></div><div id="copyright"><ul><li class="author"><strong>本文作者：</strong>Luchron<i class="ic i-at"><em>@</em></i>絶対忘れてやらないよ</li><li class="link"><strong>本文链接：</strong><a href="https://luchron.github.io/2026/03/11/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/IsaacSim/" title="Isaac Sim">https://luchron.github.io/2026/03/11/科研学习/IsaacSim/</a></li><li class="license"><strong>版权声明：</strong>本站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/2026/03/11/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/IsaacLab/" rel="prev" itemprop="url" data-background-image="//assets/01.jpg" title="IsaacLab"><span class="type">上一篇</span><span class="category"><i class="ic i-flag"></i>科研学习</span><h3>IsaacLab</h3></a></div><div class="item right"><a href="/2026/03/24/hello-world/" rel="next" itemprop="url" data-background-image="//assets/01.jpg" title="Hello World"><span class="type">下一篇</span><h3>Hello World</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-isaac-sim-%E7%9A%84%E5%BA%95%E5%B1%82%E5%9F%BA%E7%9F%B3"><span class="toc-number">1.</span> <span class="toc-text"> 1. Isaac Sim 的底层基石</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-isaac-sim-%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD"><span class="toc-number">2.</span> <span class="toc-text"> 2. Isaac Sim 的核心功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#a-%E9%AB%98%E9%80%BC%E7%9C%9F%E5%BA%A6%E7%9A%84%E4%BC%A0%E6%84%9F%E5%99%A8%E6%A8%A1%E6%8B%9F-sensor-simulation"><span class="toc-number">2.1.</span> <span class="toc-text"> A. 高逼真度的传感器模拟 (Sensor Simulation)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#b-%E5%90%88%E6%88%90%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90-synthetic-data-generation-sdg"><span class="toc-number">2.2.</span> <span class="toc-text"> B. 合成数据生成 (Synthetic Data Generation - SDG)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#c-ros-ros-2-%E6%97%A0%E7%BC%9D%E6%A1%A5%E6%8E%A5-ros-bridge"><span class="toc-number">2.3.</span> <span class="toc-text"> C. ROS / ROS 2 无缝桥接 (ROS Bridge)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#d-%E5%9F%9F%E9%9A%8F%E6%9C%BA%E5%8C%96-domain-randomization"><span class="toc-number">2.4.</span> <span class="toc-text"> D. 域随机化 (Domain Randomization)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-isaac-sim-%E7%9A%84%E4%B8%BB%E8%A6%81%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">3.</span> <span class="toc-text"> 3. Isaac Sim 的主要应用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%80%BB%E7%BB%93isaac-sim-%E4%B8%8E%E5%91%A8%E8%BE%B9%E7%94%9F%E6%80%81%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">4.</span> <span class="toc-text"> 4. 总结：Isaac Sim 与周边生态的关系</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-number"></span> <span class="toc-text"> 引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#isaac-sim-%E6%A6%82%E8%BF%B0%E4%B8%8E%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="toc-number"></span> <span class="toc-text"> Isaac Sim 概述与核心概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-isaac-sim"><span class="toc-number">0.1.</span> <span class="toc-text"> 什么是 Isaac Sim</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#isaac-sim-%E7%9A%84%E6%9E%B6%E6%9E%84"><span class="toc-number">0.2.</span> <span class="toc-text"> Isaac Sim 的架构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#isaac-sim-%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">0.3.</span> <span class="toc-text"> Isaac Sim 的应用场景</span></a></li></ol></li></div><div class="related panel pjax" data-title="系列文章"><ul><li><a href="/2026/01/21/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/PhysTwin/" rel="bookmark" title="PhysTwin 论文阅读">PhysTwin 论文阅读</a></li><li><a href="/2026/03/11/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/ROS2/" rel="bookmark" title="ROS2">ROS2</a></li><li><a href="/2026/03/11/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/IsaacLab/" rel="bookmark" title="IsaacLab">IsaacLab</a></li><li class="active"><a href="/2026/03/11/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/IsaacSim/" rel="bookmark" title="Isaac Sim">Isaac Sim</a></li><li><a href="/2026/04/12/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/cs231n/" rel="bookmark" title="cs231n 课程笔记">cs231n 课程笔记</a></li><li><a href="/2026/04/19/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/VGGT/" rel="bookmark" title="VGGT 论文阅读">VGGT 论文阅读</a></li><li><a href="/2026/05/03/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/%E6%A8%A1%E5%9E%8B%E9%87%8F%E5%8C%96/" rel="bookmark" title="模型量化">模型量化</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="image" loading="lazy" decoding="async" itemprop="image" alt="Luchron" src="/assets/avatar.avif"><p class="name" itemprop="name">Luchron</p><div class="description" itemprop="description">未下眉头，又上心头</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">48</span><span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">5</span><span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">47</span><span class="name">标签</span></a></div></nav><div class="social"><a target="_blank" rel="noopener" href="https://github.com/LuChron" class="item github" title="https://github.com/LuChron"><i class="ic i-github"></i></a><a href="mailto:3454410481@qq.com" class="item email" title="mailto:3454410481@qq.com"><i class="ic i-envelope"></i></a></div><div class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item dropdown"><a href="#" onclick="return false;"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li></div></div></div></div><ul id="quick"><li class="prev pjax"><a href="/2026/03/24/hello-world/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/2026/03/11/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/IsaacLab/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div><div id="player"></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/06/30/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/ComputerScienceDistilled/">《Computer Science Distilled》读书笔记</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" title="分类于课堂笔记">课堂笔记</a></div><span><a href="/2026/04/01/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">面向对象程序设计 (OOP)</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/" title="分类于超算短学期">超算短学期</a></div><span><a href="/2025/08/24/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/%E4%BB%8E%E9%9B%B6%E5%AE%9E%E7%8E%B0Qwen3%E7%BB%84%E4%BB%B6/">从零实现 Qwen3 关键组件</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/08/18/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%8E%B0%E4%BB%A3CSharp%E5%9F%BA%E7%A1%80/">现代 C# 基础</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/05/18/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/%E7%99%BB%E5%BD%95%E4%B8%8E%E9%89%B4%E6%9D%83/">登录与鉴权</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/" title="分类于超算短学期">超算短学期</a></div><span><a href="/2025/05/29/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/Linux%E5%85%A5%E9%97%A8/">Linux 入门</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/NPM/">NPM</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E5%85%B3%E4%BA%8E%E6%88%91/" title="分类于关于我">关于我</a></div><span><a href="/2025/10/13/%E5%85%B3%E4%BA%8E%E6%88%91/about%20me/">about me</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/" title="分类于科研学习">科研学习</a></div><span><a href="/2026/03/11/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/ROS2/">ROS2</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/12/20/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/CMake/">CMake</a></span></li></ul></div></div><div class="status"><div class="copyright">© 2022 -<span itemprop="copyrightYear">2026</span><span class="with-love"><i class="ic i-sakura rotate"></i></span><span class="author" itemprop="copyrightHolder">Luchron @ LuChron's Blog</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i></span><span title="站点总字数">995k 字</span><span class="post-meta-divider"> | </span><span class="post-meta-item-icon"><i class="ic i-coffee"></i></span><span title="站点阅读时长">15:04</span></div><div class="powered-by">基于 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> &amp; Theme.<a target="_blank" rel="noopener" href="https://github.com/theme-shoka-x/hexo-theme-shokaX/">ShokaX</a></div></div></div></footer></div><script data-config="" type="text/javascript">var LOCAL = {
+    ispost: true,
+    path: `2026/03/11/科研学习/IsaacSim/`,
+    favicon: {
+        show: `你回来了(￣▽￣)`,
+        hide: `她跑掉了(╥﹏╥)`
+    },
+    search: {
+        placeholder: "文章搜索",
+        empty: "关于 「 ${query} 」，什么也没搜到",
+        stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    nocopy: "false",
+    copyright: `复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。`,
+    copy_tex: false,
+    katex: false,
+    mermaid: false,
+    audio: undefined,
+    nocopy: false,
+    outime: true,
+    template: `<div class="note warning"><p><span class="label warning">文章时效性提示</span><br>这是一篇发布于 {{publish}} 天前，最后一次更新在 {{updated}} 天前的文章，部分信息可能已经发生改变，请注意甄别。</p></div>`,
+    quiz: {
+        choice: `单选题`,
+        multiple: `多选题`,
+        true_false: `判断题`,
+        essay: `问答题`,
+        gap_fill: `填空题`,
+        mistake: `错题备注`
+    }
+};
+</script><script src="/js/siteInit.js?v=0.5.4" type="module" fetchpriority="high" defer=""></script></body></html>

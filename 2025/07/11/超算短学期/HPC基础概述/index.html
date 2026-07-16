@@ -1,0 +1,527 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"><meta name="renderer" content="webkit"><link rel="icon" type="image/ico" sizes="32x32" href="/assets/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="alternate" href="/rss.xml" title="絶対忘れてやらないよ" type="application/rss+xml"><link rel="alternate" href="/atom.xml" title="絶対忘れてやらないよ" type="application/atom+xml"><link rel="alternate" type="application/json" title="絶対忘れてやらないよ" href="https://luchron.github.io/feed.json"><link rel="preconnect" href="https://s4.zstatic.net"><link rel="preconnect" href="https://at.alicdn.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CFredericka%20the%20Great:400,400italic,700,700italic%7CNoto%20Serif%20JP:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CInconsolata:400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext" media="none" onload="this.media='all'"><link rel="modulepreload" href="/js/siteInit.js"><link rel="modulepreload" href="/js/nyx-player-HGUYDKEU.js"><link rel="modulepreload" href="/js/copy-tex-FIB26BBA.js"><link rel="modulepreload" href="/js/post-S7SVO5ZB.js"><link rel="modulepreload" href="/js/chunk-WN4FGWSR.js"><link rel="modulepreload" href="/js/pagefind-ROWL75QD.js"><link rel="modulepreload" href="/js/index.esm-V2O4HKJY.js"><link rel="modulepreload" href="/js/chunk-HJSTZ4VX.js"><link rel="modulepreload" href="/js/chunk-HZLNKXMP.js"><link rel="stylesheet" href="/css/siteInit.css" media="none" onload="this.media='all'"><link rel="preload" href="//assets/03.jpg" as="image" fetchpriority="high"><meta name="keywords" content="HPC,"><meta name="description" content="计算机系统基础与 HPC 发展概述"><link rel="canonical" href="https://luchron.github.io/2025/07/11/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/HPC%E5%9F%BA%E7%A1%80%E6%A6%82%E8%BF%B0/"><link rel="stylesheet" href="/css/post.css?v=0.5.4"><link rel="stylesheet" href="/css/mermaid.css?v=0.5.4"><!-- 临时处理--><link rel="stylesheet" media="none" onload="this.media='all'" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css"><title>HPC 基础概述</title><meta name="generator" content="Hexo 7.3.0"></head><body itemscope="" itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="pagefind_mount"></div><div id="container"><header id="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">HPC 基础概述</h1><div class="meta"><span class="item" title="创建时间：2025-07-11 20:23:36"><span class="icon"><i class="ic i-calendar"></i></span><span class="text">发表于</span><time itemprop="dateCreated datePublished" datetime="2025-07-11T20:23:36+08:00">2025-07-11</time></span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i></span><span class="text">本文字数</span><span>12k</span><span class="text">字</span></span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i></span><span class="text">阅读时长</span><span>11 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span><span class="line"></span><span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">LuChron's Blog</a></li></ul><ul class="right" id="rightNav"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div class="pjax" id="imgs"><img src="/assets/03.avif" loading="eager" decoding="async" fetchpriority="high" alt="絶対忘れてやらないよ"></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><main><div class="inner"><div class="pjax" id="main"><div class="article wrap"><div class="breadcrumb" itemlistelement="" itemscope="" itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i><span><a href="/">首页</a></span><i class="ic i-angle-right"></i><span class="current" itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/categories/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/" itemprop="item" rel="index" title="分类于超算短学期"><span itemprop="name">超算短学期<meta itemprop="position" content="0"></span></a></span></div><article class="post block" itemscope="itemscope" itemtype="http://schema.org/Article" data-pagefind-body="data-pagefind-body" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://luchron.github.io/2025/07/11/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/HPC%E5%9F%BA%E7%A1%80%E6%A6%82%E8%BF%B0/"><span hidden="hidden" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="image" content="/assets/avatar.jpg"><meta itemprop="name" content="Luchron"><meta itemprop="description" content="狗窝, 未下眉头，又上心头"></span><span hidden="hidden" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="絶対忘れてやらないよ"></span><div class="body md" itemprop="articleBody"><h1 id="计算机系统基础概述"><a class="anchor" href="#计算机系统基础概述">#</a> 计算机系统基础概述</h1>
+<h2 id="1-hpc发展"><a class="anchor" href="#1-hpc发展">#</a> 1 HPC发展</h2>
+<ul>
+<li>向量机（PVP)</li>
+<li>对称多处理机</li>
+<li>大规模并行处理机</li>
+<li>集群计算机</li>
+</ul>
+<h2 id="2-并行计算"><a class="anchor" href="#2-并行计算">#</a> 2 并行计算</h2>
+<p>刚开始是多处理器，后来是大型组机，多计算机进行并行运算</p>
+<h2 id="3-计算机系统"><a class="anchor" href="#3-计算机系统">#</a> 3 计算机系统</h2>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20250625105702455.avif" alt="image-20250625105702455"></p>
+<h2 id="处理器的结构模型"><a class="anchor" href="#处理器的结构模型">#</a> 处理器的结构模型</h2>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20250625110602372.avif" alt="image-20250625110602372"></p>
+<h1 id="操作系统"><a class="anchor" href="#操作系统">#</a> 操作系统</h1>
+<p>是硬件与软件的接口，对计算机的软件硬件资源进行管理</p>
+<p>操作系统的类型很多，分布式、并行的……很多</p>
+<p>如果一个cpu处理任务，会分时处理技术，一个时间段执行一个程序，另一个时间段执行下一个程序。</p>
+<h1 id="lecture-3"><a class="anchor" href="#lecture-3">#</a> lecture 3</h1>
+<blockquote>
+<p>计算机系统</p>
+</blockquote>
+<p>操作系统是管理仪器上的硬件的资源，然后包装成一个抽象的层，让软件更好操作这些硬件</p>
+<p>比如往硬盘上写数据</p>
+<h2 id="31-进程"><a class="anchor" href="#31-进程">#</a> 3.1 进程</h2>
+<p>我们的进程有很多，怎么管理呢，如何在寄存器上管理呢</p>
+<p>那么：进程的调度：process schedule</p>
+<p>两种形式：</p>
+<ul>
+<li>
+<p>none-preemptive，非抢占式的，就是别的进程不能抢占他的cpu进程，容易导致卡死</p>
+</li>
+<li>
+<p>preemptive，大多数cpu采用的，可以不同进程一起，挨个叫他，类似于这个意思</p>
+<blockquote>
+<p>round robin算法，我们轮流进行进程，但是公平的得到cpu时间，没有不同的重要性的比较。所以我们希望对进程有一个优先级。于是有了priority-based，我们根据一个优先级进行调度。</p>
+</blockquote>
+</li>
+</ul>
+<p>我们将程序通过并行来大大降低程序运行的时间来加快进程。但是这个需要我们的进程的合作关系。</p>
+<blockquote>
+<p>比如我们的矩阵乘法，一块在一个进程里面，一个在另一个进程里面。我们一个进程是不能访问另一个进程的内存的</p>
+<p>所以我们需要interprocess communciation<br>
+即不同进程之间的交流</p>
+<p>我们进程之间可以互相通信</p>
+</blockquote>
+<ul>
+<li><strong>进程是资源分配的基本单位</strong>，拥有<strong>独立的内存空间</strong>。</li>
+<li><strong>线程是程序执行的最小单位</strong>，<strong>共享进程的资源</strong>，但拥有<strong>自己的执行栈和程序计数器</strong>。</li>
+</ul>
+<p>节点之间使用进程级别的并行，然后要使用节点间的交流。</p>
+<p>对于一个主板上的几个cpu，我们使用的是线程，这样可以共享进程，更加方便</p>
+<h1 id="gpu"><a class="anchor" href="#gpu">#</a> GPU</h1>
+<p>硬件可编程（类似FPGA?)，现在的一般都是可编程的</p>
+<blockquote>
+<p>Von Neumann Model has two key properties</p>
+</blockquote>
+<ul>
+<li>stored program</li>
+<li>顺序执行，顺序结束</li>
+</ul>
+<p>我们需要很高的算力</p>
+<p>GPU核远比CPU核多，可以提高更高的算力</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/1c367136432512c8ef205e7c9bff0255.jpeg" alt="1c367136432512c8ef205e7c9bff0255"></p>
+<blockquote>
+<p>其实形象的理解，和cpu相比，gpu就是一条</p>
+</blockquote>
+<p>在GPU上，更多的核意味着更多的问题。更多的核导致核之间的协同很难</p>
+<blockquote>
+<p>[!important]</p>
+<p><strong>CUDA 编程</strong> 是用来在 <strong>NVIDIA 显卡（GPU）上编写并行程序</strong>的</p>
+<p>用于<strong>加速科学计算、AI训练、图像处理、大数据处理等高性能任务</strong>。</p>
+<blockquote>
+<p>由于传统程序运行在cpu上，他的核心少，但是cuda编程运行在gpu上可以使用多个核。</p>
+</blockquote>
+</blockquote>
+<p>常用于以下领域：</p>
+<ul>
+<li>AI 工程师（训练大型模型）</li>
+<li>科研人员（模拟大规模计算）</li>
+<li>游戏/图像/视频工程师（加速图像处理）</li>
+<li>高校/研究所/超算中心（并行算法研发）</li>
+</ul>
+<blockquote>
+<p>现在的gpu越来越像ai芯片</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>含义</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thread</td>
+<td>最小的并行单位，执行 kernel</td>
+<td>处理单个数据元素</td>
+</tr>
+<tr>
+<td>Thread Block</td>
+<td>一组线程（最多 1024 个）</td>
+<td>在线程块内部可共享数据、同步</td>
+</tr>
+<tr>
+<td>Grid</td>
+<td>所有线程块的集合</td>
+<td>覆盖整个输入数据范围</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!important]</p>
+<p><strong>SPMD</strong>（<strong>Single Program Multiple Data</strong>）是并行编程的一种模型，<br>
+<strong>所有处理器运行</strong>“<strong>同一个程序</strong>”，但<strong>各自处理不同的数据</strong>。</p>
+</blockquote>
+<p>一些并行计算思想：</p>
+<p><strong>为了让 GPU 的计算单元效率最大化，要尽量让一小撮线程（一个 Warp）执行完全相同的指令路径。</strong></p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-c"><span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">int</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> tid </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> threadIdx.x </span><span style="color:#AB5959;--shiki-dark:#CB7676">+</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> blockIdx.x</span><span style="color:#AB5959;--shiki-dark:#CB7676">*</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">blockDim.x</span><span style="color:#999999;--shiki-dark:#666666">;</span></span></code></pre>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20250701151525771.avif" alt="image-20250701151525771"></p>
+<h1 id="openmp"><a class="anchor" href="#openmp">#</a> Openmp</h1>
+<p>Openmp is an API that supports muti-platform shared-memory multiprocessing programming in C C++ Fortran</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-c"><span class="line"><span style="color:#999999;--shiki-dark:#666666">#</span><span style="color:#1E754F;--shiki-dark:#4D9375">pragma</span><span style="color:#B07D48;--shiki-dark:#BD976A"> omp</span><span style="color:#B07D48;--shiki-dark:#BD976A"> parallel</span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">                   </span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">	printf</span><span style="color:#1e754f;--shiki-dark:#4d9375">(</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">to do sth</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#1e754f;--shiki-dark:#4d9375">)</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>代码中间小的任务叫做 section</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-c"><span class="line"><span style="color:#999999;--shiki-dark:#666666">#</span><span style="color:#1E754F;--shiki-dark:#4D9375">include</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> &lt;</span><span style="color:#B56959;--shiki-dark:#C98A7D">stdio.h</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">&gt;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">#</span><span style="color:#1E754F;--shiki-dark:#4D9375">include</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> &lt;</span><span style="color:#B56959;--shiki-dark:#C98A7D">omp.h</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">int</span><span style="color:#59873A;--shiki-dark:#80A665"> main</span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">    printf</span><span style="color:#1e754f;--shiki-dark:#4d9375">(</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">Welcome to OpenMP!</span><span style="color:#A65E2B;--shiki-dark:#C99076">\n</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#1e754f;--shiki-dark:#4d9375">)</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">    </span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">    #</span><span style="color:#1E754F;--shiki-dark:#4D9375">pragma</span><span style="color:#B07D48;--shiki-dark:#BD976A"> omp</span><span style="color:#B07D48;--shiki-dark:#BD976A"> parallel</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">    </span><span style="color:#1e754f;--shiki-dark:#4d9375">{</span></span>
+<span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">        int</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> ID </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#59873A;--shiki-dark:#80A665"> omp_get_thread_num</span><span style="color:#a65e2b;--shiki-dark:#d4976c">(</span><span style="color:#a65e2b;--shiki-dark:#d4976c">)</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">        printf</span><span style="color:#a65e2b;--shiki-dark:#d4976c">(</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">hello(</span><span style="color:#A65E2B;--shiki-dark:#C99076">%d</span><span style="color:#B56959;--shiki-dark:#C98A7D">) </span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> ID</span><span style="color:#a65e2b;--shiki-dark:#d4976c">)</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">        printf</span><span style="color:#a65e2b;--shiki-dark:#d4976c">(</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">world(</span><span style="color:#A65E2B;--shiki-dark:#C99076">%d</span><span style="color:#B56959;--shiki-dark:#C98A7D">)</span><span style="color:#A65E2B;--shiki-dark:#C99076">\n</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> ID</span><span style="color:#a65e2b;--shiki-dark:#d4976c">)</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">    </span><span style="color:#1e754f;--shiki-dark:#4d9375">}</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">          //这里面是并行运算程序</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">    </span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">    printf</span><span style="color:#1e754f;--shiki-dark:#4d9375">(</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#B56959;--shiki-dark:#C98A7D">Bye!</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#1e754f;--shiki-dark:#4d9375">)</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">    return</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 0</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<h2 id="1-调度策略"><a class="anchor" href="#1-调度策略">#</a> 1 调度策略</h2>
+<blockquote>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20250702093925633.avif" alt="image-20250702093925633"></p>
+<p>这张图对比了 OpenMP 中 for 循环的三种主要调度策略：static, dynamic, 和 guided。它们决定了循环的迭代任务如何被分配给不同的线程。</p>
+<h4 id="1-schedulestatic-静态调度"><a class="anchor" href="#1-schedulestatic-静态调度">#</a> (1) schedule(static) - 静态调度</h4>
+<ul>
+<li><strong>工作原理</strong>: 在循环开始之前，将所有迭代任务（循环的每一次）<strong>平均分成大块</strong>，然后静态地、永久地分配给每个线程。例如，如果有100个任务和4个线程，线程0得到任务1-25，线程1得到26-50，以此类推。这是一种简单、低开销的分配方式。</li>
+<li><strong>图中表现</strong>:</li>
+<li>你可以看到每个线程都分到了一大段连续的任务。</li>
+<li><strong>性能极差 (约 3.6s)</strong>。因为负载不均衡，线程3不幸地分到了一堆耗时长的黄色任务，而其他线程（特别是线程2）很快就完成了它们的短任务，然后就进入了长时间的等待。这造成了严重的<strong>负载不均衡</strong>和资源浪费。</li>
+<li><strong>适用场景</strong>: 当每次循环迭代的计算量都完全相同时（负载均衡），静态调度是最高效的，因为它几乎没有管理开销。</li>
+</ul>
+<h4 id="2-scheduledynamic-1-动态调度"><a class="anchor" href="#2-scheduledynamic-1-动态调度">#</a> (2) schedule(dynamic, 1) - 动态调度</h4>
+<ul>
+<li><strong>工作原理</strong>: 任务不是预先分配的。它会维护一个任务池。每当一个线程完成当前任务后，它就会<strong>动态地</strong>去任务池里<strong>请求下一个任务</strong>来做。1 表示每次只请求一个任务（chunk size = 1）。</li>
+<li><strong>图中表现</strong>:</li>
+<li>任务的分配是交错的。黄色和绿色的任务块被分散在所有线程中。</li>
+<li><strong>性能最好 (约 2.25s)</strong>。当一个线程完成一个短的绿色任务后，它能立刻去领一个新的任务（可能是黄色或绿色），而不会闲置。这确保了所有线程都持续有活干，直到所有任务被完成。最终，所有线程几乎在同一时间结束工作。这就是<strong>良好的负载均衡</strong>。</li>
+<li><strong>适用场景</strong>: 当每次循环迭代的计算量非常不确定或严重不均衡时，动态调度是最佳选择。它的缺点是管理开销比静态调度高，因为线程需要频繁地请求任务。</li>
+</ul>
+<h4 id="3-scheduleguided-1-导向式调度"><a class="anchor" href="#3-scheduleguided-1-导向式调度">#</a> (3) schedule(guided, 1) - 导向式调度</h4>
+<ul>
+<li><strong>工作原理</strong>: 这是 static 和 dynamic 的一种折中方案。它开始时分配<strong>较大的任务块</strong>（为了降低管理开销），随着任务池中剩余任务的减少，分配的<strong>任务块也越来越小</strong>（为了在最后阶段实现更好的负载均衡）。1 表示最小的任务块大小为1。</li>
+<li><strong>图中表现</strong>:</li>
+<li>你可以看到，在开始阶段，分配的任务块较大；越往后，任务块变得越零碎。</li>
+<li><strong>在此例中性能不佳 (约 3.6s)</strong>。不幸的是，在初始的大块分配中，线程3还是分到了耗时长的任务组合。虽然最后阶段任务分配变细了，但已经无法弥补早期分配不均造成的巨大时间差。</li>
+<li><strong>适用场景</strong>: 适用于负载不均衡，但又想避免 dynamic 调度可能带来的较高管理开销的情况。它通常是一个不错的通用选择。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>[!important]</p>
+<p>如果遇到双层循环，那么并行只会分配一层循环</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>#pragma omp parallel for collapse(2)</span></span></code></pre>
+<p>这样就是双层循环都分配了</p>
+</blockquote>
+<h2 id="2-同步指令"><a class="anchor" href="#2-同步指令">#</a> 2 同步指令</h2>
+<blockquote>
+<p>OpenMP 中两个至关重要的同步指令：<code>critical</code> 和 <code>atomic</code>。</p>
+<p>这两个指令的根本目的都是为了解决同一个问题：<strong>竞争条件 (Race Condition)</strong>。</p>
+<h3 id="1-什么是竞争条件"><a class="anchor" href="#1-什么是竞争条件">#</a> 1. 什么是竞争条件？</h3>
+<p>当多个线程同时尝试读取和修改<strong>同一个共享内存地址</strong>时，由于操作系统对线程的调度顺序是不可预测的，最终的计算结果会取决于哪个线程“跑得快”，导致结果出现错误或不确定。这就是竞争条件。</p>
+<p>一个最经典的例子是并行累加：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-c"><span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">int</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> total_sum </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 0</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">#</span><span style="color:#1E754F;--shiki-dark:#4D9375">pragma</span><span style="color:#B07D48;--shiki-dark:#BD976A"> omp</span><span style="color:#B07D48;--shiki-dark:#BD976A"> parallel</span><span style="color:#B07D48;--shiki-dark:#BD976A"> for</span></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">for</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#AB5959;--shiki-dark:#CB7676">int</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> i </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 0</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> i </span><span style="color:#AB5959;--shiki-dark:#CB7676">&lt;</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 1000</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> i</span><span style="color:#AB5959;--shiki-dark:#CB7676">++</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">   // 危险操作！</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">   total_sum </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> total_sum </span><span style="color:#AB5959;--shiki-dark:#CB7676">+</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">// 最终 total_sum 的结果很可能小于 1000</span></span></code></pre>
+<p>为什么会出错？因为 <code>total_sum = total_sum + 1</code> 并不是一个单一的操作。它在底层至少分为三步：</p>
+<ol>
+<li><strong>读取</strong> <code>total_sum</code> 的当前值到线程的寄存器。</li>
+<li>在寄存器中<strong>计算</strong> +1。</li>
+<li>将寄存器中的新值<strong>写回</strong>到 <code>total_sum</code>。</li>
+</ol>
+<p>想象一下两个线程同时执行这个操作：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">时间</th>
+<th style="text-align:left">线程 A 操作</th>
+<th style="text-align:left">线程 B 操作</th>
+<th style="text-align:left">total_sum 的值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">T1</td>
+<td style="text-align:left">读取 <code>total_sum</code> (值为 50)</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">50</td>
+</tr>
+<tr>
+<td style="text-align:left">T2</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">读取 <code>total_sum</code> (值为 50)</td>
+<td style="text-align:left">50</td>
+</tr>
+<tr>
+<td style="text-align:left">T3</td>
+<td style="text-align:left">计算 50 + 1 = 51</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">50</td>
+</tr>
+<tr>
+<td style="text-align:left">T4</td>
+<td style="text-align:left">写回 51 到 <code>total_sum</code></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">51</td>
+</tr>
+<tr>
+<td style="text-align:left">T5</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">计算 50 + 1 = 51</td>
+<td style="text-align:left">51</td>
+</tr>
+<tr>
+<td style="text-align:left">T6</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">写回 51 到 <code>total_sum</code></td>
+<td style="text-align:left">51</td>
+</tr>
+</tbody>
+</table>
+<p>两个线程都执行了加法，但 <code>total_sum</code> 只增加了1次。这就是竞争条件。为了解决这个问题，我们需要确保这个“读-改-写”的过程是<strong>互斥 (Mutually Exclusive)</strong> 的，即同一时间只允许一个线程执行。<code>critical</code> 和 <code>atomic</code> 就是实现互斥的两种方法。</p>
+<hr>
+<h3 id="2-pragma-omp-critical"><a class="anchor" href="#2-pragma-omp-critical">#</a> 2. <code>#pragma omp critical</code></h3>
+<p><code>critical</code> 指令定义了一个<strong>代码块 (Code Block)</strong>，这个代码块被称为<strong>临界区 (Critical Section)</strong>。它保证在任何时候，最多只有一个线程可以进入这个代码块执行。</p>
+<p>可以把它想象成一个<strong>带锁的房间</strong>。</p>
+<ul>
+<li>一个线程来到门口，如果房间是空的，它就进去并把门锁上。</li>
+<li>其他线程来到门口，发现门锁着，就必须在外面排队等待。</li>
+<li>直到里面的线程办完事出来，把锁打开，等待的线程中才会有一个被允许进去。</li>
+</ul>
+<p><strong>语法和示例：</strong></p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-c"><span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">int</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> total_sum </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 0</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">#</span><span style="color:#1E754F;--shiki-dark:#4D9375">pragma</span><span style="color:#B07D48;--shiki-dark:#BD976A"> omp</span><span style="color:#B07D48;--shiki-dark:#BD976A"> parallel</span><span style="color:#B07D48;--shiki-dark:#BD976A"> for</span></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">for</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#AB5959;--shiki-dark:#CB7676">int</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> i </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 0</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> i </span><span style="color:#AB5959;--shiki-dark:#CB7676">&lt;</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 1000</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> i</span><span style="color:#AB5959;--shiki-dark:#CB7676">++</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">   // 只有一个线程能进入这个花括号区域</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">   #</span><span style="color:#1E754F;--shiki-dark:#4D9375">pragma</span><span style="color:#B07D48;--shiki-dark:#BD976A"> omp</span><span style="color:#B07D48;--shiki-dark:#BD976A"> critical</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">   </span><span style="color:#1e754f;--shiki-dark:#4d9375">{</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">       total_sum </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> total_sum </span><span style="color:#AB5959;--shiki-dark:#CB7676">+</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">       // 可以在这里做其他复杂的操作，比如打印</span></span>
+<span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">       // printf("Thread %d is updating sum\n", omp_get_thread_num());</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">   </span><span style="color:#1e754f;--shiki-dark:#4d9375">}</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<ul>
+<li><strong>优点</strong>:</li>
+<li><strong>灵活强大</strong>: 可以保护任意长度和复杂度的代码块，包括函数调用、I/O操作（如 <code>printf</code>）等。</li>
+<li><strong>缺点</strong>:</li>
+<li><strong>开销较大</strong>: 实现 <code>critical</code> 通常需要操作系统级别的锁（如互斥锁 Mutex），这涉及到上下文切换，开销相对较高。如果临界区被频繁访问，会成为严重的性能瓶瓶颈，这种现象称为<strong>序列化 (Serialization)</strong>，即并行代码退化成了串行执行。</li>
+</ul>
+<p><strong>命名临界区 (Named Critical Section):</strong><br>
+你还可以给临界区命名，<code>#pragma omp critical (name)</code>。只有同名的临界区才会互斥。这允许多个不相关的临界区可以并行执行。</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-c"><span class="line"><span style="color:#999999;--shiki-dark:#666666">#</span><span style="color:#1E754F;--shiki-dark:#4D9375">pragma</span><span style="color:#B07D48;--shiki-dark:#BD976A"> omp</span><span style="color:#B07D48;--shiki-dark:#BD976A"> critical</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#B07D48;--shiki-dark:#BD976A">update_x</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> x</span><span style="color:#AB5959;--shiki-dark:#CB7676">++</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">#</span><span style="color:#1E754F;--shiki-dark:#4D9375">pragma</span><span style="color:#B07D48;--shiki-dark:#BD976A"> omp</span><span style="color:#B07D48;--shiki-dark:#BD976A"> critical</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#B07D48;--shiki-dark:#BD976A">update_y</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> y</span><span style="color:#AB5959;--shiki-dark:#CB7676">++</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">// 这两个临界区不会互相阻塞</span></span></code></pre>
+<hr>
+<h3 id="3-pragma-omp-atomic"><a class="anchor" href="#3-pragma-omp-atomic">#</a> 3. <code>#pragma omp atomic</code></h3>
+<p><code>atomic</code> 指令提供了一种更轻量级的方式来保护内存操作。它<strong>不保护代码块，只保护紧随其后的那一条特定类型的语句</strong>。</p>
+<p>可以把它想象成一个<strong>原子操作 (Atomic Operation)</strong>，一个不可分割、不会被中断的操作。</p>
+<ul>
+<li>当一个线程执行 <code>atomic</code> 操作时，CPU 保证这个操作（比如“读-改-写”）会一次性完成，期间不允许任何其他线程插入。</li>
+</ul>
+<p><strong>语法和示例：</strong></p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-c"><span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">int</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> total_sum </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 0</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">#</span><span style="color:#1E754F;--shiki-dark:#4D9375">pragma</span><span style="color:#B07D48;--shiki-dark:#BD976A"> omp</span><span style="color:#B07D48;--shiki-dark:#BD976A"> parallel</span><span style="color:#B07D48;--shiki-dark:#BD976A"> for</span></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">for</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#AB5959;--shiki-dark:#CB7676">int</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> i </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 0</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> i </span><span style="color:#AB5959;--shiki-dark:#CB7676">&lt;</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 1000</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> i</span><span style="color:#AB5959;--shiki-dark:#CB7676">++</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">   // 只保护下面这一句特定的内存更新语句</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">   #</span><span style="color:#1E754F;--shiki-dark:#4D9375">pragma</span><span style="color:#B07D48;--shiki-dark:#BD976A"> omp</span><span style="color:#B07D48;--shiki-dark:#BD976A"> atomic</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">   total_sum </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> total_sum </span><span style="color:#AB5959;--shiki-dark:#CB7676">+</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> // 或者 total_sum++;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<ul>
+<li><strong>优点</strong>:</li>
+<li><strong>开销极低</strong>: <code>atomic</code> 通常能被编译器直接翻译成特殊的、高效的硬件指令（如 x86 架构下的 <code>LOCK</code> 前缀指令）。它避免了操作系统锁的开销，性能远高于 <code>critical</code>。</li>
+<li><strong>缺点</strong>:</li>
+<li><strong>限制严格</strong>: 它只能用于非常特定的、简单的内存更新语句，通常是形如 <code>x = x op expr</code> 或 <code>x++</code>, <code>++x</code> 等形式。</li>
+<li>不能保护一个代码块，也不能保护函数调用或 I/O 操作。</li>
+</ul>
+<hr>
+<h3 id="4-critical-vs-atomic-对比总结"><a class="anchor" href="#4-critical-vs-atomic-对比总结">#</a> 4. <code>critical</code> vs. <code>atomic</code> 对比总结</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">特性</th>
+<th style="text-align:left"><code>#pragma omp critical</code></th>
+<th style="text-align:left"><code>#pragma omp atomic</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>保护对象</strong></td>
+<td style="text-align:left">一个<strong>代码块</strong> <code>{ ... }</code></td>
+<td style="text-align:left"><strong>单条</strong>特定的内存更新语句</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>灵活性</strong></td>
+<td style="text-align:left"><strong>高</strong>。可以保护复杂的逻辑、函数调用、I/O等。</td>
+<td style="text-align:left"><strong>低</strong>。只能用于 <code>x++</code>, <code>x+=y</code> 等简单表达式。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>性能开销</strong></td>
+<td style="text-align:left"><strong>较高</strong>。通常使用软件锁，可能引起线程阻塞和上下文切换。</td>
+<td style="text-align:left"><strong>极低</strong>。通常使用硬件原子指令，非常高效。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>使用场景</strong></td>
+<td style="text-align:left">保护复杂数据结构更新、文件写入、或者必须一起执行的多条语句。</td>
+<td style="text-align:left">简单的计数器、累加器、标志位设置等。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>类比</strong></td>
+<td style="text-align:left">带锁的房间（通用，但进出慢）</td>
+<td style="text-align:left">不可分割的魔法指令（特定，但瞬时完成）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="何时使用哪个"><a class="anchor" href="#何时使用哪个">#</a> 何时使用哪个？</h3>
+<p>一个非常简单实用的准则：</p>
+<blockquote>
+<p><strong>如果能用 <code>atomic</code>，就一定要用 <code>atomic</code>。</strong></p>
+</blockquote>
+<p>只有当你要保护的操作无法被 <code>atomic</code> 覆盖时（比如要更新一个链表，或者要在一个事务里同时更新两个变量），你才应该考虑使用 <code>critical</code>。在大多数累加、计数的场景下，<code>atomic</code> 都是性能更优的正确选择。</p>
+</blockquote>
+<h2 id="3-mpi"><a class="anchor" href="#3-mpi">#</a> 3 MPI</h2>
+<blockquote>
+<p>注意不同于openmpi</p>
+</blockquote>
+<h3 id="31-什么是-mpi-和-mpi_send"><a class="anchor" href="#31-什么是-mpi-和-mpi_send">#</a> 3.1 什么是 MPI 和 <code>MPI_Send</code>？</h3>
+<ul>
+<li>
+<p><strong>MPI (Message Passing Interface)</strong>: 是一种用于<strong>分布式内存</strong>并行编程的标准化接口。与 OpenMP（用于共享内存）不同，MPI 的模型是多个独立的<strong>进程 (Process)</strong>，每个进程都有自己独立的内存空间。它们之间不能直接访问对方的变量，必须通过<strong>发送和接收消息 (Messages)</strong> 来进行通信和数据交换。</p>
+</li>
+<li>
+<p><strong><code>MPI_Send</code></strong>: 这是实现<strong>点对点 (Point-to-Point)</strong> 通信的发送函数。一个进程调用它，将一块数据打包成消息，发送给指定的另一个进程。</p>
+</li>
+</ul>
+<p>可以把这个过程想象成<strong>寄快递</strong>：</p>
+<ul>
+<li>你要寄送一个包裹（数据）。</li>
+<li>你需要把包裹打包好，写上收件人地址、发件人信息等（填写 <code>MPI_Send</code> 的参数）。</li>
+<li>然后把包裹交给快递员（调用 <code>MPI_Send</code> 函数）。</li>
+</ul>
+<hr>
+<h3 id="32-函数参数详解"><a class="anchor" href="#32-函数参数详解">#</a> 3.2 函数参数详解</h3>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20250702103848382.avif" alt="image-20250702103848382"></p>
+<h4 id="消息内容-the-what"><a class="anchor" href="#消息内容-the-what">#</a> <strong>消息内容 (The "What")</strong></h4>
+<ol>
+<li>
+<p><strong><code>const void* buffer</code></strong>: <strong>要发送的数据</strong></p>
+<ul>
+<li>这是指向你要发送的数据的内存地址（指针）。比如，一个整数变量的地址、一个数组的起始地址等。</li>
+<li><code>void*</code> 表示它可以是任何类型的数据，非常灵活。</li>
+</ul>
+</li>
+<li>
+<p><strong><code>int count</code></strong>: <strong>发送元素的数量</strong></p>
+<ul>
+<li>指明你要发送多少个<strong>元素</strong>，而不是多少个字节。</li>
+<li>例如，如果要发送一个包含10个整数的数组，<code>count</code> 就是 <code>10</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong><code>MPI_Datatype datatype</code></strong>: <strong>发送元素的数据类型</strong></p>
+<ul>
+<li>这个参数告诉 MPI，<code>buffer</code> 指向的数据是什么类型的。这与 <code>count</code> 参数配合，MPI 就可以计算出总共需要发送多少字节的数据 (总字节数 = <code>count</code> * <code>sizeof(datatype)</code>）。</li>
+<li>MPI 预定义了很多类型，如 <code>MPI_INT</code> (对应 C 的 <code>int</code>)、<code>MPI_DOUBLE</code> (对应 <code>double</code>)、<code>MPI_CHAR</code> 等。</li>
+</ul>
+</li>
+</ol>
+<h4 id="消息信封-the-who-and-how"><a class="anchor" href="#消息信封-the-who-and-how">#</a> <strong>消息信封 (The "Who" and "How")</strong></h4>
+<ol start="4">
+<li>
+<p><strong><code>int recipient</code></strong>: <strong>接收者 (Recipient)</strong></p>
+<ul>
+<li>你要把消息发送给哪个进程。这里填写的是接收进程的<strong>秩 (Rank)</strong>。在 MPI 中，每个进程都有一个从 0 开始的唯一整数ID，这个ID就是它的秩。</li>
+</ul>
+</li>
+<li>
+<p><strong><code>int tag</code></strong>: <strong>消息标签 (Tag)</strong></p>
+<ul>
+<li>一个整数，你可以用它来区分不同类型的消息。</li>
+<li>接收方在调用 <code>MPI_Recv</code> 时可以指定只接收特定标签的消息。这就像邮件的“主题”，可以帮助接收者对消息进行分类和过滤。</li>
+</ul>
+</li>
+<li>
+<p><strong><code>MPI_Comm communicator</code></strong>: <strong>通信域 (Communicator)</strong></p>
+<ul>
+<li>指定这个发送操作发生在哪个进程组内。一个通信域定义了一组可以互相通信的进程。</li>
+<li>在大多数简单程序中，这个参数都是 <code>MPI_COMM_WORLD</code>，它代表了参与当前 MPI 程序的所有进程。</li>
+</ul>
+</li>
+</ol>
+<h3 id="33-mpi_send-的一个重要特性阻塞-blocking"><a class="anchor" href="#33-mpi_send-的一个重要特性阻塞-blocking">#</a> 3.3 <code>MPI_Send</code> 的一个重要特性：阻塞 (Blocking)</h3>
+<p><code>MPI_Send</code> 是一个<strong>阻塞式 (Blocking)</strong> 的发送操作。这意味着什么？</p>
+<blockquote>
+<p>当你的程序调用 <code>MPI_Send</code> 时，程序会**暂停（阻塞）**在该行，直到 MPI 系统确认发送缓冲区 (<code>buffer</code>) 的内容可以被安全地修改为止。</p>
+</blockquote>
+<p>这通常意味着以下两种情况之一：</p>
+<ol>
+<li>数据已经被完全拷贝到了接收进程的内存中。</li>
+<li>数据已经被拷贝到了一个由 MPI 管理的、安全的临时系统缓冲区中。</li>
+</ol>
+<p><strong>关键点</strong>：一旦 <code>MPI_Send</code> 函数返回，你就可以立刻<strong>重用或修改 <code>buffer</code> 指向的内存</strong>，而不用担心会破坏正在发送的数据。</p>
+<p>与之对应的是非阻塞发送 <code>MPI_Isend</code>，它会立即返回，允许你的程序在数据发送的同时继续执行其他计算，但你需要稍后手动检查发送是否完成。</p>
+<h3 id="34-一个简单的例子"><a class="anchor" href="#34-一个简单的例子">#</a> 3.4 一个简单的例子</h3>
+<p>假设进程 0 要发送一个整数 <code>42</code> 给进程 1：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-c"><span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">// 假设 mpi_rank 是当前进程的秩</span></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">if</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">mpi_rank </span><span style="color:#AB5959;--shiki-dark:#CB7676">==</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 0</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">    // ---- 这是发送方 (进程 0) 的代码 ----</span></span>
+<span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">    int</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> number_to_send </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 42</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">    </span></span>
+<span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">    // 调用 MPI_Send</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">    MPI_Send</span><span style="color:#1e754f;--shiki-dark:#4d9375">(</span></span>
+<span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">        &amp;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">number_to_send</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">   // buffer: 数据的地址</span></span>
+<span class="line"><span style="color:#2F798A;--shiki-dark:#4C9A91">        1</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">                 // count: 发送 1 个元素</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">        MPI_INT</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">           // datatype: 元素类型是 int</span></span>
+<span class="line"><span style="color:#2F798A;--shiki-dark:#4C9A91">        1</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">                 // recipient: 发给进程 1</span></span>
+<span class="line"><span style="color:#2F798A;--shiki-dark:#4C9A91">        0</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">                 // tag: 使用标签 0</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">        MPI_COMM_WORLD</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">     // communicator: 在全局通信域中</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">    </span><span style="color:#1e754f;--shiki-dark:#4d9375">)</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> </span></span>
+<span class="line"><span style="color:#1E754F;--shiki-dark:#4D9375">else</span><span style="color:#1E754F;--shiki-dark:#4D9375"> if</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">mpi_rank </span><span style="color:#AB5959;--shiki-dark:#CB7676">==</span><span style="color:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#999999;--shiki-dark:#666666"> </span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">    // ---- 这是接收方 (进程 1) 的代码 ----</span></span>
+<span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">    int</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> received_number</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">    MPI_Status status</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> // 用于接收状态信息</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">    </span></span>
+<span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">    // 调用对应的 MPI_Recv</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">    MPI_Recv</span><span style="color:#1e754f;--shiki-dark:#4d9375">(</span></span>
+<span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">        &amp;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">received_number</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">  // buffer: 存放接收数据的地址</span></span>
+<span class="line"><span style="color:#2F798A;--shiki-dark:#4C9A91">        1</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">                 // count: 最多接收 1 个元素</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">        MPI_INT</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">           // datatype: 期望接收 int 类型</span></span>
+<span class="line"><span style="color:#2F798A;--shiki-dark:#4C9A91">        0</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">                 // source: 从进程 0 接收</span></span>
+<span class="line"><span style="color:#2F798A;--shiki-dark:#4C9A91">        0</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">                 // tag: 只接收标签为 0 的消息</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">        MPI_COMM_WORLD</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">    // communicator</span></span>
+<span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">        &amp;</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">status</span><span style="color:#A0ADA0;--shiki-dark:#758575DD">            // status: 接收状态</span></span>
+<span class="line"><span style="color:#999999;--shiki-dark:#666666">    </span><span style="color:#1e754f;--shiki-dark:#4d9375">)</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">    // 此时 received_number 的值会是 42</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span></code></pre>
+<p>这个例子展示了 <code>MPI_Send</code> 如何与 <code>MPI_Recv</code> 配对使用，完成一次完整的点对点通信。</p>
+<h3 id="35-一些函数"><a class="anchor" href="#35-一些函数">#</a> 3.5 一些函数</h3>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20250702110916525.avif" alt="image-20250702110916525"></p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20250702110931135.avif" alt="image-20250702110931135"></p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20250702110959077.avif" alt="image-20250702110959077"></p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20250702111028155.avif" alt="image-20250702111028155"></p>
+<h1 id="oop速通"><a class="anchor" href="#oop速通">#</a> OOP速通</h1>
+<blockquote>
+<p>C语言是过程式的语言，由函数来操纵数据，数据和函数是绑定在一起的</p>
+</blockquote>
+<p><strong>类</strong>：类首先定义了一种类型</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20250702140805406.avif" alt="image-20250702140805406"></p>
+<p>这就体现了数据的抽象和数据的封装</p>
+<p>this就是指向本身的那个指针，和js中的用法相似</p>
+<p><strong>引用</strong></p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-c++"><span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">void</span><span style="color:#59873A;--shiki-dark:#80A665"> swap</span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#AB5959;--shiki-dark:#CB7676">int&amp;</span><span style="color:#B07D48;--shiki-dark:#BD976A">a</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#AB5959;--shiki-dark:#CB7676">int&amp;</span><span style="color:#B07D48;--shiki-dark:#BD976A">b</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">    int</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> temp </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> a</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">    a </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> b</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#393A34;--shiki-dark:#DBD7CAEE">    b </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE"> temp</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"><span style="color:#AB5959;--shiki-dark:#CB7676">int</span><span style="color:#59873A;--shiki-dark:#80A665"> main</span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#2993a3;--shiki-dark:#5eaab5">{</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">    swap</span><span style="color:#1e754f;--shiki-dark:#4d9375">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">x</span><span style="color:#999999;--shiki-dark:#666666">,</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">y</span><span style="color:#1e754f;--shiki-dark:#4d9375">)</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#2993a3;--shiki-dark:#5eaab5">}</span></span>
+<span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">//这样可以实现交换功能</span></span></code></pre>
+<p><strong>移动</strong></p>
+<blockquote>
+<p><strong>移动的本质</strong>：把资源的“所有权”从一个对象转移到另一个对象，原对象被“掏空”，不再拥有资源。</p>
+</blockquote>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-c++"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">std</span><span style="color:#999999;--shiki-dark:#666666">::</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">string a </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">hello</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#999999;--shiki-dark:#666666">;</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">std</span><span style="color:#999999;--shiki-dark:#666666">::</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">string b </span><span style="color:#999999;--shiki-dark:#666666">=</span><span style="color:#59873A;--shiki-dark:#80A665"> std</span><span style="color:#999999;--shiki-dark:#666666">::</span><span style="color:#59873A;--shiki-dark:#80A665">move</span><span style="color:#2993a3;--shiki-dark:#5eaab5">(</span><span style="color:#393A34;--shiki-dark:#DBD7CAEE">a</span><span style="color:#2993a3;--shiki-dark:#5eaab5">)</span><span style="color:#999999;--shiki-dark:#666666">;</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> // a 的资源被“搬”到 b</span></span></code></pre>
+<p>之后，a 处于“空壳状态”，只能安全地销毁或赋新值。</p>
+<div class="tags"><a href="/tags/HPC/" rel="tag"><i class="ic i-tag"></i>HPC</a><a href="/tags/%E8%B6%85%E7%AE%97/" rel="tag"><i class="ic i-tag"></i>超算</a></div></div><footer><div class="meta"></div><div id="copyright"><ul><li class="author"><strong>本文作者：</strong>Luchron<i class="ic i-at"><em>@</em></i>絶対忘れてやらないよ</li><li class="link"><strong>本文链接：</strong><a href="https://luchron.github.io/2025/07/11/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/HPC%E5%9F%BA%E7%A1%80%E6%A6%82%E8%BF%B0/" title="HPC 基础概述">https://luchron.github.io/2025/07/11/超算短学期/HPC基础概述/</a></li><li class="license"><strong>版权声明：</strong>本站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/2025/07/03/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" rel="prev" itemprop="url" data-background-image="//assets/01.jpg" title="数据库基础"><span class="type">上一篇</span><span class="category"><i class="ic i-flag"></i>技术积累</span><h3>数据库基础</h3></a></div><div class="item right"><a href="/2025/07/24/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/%E5%90%91%E9%87%8F%E5%8C%96%E8%BF%9B%E9%98%B6RISC-V/" rel="next" itemprop="url" data-background-image="//assets/06.jpg" title="向量化进阶 (RISC-V)"><span class="type">下一篇</span><span class="category"><i class="ic i-flag"></i>超算短学期</span><h3>向量化进阶 (RISC-V)</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text"> 计算机系统基础概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-hpc%E5%8F%91%E5%B1%95"><span class="toc-number">1.1.</span> <span class="toc-text"> 1 HPC发展</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97"><span class="toc-number">1.2.</span> <span class="toc-text"> 2 并行计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.</span> <span class="toc-text"> 3 计算机系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.4.</span> <span class="toc-text"> 处理器的结构模型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.</span> <span class="toc-text"> 操作系统</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#lecture-3"><span class="toc-number">3.</span> <span class="toc-text"> lecture 3</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#31-%E8%BF%9B%E7%A8%8B"><span class="toc-number">3.1.</span> <span class="toc-text"> 3.1 进程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#gpu"><span class="toc-number">4.</span> <span class="toc-text"> GPU</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#openmp"><span class="toc-number">5.</span> <span class="toc-text"> Openmp</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5"><span class="toc-number">5.1.</span> <span class="toc-text"> 1 调度策略</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-schedulestatic-%E9%9D%99%E6%80%81%E8%B0%83%E5%BA%A6"><span class="toc-number">5.1.0.1.</span> <span class="toc-text"> (1) schedule(static) - 静态调度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-scheduledynamic-1-%E5%8A%A8%E6%80%81%E8%B0%83%E5%BA%A6"><span class="toc-number">5.1.0.2.</span> <span class="toc-text"> (2) schedule(dynamic, 1) - 动态调度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-scheduleguided-1-%E5%AF%BC%E5%90%91%E5%BC%8F%E8%B0%83%E5%BA%A6"><span class="toc-number">5.1.0.3.</span> <span class="toc-text"> (3) schedule(guided, 1) - 导向式调度</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%90%8C%E6%AD%A5%E6%8C%87%E4%BB%A4"><span class="toc-number">5.2.</span> <span class="toc-text"> 2 同步指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E7%AB%9E%E4%BA%89%E6%9D%A1%E4%BB%B6"><span class="toc-number">5.2.1.</span> <span class="toc-text"> 1. 什么是竞争条件？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-pragma-omp-critical"><span class="toc-number">5.2.2.</span> <span class="toc-text"> 2. #pragma omp critical</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-pragma-omp-atomic"><span class="toc-number">5.2.3.</span> <span class="toc-text"> 3. #pragma omp atomic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-critical-vs-atomic-%E5%AF%B9%E6%AF%94%E6%80%BB%E7%BB%93"><span class="toc-number">5.2.4.</span> <span class="toc-text"> 4. critical vs. atomic 对比总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8%E5%93%AA%E4%B8%AA"><span class="toc-number">5.2.5.</span> <span class="toc-text"> 何时使用哪个？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-mpi"><span class="toc-number">5.3.</span> <span class="toc-text"> 3 MPI</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#31-%E4%BB%80%E4%B9%88%E6%98%AF-mpi-%E5%92%8C-mpi_send"><span class="toc-number">5.3.1.</span> <span class="toc-text"> 3.1 什么是 MPI 和 MPI_Send？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#32-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3"><span class="toc-number">5.3.2.</span> <span class="toc-text"> 3.2 函数参数详解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E5%86%85%E5%AE%B9-the-what"><span class="toc-number">5.3.2.1.</span> <span class="toc-text"> 消息内容 (The "What")</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E4%BF%A1%E5%B0%81-the-who-and-how"><span class="toc-number">5.3.2.2.</span> <span class="toc-text"> 消息信封 (The "Who" and "How")</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#33-mpi_send-%E7%9A%84%E4%B8%80%E4%B8%AA%E9%87%8D%E8%A6%81%E7%89%B9%E6%80%A7%E9%98%BB%E5%A1%9E-blocking"><span class="toc-number">5.3.3.</span> <span class="toc-text"> 3.3 MPI_Send 的一个重要特性：阻塞 (Blocking)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#34-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-number">5.3.4.</span> <span class="toc-text"> 3.4 一个简单的例子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#35-%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0"><span class="toc-number">5.3.5.</span> <span class="toc-text"> 3.5 一些函数</span></a></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#oop%E9%80%9F%E9%80%9A"><span class="toc-number">6.</span> <span class="toc-text"> OOP速通</span></a></li></div><div class="related panel pjax" data-title="系列文章"><ul><li><a href="/2025/05/29/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/Linux%E5%85%A5%E9%97%A8/" rel="bookmark" title="Linux 入门">Linux 入门</a></li><li class="active"><a href="/2025/07/11/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/HPC%E5%9F%BA%E7%A1%80%E6%A6%82%E8%BF%B0/" rel="bookmark" title="HPC 基础概述">HPC 基础概述</a></li><li><a href="/2025/07/24/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/%E5%90%91%E9%87%8F%E5%8C%96%E8%BF%9B%E9%98%B6RISC-V/" rel="bookmark" title="向量化进阶 (RISC-V)">向量化进阶 (RISC-V)</a></li><li><a href="/2025/08/09/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/%E5%90%91%E9%87%8F%E5%8C%96%E8%AE%A1%E7%AE%97/" rel="bookmark" title="向量化计算">向量化计算</a></li><li><a href="/2025/08/10/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/Solver%E7%AC%94%E8%AE%B0/" rel="bookmark" title="Solver Challenge 笔记">Solver Challenge 笔记</a></li><li><a href="/2025/08/24/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/%E4%BB%8E%E9%9B%B6%E5%AE%9E%E7%8E%B0Qwen3%E7%BB%84%E4%BB%B6/" rel="bookmark" title="从零实现 Qwen3 关键组件">从零实现 Qwen3 关键组件</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="image" loading="lazy" decoding="async" itemprop="image" alt="Luchron" src="/assets/avatar.avif"><p class="name" itemprop="name">Luchron</p><div class="description" itemprop="description">未下眉头，又上心头</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">48</span><span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">5</span><span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">47</span><span class="name">标签</span></a></div></nav><div class="social"><a target="_blank" rel="noopener" href="https://github.com/LuChron" class="item github" title="https://github.com/LuChron"><i class="ic i-github"></i></a><a href="mailto:3454410481@qq.com" class="item email" title="mailto:3454410481@qq.com"><i class="ic i-envelope"></i></a></div><div class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item dropdown"><a href="#" onclick="return false;"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li></div></div></div></div><ul id="quick"><li class="prev pjax"><a href="/2025/07/24/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/%E5%90%91%E9%87%8F%E5%8C%96%E8%BF%9B%E9%98%B6RISC-V/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/2025/07/03/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div><div id="player"></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/Go/">Go</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/" title="分类于科研学习">科研学习</a></div><span><a href="/2026/04/19/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/VGGT/">VGGT 论文阅读</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/JS/">JavaScript</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/" title="分类于超算短学期">超算短学期</a></div><span><a href="/2025/07/24/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/%E5%90%91%E9%87%8F%E5%8C%96%E8%BF%9B%E9%98%B6RISC-V/">向量化进阶 (RISC-V)</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/07/03/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/">数据库基础</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/fatch%20api/">fetch api</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/api%E7%9A%84%E5%88%B6%E5%AE%9A/">api的制定</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" title="分类于课堂笔记">课堂笔记</a></div><span><a href="/2025/10/13/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/">数据结构基础</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/" title="分类于科研学习">科研学习</a></div><span><a href="/2026/03/11/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/ROS2/">ROS2</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/" title="分类于超算短学期">超算短学期</a></div><span><a href="/2025/08/24/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/%E4%BB%8E%E9%9B%B6%E5%AE%9E%E7%8E%B0Qwen3%E7%BB%84%E4%BB%B6/">从零实现 Qwen3 关键组件</a></span></li></ul></div></div><div class="status"><div class="copyright">© 2022 -<span itemprop="copyrightYear">2026</span><span class="with-love"><i class="ic i-sakura rotate"></i></span><span class="author" itemprop="copyrightHolder">Luchron @ LuChron's Blog</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i></span><span title="站点总字数">995k 字</span><span class="post-meta-divider"> | </span><span class="post-meta-item-icon"><i class="ic i-coffee"></i></span><span title="站点阅读时长">15:04</span></div><div class="powered-by">基于 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> &amp; Theme.<a target="_blank" rel="noopener" href="https://github.com/theme-shoka-x/hexo-theme-shokaX/">ShokaX</a></div></div></div></footer></div><script data-config="" type="text/javascript">var LOCAL = {
+    ispost: true,
+    path: `2025/07/11/超算短学期/HPC基础概述/`,
+    favicon: {
+        show: `你回来了(￣▽￣)`,
+        hide: `她跑掉了(╥﹏╥)`
+    },
+    search: {
+        placeholder: "文章搜索",
+        empty: "关于 「 ${query} 」，什么也没搜到",
+        stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    nocopy: "false",
+    copyright: `复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。`,
+    copy_tex: false,
+    katex: false,
+    mermaid: false,
+    audio: undefined,
+    nocopy: false,
+    outime: true,
+    template: `<div class="note warning"><p><span class="label warning">文章时效性提示</span><br>这是一篇发布于 {{publish}} 天前，最后一次更新在 {{updated}} 天前的文章，部分信息可能已经发生改变，请注意甄别。</p></div>`,
+    quiz: {
+        choice: `单选题`,
+        multiple: `多选题`,
+        true_false: `判断题`,
+        essay: `问答题`,
+        gap_fill: `填空题`,
+        mistake: `错题备注`
+    }
+};
+</script><script src="/js/siteInit.js?v=0.5.4" type="module" fetchpriority="high" defer=""></script></body></html>

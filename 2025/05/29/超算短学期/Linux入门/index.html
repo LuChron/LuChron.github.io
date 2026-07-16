@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"><meta name="renderer" content="webkit"><link rel="icon" type="image/ico" sizes="32x32" href="/assets/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="alternate" href="/rss.xml" title="絶対忘れてやらないよ" type="application/rss+xml"><link rel="alternate" href="/atom.xml" title="絶対忘れてやらないよ" type="application/atom+xml"><link rel="alternate" type="application/json" title="絶対忘れてやらないよ" href="https://luchron.github.io/feed.json"><link rel="preconnect" href="https://s4.zstatic.net"><link rel="preconnect" href="https://at.alicdn.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CFredericka%20the%20Great:400,400italic,700,700italic%7CNoto%20Serif%20JP:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CInconsolata:400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext" media="none" onload="this.media='all'"><link rel="modulepreload" href="/js/siteInit.js"><link rel="modulepreload" href="/js/nyx-player-HGUYDKEU.js"><link rel="modulepreload" href="/js/copy-tex-FIB26BBA.js"><link rel="modulepreload" href="/js/post-S7SVO5ZB.js"><link rel="modulepreload" href="/js/chunk-WN4FGWSR.js"><link rel="modulepreload" href="/js/pagefind-ROWL75QD.js"><link rel="modulepreload" href="/js/index.esm-V2O4HKJY.js"><link rel="modulepreload" href="/js/chunk-HJSTZ4VX.js"><link rel="modulepreload" href="/js/chunk-HZLNKXMP.js"><link rel="stylesheet" href="/css/siteInit.css" media="none" onload="this.media='all'"><link rel="preload" href="//assets/04.jpg" as="image" fetchpriority="high"><meta name="keywords" content="HPC,"><meta name="description" content="超算短学期 Linux 入门笔记"><link rel="canonical" href="https://luchron.github.io/2025/05/29/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/Linux%E5%85%A5%E9%97%A8/"><link rel="stylesheet" href="/css/post.css?v=0.5.4"><link rel="stylesheet" href="/css/mermaid.css?v=0.5.4"><!-- 临时处理--><link rel="stylesheet" media="none" onload="this.media='all'" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css"><title>Linux 入门</title><meta name="generator" content="Hexo 7.3.0"></head><body itemscope="" itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="pagefind_mount"></div><div id="container"><header id="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">Linux 入门</h1><div class="meta"><span class="item" title="创建时间：2025-05-29 21:39:07"><span class="icon"><i class="ic i-calendar"></i></span><span class="text">发表于</span><time itemprop="dateCreated datePublished" datetime="2025-05-29T21:39:07+08:00">2025-05-29</time></span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i></span><span class="text">本文字数</span><span>3.7k</span><span class="text">字</span></span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i></span><span class="text">阅读时长</span><span>3 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span><span class="line"></span><span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">LuChron's Blog</a></li></ul><ul class="right" id="rightNav"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div class="pjax" id="imgs"><img src="/assets/04.avif" loading="eager" decoding="async" fetchpriority="high" alt="絶対忘れてやらないよ"></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><main><div class="inner"><div class="pjax" id="main"><div class="article wrap"><div class="breadcrumb" itemlistelement="" itemscope="" itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i><span><a href="/">首页</a></span><i class="ic i-angle-right"></i><span class="current" itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/categories/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/" itemprop="item" rel="index" title="分类于超算短学期"><span itemprop="name">超算短学期<meta itemprop="position" content="0"></span></a></span></div><article class="post block" itemscope="itemscope" itemtype="http://schema.org/Article" data-pagefind-body="data-pagefind-body" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://luchron.github.io/2025/05/29/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/Linux%E5%85%A5%E9%97%A8/"><span hidden="hidden" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="image" content="/assets/avatar.jpg"><meta itemprop="name" content="Luchron"><meta itemprop="description" content="狗窝, 未下眉头，又上心头"></span><span hidden="hidden" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="絶対忘れてやらないよ"></span><div class="body md" itemprop="articleBody"><h1 id="1-预备知识"><a class="anchor" href="#1-预备知识">#</a> 1 预备知识</h1>
+<p>操作系统（OS）是管理计算机硬件、软件资源和为计算机程序提供通用服务的系统软件。操作系统是计算机系统软件的重要组成部分。</p>
+<p>内核是一个计算机程序，它是计算机操作系统的核心，对系统中的所有内容都有完全的控制权。它是操作系统的“最低”级别。</p>
+<blockquote>
+<p>推荐使用 Debian 系统(linux发行版本)</p>
+</blockquote>
+<h3 id="11-一些命令"><a class="anchor" href="#11-一些命令">#</a> 1.1 一些命令</h3>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-bash"><span class="line"><span style="color:#998418;--shiki-dark:#B8A965">pwd</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> #打印路径</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">cd</span><span style="color:#B56959;--shiki-dark:#C98A7D"> /</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> #切换根目录</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">cd</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ..</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> #切换到父目录</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">cd</span><span style="color:#B56959;--shiki-dark:#C98A7D"> ~</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> #从主目录开始</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">li</span><span style="color:#AB5959;--shiki-dark:#CB7676"> </span><span style="color:#AB5959;--shiki-dark:#CB7676">&gt;</span><span style="color:#B56959;--shiki-dark:#C98A7D"> output.txt</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> #如果文件没有会被创建，如果文件存在会被覆盖。然后把ls的输出写到txt文件中</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">cat</span><span style="color:#B56959;--shiki-dark:#C98A7D"> output.txt</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> #查看文件内容</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">echo</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">this is a test</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#AB5959;--shiki-dark:#CB7676"> </span><span style="color:#AB5959;--shiki-dark:#CB7676">&gt;</span><span style="color:#B56959;--shiki-dark:#C98A7D"> test_1.txt</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> #覆盖写入</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">cat</span><span style="color:#B56959;--shiki-dark:#C98A7D"> test_1.txt</span><span style="color:#B56959;--shiki-dark:#C98A7D"> test_2.txt</span><span style="color:#B56959;--shiki-dark:#C98A7D"> test_3.txt</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> #查看文件内容</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">cat</span><span style="color:#B56959;--shiki-dark:#C98A7D"> test_?.txt</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> #简化操作</span></span>
+<span class="line"><span style="color:#998418;--shiki-dark:#B8A965">echo</span><span style="color:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="color:#B56959;--shiki-dark:#C98A7D">this is a test</span><span style="color:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="color:#AB5959;--shiki-dark:#CB7676"> </span><span style="color:#AB5959;--shiki-dark:#CB7676">&gt;</span><span style="color:#AB5959;--shiki-dark:#CB7676">&gt;</span><span style="color:#B56959;--shiki-dark:#C98A7D"> test.txt</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> #追加写入</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">less</span><span style="color:#B56959;--shiki-dark:#C98A7D"> test.txt</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> #分页查看文件内容</span></span></code></pre>
+<p><code>mkdir -p</code> 是一个用于创建目录的命令，常见于类 Unix 操作系统（如 Linux 和 macOS）中的命令行。</p>
+<p>具体来说：</p>
+<ul>
+<li><code>mkdir</code> 命令用于创建一个新的目录。</li>
+<li><code>-p</code> 选项的作用是<strong>递归创建</strong>目录。当你使用 <code>-p</code> 时，如果中间的目录路径不存在，<code>mkdir</code> 会自动创建它们，而不会报错。</li>
+</ul>
+<p>举个例子：</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-bash"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">mkdir</span><span style="color:#A65E2B;--shiki-dark:#C99076"> -p</span><span style="color:#B56959;--shiki-dark:#C98A7D"> /home/user/docs/project</span></span></code></pre>
+<p>这条命令会创建 <code>/home/user/docs/project</code> 这个目录。如果 <code>/home/user</code> 或 <code>/home/user/docs</code> 目录不存在，它们会被自动创建出来。没有 <code>-p</code> 选项的话，如果中间的某个目录不存在，<code>mkdir</code> 会报错。</p>
+<p><strong>关于移动</strong></p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-bash"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">mv</span><span style="color:#B56959;--shiki-dark:#C98A7D"> dir1/</span><span style="color:#A65E2B;--shiki-dark:#C99076">*</span><span style="color:#B56959;--shiki-dark:#C98A7D"> .</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> #就像..代表父目录，我们的.能代表当前目录（就是pwd的目录，与dir啥的无关）</span></span>
+<span class="line"><span style="color:#A0ADA0;--shiki-dark:#758575DD">#如果mv传递了多个参数的话，那么最后一个被视作前几个移动的目标文件夹</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">cp</span><span style="color:#B56959;--shiki-dark:#C98A7D"> dir4/dir5/dir6/combined.txt</span><span style="color:#B56959;--shiki-dark:#C98A7D"> .</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> #复制</span></span></code></pre>
+<p><strong>关于删除</strong></p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-bash"><span class="line"><span style="color:#59873A;--shiki-dark:#80A665">rm</span><span style="color:#B56959;--shiki-dark:#C98A7D"> test.txt</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> #删除文件</span></span>
+<span class="line"><span style="color:#59873A;--shiki-dark:#80A665">rmdir</span><span style="color:#A0ADA0;--shiki-dark:#758575DD"> #删除目录</span></span></code></pre>
+<blockquote>
+<p>[!warning]</p>
+<p>注意，不同于图形化界面，这里得删除是永久删除，不可以找回</p>
+</blockquote>
+<h3 id="12-计算机网络相关知识"><a class="anchor" href="#12-计算机网络相关知识">#</a> 1.2 计算机网络相关知识</h3>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1DD4y127r4">https://www.bilibili.com/video/BV1DD4y127r4</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1CQ4y1d728">https://www.bilibili.com/video/BV1CQ4y1d728</a></p>
+<p><strong>虚拟机得几种网络模式</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV11M4y1J7zP">https://www.bilibili.com/video/BV11M4y1J7zP</a></p>
+<h3 id="13-ssh"><a class="anchor" href="#13-ssh">#</a> 1.3 SSH</h3>
+<p>SSH 的全称是 <strong>Secure Shell</strong> (安全外壳协议)，它是一种网络协议，用于在不安全的网络上安全地运行网络服务。简单来说，SSH 让你能够安全地远程连接和控制另一台计算机。</p>
+<p>想象一下，你想在另一台电脑上执行命令、传输文件，或者管理服务器，但你和那台电脑之间隔着互联网这个“不安全”的公共场所。SSH 就像是为你和那台电脑之间建立了一条加密的、安全的“隧道”，确保你们之间的通信内容不会被窃听或篡改。</p>
+<p><strong>什么是非对称加密？</strong></p>
+<p>非对称加密，也称为<strong>公钥加密</strong>，与对称加密（例如 AES）不同，它使用<strong>一对</strong>密钥：</p>
+<ul>
+<li><strong>公钥 (Public Key):</strong> 可以公开分发，任何人都可以获取。用公钥加密的数据，只有对应的私钥才能解密。</li>
+<li><strong>私钥 (Private Key):</strong> 必须严格保密，只有密钥的拥有者持有。用私钥签名（或解密公钥加密的数据）的数据，可以用对应的公钥来验证（或解密）。</li>
+</ul>
+<h3 id="14-用户与组"><a class="anchor" href="#14-用户与组">#</a> 1.4 用户与组</h3>
+<p><strong>Linux 的用户：</strong></p>
+<p>Linux是一个多用户多任务的操作系统，每个用户都需要一个账户才能登录系统并使用系统的资源。</p>
+<p>Linux中的用户账户可以分为很多类：常用的  普通用户和超级 用户。普通用户只能访问自己拥有或被赋予权限的资源，超级用户（root）拥有对所有系统资源的完全访问权限。</p>
+<p><strong>Linux 用户组：</strong></p>
+<p>除了用户账户外，Linux 还支持用户组的概念。用户组是具有相同特性的用户的集合。用户可以属于多个用户组，每个用户组都有一个唯一的组 ID（GID）。</p>
+<p>用户组的主要作用是用于控制用户对文件和目录的访问权限。当用户创建一个文件或目录时，可以指定该文件或目录的所有者、所有组和其他组。所有者拥有对该文件或目录的完全访问权限，所有组的成员拥有对该文件或目录的读写权限，其他组的成员则只能读取该文件或目录。</p>
+<h3 id="15-计算机集群"><a class="anchor" href="#15-计算机集群">#</a> 1.5 计算机集群</h3>
+<p>所谓计算机集群，就是将多台计算机连接在一起，通过网络协同工作，以完成一些大规模的计算任务。为什么我们需要计算机集群呢？因为单体的制造成本和性能是有限的。制造芯片时，人们想把单个处理器的性能提升到极致，但是遇到了物理限制：一块集成电路上的晶体管数量越多，设计就越复杂，发热就越严重，功耗就越大，性能就越低。因此，人们开始尝试将多个处理器连接在一起，就有了现代多核处理器。制造计算机时，也可以放置多个 CPU（常见的服务器一般都具有两颗），但放置更多只会增加单台计算机的设计和制造难度。与其想着怎么把单体造强，不如想着怎么把多个单体连接在一起，怎么让它们协同工作，这就是并行计算思想的由来。</p>
+<h3 id="16-mpi"><a class="anchor" href="#16-mpi">#</a> 1.6 MPI</h3>
+<p>MPI 指的是Message Passing Interface，是程序在不同机器间发送、接收数据的接口标准，类似于定义了一套通信的 API。它被设计用于支持并行计算系统的架构，使得开发者能够方便地开发可移植的消息传递程序。MPI 编程能力在高性能计算的实践与学习中也是非常基础的技能。</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>调度环境（如 Slurm）</th>
+<th>非调度环境（如 ssh + hostfile）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>谁决定用哪些节点</td>
+<td>调度器</td>
+<td>你自己</td>
+</tr>
+<tr>
+<td>启动命令</td>
+<td><code>sbatch</code> 或 <code>srun</code></td>
+<td><code>mpirun --hostfile xxx</code></td>
+</tr>
+<tr>
+<td>是否需写 hostfile</td>
+<td>不需要</td>
+<td>需要</td>
+</tr>
+<tr>
+<td>使用对象</td>
+<td>超算、HPC、大型实验室</td>
+<td>小型集群、开发调试</td>
+</tr>
+</tbody>
+</table>
+<h1 id="2-任务完成"><a class="anchor" href="#2-任务完成">#</a> 2 任务完成</h1>
+<h2 id="任务11"><a class="anchor" href="#任务11">#</a> 任务1.1</h2>
+<p>&lt;img src="/assets/图片/image-20250521213051485.png" alt="image-20250521213051485" style="zoom:67%;" /&gt;</p>
+<p>&lt;img src="/assets/图片/image-20250521213138118.png" alt="image-20250521213138118" style="zoom:67%;" /&gt;</p>
+<p>验证结果与 ISO 镜像所在同一目录下的 <code>SHA256SUMS</code> 文件中的结果进行比较，发现结果相同。</p>
+<p>&lt;img src="/assets/图片/image-20250521225625199.png" alt="image-20250521225625199" style="zoom:50%;" /&gt;</p>
+<p>linux Debian配置成功</p>
+<h2 id="任务21"><a class="anchor" href="#任务21">#</a> 任务2.1</h2>
+<p>&lt;img src="/assets/图片/image-20250522102753954.png" alt="image-20250522102753954" style="zoom:50%;" /&gt;</p>
+<h2 id="任务32"><a class="anchor" href="#任务32">#</a> 任务3.2</h2>
+<p>使用nano所得截图</p>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20250522121039620.avif" alt="image-20250522121039620"></p>
+<p>ssh成功连接的截图</p>
+<h2 id="任务52"><a class="anchor" href="#任务52">#</a> 任务5.2</h2>
+<p><img loading="lazy" src="/assets/%E5%9B%BE%E7%89%87/image-20250522183320315.avif" alt="image-20250522183320315"></p>
+<p>ssh成功连接</p>
+<div class="tags"><a href="/tags/HPC/" rel="tag"><i class="ic i-tag"></i>HPC</a><a href="/tags/Linux/" rel="tag"><i class="ic i-tag"></i>Linux</a></div></div><footer><div class="meta"></div><div id="copyright"><ul><li class="author"><strong>本文作者：</strong>Luchron<i class="ic i-at"><em>@</em></i>絶対忘れてやらないよ</li><li class="link"><strong>本文链接：</strong><a href="https://luchron.github.io/2025/05/29/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/Linux%E5%85%A5%E9%97%A8/" title="Linux 入门">https://luchron.github.io/2025/05/29/超算短学期/Linux入门/</a></li><li class="license"><strong>版权声明：</strong>本站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/2025/05/18/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/%E7%99%BB%E5%BD%95%E4%B8%8E%E9%89%B4%E6%9D%83/" rel="prev" itemprop="url" data-background-image="//assets/02.jpg" title="登录与鉴权"><span class="type">上一篇</span><span class="category"><i class="ic i-flag"></i>技术积累</span><h3>登录与鉴权</h3></a></div><div class="item right"><a href="/2025/06/28/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/" rel="next" itemprop="url" data-background-image="//assets/01.jpg" title="数字逻辑设计"><span class="type">下一篇</span><span class="category"><i class="ic i-flag"></i>课堂笔记</span><h3>数字逻辑设计</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text"> 1 预备知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4"><span class="toc-number">1.0.1.</span> <span class="toc-text"> 1.1 一些命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86"><span class="toc-number">1.0.2.</span> <span class="toc-text"> 1.2 计算机网络相关知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-ssh"><span class="toc-number">1.0.3.</span> <span class="toc-text"> 1.3 SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E7%94%A8%E6%88%B7%E4%B8%8E%E7%BB%84"><span class="toc-number">1.0.4.</span> <span class="toc-text"> 1.4 用户与组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%9B%86%E7%BE%A4"><span class="toc-number">1.0.5.</span> <span class="toc-text"> 1.5 计算机集群</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-mpi"><span class="toc-number">1.0.6.</span> <span class="toc-text"> 1.6 MPI</span></a></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E4%BB%BB%E5%8A%A1%E5%AE%8C%E6%88%90"><span class="toc-number">2.</span> <span class="toc-text"> 2 任务完成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A111"><span class="toc-number">2.1.</span> <span class="toc-text"> 任务1.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A121"><span class="toc-number">2.2.</span> <span class="toc-text"> 任务2.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A132"><span class="toc-number">2.3.</span> <span class="toc-text"> 任务3.2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A152"><span class="toc-number">2.4.</span> <span class="toc-text"> 任务5.2</span></a></li></ol></li></div><div class="related panel pjax" data-title="系列文章"><ul><li class="active"><a href="/2025/05/29/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/Linux%E5%85%A5%E9%97%A8/" rel="bookmark" title="Linux 入门">Linux 入门</a></li><li><a href="/2025/07/11/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/HPC%E5%9F%BA%E7%A1%80%E6%A6%82%E8%BF%B0/" rel="bookmark" title="HPC 基础概述">HPC 基础概述</a></li><li><a href="/2025/07/24/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/%E5%90%91%E9%87%8F%E5%8C%96%E8%BF%9B%E9%98%B6RISC-V/" rel="bookmark" title="向量化进阶 (RISC-V)">向量化进阶 (RISC-V)</a></li><li><a href="/2025/08/09/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/%E5%90%91%E9%87%8F%E5%8C%96%E8%AE%A1%E7%AE%97/" rel="bookmark" title="向量化计算">向量化计算</a></li><li><a href="/2025/08/10/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/Solver%E7%AC%94%E8%AE%B0/" rel="bookmark" title="Solver Challenge 笔记">Solver Challenge 笔记</a></li><li><a href="/2025/08/24/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/%E4%BB%8E%E9%9B%B6%E5%AE%9E%E7%8E%B0Qwen3%E7%BB%84%E4%BB%B6/" rel="bookmark" title="从零实现 Qwen3 关键组件">从零实现 Qwen3 关键组件</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="image" loading="lazy" decoding="async" itemprop="image" alt="Luchron" src="/assets/avatar.avif"><p class="name" itemprop="name">Luchron</p><div class="description" itemprop="description">未下眉头，又上心头</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">48</span><span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">5</span><span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">47</span><span class="name">标签</span></a></div></nav><div class="social"><a target="_blank" rel="noopener" href="https://github.com/LuChron" class="item github" title="https://github.com/LuChron"><i class="ic i-github"></i></a><a href="mailto:3454410481@qq.com" class="item email" title="mailto:3454410481@qq.com"><i class="ic i-envelope"></i></a></div><div class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item dropdown"><a href="#" onclick="return false;"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li></div></div></div></div><ul id="quick"><li class="prev pjax"><a href="/2025/06/28/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/2025/05/18/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/%E7%99%BB%E5%BD%95%E4%B8%8E%E9%89%B4%E6%9D%83/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div><div id="player"></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/" title="分类于科研学习">科研学习</a></div><span><a href="/2026/04/12/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/cs231n/">cs231n 课程笔记</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/" title="分类于超算短学期">超算短学期</a></div><span><a href="/2025/07/24/%E8%B6%85%E7%AE%97%E7%9F%AD%E5%AD%A6%E6%9C%9F/%E5%90%91%E9%87%8F%E5%8C%96%E8%BF%9B%E9%98%B6RISC-V/">向量化进阶 (RISC-V)</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" title="分类于课堂笔记">课堂笔记</a></div><span><a href="/2026/07/15/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/09/15/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/React%E7%AC%94%E8%AE%B0/">React 笔记</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/" title="分类于科研学习">科研学习</a></div><span><a href="/2026/03/11/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/IsaacSim/">Isaac Sim</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%89%8D%E7%AB%AF/React/">React</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2025/10/13/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/Go/">Go</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/" title="分类于技术积累">技术积累</a></div><span><a href="/2026/06/24/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/%E5%90%8E%E7%AB%AF/MySQL%E5%85%A5%E9%97%A8/">MySQL 入门</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E5%85%B3%E4%BA%8E%E6%88%91/" title="分类于关于我">关于我</a></div><span><a href="/2025/10/13/%E5%85%B3%E4%BA%8E%E6%88%91/about%20me/">about me</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/" title="分类于科研学习">科研学习</a></div><span><a href="/2026/03/11/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/IsaacLab/">IsaacLab</a></span></li></ul></div></div><div class="status"><div class="copyright">© 2022 -<span itemprop="copyrightYear">2026</span><span class="with-love"><i class="ic i-sakura rotate"></i></span><span class="author" itemprop="copyrightHolder">Luchron @ LuChron's Blog</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i></span><span title="站点总字数">995k 字</span><span class="post-meta-divider"> | </span><span class="post-meta-item-icon"><i class="ic i-coffee"></i></span><span title="站点阅读时长">15:04</span></div><div class="powered-by">基于 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> &amp; Theme.<a target="_blank" rel="noopener" href="https://github.com/theme-shoka-x/hexo-theme-shokaX/">ShokaX</a></div></div></div></footer></div><script data-config="" type="text/javascript">var LOCAL = {
+    ispost: true,
+    path: `2025/05/29/超算短学期/Linux入门/`,
+    favicon: {
+        show: `你回来了(￣▽￣)`,
+        hide: `她跑掉了(╥﹏╥)`
+    },
+    search: {
+        placeholder: "文章搜索",
+        empty: "关于 「 ${query} 」，什么也没搜到",
+        stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    nocopy: "false",
+    copyright: `复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。`,
+    copy_tex: false,
+    katex: false,
+    mermaid: false,
+    audio: undefined,
+    nocopy: false,
+    outime: true,
+    template: `<div class="note warning"><p><span class="label warning">文章时效性提示</span><br>这是一篇发布于 {{publish}} 天前，最后一次更新在 {{updated}} 天前的文章，部分信息可能已经发生改变，请注意甄别。</p></div>`,
+    quiz: {
+        choice: `单选题`,
+        multiple: `多选题`,
+        true_false: `判断题`,
+        essay: `问答题`,
+        gap_fill: `填空题`,
+        mistake: `错题备注`
+    }
+};
+</script><script src="/js/siteInit.js?v=0.5.4" type="module" fetchpriority="high" defer=""></script></body></html>
